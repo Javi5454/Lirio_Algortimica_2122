@@ -1,13 +1,13 @@
 
 #!/bin/bash
-# Compile first insercion.cpp at folder Code with 
+# Compile first quicksort.cpp at folder Code with 
 # g++ quicksort.cpp -o quicksort -std=gnu++0x
 
 
-i="10000"
+i="100000"
 
-while [ $i -le 200000 ]
+while [ $i -le 2000000 ]
 do
 ../Code/quicksort $i >> salida_quicksort.dat
-i=$[$i+7600]
+i=$[$i+76000]
 done
