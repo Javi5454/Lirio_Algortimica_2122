@@ -1,12 +1,13 @@
 
 #!/bin/bash
+# Compile first insercion.cpp at folder Code with 
+# g++ insercion.cpp -o insercion -std=gnu++0x
 
-echo "" > salida_insercion.dat
 
 i="1000"
 
-while [ $i -le 5000 ]
+while [ $i -le 10000 ]
 do
-../insercion $i > salida_insercion.dat
-i=$[$i+4000]
+../Code/insercion $i >> salida_insercion.dat
+i=$[$i+1000]
 done
