@@ -105,7 +105,7 @@ int main(int argc, char * argv[])
 
   srandom(time(0));
 
-  for (int j = 0; j < 3; j++){
+  for (int j = 0; j < 15; j++){
     for (int i = 0; i < n; i++)
       {
         T[i] = random();
@@ -157,7 +157,7 @@ int main(int argc, char * argv[])
         delete [] U;
       }
   }
-  time_total /= 3;
+  time_total /= 15;
 
   cout << n << " " << time_total << endl;
 

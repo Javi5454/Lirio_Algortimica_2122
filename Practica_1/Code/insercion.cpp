@@ -102,7 +102,7 @@ int main(int argc, char* argv[])
 
   srandom(time(0));
 
-  for (int i = 0; i < 3; i++){
+  for (int i = 0; i < 15; i++){
 
     for (int j = 0; j < n; j++)
       {
@@ -120,7 +120,7 @@ int main(int argc, char* argv[])
       time_total += transcurrido.count();
   }
 
-  time_total /= 3;
+  time_total /= 15;
 
   cout << n << " " << time_total << endl;
 

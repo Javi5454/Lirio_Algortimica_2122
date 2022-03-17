@@ -4,10 +4,10 @@
 # g++ seleccion.cpp -o seleccion-std=gnu++0x
 
 
-i="1000"
+i="10000"
 
-while [ $i -le 50000 ]
+while [ $i -le 200000 ]
 do
 ../Code/seleccion $i >> salida_seleccion.dat
-i=$[$i+1000]
+i=$[$i+7600]
 done
