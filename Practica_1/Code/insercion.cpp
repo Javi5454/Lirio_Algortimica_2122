@@ -91,6 +91,7 @@ int main(int argc, char* argv[])
   }
 
   int n = stoi(argv[1]);
+  double time_total = 0;
   
 
   high_resolution_clock::time_point tantes, tdespues;
@@ -101,20 +102,27 @@ int main(int argc, char* argv[])
 
   srandom(time(0));
 
-  for (int i = 0; i < n; i++)
-    {
-      T[i] = random();
-    };
+  for (int i = 0; i < 3; i++){
 
-  tantes = high_resolution_clock::now();
+    for (int j = 0; j < n; j++)
+      {
+        T[j] = random();
+      };
 
-  insercion(T, n);
+      tantes = high_resolution_clock::now();
 
-  tdespues = high_resolution_clock::now();
+      insercion(T, n);
 
-  transcurrido = duration_cast<duration<double>>(tdespues-tantes);
+      tdespues = high_resolution_clock::now();
 
-  cout << n << " " << transcurrido.count() << endl;
+      transcurrido = duration_cast<duration<double>>(tdespues-tantes);
+
+      time_total += transcurrido.count();
+  }
+
+  time_total /= 3;
+
+  cout << n << " " << time_total << endl;
 
   delete [] T;
 
