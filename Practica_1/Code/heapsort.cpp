@@ -9,6 +9,8 @@ using namespace std;
 #include <cstdlib>
 #include <climits>
 #include <cassert>
+#include <chrono>
+using namespace std::chrono;
 
 
 
@@ -91,18 +93,21 @@ static void reajustar(int T[], int num_elem, int k)
 }
   
       
-int main()
+int main(int argc, char* argv[])
 {
-  int n;
-  cout << "Introduce número de elementos del vector: ";
-  cin >> n;
+  if (argc != 2){
+    cout << "Syntax error: ./heapsort <Num of elements>" << endl;
+  }
+
+  int n = stoi(argv[1]);
+  double time_total = 0;
 
   int * T = new int[n];
   assert(T);
 
   srandom(time(0));
 
-  high_resolution_clock::time_point tantes, tdepues, tantes_vacio, tdespues_vacio;
+  high_resolution_clock::time_point tantes, tdepues;
   duration<double> transcurrido;
 
   for (int j = 0; j < 15; j++){
