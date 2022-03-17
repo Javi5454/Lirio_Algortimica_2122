@@ -1,5 +1,5 @@
 /**
-   @file Ordenaci髇 r醦ida (quicksort).
+   @file Ordenaci贸n r谩pida (quicksort).
 */
 
    
@@ -16,14 +16,14 @@ using namespace std;
 
 
 /* ************************************************************ */ 
-/*  M閠odo de ordenaci髇 r醦ida  */
+/*  M茅todo de ordenaci贸n r谩pida  */
 
 /**
-   @brief Ordena un vector por el m閠odo quicksort.
+   @brief Ordena un vector por el m茅todo quicksort.
 
    @param T: vector de elementos. Debe tener num_elem elementos.
              Es MODIFICADO.
-   @param num_elem: n鷐ero de elementos. num_elem > 0.
+   @param num_elem: n煤mero de elementos. num_elem > 0.
 
    Cambia el orden de los elementos de T de forma que los dispone
    en sentido creciente de menor a mayor.
@@ -35,15 +35,15 @@ void quicksort(int T[], int num_elem);
 
 
 /**
-   @brief Ordena parte de un vector por el m閠odo quicksort.
+   @brief Ordena parte de un vector por el m茅todo quicksort.
 
-   @param T: vector de elementos. Tiene un n鷐ero de elementos 
+   @param T: vector de elementos. Tiene un n煤mero de elementos 
                    mayor o igual a final. Es MODIFICADO.
-   @param inicial: Posici髇 que marca el incio de la parte del
+   @param inicial: Posici贸n que marca el incio de la parte del
                    vector a ordenar.
-   @param final: Posici髇 detr醩 de la 鷏tima de la parte del
+   @param final: Posici贸n detr谩s de la 煤ltima de la parte del
                    vector a ordenar. 
-		   inicial < final.
+       inicial < final.
 
    Cambia el orden de los elementos de T entre las posiciones
    inicial y final - 1 de forma que los dispone en sentido creciente
@@ -54,62 +54,62 @@ static void quicksort_lims(int T[], int inicial, int final);
 
 
 /**
-   @brief Ordena un vector por el m閠odo de inserci髇.
+   @brief Ordena un vector por el m茅todo de inserci贸n.
 
    @param T: vector de elementos. Debe tener num_elem elementos.
              Es MODIFICADO.
-   @param num_elem: n鷐ero de elementos. num_elem > 0.
+   @param num_elem: n煤mero de elementos. num_elem > 0.
 
    Cambia el orden de los elementos de T de forma que los dispone
    en sentido creciente de menor a mayor.
-   Aplica el algoritmo de inserci髇.
+   Aplica el algoritmo de inserci贸n.
 */
 inline static 
 void insercion(int T[], int num_elem);
 
 
 /**
-   @brief Ordena parte de un vector por el m閠odo de inserci髇.
+   @brief Ordena parte de un vector por el m茅todo de inserci贸n.
 
-   @param T: vector de elementos. Tiene un n鷐ero de elementos 
+   @param T: vector de elementos. Tiene un n煤mero de elementos 
                    mayor o igual a final. Es MODIFICADO.
-   @param inicial: Posici髇 que marca el incio de la parte del
+   @param inicial: Posici贸n que marca el incio de la parte del
                    vector a ordenar.
-   @param final: Posici髇 detr醩 de la 鷏tima de la parte del
+   @param final: Posici贸n detr谩s de la 煤ltima de la parte del
                    vector a ordenar. 
-		   inicial < final.
+       inicial < final.
 
    Cambia el orden de los elementos de T entre las posiciones
    inicial y final - 1 de forma que los dispone en sentido creciente
    de menor a mayor.
-   Aplica el algoritmo de inserci髇.
+   Aplica el algoritmo de inserci贸n.
 */
 static void insercion_lims(int T[], int inicial, int final);
 
 
 /**
-   @brief Redistribuye los elementos de un vector seg鷑 un pivote.
+   @brief Redistribuye los elementos de un vector seg煤n un pivote.
 
-   @param T: vector de elementos. Tiene un n鷐ero de elementos 
+   @param T: vector de elementos. Tiene un n煤mero de elementos 
                    mayor o igual a final. Es MODIFICADO.
-   @param inicial: Posici髇 que marca el incio de la parte del
+   @param inicial: Posici贸n que marca el incio de la parte del
                    vector a ordenar.
-   @param final: Posici髇 detr醩 de la 鷏tima de la parte del
+   @param final: Posici贸n detr谩s de la 煤ltima de la parte del
                    vector a ordenar. 
-		   inicial < final.
-   @param pp: Posici髇 del pivote. Es MODIFICADO.
+       inicial < final.
+   @param pp: Posici贸n del pivote. Es MODIFICADO.
 
    Selecciona un pivote los elementos de T situados en las posiciones
    entre inicial y final - 1. Redistribuye los elementos, situando los
-   menores que el pivote a su izquierda, despu閟 los iguales y a la
-   derecha los mayores. La posici髇 del pivote se devuelve en pp.
+   menores que el pivote a su izquierda, despu茅s los iguales y a la
+   derecha los mayores. La posici贸n del pivote se devuelve en pp.
 */
 static void dividir_qs(int T[], int inicial, int final, int & pp);
 
 
 
 /**
-   Implementaci髇 de las funciones
+   Implementaci贸n de las funciones
 **/
 
 
@@ -189,20 +189,37 @@ static void dividir_qs(int T[], int inicial, int final, int & pp)
 int main()
 {
   int n;
-  cout << "Introduce n鷐ero de elementos del vector: ";
+  cout << "Introduce n煤mero de elementos del vector: ";
   cin >> n;
 
   int * T = new int[n];
   assert(T);
 
+  high_resolution_clock::time_point tantes, tdepues, tantes_vacio, tdespues_vacio;
+  duration<double> transcurrido;
+
   srandom(time(0));
 
-  for (int i = 0; i < n; i++)
-    {
-      T[i] = random();
-    };
+  for (int j = 0; j < 15; j++){
+    for (int i = 0; i < n; i++)
+      {
+        T[i] = random();
+      };
 
-  quicksort(T, n);
+    tantes = high_resolution_clock::now();
+
+    quicksort(T, n);
+
+    tdepues = high_resolution_clock::now();
+    
+    transcurrido = duration_cast<duration<double>>(tdepues - tantes);
+
+    time_total += transcurrido.count();
+  }
+
+  time_total /= 15;
+
+  cout << n << " " << time_total << endl;
 
   delete [] T;
 
