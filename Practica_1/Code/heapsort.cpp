@@ -1,5 +1,5 @@
 /**
-   @file Ordenaci髇 por montones
+   @file Ordenaci贸n por montones
 */
 
    
@@ -16,18 +16,18 @@ using namespace std;
 
 
 /* ************************************************************ */ 
-/*  M閠odo de ordenaci髇 por montones  */
+/*  M茅todo de ordenaci贸n por montones  */
 
 /**
-   @brief Ordena un vector por el m閠odo de montones.
+   @brief Ordena un vector por el m茅todo de montones.
 
    @param T: vector de elementos. Debe tener num_elem elementos.
              Es MODIFICADO.
-   @param num_elem: n鷐ero de elementos. num_elem > 0.
+   @param num_elem: n煤mero de elementos. num_elem > 0.
 
    Cambia el orden de los elementos de T de forma que los dispone
    en sentido creciente de menor a mayor.
-   Aplica el algoritmo de ordenaci髇 por montones.
+   Aplica el algoritmo de ordenaci贸n por montones.
 */
 inline static 
 void heapsort(int T[], int num_elem);
@@ -35,16 +35,16 @@ void heapsort(int T[], int num_elem);
 
 
 /**
-   @brief Reajusta parte de un vector para que sea un mont髇.
+   @brief Reajusta parte de un vector para que sea un mont贸n.
 
    @param T: vector de elementos. Debe tener num_elem elementos.
              Es MODIFICADO.
-   @param num_elem: n鷐ero de elementos. num_elem > 0.
-   @param k: 韓dice del elemento que se toma com ra韟
+   @param num_elem: n煤mero de elementos. num_elem > 0.
+   @param k: 铆ndice del elemento que se toma com ra铆z
    
    Reajusta los elementos entre las posiciones k y num_elem - 1 
-   de T para que cumpla la propiedad de un mont髇 (APO), 
-   considerando al elemento en la posici髇 k como la ra韟.
+   de T para que cumpla la propiedad de un mont贸n (APO), 
+   considerando al elemento en la posici贸n k como la ra铆z.
 */
 static void reajustar(int T[], int num_elem, int k);
 
@@ -52,7 +52,7 @@ static void reajustar(int T[], int num_elem, int k);
 
 
 /**
-   Implementaci髇 de las funciones
+   Implementaci贸n de las funciones
 **/
 
 
@@ -94,7 +94,7 @@ static void reajustar(int T[], int num_elem, int k)
 int main()
 {
   int n;
-  cout << "Introduce n鷐ero de elementos del vector: ";
+  cout << "Introduce n煤mero de elementos del vector: ";
   cin >> n;
 
   int * T = new int[n];
@@ -102,19 +102,36 @@ int main()
 
   srandom(time(0));
 
-  for (int i = 0; i < n; i++)
-    {
-      T[i] = random();
-    };
+  high_resolution_clock::time_point tantes, tdepues, tantes_vacio, tdespues_vacio;
+  duration<double> transcurrido;
 
-  // escribe_vector(T, n);
+  for (int j = 0; j < 15; j++){
+    for (int i = 0; i < n; i++)
+      {
+        T[i] = random();
+      };
 
-  heapsort(T, n);
+    // escribe_vector(T, n);
 
-  // escribe_vector(T, n);
+    tantes = high_resolution_clock::now();
 
+    heapsort(T, n);
+
+    tdepues = high_resolution_clock::now();
+    
+    transcurrido = duration_cast<duration<double>>(tdepues - tantes);
+
+    time_total += transcurrido.count();
+
+    // escribe_vector(T, n);
+
+  }
+  time_total /= 15;
+
+  cout << n << " " << time_total << endl;
 
   delete [] T;
 
   return 0;
 };
+
