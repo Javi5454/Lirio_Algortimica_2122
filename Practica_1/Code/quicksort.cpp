@@ -191,7 +191,7 @@ static void dividir_qs(int T[], int inicial, int final, int & pp)
 int main(int argc, char* argv[])
 {
   if(argc != 2){
-    cout << "Syntax error: ./heapsort <Num of elements>" << endl;
+    cout << "Syntax error: ./quicksort <Num of elements>" << endl;
   }
 
   int n = stoi(argv[1]);

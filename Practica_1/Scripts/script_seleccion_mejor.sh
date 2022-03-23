@@ -1,4 +1,3 @@
-
 #!/bin/bash
 # Compile first seleccion_mejor.cpp at folder Code with 
 # g++ seleccion_mejor.cpp -o seleccion_mejor -std=gnu++0x
