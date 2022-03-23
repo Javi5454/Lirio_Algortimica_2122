@@ -1,5 +1,5 @@
 /**
-   @file C醠culo del coste de los caminos m韓imos. Algoritmo de Floyd.
+   @file C谩lculo del coste de los caminos m铆nimos. Algoritmo de Floyd.
 */
 
    
@@ -10,6 +10,8 @@ using namespace std;
 #include <climits>
 #include <cassert>
 #include <cmath>
+#include <chrono>
+using namespace std::chrono;
 
 
 static int const MAX_LONG  = 10;
@@ -17,9 +19,9 @@ static int const MAX_LONG  = 10;
 /**********************************************************************/
 
 /**
-   @brief Reserva espacio en memoria din醡ica para una matriz cuadrada.
+   @brief Reserva espacio en memoria din谩mica para una matriz cuadrada.
    
-   @param dim: dimensi髇 de la matriz. dim > 0.
+   @param dim: dimensi贸n de la matriz. dim > 0.
 
    @returns puntero a la zona de memoria reservada.
 */
@@ -32,7 +34,7 @@ int ** ReservaMatriz(int dim);
    @brief Libera el espacio asignado a una matriz cuadrada.
    
    @param M: puntero a la zona de memoria reservada. Es MODIFICADO.
-   @param dim: dimensi髇 de la matriz. dim > 0.
+   @param dim: dimensi贸n de la matriz. dim > 0.
 
    Liberar la zona memoria asignada a M y lo pone a NULL.
 */
@@ -44,7 +46,7 @@ void LiberaMatriz(int ** & M, int dim);
    @brief Rellena una matriz cuadrada con valores aleaotorias.
    
    @param M: puntero a la zona de memoria reservada. Es MODIFICADO.
-   @param dim: dimensi髇 de la matriz. dim > 0.
+   @param dim: dimensi贸n de la matriz. dim > 0.
 
    Asigna un valor aleatorio entero de [0, MAX_LONG - 1] a cada
    elemento de la matriz M, salvo los de la diagonal principal
@@ -54,12 +56,12 @@ void RellenaMatriz(int **M, int dim);
 
 /**********************************************************************/	
 /**
-   @brief C醠culo de caminos m韓imos.
+   @brief C谩lculo de caminos m铆nimos.
    
    @param M: Matriz de longitudes de los caminos. Es MODIFICADO.
-   @param dim: dimensi髇 de la matriz. dim > 0.
+   @param dim: dimensi贸n de la matriz. dim > 0.
 
-   Calcula la longitud del camino m韓imo entre cada par de nodos (i,j),
+   Calcula la longitud del camino m铆nimo entre cada par de nodos (i,j),
    que se almacena en M[i][j].
 */
 void Floyd(int **M, int dim);
@@ -68,7 +70,7 @@ void Floyd(int **M, int dim);
 
 
 /**
-   Implementaci髇 de las funciones
+   Implementaci贸n de las funciones
 **/
 
 
@@ -141,32 +143,43 @@ void Floyd(int **M, int dim)
 /**********************************************************************/	
 int main (int argc, char **argv)
 {
-  clock_t tantes;    // Valor del reloj antes de la ejecuci髇
-  clock_t tdespues;  // Valor del reloj despu閟 de la ejecuci髇
-  int dim;           // Dimensi髇 de la matriz
+  int dim;           // Dimensi贸n de la matriz
 
   //Lectura de los parametros de entrada
   if (argc != 2)
     {
-      cout << "Par醡etros de entrada: " << endl
-	   << "1.- N鷐ero de nodos" << endl << endl;
+      cout << "Par谩metros de entrada: " << endl
+	   << "1.- N煤mero de nodos" << endl << endl;
       return 1;	
-    }	
+    }
 
-  dim = atoi(argv[1]);	
+  double time_total = 0;
+  high_resolution_clock::time_point tantes, tdepues, tantes_vacio, tdespues_vacio;
+  duration<double> transcurrido;	
+
+  dim = atoi(argv[1]);
+
+  for (int i=0; i < 15; i++){
+
   int ** M = ReservaMatriz(dim);
 
   RellenaMatriz(M,dim);
 		
-			
   // Empieza el algoritmo de floyd
-  tantes = clock();
-  Floyd(M,dim);
-  tdespues = clock();
-  cout << "Tiempo: " << ((double)(tdespues-tantes))/CLOCKS_PER_SEC
-       << " s" << endl;
-  LiberaMatriz(M,dim);
+    tantes = high_resolution_clock::now();
+
+    Floyd(M, dim);
+    tdepues = high_resolution_clock::now();
+
+    transcurrido = duration_cast<duration<double>>(tdepues - tantes);
+
+    time_total += transcurrido.count();
+
+    LiberaMatriz(M,dim);
+  }
+
+  time_total /= 15;
+  cout << dim << " " << time_total << endl;
 
   return 0;
 }	
-	

@@ -100,13 +100,9 @@ int main(int argc, char* argv[])
   int * T = new int[n];
   assert(T);
 
-  srandom(time(0));
-
-  for (int i = 0; i < 15; i++){
-
     for (int j = 0; j < n; j++)
       {
-        T[j] = random();
+        T[j] = n-j;
       };
 
       tantes = high_resolution_clock::now();
@@ -117,10 +113,7 @@ int main(int argc, char* argv[])
 
       transcurrido = duration_cast<duration<double>>(tdespues-tantes);
 
-      time_total += transcurrido.count();
-  }
-
-  time_total /= 15;
+      time_total = transcurrido.count();
 
   cout << n << " " << time_total << endl;
 

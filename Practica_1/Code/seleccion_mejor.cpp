@@ -103,12 +103,9 @@ int main(int argc, char * argv[])
   int * T = new int[n];
   assert(T);
 
-  srandom(time(0));
-
-  for (int j = 0; j < 15; j++){
     for (int i = 0; i < n; i++)
       {
-        T[i] = random();
+        T[i] = i;
       };
 
 
@@ -125,13 +122,13 @@ int main(int argc, char * argv[])
     
         transcurrido = duration_cast<duration<double>>(tdepues - tantes);
 
-        time_total += transcurrido.count();
+        time_total = transcurrido.count();
       } else {
         int * U = new int[n];
         assert(U);
 
         for (int i = 0; i < n; i++)
-    U[i] = T[i];
+            U[i] = T[i];
         
         tantes_vacio = high_resolution_clock::now();
         for (int veces = 0; veces < NUM_VECES; veces++)
@@ -152,12 +149,10 @@ int main(int argc, char * argv[])
 
       transcurrido = duration_cast<duration<double>>((tdepues - tantes) - (tdespues_vacio - tantes_vacio));
 
-      time_total += transcurrido.count();
+      time_total = transcurrido.count();
 
         delete [] U;
       }
-  }
-  time_total /= 15;
 
   cout << n << " " << time_total << endl;
 
