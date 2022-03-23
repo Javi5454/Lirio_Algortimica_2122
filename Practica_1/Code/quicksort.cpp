@@ -190,17 +190,27 @@ static void dividir_qs(int T[], int inicial, int final, int & pp)
 
 int main(int argc, char* argv[])
 {
+<<<<<<< HEAD
+  int n;
+  cout << "Introduce número de elementos del vector: ";
+  cin >> n;
+=======
   if(argc != 2){
     cout << "Syntax error: ./quicksort <Num of elements>" << endl;
   }
 
   int n = stoi(argv[1]);
   double time_total = 0;
+>>>>>>> 51126349b25cd7473bd3faf9b3ab6971a0965aff
 
   int * T = new int[n];
   assert(T);
 
+<<<<<<< HEAD
+  high_resolution_clock::time_point tantes, tdepues, tantes_vacio, tdespues_vacio;
+=======
   high_resolution_clock::time_point tantes, tdepues;
+>>>>>>> 51126349b25cd7473bd3faf9b3ab6971a0965aff
   duration<double> transcurrido;
 
   srandom(time(0));
@@ -214,6 +224,7 @@ int main(int argc, char* argv[])
     tantes = high_resolution_clock::now();
 
     quicksort(T, n);
+<<<<<<< HEAD
 
     tdepues = high_resolution_clock::now();
     
@@ -224,6 +235,18 @@ int main(int argc, char* argv[])
 
   time_total /= 15;
 
+=======
+
+    tdepues = high_resolution_clock::now();
+    
+    transcurrido = duration_cast<duration<double>>(tdepues - tantes);
+
+    time_total += transcurrido.count();
+  }
+
+  time_total /= 15;
+
+>>>>>>> 51126349b25cd7473bd3faf9b3ab6971a0965aff
   cout << n << " " << time_total << endl;
 
   delete [] T;

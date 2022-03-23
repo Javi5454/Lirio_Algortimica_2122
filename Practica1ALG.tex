@@ -1,0 +1,39 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{DOBLE GRADO\\INGENIERÍA INFORMÁTICA\\MATEMÁTICAS\\\\Moya Martín Castaño\\Javier Gómez López\\Jośe Alberto Hoces Castro}
+\title{PRÁCTICA 1: ANÁLISIS DE EFICIENCIA DE ALGORITMOS\\}
+\date{Entregado: \newpage }
+
+\begin{document}
+\maketitle
+\section*{Introducción}
+
+\paragraph{}
+Meter arriba texto de introducción.
+¿METEMOS INDICE?
+\\
+Para el análisis de la eficiencia en distintos aspectos a tener en cuenta hemos realizado las siguientes tareas:
+	- Comparación de tiempos entre ejecuciones en distintos ordenadores. \\
+	- Comparación de tiempos entre ejecuciones en distintos sistemas operativos. \\
+	- Comparación de tiempos entre ejecuciones para el peor y el mejor caso en  inserción y selección. \\
+	- Comparación de tiempos entre ejecuciones utilizando optimización y sin utilizarla. \\
+
+Para los algoritmos de inserción y selección hemos visto que la eficiencia híbrida nos aporta las siguientes funciones:
+(ESCRIBIR AQUÍ LAS FUNCIONES QUE LE HAN SALIDO A JOŚE ALBERTO)
+\\
+Inserción: $f(x) =  1.04896 * 10^{-9} * x^2 + 2.1386 * 10^{-7} * x - 0.0120955 $
+\\
+Selección: $f(x) =  1.29484 * 10^{-9} * x^2 - 7.43377 * 10^{-6} * x + 0.0733569 $
+\\
+(ESCRIBIR AQUÍ LOS TIEMPOS QUE LE HAN SALIDO A JOŚE ALBERTO)
+\\
+Vemos que para estas funciones, la ejecución de un tamaño de vector de 500000 datos, se tardaría  323.8048345 segundos para una única ejecucion de tamaño 500000. Esto multiplicado a 15 ejecuciones para obtener el promedio nos daría que para obtener el tiempo tamaño de 500000 se tardan $48570.72518 \simeq 1.3491$ horas. El mismo razonamiento lo podemos aplicar para obtener el tiempo de ejecución para tamaño 500000 con selección, donde para una única ejecución sale un tiempo de 320.0664719 segundos. Multiplicando este valor ahora por 15 tenemos que selección tarda $4800.997079 \simeq 1.3336103$ horas. Teniendo esto en cuenta hemos decidido llegar hasta un tamaño de vector de 200000 datos.
+
+
+\end{document}
