@@ -1,0 +1,94 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\renewcommand*\contentsname{Índice} %Nombre del indice
+
+\begin{document}
+\begin{titlepage}
+	\centering
+	{\includegraphics[scale=0.5]{Logo_UGR.png}\par}
+	\vspace{1cm}
+	{\bfseries\Large Escuela T\'ecnica Superior de Ingeniería Informática y Matem\'aticas \par}
+	\vspace{2.5cm}
+	{\scshape\Huge Pr\'actica 1: An\'alisis de eficiencia de algoritmos \par}
+	\vspace{3cm}
+	{\itshape\Large Doble Grado Ingeniería Informática y Matemáticas}
+	\vfill
+	{\Large Autores: \par}
+	{\Large Moya Mart\'in Castaño \par}
+	{\Large Javier Gómez López \par}
+	{\Large Jose Alberto Hoces Castro\par}
+	\vfill
+	{\Large Marzo 2022 \par}
+\end{titlepage}
+
+\thispagestyle{empty}
+\null
+\vfill
+
+%%Información sobre la licencia
+\parbox[t]{\textwidth}{
+  \includegraphics[scale=0.05]{by-nc-sa.png}\\[4pt]
+  \raggedright % Texto alineado a la izquierda
+  \sffamily\large
+  {\Large Este trabajo se distribuye bajo una licencia CC BY-NC-SA 4.0.}\\[4pt]
+  Eres libre de distribuir y adaptar el material siempre que reconozcas a los\\
+  autores originales del documento, no lo utilices para fines comerciales\\
+  y lo distribuyas bajo la misma licencia.\\[4pt]
+  \texttt{creativecommons.org/licenses/by-nc-sa/4.0/}
+}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+\section{Introducción}
+
+Esta primera práctica, \textbf{Práctica 1}, consiste en el análisis de eficiencia de algoritmos, consiste en tres partes distintas:
+\begin{itemize}
+	\item \textbf{Análisis de la eficiencia teórica:} estudio de la complejidad teórica del algoritmos (Mejor caso, peor caso y caso promedio).
+	\item \textbf{Análisis de la eficiencia empírica:} ejecución y medición de tiempos de ejecución de los algoritmos estudiados.
+	\item \textbf{Análisis de la eficiencia híbrida:} obtención de las constantes ocultas
+\end{itemize}
+
+A continuación, se explican en más profundidad dichas partes.
+
+\subsection{Análisis de la eficiencia teórica}
+
+El análisis de la \textbf{eficiencia teórica} consiste en analizar el tiempo de ejecución de los algoritmos dados para encontrar el peor de los casos, es decir, en qué clase de funciones en notación \(\mathcal{O}\) grande se encuentran. Para ello, hemos utilizado las técnicas de análisis de algoritmos vistas en clase y en la asignatura \textit{Estructura de Computadores}.
+
+\subsection{Análisis de la eficiencia empírica}
+
+Para el análisis de la \textbf{eficiencia empírica}, hemos ejecutado los algortimos en cada uno de nuestros equipos bajo las mismas normas y condiciones, hemos medido el tiempo de ejecución de dichos algoritmos con la biblioteca \texttt{<chrono>}, basándonos en la siguiente estructura del código:
+
+\newpage
+
+Meter arriba texto de introducción.
+¿METEMOS INDICE?
+\\
+Para el análisis de la eficiencia en distintos aspectos a tener en cuenta hemos realizado las siguientes tareas:
+	- Comparación de tiempos entre ejecuciones en distintos ordenadores. \\
+	- Comparación de tiempos entre ejecuciones en distintos sistemas operativos. \\
+	- Comparación de tiempos entre ejecuciones para el peor y el mejor caso en  inserción y selección. \\
+	- Comparación de tiempos entre ejecuciones utilizando optimización y sin utilizarla. \\
+
+Para los algoritmos de inserción y selección hemos visto que la eficiencia híbrida nos aporta las siguientes funciones:
+(ESCRIBIR AQUÍ LAS FUNCIONES QUE LE HAN SALIDO A JOŚE ALBERTO)
+\\
+Inserción: $f(x) =  1.04896 * 10^{-9} * x^2 + 2.1386 * 10^{-7} * x - 0.0120955 $
+\\
+Selección: $f(x) =  1.29484 * 10^{-9} * x^2 - 7.43377 * 10^{-6} * x + 0.0733569 $
+\\
+(ESCRIBIR AQUÍ LOS TIEMPOS QUE LE HAN SALIDO A JOŚE ALBERTO)
+\\
+Vemos que para estas funciones, la ejecución de un tamaño de vector de 500000 datos, se tardaría  323.8048345 segundos para una única ejecucion de tamaño 500000. Esto multiplicado a 15 ejecuciones para obtener el promedio nos daría que para obtener el tiempo tamaño de 500000 se tardan $48570.72518 \simeq 1.3491$ horas. El mismo razonamiento lo podemos aplicar para obtener el tiempo de ejecución para tamaño 500000 con selección, donde para una única ejecución sale un tiempo de 320.0664719 segundos. Multiplicando este valor ahora por 15 tenemos que selección tarda $4800.997079 \simeq 1.3336103$ horas. Teniendo esto en cuenta hemos decidido llegar hasta un tamaño de vector de 200000 datos.
+
+
+\end{document}
