@@ -1,0 +1,93 @@
+
+
+*******************************************************************************
+Sat Mar 26 20:52:11 2022
+
+
+FIT:    data read from 'salida_heapsort.dat'
+        format = z
+        x range restricted to [100000. : 2.00000e+06]
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*x*log(x)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0           
+   0 1.6095053190e-01   0.00e+00  1.89e-01    1.115147e-08
+   3 7.5486258682e-03  -4.12e-04  1.89e-04    1.567976e-08
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.00754863
+rel. change during last iteration : -4.12054e-09
+
+degrees of freedom    (FIT_NDF)                        : 25
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0173766
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000301945
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 1.56798e-08      +/- 2.009e-10    (1.281%)
+
+
+*******************************************************************************
+Sat Mar 26 20:52:24 2022
+
+
+FIT:    data read from 'salida_heapsortj.dat'
+        format = z
+        x range restricted to [100000. : 2.00000e+06]
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*x*log(x)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0           
+   0 1.7135090900e-01   0.00e+00  1.56e-01    9.187011e-09
+   3 1.5348917108e-04  -2.26e-02  1.56e-04    1.397075e-08
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.000153489
+rel. change during last iteration : -2.26158e-07
+
+degrees of freedom    (FIT_NDF)                        : 25
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00247781
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.13957e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.39707e-08      +/- 2.865e-11    (0.2051%)
+
+
+*******************************************************************************
+Sat Mar 26 20:52:41 2022
+
+
+FIT:    data read from 'salida_heapsortm.dat'
+        format = z
+        x range restricted to [100000. : 2.00000e+06]
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: h(x)
+	h(x) = c0*x*log(x)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c0           
+   0 4.1921179845e-01   0.00e+00  2.06e-01    1.214392e-08
+   3 2.7471278324e-03  -3.07e-03  2.06e-04    1.960511e-08
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.00274713
+rel. change during last iteration : -3.07391e-08
+
+degrees of freedom    (FIT_NDF)                        : 25
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0104826
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000109885
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c0              = 1.96051e-08      +/- 1.212e-10    (0.6182%)

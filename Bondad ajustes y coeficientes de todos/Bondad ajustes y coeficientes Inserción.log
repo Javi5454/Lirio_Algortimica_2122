@@ -1,0 +1,115 @@
+*******************************************************************************
+Sat Mar 26 21:07:08 2022
+
+
+FIT:    data read from 'salida_insercion.dat'
+        format = z
+        x range restricted to [10000.0 : 200000.]
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*x*x+a1*x+a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 4.0464306737e+02   0.00e+00  1.48e+01    2.528462e-10   1.847386e-04  -1.215268e+01
+   4 9.6755329889e+00  -4.57e-02  1.48e-03    7.963407e-10   2.235625e-05  -5.922787e-01
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 9.67553
+rel. change during last iteration : -4.56704e-07
+
+degrees of freedom    (FIT_NDF)                        : 23
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.648595
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.420675
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 7.96341e-10      +/- 4.387e-11    (5.509%)
+a1              = 2.23563e-05      +/- 9.479e-06    (42.4%)
+a2              = -0.592279        +/- 0.433        (73.1%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.972  1.000 
+a2              0.788 -0.893  1.000 
+
+
+*******************************************************************************
+Sat Mar 26 21:01:41 2022
+
+
+FIT:    data read from 'salida_insercionj.dat'
+        format = z
+        x range restricted to [100000. : 2.00000e+06]
+        #datapoints = 14
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*x*x+b1*x+b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1            b2           
+   0 3.3208524157e+11   0.00e+00  8.87e+04    1.397075e-08   1.000000e+00   1.000000e+00
+   9 1.7858706828e-02  -2.78e-02  8.87e-05    8.499239e-10  -8.578793e-06   5.465808e-01
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.0178587
+rel. change during last iteration : -2.78157e-07
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0402929
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00162352
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 8.49924e-10      +/- 1.293e-11    (1.521%)
+b1              = -8.57879e-06     +/- 3.91e-06     (45.57%)
+b2              = 0.546581         +/- 0.2862       (52.36%)
+
+correlation matrix of the fit parameters:
+                b0     b1     b2     
+b0              1.000 
+b1             -0.996  1.000 
+b2              0.982 -0.995  1.000 
+
+
+*******************************************************************************
+Sat Mar 26 21:02:09 2022
+
+
+FIT:    data read from 'salida_insercionm.dat'
+        format = z
+        x range restricted to [100000. : 2.00000e+06]
+        #datapoints = 14
+        residuals are weighted equally (unit weight)
+
+function used for fitting: h(x)
+	h(x) = c0*x*x+c1*x+c2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c0            c1            c2           
+   0 3.3266768438e+11   0.00e+00  8.87e+04    1.960511e-08   1.000000e+00   1.000000e+00
+   9 1.7768880909e-02  -1.62e-01  8.87e-05    1.043936e-09   1.585932e-06  -9.694140e-02
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.0177689
+rel. change during last iteration : -1.62132e-06
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0401915
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00161535
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c0              = 1.04394e-09      +/- 1.289e-11    (1.235%)
+c1              = 1.58593e-06      +/- 3.9e-06      (245.9%)
+c2              = -0.0969414       +/- 0.2855       (294.5%)
+
+correlation matrix of the fit parameters:
+                c0     c1     c2     
+c0              1.000 
+c1             -0.996  1.000 
+c2              0.982 -0.995  1.000 
