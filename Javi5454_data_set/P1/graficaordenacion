@@ -1,0 +1,21 @@
+f(x) = a0*x*log(x)
+fit f(x) 'salida_quicksort.dat' via a0
+
+g(x) = b0*x*log(x)
+fit g(x) 'salida_heapsort.dat' via b0
+
+h(x) = c0*x*x+c1*x+c2
+fit h(x) 'salida_insercion.dat' via c0,c1,c2
+
+i(x) = d0*x*x+d1*x+d2
+fit i(x) 'salida_seleccion.dat' via d0,d1,d2
+
+set xlabel 'Tamanio'
+set ylabel 'Tiempo (seg)'
+set xrange [10000:2000000]
+
+plot f(x) title 'Quicksort', g(x) title 'Heapsort', h(x) title 'Insercion', i(x) title 'Seleccion'
+
+set xrange [10000:2000000]
+set yrange [0:2]
+plot f(x) title 'Quicksort', g(x) title 'Heapsort', h(x) title 'Insercion', i(x) title 'Seleccion'
