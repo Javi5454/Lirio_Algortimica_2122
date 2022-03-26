@@ -1,0 +1,135 @@
+
+
+*******************************************************************************
+Sat Mar 26 14:11:43 2022
+
+
+FIT:    data read from 'salida_floyd.dat'
+        format = z
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*x*log(x)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0           
+   0 1.9678462048e+09   0.00e+00  8.71e+03    1.000000e+00
+   4 8.1345055253e+02  -7.41e-10  8.71e-01    1.646851e-03
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 813.451
+rel. change during last iteration : -7.40721e-15
+
+degrees of freedom    (FIT_NDF)                        : 25
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.70421
+variance of residuals (reduced chisquare) = WSSR/ndf   : 32.538
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 0.00164685       +/- 0.0001284    (7.795%)
+
+
+*******************************************************************************
+Sat Mar 26 14:12:02 2022
+
+
+FIT:    data read from 'salida_floyd.dat'
+        format = z
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*x*x+b1*x+b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1            b2           
+   0 9.2525200989e+13   0.00e+00  1.09e+06    1.000000e+00   1.000000e+00   1.000000e+00
+   9 1.5227999791e+01  -1.29e-01  1.09e-03    1.504389e-05  -1.313539e-02   2.659882e+00
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 15.228
+rel. change during last iteration : -1.29027e-06
+
+degrees of freedom    (FIT_NDF)                        : 23
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.813687
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.662087
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.50439e-05      +/- 5.504e-07    (3.658%)
+b1              = -0.0131354       +/- 0.001189     (9.053%)
+b2              = 2.65988          +/- 0.5432       (20.42%)
+
+correlation matrix of the fit parameters:
+                b0     b1     b2     
+b0              1.000 
+b1             -0.972  1.000 
+b2              0.788 -0.893  1.000 
+
+
+*******************************************************************************
+Sat Mar 26 14:12:22 2022
+
+
+FIT:    data read from 'salida_floyd.dat'
+        format = z
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: h(x)
+	h(x) = c0*x*x*x+c1*x*x+c2*x+c3
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c0            c1            c2            c3           
+   0 2.7413090824e+20   0.00e+00  1.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  13 9.8511617366e-01  -3.02e-06  1.62e-04    5.129217e-09  -1.113146e-06   8.357509e-04  -1.343972e-01
+
+After 13 iterations the fit converged.
+final sum of squares of residuals : 0.985116
+rel. change during last iteration : -3.01856e-11
+
+degrees of freedom    (FIT_NDF)                        : 22
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.211608
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.044778
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c0              = 5.12922e-09      +/- 2.876e-10    (5.607%)
+c1              = -1.11315e-06     +/- 9.172e-07    (82.39%)
+c2              = 0.000835751      +/- 0.0008422    (100.8%)
+c3              = -0.134397        +/- 0.211        (157%)
+
+correlation matrix of the fit parameters:
+                c0     c1     c2     c3     
+c0              1.000 
+c1             -0.988  1.000 
+c2              0.930 -0.974  1.000 
+c3             -0.743  0.816 -0.910  1.000 
+
+
+*******************************************************************************
+Sat Mar 26 14:12:55 2022
+
+
+FIT:    data read from 'salida_floyd.dat'
+        format = z
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: i(x)
+	i(x) = d0*2**x
+fitted parameters initialized with current variable values
+
+
+Current data point
+=========================
+#               = 14 out of 26
+x               = 1              
+z               = 5.97643        
+
+Current set of parameters
+=========================
+d0              = 1              
+
+BREAK: Undefined value during function evaluation
