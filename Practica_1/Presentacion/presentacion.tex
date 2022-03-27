@@ -1,0 +1,384 @@
+% --------------------------------------------------
+%  TALLER DE INTRODUCCIÓN A LaTeX
+%  https://github.com/mianfg/latex-intro
+%
+%  Sesión 1 -> Presentación
+%
+%  Autor: Miguel Ángel Fernández Gutiérrez, @mianfg
+%  Fecha: 20 febrero, 2019
+% --------------------------------------------------
+
+% Tipo de documento (presentación)
+\documentclass[10pt, xcolor=table]{beamer}
+
+% Cargar el tema
+\usetheme{metropolis}
+
+%  __________
+% |          |
+% | Paquetes |
+% |__________|
+
+% Paquetes de idioma
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla, es-lcroman, es-noquoting]{babel}
+
+% Paquete para código fuente
+% LISTINGS
+\usepackage{listings}
+\usepackage{lipsum}
+\usepackage{courier}
+\usepackage{csvsimple}
+
+% Colores para los bloques de código
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{blue},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize\ttfamily,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=4
+}
+\lstset{style=mystyle}
+
+% Paquete de numeración en Beamer
+\usepackage{appendixnumberbeamer}
+
+% Paquete de uso para plantilla
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+% Paquete para controlar espacios
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+% Paquetes para matemáticas
+\usepackage{amsmath}    % Paquete básico de matemáticas
+\usepackage{amsthm}     % Teoremas
+\usepackage{mathrsfs}   % Fuente para ciertas letras utilizadas en matemáticas
+
+% Paquetes para fuentes
+\usepackage{newpxtext, newpxmath}   % Fuente similar a Palatino
+\usepackage{FiraSans}               % Fuente sans serif
+\usepackage[T1]{fontenc}
+\usepackage[italic]{mathastext}     % Utiliza la fuente del documento
+                                    % en los entornos matemáticos
+
+%  ________________________
+% |                        |
+% | Configuración del tema |
+% |________________________|
+
+% Configuración básica del tema
+\metroset{
+  % tema oscuro ('dark') o claro ('light'). No tiene efecto al usar la
+  % paleta de colores más adelante
+  background=light,
+  % 'none' para eliminar la diapositiva inicial de cada sección
+  sectionpage=progressbar,
+  % 'progressbar' o 'simple' para añadir una diapositiva inicial a cada subsección
+  subsectionpage=none,
+  % contador de página: 'none', 'counter' o 'fraction'
+  numbering=none,
+  % barra de progreso: 'none', 'head', 'frametitle' o 'foot'
+  progressbar=frametitle,
+  % fondo de los bloques estilo teorema: 'transparent' o 'fill'
+  block=fill,
+}
+
+% Paleta de colores
+\definecolor{accent}{HTML}{009688}
+\colorlet{darkaccent}{accent!70!black}
+\definecolor{foreground}{RGB}{0, 0, 0}
+\definecolor{background}{RGB}{255, 255, 255}
+
+% Insertar los colores en el tema
+\setbeamercolor{normal text}{fg=foreground, bg=background}
+\setbeamercolor{alerted text}{fg=darkaccent, bg=background}
+\setbeamercolor{example text}{fg=foreground, bg=background}
+\setbeamercolor{frametitle}{fg=background, bg=accent}
+
+\setbeamercolor{headtitle}{fg=background!70!accent,bg=accent!90!foreground}
+\setbeamercolor{headnav}{fg=background,bg=accent!90!foreground}
+\setbeamercolor{section in head/foot}{fg=background,bg=accent}
+
+\defbeamertemplate*{headline}{miniframes theme no subsection}{
+  % Caja para mostrar título y autor encima de cada diapositiva
+  % Nosotros no 
+  %% \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,
+  %%     leftskip=.3cm,rightskip=.3cm plus1fil]{headtitle}
+  %%   {\usebeamerfont{title in head/foot}\insertshorttitle}
+  %%   \hfill
+  %%   \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}
+  %% \end{beamercolorbox}
+  %% \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+  %% \end{beamercolorbox}
+
+  % Caja para mostrar navegación encima de cada diapositiva
+  \begin{beamercolorbox}{headnav}
+    \vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+  \end{beamercolorbox}
+}
+
+%  _________
+% |         |
+% | Ajustes |
+% |_________|
+
+% Fijar tabla a posición
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%  ________
+% |        |
+% | Título |
+% |________|
+
+\title{Análisis de eficiencia de algoritmos}
+\subtitle{Algorítmica. \alert{Práctica 1}}
+\date{}
+\author{Jose Alberto Hoces Castro\\Javier Gómez López\\Moya Martín Castaño\\[4pt]}
+\titlegraphic{\hfill\includegraphics[width=2.5cm]{logo_dark.jpg}}
+
+%  ___________
+% |           |
+% | Documento |
+% |___________|
+
+\begin{document}
+\maketitle
+
+\begin{frame}{Contenidos}
+	\setbeamertemplate{section in toc}[sections numbered]
+	\tableofcontents[]
+\end{frame}
+
+\section{Introducción}
+\begin{frame}{Análisis de eficiencia de algoritmos}
+	\begin{itemize}
+		\item \textbf{Análisis de la eficiencia teórica:} estudio de la complejidad teórica de algoritmos.
+		\item \textbf{Análisis de la eficiencia empírica:} ejecución y medición de tiempos de ejecución de los algoritmos estudiados.
+		\item \textbf{Análisis de la eficiencia híbrida:} obtención de las constantes ocultas.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Cálculo de la eficiencia teórica}
+Consiste en analizar sobre el papel el peor tiempo de ejecución posible en un algoritmo para decidir en qué clase de funciones en notación \(\mathcal{O}\) se encuentra
+\end{frame}
+
+\begin{frame}{Cálculo de la eficiencia empírica}
+Ejecución de los algortimos en distintos agentes tecnológicos, calculando su tiempo de ejecución con la librería \texttt{<chrono>}.
+\end{frame}
+
+\begin{frame}{Cálculo de la eficiencia híbrida}
+Obtención de las constantes ocultas a través de gnuplot.
+\end{frame}
+
+\section{Análisis de los algoritmos propuestos}
+
+\begin{frame}{Algoritmos trabajados}
+Se ha realizado un análisis de los siguientes algoritmos:
+\begin{enumerate}
+	\item Algoritmo de Inserción
+	\item Algoritmo de Selección
+	\item Algoritmo de Quicksort
+	\item Algoritmo de Heapsort
+	\item Algoritmo de Floyd
+	\item Algoritmos de las torres de Hanoi
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Floyd}
+El código del algoritmo de Floyd es el siguiente:
+\lstinputlisting[language=C++]{./Codes/floyd.cpp}
+\end{frame}
+
+\begin{frame}[fragile]{Floyd.
+\normalfont{Eficiencia teórica}}
+En los comentarios del código observamos el análisis de la función.
+
+Son tres bucles \texttt{for} anidados, cada uno \(\mathcal{O}(n)\) y por tanto,
+\[
+	T(n) \in \mathcal{O}(n^3)
+\]
+\end{frame}
+
+\begin{frame}{Floyd.
+\normalfont{Eficiencia empírica}}
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.6}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Intel Core i7-6700 3.40 GHz}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Javi5454/salida_floyd.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+		}
+		\scalebox{0.6}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{i5-1095G1 1.00 GHz}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Jota/salida_floyd.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+			\end{tabular}
+			}
+		\scalebox{0.6}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Moya/salida_floyd.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+		}
+		\caption{Experiencia empírica de algoritmo de Floyd sin optimizar}
+\end{table}
+\end{frame}
+
+\begin{frame}{Floyd.
+\normalfont{Eficiencia híbrida}}
+\centering
+\includegraphics[scale=0.15]{../../Images/floyd_combinados.png}
+\end{frame}
+
+\begin{frame}{Floyd.
+\normalfont{Eficiencia híbrida}}
+\begin{itemize}
+	\item i7-6700 3.4GHz \(\rightarrow T_1(n) = 4.38237 \cdot 10^{-9} x^3 - 4.33753 \cdot 10^{-7} x^2 + 0.000337001x - 0.0504332\)
+	\item i5-1095G1 1.00 GHz \(\rightarrow T_2(n) = 5.12922 \cdot 10^{-9} x^3 - 1.11315 \cdot 10^{-6} x^2 + 0.00083571x - 0.134397\)
+	\item Ordenador Moya \(\rightarrow T_3(n) = 6.77297 \cdot 10^{-9} x^3 + 5.13099 \cdot 10^{-7} x^2 - 0.000427834 x + 0.0714028\)
+\end{itemize}
+
+Coeficiente de regresión:
+\begin{itemize}
+	\item \(T_1 (n) \longrightarrow R^2 = 0.00204522\)
+	\item \(T_2 (n) \longrightarrow R^2 = 0.044778\)
+	\item \(T_3 (n) \longrightarrow R^2 = 0.000855184\)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hanoi}
+El código del algoritmo de las torres de Hanoi es el siguiente:
+\lstinputlisting[language=C++]{./Codes/hanoi.cpp}
+\end{frame}
+
+\begin{frame}[fragile]{Hanoi.
+\normalfont{Eficiencia teórica}}
+Estamos ante un algoritmo recursivo, cuya ecuación de recurrencia es:
+\[
+	T(n) = 2 T(n-1) +1
+\]
+\[
+	(x-2)(x-1) = 0
+\]
+\[
+	T(n) = c_1 \cdot 2^n + c_2
+\]
+
+Por tanto:
+\[
+	T(n) \in \mathcal{O}(2^n)
+\]
+\end{frame}
+
+\begin{frame}[fragile]{Hanoi.
+\normalfont{Eficiencia empírica}}
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.6}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Intel Core i7-6700 3.40 GHz}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Javi5454/salida_hanoi.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+		}
+		\scalebox{0.6}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{i5-1095G1 1.00 GHz}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Jota/salida_hanoi.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+			\end{tabular}
+			}
+		\scalebox{0.6}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Moya/salida_hanoi.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+		}
+		\caption{Experiencia empírica de algoritmo de Hanoi sin optimizar}
+\end{table}
+\end{frame}
+
+\begin{frame}[fragile]{Hanoi.
+\normalfont{Eficiencia híbrida}}
+INSERTAR GRÁFICA HANOI
+\end{frame}
+
+\begin{frame}[fragile]{Hanoi.
+\normalfont{Eficiencia híbrida}}
+\begin{itemize}
+	\item i7-6700 3.40GHz \(\rightarrow T_1(n) =\)
+	\item i5-1095G1 1.00 GHz \(\rightarrow T_2(n) = \)
+	\item Ordenador Moya \(\rightarrow T_3 (n) = \)
+\end{itemize}
+
+Coeficiente de regresión:
+\begin{itemize}
+	\item \(T_1(n) \longrightarrow R^2 = \)
+	\item \(T_2(n) \longrightarrow R^2 = \)
+	\item \(T_3(n) \longrightarrow R^2 = \)
+\end{itemize}
+\end{frame}
+
+\section{Conclusiones}
+
+\begin{frame}{Conclusiones}
+El análisis híbrido nos confirma nuestro análisis teórico observando el coeficiente de regresión.
+
+Lo que más influye en el tiempo es el orden de eficiencia del algoritmo.
+
+Diversidad de agentes tecnológicos: diferentes computadores y arquitecturas da lugar a resultados distintos.
+\end{frame}
+\end{document}

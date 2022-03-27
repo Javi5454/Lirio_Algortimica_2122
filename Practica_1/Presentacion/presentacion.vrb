@@ -1,0 +1,13 @@
+\frametitle{Hanoi. \normalfont {Eficiencia híbrida}}
+\begin{itemize}
+	\item i7-6700 3.40GHz \(\rightarrow T_1(n) =\)
+	\item i5-1095G1 1.00 GHz \(\rightarrow T_2(n) = \)
+	\item Ordenador Moya \(\rightarrow T_3 (n) = \)
+\end{itemize}
+
+Coeficiente de regresión:
+\begin{itemize}
+	\item \(T_1(n) \longrightarrow R^2 = \)
+	\item \(T_2(n) \longrightarrow R^2 = \)
+	\item \(T_3(n) \longrightarrow R^2 = \)
+\end{itemize}
