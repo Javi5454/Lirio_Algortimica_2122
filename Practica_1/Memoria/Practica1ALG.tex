@@ -131,9 +131,243 @@ La parte que más nos interesa es la parte donde pone \texttt{Final set of param
 A continuación, realizaremos el estudio individual de cada algortimo, como se ha descrito anteriormente.
 
 \subsection{Inserción}
+\scalebox{0.75}{
+\lstinputlisting[language=C++]{./Codes/insercion.cpp}
+}
+
+\subsubsection{Eficiencia teórica}
+Tal y como se ha indicado en los comentarios del código, todas las operaciones de asignación son \(\mathcal{O}(1)\). Estas, a su vez, se incluyen en un bucle \texttt{for} y un bucle \texttt{while}, que están anidados, y que por ser cada uno \(\mathcal{O}(n)\), multiplicamos lor órdenes de ambos como se vio en teoría, obteniendo que la función \texttt{static void insercion\_lims} es \(\mathcal{O}(n^2)\), es decir,
+\[
+T(n) \in \mathcal{O}(n^2)
+\]
+donde \(T(n)\) es la función que expresa el tiempo de ejecución del algoritmo.
+
+\subsubsection{Eficiencia empírica}
+Tras ejecutar el algortimo en un rango de 10000 a 200000 elementos, con saltos de 7600 unidades por ejecución, obtenemos los siguientes resultados:
+
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Intel Core i7-6700 3.40 GHz}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Javi5454/salida_insercion.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\hspace{2cm}
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Jota}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Jota/salida_insercion.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\hspace{2cm}
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Moya/salida_insercion.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\caption{Experiencia empírica de algoritmo de Selección sin optimizar}
+\end{table}
+
+En este caso, al igual que en el resto de algoritmos, percibimos un poco de diferencia entre los tiempos de ejecución, debido a las diferentes circunstancias de cada integrante del grupo, pues poseemos dispositivos con distinto potencial.
+
+\subsubsection{Eficiencia híbrida}
+El estudio de la eficiencia híbrida consiste en hallar la expresión de las funciones que representan el tiempo de ejecución a partir de un tamaño dado. Usando los datasets del anterior apartado, hemos usado gnuplot para graficar los 26 puntos obtenidos junto con su función de ajuste. A continuación mostramos la gráfica con los ajustes de cada uno de los integrantes:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.16]{../../Images/Inserción combinados.png}
+	\caption{Gráfica con los tiempos de ejecución del \\algoritmo de Inserción}
+\end{figure}
+
+Y las constantes ocultas son:
+
+\begin{itemize}
+	\item i7-6700 3.40Ghz \(\rightarrow T_1(n) = 8.49924 \cdot 10^{-10} x^2 - 8.57879 \cdot 10^{-6} x + 0.546581\).
+	\item Ordenador José Alberto \(\rightarrow T_2(n) = 7.96341 \cdot 10^{-10} x^2 + 2.23563 \cdot 10^{-5} x - 0.592279\).
+	\item Ordenador Manuel \(\rightarrow T_3(n) = 1.04394 \cdot 10^{-9} x^2 + 1.58593 \cdot 10^{-6} x - 0.0969414\).
+\end{itemize}
+
+Para terminar nuestro análisis de este algoritmo, terminaremos de confirmar que el ajuste cuadrático es el óptimo viendo la varianza residual que nos ha proporcionado gnuplot:
+
+\begin{itemize}
+	\item \(T_1(n) \longrightarrow Var.res = 0.00162352\)
+	\item \(T_2(n) \longrightarrow Var.res = 0.0050675\)
+	\item \(T_3(n) \longrightarrow Var.res = 0.00161535\)
+\end{itemize}
+
+Como todas son muy próximas a 0, podemos asegurar que el ajuste es muy bueno.
+
 \subsection{Selección}
+
+Tal y como se ha indicado en los comentarios del código, todas las operaciones de asignación son \(\mathcal{O}(1)\). Estas, a su vez, se incluyen en dos bucles \texttt{for} que están anidados, que por ser cada uno \(\mathcal{O}(n)\), multiplicamos lor órdenes de ambos como se vio en teoría, obteniendo que la función \texttt{static void seleccion\_lims} es \(\mathcal{O}(n^2)\), es decir,
+\[
+T(n) \in \mathcal{O}(n^2)
+\]
+donde \(T(n)\) es la función que expresa el tiempo de ejecución del algoritmo.
+
+\subsubsection{Eficiencia empírica}
+Tras ejecutar el algortimo en un rango de 10000 a 200000 elementos, con saltos de 7600 unidades por ejecución, obtenemos los siguientes resultados:
+
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Intel Core i7-6700 3.40 GHz}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Javi5454/salida_seleccion.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\hspace{2cm}
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Jota}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Jota/salida_seleccion.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\hspace{2cm}
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Moya/salida_seleccion.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\caption{Experiencia empírica de algoritmo de Selección sin optimizar}
+\end{table}
+
+\newpage
+
+Observamos pequeñas diferencias en los tiempos de ejecución de cada uno de los ordenadores de los integrantes del grupo, y esto se debe a las condiciones específicas de cada uno de nuestros dispositivos y las prestaciones que estos tienen.
+
+\subsubsection{Eficiencia híbrida}
+
+Gracias al estudio de la eficiencia híbrida veremos que el ajuste teórico hecho hace dos subapartados es el correcto. Para ello, hemos tomado los datasets recién mostrados y hemos generado una gráfica en la que se representan los 26 tiempos obtenidos en función de los tamaños que hemos probado. Gnuplot nos ha facilitado esta gráfica junto con las constantes específicas asociadas a cada uno de nuestro, así como las varianzas residuales:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.15]{../../Images/Selección combinados.png}
+	\caption{Gráfica con los tiempos de ejecución del \\algoritmo de Selección}
+\end{figure}
+
+Y las constantes ocultas son:
+\begin{itemize}
+	\item i7-6700 3.40Ghz \(\rightarrow T_1(n) = 1.0371 \cdot 10^{-9} x^2 + -9.86278 \cdot 10^{-6} x +0.0216418\).
+	\item Ordenador José Alberto \(\rightarrow T_2(n) = 1.17905 \cdot 10^{-9} x^2 + 3.97249 \cdot 10^{-7} x - 0.00421685\).
+	\item Ordenador Manuel \(\rightarrow T_3(n) = 1.29484 \cdot 10^{-9} x^2 - 7.43377 \cdot 10^{-6} x + 0.0733569\).
+\end{itemize}
+
+Y para terminar de confirmar que nuestro ajuste es el correcto, podemos ver el valor de la varianza residual en cada caso:
+
+\begin{itemize}
+	\item \(T_1(n) \longrightarrow Var.res = 0.0164518\)
+	\item \(T_2(n) \longrightarrow Var.res = 0.000537586\)
+	\item \(T_3(n) \longrightarrow Var.res = 0.00387134\)
+\end{itemize}
+
+Vemos que en todos los casos el ajuste cuadrático nos da varianzas muy próximas a 0, por lo que es un ajuste óptimo.
+
 \subsection{Quicksort}
 \subsection{Heapsort}
+
+\subsection{Comparativa de los algoritmo de ordenación}
+
+En este apartado vamos a ver claramente cuál es la diferencia entre los 4 algoritmos de ordenación que acabamos de analizar. Para ello, hemos generado una gráfica conjunta con las funciones de ajuste ya halladas antes, que eran:
+
+\begin{itemize}
+	\item Inserción Javier \(\rightarrow T_1(n) = 8.49924 \cdot 10^{-10} x^2 - 8.57879 \cdot 10^{-6} x + 0.546581\).
+	\item Selección Javier \(\rightarrow T_1(n) = 1.0371 \cdot 10^{-9} x^2 + -9.86278 \cdot 10^{-6} x +0.0216418\).
+	\item Quicksort Javier \(\rightarrow T_1(n) = 9.18701 \cdot 10^{-9} \cdot x \cdot log(x)\).
+	\item Heapsort Javier \(\rightarrow T_1(n) = 1.39707 \cdot 10^{-8} \cdot x \cdot log(x)\).
+\end{itemize}
+
+\begin{itemize}
+	\item Inserción José Alberto \(\rightarrow T_2(n) = 7.96341 \cdot 10^{-10} x^2 + 2.23563 \cdot 10^{-5} x - 0.592279\).
+	\item Selección José Alberto \(\rightarrow T_2(n) = 1.17905 \cdot 10^{-9} x^2 + 3.97249 \cdot 10^{-7} x - 0.00421685\).
+	\item Quicksort José Alberto \(\rightarrow T_2(n) = 1.11515 \cdot 10^{-8} \cdot x \cdot log(x)\).
+	\item Heapsort José Alberto \(\rightarrow T_2(n) = 1.56798 \cdot 10^{-8} \cdot x \cdot log(x)\).
+\end{itemize}
+
+\begin{itemize}
+	\item Inserción Manuel \(\rightarrow T_3(n) = 1.04394 \cdot 10^{-9} x^2 + 1.58593 \cdot 10^{-6} x - 0.0969414\).
+	\item Selección Manuel \(\rightarrow T_3(n) = 1.29484 \cdot 10^{-9} x^2 - 7.43377 \cdot 10^{-6} x + 0.0733569\).
+	\item Quicksort Manuel \(\rightarrow T_3(n) = 1.21439 \cdot 10^{-8} \cdot x \cdot log(x)\).
+	\item Heapsort Manuel \(\rightarrow T_3(n) = 1.96051 \cdot 10^{-8} \cdot x \cdot log(x)\).
+\end{itemize}
+
+\begin{figure}[h!]
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[scale=0.4]{../../Images/Gráfica comparativa algoritmos ordenación Javi5454.png}
+		\caption{Ordenador Javier}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[scale=0.4]{../../Images/Gráfica comparativa algoritmos ordenación Javi5454 (H y Q).png}
+		\caption{Ordenador Javier}
+	\end{subfigure}
+\end{figure}
+ 
+ \begin{figure}[h!]
+ 	\begin{subfigure}{.5\textwidth}
+ 		\centering
+ 		\includegraphics[scale=0.13]{../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png}
+ 		\caption{Ordenador José Alberto}
+ 	\end{subfigure}
+ 	\hfill
+ 	\begin{subfigure}{.5\textwidth}
+ 		\centering
+ 		\includegraphics[scale=0.13]{../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q).png}
+ 		\caption{Ordenador José Alberto}
+ 	\end{subfigure}
+ \end{figure}
+
+\begin{figure}[h!]
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[scale=0.35]{../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya.png}
+		\caption{Ordenador Manuel}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[scale=0.15]{../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya (H y Q).png}
+		\caption{Ordenador Manuel}
+	\end{subfigure}
+\end{figure}
+
 \subsection{Floyd}
 \lstinputlisting[language=Python]{./Codes/floyd.cpp}
 
@@ -211,9 +445,9 @@ En esta gráfica están representados los 26 puntos obtenidos tras la ejecución
 
 Podemos observar que nuestro análisis teórico es correcto. Además, podemos observarlo con el coeficiente de regresión para cada una de nuestra funciones de ajuste:
 \begin{itemize}
-	\item \(T_1(n) \longrightarrow R^2 = 0.00204522\)
-	\item \(T_2(n) \longrightarrow R^2 = 0.044778\)
-	\item \(T_3(n) \longrightarrow R^2 = 0.000855184\)
+	\item \(T_1(n) \longrightarrow Var.res = 0.00204522\)
+	\item \(T_2(n) \longrightarrow Var.res = 0.044778\)
+	\item \(T_3(n) \longrightarrow Var.res = 0.000855184\)
 \end{itemize}
 
 Estos valores son muy cercanos a 0, y por tanto indican que el ajuste es muy bueno.
@@ -311,16 +545,16 @@ En este caso, queríamos mostrar la diferencia que obtenemos cuando realizamos l
 Con una compilación normal, el compilador tratará de convertir nuestros \texttt{.cpp} a código máquina de la manera más fiel posible. Sin embargo, si la introducimos la orden \texttt{-Og} estamos indicando a este que reduzca en lo máximo la ineficiencia de nuestro código, optimizándolo.
 
 \begin{figure}[h!]
-\begin{subfigure}{.33\textwidth}
+\begin{subfigure}{.5\textwidth}
 	\centering
-	\includegraphics[scale=0.25]{../../Images/floyd_opt_Javi5454.png}
+	\includegraphics[scale=0.3]{../../Images/floyd_opt_Javi5454.png}
 	\caption{Intel i7-6700 3.40GHz}
 	\label{Floyd Optimizado Javi5454}
 \end{subfigure}
-\hspace{1cm}
-\begin{subfigure}{.33\textwidth}
+\hfill
+\begin{subfigure}{.5\textwidth}
 	\centering
-	\includegraphics[scale=0.25]{../../Images/floyd_opt_Jota.png}
+	\includegraphics[scale=0.3]{../../Images/floyd_opt_Jota.png}
 	\caption{i5-1095G1 1.00 GHz}
 	\label{Floyd Optimizado Jota}
 \end{subfigure}
@@ -346,4 +580,68 @@ A continuación, se muestran dos gráficas donde se observan otras posibilidades
 \end{figure}
 
 Vemos que los órdenes que habíamos obtenido en nuestro análisis teórico son los que mejor se ajustan a nuestra nube de puntos, siendo esto una confirmación de la bondad de nuestro análisis.
+
+section{Casos en la ejecución de inserción y selección: mejor, peor y promedio}
+
+Otra de las tareas a realizar en esta práctica ha sido medir los tiempos para el mejor caso y peor caso de los algoritmos de inserción y selección y compararlos con el promedio, el cual ya hemos analizado anteriormente. El peor caso es el de un vector ordenado a la inversa, para lo cual hemos introducido en los códigos de inserción y selección el siguiente bucle:
+
+\lstinputlisting[language=Python]{./Codes/peor.cpp}
+
+Y para el mejor caso hemos introducido un bucle que crea un vector ya ordenado:
+
+\lstinputlisting[language=C++]{./Codes/mejor.cpp}
+
+Y hemos generado las siguientes gráficas comparativas para cada integrante, las cuales son muy parecidas:
+
+\begin{figure}[h!]
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[scale=0.3]{../../Images/Gráfica casos selección Javi5454.png}
+		\caption{Selección Javier}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[scale=0.3]{../../Images/Gráfica inserción casos Javi5454.png}
+		\caption{Inserción Javier}
+	\end{subfigure}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h!]
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[scale=0.12]{../../Images/Gráfica casos selección Joshoccas.png}
+		\caption{Selección José Alberto}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[scale=0.3]{../../Images/Gráfica casos inserción Joshoccas.png}
+		\caption{Inserción José Alberto}
+	\end{subfigure}
+\end{figure}
+
+\begin{figure}[h!]
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[scale=0.3]{../../Images/Casos selección ManuelMoya.png}
+		\caption{Selección Manuel}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[scale=0.3]{../../Images/Casos inserción ManuelMoya.png}
+		\caption{Inserción Manuel}
+	\end{subfigure}
+\end{figure}
+
+Como hemos apreciado en las gráficas, en inserción los casos se diferencian perfectamente, tardando casi 0 segundos para el mejor caso y tardando mucho más para el peor caso. Sin embargo, en el algoritmo de selección vemos que las gráficas oscilan en torno a los mismos valores. Esto se debe a cómo están hechos los códigos. En el algoritmo de selección, se comienza hallando el mínimo de los n elementos y se coloca en la primera posición. Tras esto, se calcula el mínimo de los n-1 elementos restantes que no están ordenados y se coloca en segunda posición, y así sucesivamente hasta llegar al final. Por ello, independientemente de que el vector esté ordenado o no, siempre va a tener que recorrer el vector de la forma descrita para hallar todos los mínimos, de ahí que los tiempos en los 3 casos no se diferencien mucho.
+
+Por otra parte, en inserción sí se diferencian, y esto se debe a que se ordena de una forma concreta. Este algoritmo ordena "subconjuntos" del vector empezando con los dos primeros elementos. Una vez ordena los dos primeros, inserta el tercero en la posición correcta de entre estos dos. En la siguiente iteración, añade el cuarto elemento a los tres ya ordenados y así sucesivamente hasta acabar. La razón principal de por qué tarda tanto cuando está ordenado es porque cada vez que se va a añadir un elemento a los ya ordenados, se comienza comparando con el último de los ya ordenados, es decir, el mayor de todos (esta comprobación se realiza en el bucle \texttt{while} que se encuentra dentro de un \texttt{for}):
+
+\lstinputlisting[language=Python]{./Codes/insercion.cpp}
+
+De esta forma, como el vector ya está ordenado, la condición del bucle \texttt{while} nunca se da y por lo tanto en cada iteración del \texttt{for} se ahorra la ejecución del cuerpo del bucle \texttt{while} y solo se realizan comparaciones entre pares de números consecutivos.
 \end{document}

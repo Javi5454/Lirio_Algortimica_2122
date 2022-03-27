@@ -5,17 +5,23 @@
 \contentsline {subsection}{\numberline {1.3}Análisis de la eficiencia híbrida}{3}%
 \contentsline {section}{\numberline {2}Desarrollo}{4}%
 \contentsline {subsection}{\numberline {2.1}Inserción}{4}%
-\contentsline {subsection}{\numberline {2.2}Selección}{4}%
-\contentsline {subsection}{\numberline {2.3}Quicksort}{4}%
-\contentsline {subsection}{\numberline {2.4}Heapsort}{4}%
-\contentsline {subsection}{\numberline {2.5}Floyd}{4}%
-\contentsline {subsubsection}{\numberline {2.5.1}Eficiencia teórica}{4}%
-\contentsline {subsubsection}{\numberline {2.5.2}Eficiencia empírica}{4}%
-\contentsline {subsubsection}{\numberline {2.5.3}Eficiencia híbrida}{5}%
-\contentsline {subsection}{\numberline {2.6}Hanoi}{5}%
-\contentsline {subsubsection}{\numberline {2.6.1}Eficiencia teórica}{5}%
-\contentsline {subsubsection}{\numberline {2.6.2}Eficiencia empírica}{6}%
-\contentsline {subsubsection}{\numberline {2.6.3}Eficiencia híbrida}{6}%
-\contentsline {section}{\numberline {3}Casos especiales}{6}%
-\contentsline {subsection}{\numberline {3.1}Floyd optimizado}{7}%
-\contentsline {subsection}{\numberline {3.2}Otros posibles ajustes funcionales}{7}%
+\contentsline {subsubsection}{\numberline {2.1.1}Eficiencia teórica}{4}%
+\contentsline {subsubsection}{\numberline {2.1.2}Eficiencia empírica}{4}%
+\contentsline {subsubsection}{\numberline {2.1.3}Eficiencia híbrida}{5}%
+\contentsline {subsection}{\numberline {2.2}Selección}{5}%
+\contentsline {subsubsection}{\numberline {2.2.1}Eficiencia empírica}{5}%
+\contentsline {subsubsection}{\numberline {2.2.2}Eficiencia híbrida}{6}%
+\contentsline {subsection}{\numberline {2.3}Quicksort}{7}%
+\contentsline {subsection}{\numberline {2.4}Heapsort}{7}%
+\contentsline {subsection}{\numberline {2.5}Comparativa de los algoritmo de ordenación}{7}%
+\contentsline {subsection}{\numberline {2.6}Floyd}{8}%
+\contentsline {subsubsection}{\numberline {2.6.1}Eficiencia teórica}{8}%
+\contentsline {subsubsection}{\numberline {2.6.2}Eficiencia empírica}{8}%
+\contentsline {subsubsection}{\numberline {2.6.3}Eficiencia híbrida}{9}%
+\contentsline {subsection}{\numberline {2.7}Hanoi}{9}%
+\contentsline {subsubsection}{\numberline {2.7.1}Eficiencia teórica}{9}%
+\contentsline {subsubsection}{\numberline {2.7.2}Eficiencia empírica}{10}%
+\contentsline {subsubsection}{\numberline {2.7.3}Eficiencia híbrida}{10}%
+\contentsline {section}{\numberline {3}Casos especiales}{10}%
+\contentsline {subsection}{\numberline {3.1}Floyd optimizado}{10}%
+\contentsline {subsection}{\numberline {3.2}Otros posibles ajustes funcionales}{11}%

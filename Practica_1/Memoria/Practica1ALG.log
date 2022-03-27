@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.2.1)  27 MAR 2022 18:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.2.1)  28 MAR 2022 00:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -436,83 +436,258 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
-[3] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/09/10 1.8c listings language file
-)
-(./Codes/floyd.cpp
+[3] (./Codes/insercion.cpp
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
 .
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
+) [4]
+<../../Images/Inserción combinados.png, id=43, 1854.93pt x 955.57pt>
+File: ../../Images/Inserción combinados.png Graphic file (type png)
+<use ../../Images/Inserción combinados.png>
+Package pdftex.def Info: ../../Images/Inserción combinados.png  used on input 
+line 196.
+(pdftex.def)             Requested size: 296.79486pt x 152.89432pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5 <../../Images/Inserción combinados.png>]
+<../../Images/Selección combinados.png, id=48, 1854.93pt x 955.57pt>
+File: ../../Images/Selección combinados.png Graphic file (type png)
+<use ../../Images/Selección combinados.png>
+Package pdftex.def Info: ../../Images/Selección combinados.png  used on input 
+line 280.
+(pdftex.def)             Requested size: 278.2275pt x 143.32932pt.
+ [6 <../../Images/Selección combinados.png>]
+<../../Images/Gráfica comparativa algoritmos ordenación Javi5454.png, id=53, 
+642.4pt x 385.44pt>
+File: ../../Images/Gráfica comparativa algoritmos ordenación Javi5454.png Gra
+phic file (type png)
+<use ../../Images/Gráfica comparativa algoritmos ordenación Javi5454.png>
+Package pdftex.def Info: ../../Images/Gráfica comparativa algoritmos ordenaci�
+�n Javi5454.png  used on input line 332.
+(pdftex.def)             Requested size: 256.95544pt x 154.17326pt.
+
+Overfull \hbox (15.10701pt too wide) in paragraph at lines 332--333
+ [][] 
+ []
+
+<../../Images/Gráfica comparativa algoritmos ordenación Javi5454 (H y Q).png,
+ id=54, 642.4pt x 385.44pt>
+File: ../../Images/Gráfica comparativa algoritmos ordenación Javi5454 (H y Q)
+.png Graphic file (type png)
+<use ../../Images/Gráfica comparativa algoritmos ordenación Javi5454 (H y Q).
+png>
+Package pdftex.def Info: ../../Images/Gráfica comparativa algoritmos ordenaci�
+�n Javi5454 (H y Q).png  used on input line 338.
+(pdftex.def)             Requested size: 256.95544pt x 154.17326pt.
+
+Overfull \hbox (15.10701pt too wide) in paragraph at lines 338--339
+ [][] 
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 330--341
+[]$[]$  $[]$ 
+ []
+
+<../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png, id=
+55, 1854.93pt x 955.57pt>
+File: ../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png
+ Graphic file (type png)
+<use ../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png>
+
+Package pdftex.def Info: ../../Images/Gráfica comparativa algoritmos de ordena
+ción Joshoccas.png  used on input line 346.
+(pdftex.def)             Requested size: 241.14937pt x 124.22845pt.
+<../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q).png
+, id=56, 1854.93pt x 955.57pt>
+File: ../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q
+).png Graphic file (type png)
+<use ../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q)
+.png>
+Package pdftex.def Info: ../../Images/Gráfica comparativa algoritmos ordenaci�
+�n Joshoccas (H y Q).png  used on input line 352.
+(pdftex.def)             Requested size: 241.14937pt x 124.22845pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 344--355
+[]$[]$  $[]$ 
+ []
+
+<../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya.png, id=57
+, 642.4pt x 385.44pt>
+File: ../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya.png G
+raphic file (type png)
+<use ../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya.png>
+Package pdftex.def Info: ../../Images/Gráfica comparativa algoritmos ordenaci�
+�n ManuelMoya.png  used on input line 360.
+(pdftex.def)             Requested size: 224.84337pt x 134.90602pt.
+<../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya (H y Q).pn
+g, id=58, 1854.93pt x 955.57pt>
+File: ../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya (H y 
+Q).png Graphic file (type png)
+<use ../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya (H y Q
+).png>
+Package pdftex.def Info: ../../Images/Gráfica comparativa algoritmos ordenaci�
+�n ManuelMoya (H y Q).png  used on input line 366.
+(pdftex.def)             Requested size: 278.2275pt x 143.32932pt.
+
+Overfull \hbox (36.37906pt too wide) in paragraph at lines 366--367
+ [][] 
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 358--369
+[]$[]$  $[]$ 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+(./Codes/floyd.cpp [7 <../../Images/Gráfica comparativa algoritmos ordenación
+ Javi5454.png> <../../Images/Gráfica comparativa algoritmos ordenación Javi54
+54 (H y Q).png> <../../Images/Gráfica comparativa algoritmos de ordenación Jo
+shoccas.png> <../../Images/Gráfica comparativa algoritmos ordenación Joshocca
+s (H y Q).png>])
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
 
  []
 
-<../../Images/floyd_combinados.png, id=43, 1854.93pt x 955.57pt>
+[8 <../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya.png> <.
+./../Images/Gráfica comparativa algoritmos ordenación ManuelMoya (H y Q).png>
+]
+<../../Images/floyd_combinados.png, id=66, 1854.93pt x 955.57pt>
 File: ../../Images/floyd_combinados.png Graphic file (type png)
 <use ../../Images/floyd_combinados.png>
 Package pdftex.def Info: ../../Images/floyd_combinados.png  used on input line 
-201.
+435.
 (pdftex.def)             Requested size: 278.2275pt x 143.32932pt.
-(./Codes/hanoi.cpp) [5 <../../Images/floyd_combinados.png>] [6]
-<../../Images/floyd_opt_Javi5454.png, id=53, 642.4pt x 385.44pt>
+ (./Codes/hanoi.cpp) [9 <../../Images/floyd_combinados.png>]
+<../../Images/floyd_opt_Javi5454.png, id=71, 642.4pt x 385.44pt>
 File: ../../Images/floyd_opt_Javi5454.png Graphic file (type png)
 <use ../../Images/floyd_opt_Javi5454.png>
 Package pdftex.def Info: ../../Images/floyd_opt_Javi5454.png  used on input lin
-e 316.
-(pdftex.def)             Requested size: 160.59961pt x 96.35976pt.
-
-Overfull \hbox (0.97876pt too wide) in paragraph at lines 316--317
- [][] 
- []
-
-<../../Images/floyd_opt_Jota.png, id=54, 642.4pt x 385.44pt>
+e 550.
+(pdftex.def)             Requested size: 192.72148pt x 115.63289pt.
+<../../Images/floyd_opt_Jota.png, id=72, 642.4pt x 385.44pt>
 File: ../../Images/floyd_opt_Jota.png Graphic file (type png)
 <use ../../Images/floyd_opt_Jota.png>
-Package pdftex.def Info: ../../Images/floyd_opt_Jota.png  used on input line 32
-3.
-(pdftex.def)             Requested size: 160.59961pt x 96.35976pt.
+Package pdftex.def Info: ../../Images/floyd_opt_Jota.png  used on input line 55
+7.
+(pdftex.def)             Requested size: 192.72148pt x 115.63289pt.
 
-Overfull \hbox (0.97876pt too wide) in paragraph at lines 323--324
- [][] 
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 548--561
+[]$[]$  $[]$ 
  []
 
-<../../Images/floy_comparacion.png, id=55, 642.4pt x 385.44pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10]
+<../../Images/floy_comparacion.png, id=76, 642.4pt x 385.44pt>
 File: ../../Images/floy_comparacion.png Graphic file (type png)
 <use ../../Images/floy_comparacion.png>
 Package pdftex.def Info: ../../Images/floy_comparacion.png  used on input line 
-338.
+572.
 (pdftex.def)             Requested size: 160.59961pt x 96.35976pt.
-<../../Images/hanoi_comparacion.png, id=56, 642.4pt x 385.44pt>
+<../../Images/hanoi_comparacion.png, id=77, 642.4pt x 385.44pt>
 File: ../../Images/hanoi_comparacion.png Graphic file (type png)
 <use ../../Images/hanoi_comparacion.png>
 Package pdftex.def Info: ../../Images/hanoi_comparacion.png  used on input line
- 343.
+ 577.
 (pdftex.def)             Requested size: 160.59961pt x 96.35976pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 336--346
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 570--580
 []$[]$ $[]$ 
  []
 
-[7 <../../Images/floyd_opt_Javi5454.png> <../../Images/floyd_opt_Jota.png> <../
-../Images/floy_comparacion.png> <../../Images/hanoi_comparacion.png>]
+(./Codes/peor.cpp) (./Codes/mejor.cpp)
+<../../Images/Gráfica casos selección Javi5454.png, id=78, 642.4pt x 385.44pt
+>
+File: ../../Images/Gráfica casos selección Javi5454.png Graphic file (type pn
+g)
+<use ../../Images/Gráfica casos selección Javi5454.png>
+Package pdftex.def Info: ../../Images/Gráfica casos selección Javi5454.png  u
+sed on input line 599.
+(pdftex.def)             Requested size: 192.72148pt x 115.63289pt.
+<../../Images/Gráfica inserción casos Javi5454.png, id=79, 642.4pt x 385.44pt
+>
+File: ../../Images/Gráfica inserción casos Javi5454.png Graphic file (type pn
+g)
+<use ../../Images/Gráfica inserción casos Javi5454.png>
+Package pdftex.def Info: ../../Images/Gráfica inserción casos Javi5454.png  u
+sed on input line 605.
+(pdftex.def)             Requested size: 192.72148pt x 115.63289pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 597--608
+[]$[]$  $[]$ 
+ []
+
+[11 <../../Images/floyd_opt_Javi5454.png> <../../Images/floyd_opt_Jota.png> <..
+/../Images/floy_comparacion.png> <../../Images/hanoi_comparacion.png> <../../Im
+ages/Gráfica casos selección Javi5454.png> <../../Images/Gráfica inserción 
+casos Javi5454.png>]
+<../../Images/Gráfica casos selección Joshoccas.png, id=83, 1854.93pt x 955.5
+7pt>
+File: ../../Images/Gráfica casos selección Joshoccas.png Graphic file (type p
+ng)
+<use ../../Images/Gráfica casos selección Joshoccas.png>
+Package pdftex.def Info: ../../Images/Gráfica casos selección Joshoccas.png  
+used on input line 615.
+(pdftex.def)             Requested size: 222.582pt x 114.66345pt.
+<../../Images/Gráfica casos inserción Joshoccas.png, id=84, 642.4pt x 385.44p
+t>
+File: ../../Images/Gráfica casos inserción Joshoccas.png Graphic file (type p
+ng)
+<use ../../Images/Gráfica casos inserción Joshoccas.png>
+Package pdftex.def Info: ../../Images/Gráfica casos inserción Joshoccas.png  
+used on input line 621.
+(pdftex.def)             Requested size: 192.72148pt x 115.63289pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 613--624
+[]$[]$  $[]$ 
+ []
+
+<../../Images/Casos selección ManuelMoya.png, id=85, 642.4pt x 385.44pt>
+File: ../../Images/Casos selección ManuelMoya.png Graphic file (type png)
+<use ../../Images/Casos selección ManuelMoya.png>
+Package pdftex.def Info: ../../Images/Casos selección ManuelMoya.png  used on 
+input line 629.
+(pdftex.def)             Requested size: 192.72148pt x 115.63289pt.
+<../../Images/Casos inserción ManuelMoya.png, id=86, 642.4pt x 385.44pt>
+File: ../../Images/Casos inserción ManuelMoya.png Graphic file (type png)
+<use ../../Images/Casos inserción ManuelMoya.png>
+Package pdftex.def Info: ../../Images/Casos inserción ManuelMoya.png  used on 
+input line 635.
+(pdftex.def)             Requested size: 192.72148pt x 115.63289pt.
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 627--638
+[]$[]$  $[]$ 
+ []
+
+(./Codes/insercion.cpp) [12 <../../Images/Gráfica casos selección Joshoccas.p
+ng> <../../Images/Gráfica casos inserción Joshoccas.png> <../../Images/Casos 
+selección ManuelMoya.png> <../../Images/Casos inserción ManuelMoya.png>]
 (./Practica1ALG.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 9201 strings out of 481239
- 140918 string characters out of 5920378
- 600721 words of memory out of 5000000
- 24306 multiletter control sequences out of 15000+600000
+ 9329 strings out of 481239
+ 146763 string characters out of 5920378
+ 610443 words of memory out of 5000000
+ 24407 multiletter control sequences out of 15000+600000
  542803 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,60p,798b,1495s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,10n,60p,872b,1826s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-di
@@ -535,10 +710,10 @@ sfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 ti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on Practica1ALG.pdf (8 pages, 781212 bytes).
+Output written on Practica1ALG.pdf (13 pages, 1378174 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+ 165 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
