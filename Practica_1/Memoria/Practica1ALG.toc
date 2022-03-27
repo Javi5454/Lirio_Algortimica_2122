@@ -12,6 +12,10 @@
 \contentsline {subsubsection}{\numberline {2.5.1}Eficiencia teórica}{4}%
 \contentsline {subsubsection}{\numberline {2.5.2}Eficiencia empírica}{4}%
 \contentsline {subsubsection}{\numberline {2.5.3}Eficiencia híbrida}{5}%
-\contentsline {subsection}{\numberline {2.6}Hanoi}{6}%
+\contentsline {subsection}{\numberline {2.6}Hanoi}{5}%
+\contentsline {subsubsection}{\numberline {2.6.1}Eficiencia teórica}{5}%
+\contentsline {subsubsection}{\numberline {2.6.2}Eficiencia empírica}{6}%
+\contentsline {subsubsection}{\numberline {2.6.3}Eficiencia híbrida}{6}%
 \contentsline {section}{\numberline {3}Casos especiales}{6}%
-\contentsline {subsection}{\numberline {3.1}Floyd optimizado}{6}%
+\contentsline {subsection}{\numberline {3.1}Floyd optimizado}{7}%
+\contentsline {subsection}{\numberline {3.2}Otros posibles ajustes funcionales}{7}%

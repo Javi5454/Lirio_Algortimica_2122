@@ -167,7 +167,7 @@ Tras ejecutar el algoritmo en un rango de 176 a 2000 elementos, con saltos de 76
 		\scalebox{0.75}{
 		\begin{tabular}{|c|c|}
 			\hline
-			\multicolumn{2}{|c|}{\textsf{Ordenador Jota}}
+			\multicolumn{2}{|c|}{\textsf{i5-1095G1 1.00 GHz}}
 			\\\hline
 			\bfseries Elementos (n) & \bfseries Tiempo (s)
 			\csvreader{./data/Jota/salida_floyd.csv}{}
@@ -194,7 +194,7 @@ Observamos pequeñas diferencias, pero en general nada fuera de lo común. Estas
 
 \subsubsection{Eficiencia híbrida}
 
-A través de la eficiencia híbrida, comprobaremos que el ajuste teórico realizado es correcto. Para realizar este análisi, tomamos los datasets de todos los integrantes del grupo. \\
+A través de la eficiencia híbrida, comprobaremos que el ajuste teórico realizado es correcto. Para realizar este análisis, tomamos los datasets de todos los integrantes del grupo. \\
 
 \begin{figure}[h!]
 \centering
@@ -202,20 +202,12 @@ A través de la eficiencia híbrida, comprobaremos que el ajuste teórico realiz
 \caption{Gráfica con los tiempos de ejecución del \\algoritmo de Floyd}
 \end{figure}
 
-En esta gráfica están representados los 26 puntos obtenidos tras la ejecución del algoritmo de Floyd en los distintos equipos de los integrantes equipos. Tras una serie de cálculos con gnuplot, observamos que las constantes ocultas son:
+En esta gráfica están representados los 26 puntos obtenidos tras la ejecución del algoritmo de Floyd en los distintos equipos de los integrantes del grupo. Tras una serie de cálculos con gnuplot, observamos que las constantes ocultas son:
 \begin{itemize}
-	\item i7-6700 3.40Ghz \(\rightarrow T_1(n) = 4.38237 \cdot 10^{-9} x^3 -4.33753 \cdot 10^{-7} x^2 + 0.000337001 x -0.0504332\).
-	\item Ordenador Jota \(\rightarrow T_2(n) = 5.12922 \cdot 10^{-9} x^3 -1.11315 \cdot 10^{-6} x^2 + 0.00083571 x - 0.134397\).
+	\item i7-6700 3.40GHz \(\rightarrow T_1(n) = 4.38237 \cdot 10^{-9} x^3 -4.33753 \cdot 10^{-7} x^2 + 0.000337001 x -0.0504332\).
+	\item i5-1095G1 1.00 GHz \(\rightarrow T_2(n) = 5.12922 \cdot 10^{-9} x^3 -1.11315 \cdot 10^{-6} x^2 + 0.00083571 x - 0.134397\).
 	\item Ordenador Moya \(\rightarrow T_3(n) = 6.77297 \cdot 10^{-9} x^3 + 5.13099 \cdot 10^{-7} - 0.000427834 x + 0.0714028\).
 \end{itemize} 
-
-A continuación, mostramos una gráfica que muestra otras posibilidades de ajuste para otros puntos, y se observa que el ajuste con una función cúbica es el mejor, confirmando así nuestro análisis teórico. 
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=0.4]{../../Images/floy_comparacion.png}
-\caption{Bondad de ajuste cúbico Floyd}
-\end{figure}
 
 Podemos observar que nuestro análisis teórico es correcto. Además, podemos observarlo con el coeficiente de regresión para cada una de nuestra funciones de ajuste:
 \begin{itemize}
@@ -226,6 +218,87 @@ Podemos observar que nuestro análisis teórico es correcto. Además, podemos ob
 
 Estos valores son muy cercanos a 0, y por tanto indican que el ajuste es muy bueno.
 \subsection{Hanoi}
+\lstinputlisting[language=C++]{./Codes/hanoi.cpp}
+
+\subsubsection{Eficiencia teórica}
+
+En este caso no podemos realizar un análisis de la misma manera que en el algoritmo anterior, pues estamos ante un algoritmo recursivo. De esta manera, trataremos de buscar la relación de recurrencia.
+
+Suponiendo que estamos en la \(n\)-ésima iteración, el algoritmo comprobará lo indicado en el \texttt{if}, que es de \(\mathcal{O}(1)\), y volverá a llamarse a sí misma otras dos veces. Por tanto, la ecuación de recurrencia es la siguiente:
+\[
+	T_n = 2T_{n-1} + 1
+\]
+
+Si resolvemos la ecuación de recurrencia obtenemos que:
+\[
+	(x-2)(x-1) 0
+\]
+\[
+	t_n = c_1 \cdot 2^n + c_2
+\]
+
+Y concluimos que \(T(n) \in \mathcal{O}(2^n)\), donde \(T(n)\) es la función que expresa el tiempo de ejecución de nuestro algortimo para \(n\) elementos.
+
+\subsubsection{Eficiencia empírica}
+Debido al orden del algoritmo, el número de elementos que tenemos que tomar es mucho menor que los que usamos en el resto de algortimos. En este caso, tras ejecutar el algoritmo en un rango de 7 a 32 elementos, con saltos de 1 elemento por iteración, obtenemos los siguientes resultados:
+
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Intel Core i7-6700 3.40 GHz}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Javi5454/salida_hanoi.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+		}
+		\hspace{2cm}
+		\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{i5-1095G1 1.00 GHz}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Jota/salida_hanoi.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+			\end{tabular}
+			}
+		\hspace{2cm}
+		\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Moya/salida_hanoi.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+		}
+		\caption{Experiencia empírica de algoritmo de Hanoi}
+\end{table}
+
+Aquí si que observamos grandes diferencias entre los dos primeros equipos y el tercero. Esto puede ser debido a el procesador de estos, o el hecho de que el tercer equipo es un portátil y la ejecución del programa se realizó sin cargar el equipo. Esto en ocasiones puede provocar bajada de rendimiento.
+
+\subsubsection{Eficiencia híbrida}
+
+Este análisis confirmará nuestro análisis teórico. Para realizar este análisis, tomamos los datasets de todos los integrantes del grupo.
+
+INSERTAR GRÁFICA
+
+En esta gráfica están representados los 26 puntos obtenidos tras la ejecución del algoritmo de Hanoi en los distintos equipos de los integrantes del grupo. Tras una serie de cálculos con gnuplot, observamos que las constantes ocultas son:
+\begin{itemize}
+	\item i7-6700 3.40GHz \(\rightarrow T_1(n) =\).
+	\item i5-1095G1 1.00 GHz \(\rightarrow T_2(n) =\).
+	\item Ordenador Moya \(\rightarrow T_3(n) =\).
+\end{itemize}
+
+Estos valores son muy cercanos a 0, y por tanto indican que el ajuste es muy bueno.
 
 \section{Casos especiales}
 
@@ -248,10 +321,29 @@ Con una compilación normal, el compilador tratará de convertir nuestros \textt
 \begin{subfigure}{.33\textwidth}
 	\centering
 	\includegraphics[scale=0.25]{../../Images/floyd_opt_Jota.png}
-	\caption{Ordenador Jota}
+	\caption{i5-1095G1 1.00 GHz}
 	\label{Floyd Optimizado Jota}
 \end{subfigure}
 \end{figure}
 
 Podemos observar que el uso de la instrucción \texttt{-Og}, y todas sus variantes de su optimización, reducen considerablemente el tiempo de ejecución de nuestro código. Por tanto, su uso debe estar presente a la hora de compilar ciertos programas.
+
+\subsection{Otros posibles ajustes funcionales}
+
+A continuación, se muestran dos gráficas donde se observan otras posibilidades de ajuste para los algoritmos de Floyd y Hanoi, y se observa que los ajustes utilizados en los análisis previos son los mejores, confirmando nuestro análisis teórico.
+
+\begin{figure}[h!]
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[scale=0.25]{../../Images/floy_comparacion.png}
+	\caption{i7-6700 3.40GHz}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[scale=0.25]{../../Images/hanoi_comparacion.png}
+	\caption{i5-1095G1 1.00 GHz}
+\end{subfigure}
+\end{figure}
+
+Vemos que los órdenes que habíamos obtenido en nuestro análisis teórico son los que mejor se ajustan a nuestra nube de puntos, siendo esto una confirmación de la bondad de nuestro análisis.
 \end{document}
