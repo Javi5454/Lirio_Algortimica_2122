@@ -91,3 +91,63 @@ variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000109885
 Final set of parameters            Asymptotic Standard Error
 =======================            ==========================
 c0              = 1.96051e-08      +/- 1.212e-10    (0.6182%)
+
+*********************************************************************************
+Sun Mar 27 14:30:49 2022
+
+
+FIT:    data read from 'salida_heapsort_portatil.dat'
+        format = z
+        x range restricted to [100000. : 2.00000e+06]
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*x*log(x)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0           
+   0 1.8174097499e-01   0.00e+00  1.55e-01    9.113195e-09
+   3 1.3414347837e-04  -2.75e-02  1.55e-04    1.404022e-08
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.000134143
+rel. change during last iteration : -2.74508e-07
+
+degrees of freedom    (FIT_NDF)                        : 25
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00231641
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.36574e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.40402e-08      +/- 2.678e-11    (0.1907%)
+
+*******************************************************************************
+Sun Mar 27 14:39:37 2022
+
+
+FIT:    data read from 'salida_heapsort_windows.dat'
+        format = z
+        x range restricted to [100000. : 2.00000e+06]
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*x*log(x)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0           
+   0 7.2576213159e-01   0.00e+00  1.60e-01    9.450341e-09
+   3 2.8561175612e-03  -5.13e-03  1.60e-04    1.928048e-08
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.00285612
+rel. change during last iteration : -5.13213e-08
+
+degrees of freedom    (FIT_NDF)                        : 25
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0106885
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000114245
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.92805e-08      +/- 1.236e-10    (0.6409%)
