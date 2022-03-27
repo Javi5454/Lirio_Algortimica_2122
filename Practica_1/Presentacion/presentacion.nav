@@ -44,13 +44,22 @@
 \headcommand {\beamer@framepages {19}{19}}
 \headcommand {\beamer@sectionpages {8}{19}}
 \headcommand {\beamer@subsectionpages {8}{19}}
-\headcommand {\sectionentry {3}{Conclusiones}{20}{Conclusiones}{0}}
+\headcommand {\sectionentry {3}{Casos especiales}{20}{Casos especiales}{0}}
 \headcommand {\slideentry {3}{0}{1}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
 \headcommand {\slideentry {3}{0}{2}{21/21}{}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\beamer@partpages {1}{21}}
-\headcommand {\beamer@subsectionpages {20}{21}}
-\headcommand {\beamer@sectionpages {20}{21}}
-\headcommand {\beamer@documentpages {21}}
-\headcommand {\gdef \inserttotalframenumber {17}}
+\headcommand {\slideentry {3}{0}{3}{22/22}{}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@sectionpages {20}{22}}
+\headcommand {\beamer@subsectionpages {20}{22}}
+\headcommand {\sectionentry {4}{Conclusiones}{23}{Conclusiones}{0}}
+\headcommand {\slideentry {4}{0}{1}{23/23}{}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {4}{0}{2}{24/24}{}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\beamer@partpages {1}{24}}
+\headcommand {\beamer@subsectionpages {23}{24}}
+\headcommand {\beamer@sectionpages {23}{24}}
+\headcommand {\beamer@documentpages {24}}
+\headcommand {\gdef \inserttotalframenumber {19}}

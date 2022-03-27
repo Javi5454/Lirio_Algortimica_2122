@@ -1,4 +1,5 @@
 \babel@toc {spanish}{}
 \beamer@sectionintoc {1}{Introducción}{3}{0}{1}
 \beamer@sectionintoc {2}{Análisis de los algoritmos propuestos}{8}{0}{2}
-\beamer@sectionintoc {3}{Conclusiones}{20}{0}{3}
+\beamer@sectionintoc {3}{Casos especiales}{20}{0}{3}
+\beamer@sectionintoc {4}{Conclusiones}{23}{0}{4}

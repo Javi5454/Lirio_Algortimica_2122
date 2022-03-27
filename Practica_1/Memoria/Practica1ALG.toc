@@ -25,3 +25,4 @@
 \contentsline {section}{\numberline {3}Casos especiales}{10}%
 \contentsline {subsection}{\numberline {3.1}Floyd optimizado}{10}%
 \contentsline {subsection}{\numberline {3.2}Otros posibles ajustes funcionales}{11}%
+\contentsline {section}{\numberline {4}Casos en la ejecución de inserción y selección: mejor, peor y promedio}{11}%

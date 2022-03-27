@@ -10,6 +10,8 @@
 
 % Tipo de documento (presentación)
 \documentclass[10pt, xcolor=table]{beamer}
+\usepackage{caption}
+\usepackage{subcaption}
 
 % Cargar el tema
 \usetheme{metropolis}
@@ -279,9 +281,9 @@ Son tres bucles \texttt{for} anidados, cada uno \(\mathcal{O}(n)\) y por tanto,
 
 Coeficiente de regresión:
 \begin{itemize}
-	\item \(T_1 (n) \longrightarrow R^2 = 0.00204522\)
-	\item \(T_2 (n) \longrightarrow R^2 = 0.044778\)
-	\item \(T_3 (n) \longrightarrow R^2 = 0.000855184\)
+	\item \(T_1 (n) \longrightarrow Var.res = 0.00204522\)
+	\item \(T_2 (n) \longrightarrow Var.res = 0.044778\)
+	\item \(T_3 (n) \longrightarrow Var.res = 0.000855184\)
 \end{itemize}
 \end{frame}
 
@@ -370,6 +372,32 @@ Coeficiente de regresión:
 	\item \(T_2(n) \longrightarrow R^2 = \)
 	\item \(T_3(n) \longrightarrow R^2 = \)
 \end{itemize}
+\end{frame}
+
+\section{Casos especiales}
+
+\begin{frame}[fragile]{Casos especiales.
+\normalfont {Floyd Optimizado}}
+\centering
+\begin{tabular}{cc}
+\includegraphics[scale=0.2]{../../Images/floyd_opt_Javi5454.png}
+&
+\includegraphics[scale=0.2]{../../Images/floyd_opt_Jota.png}
+\\
+Intel i7-6700 3.40 GHz & i5-1095G1 1.00 GHz
+\end{tabular}
+\end{frame}
+
+\begin{frame}[fragile]{Casos especiales.
+\normalfont {Otros posibles ajustes funcionales}}
+\centering
+\begin{tabular}{cc}
+\includegraphics[scale=0.2]{../../Images/floy_comparacion.png}
+&
+\includegraphics[scale=0.2]{../../Images/hanoi_comparacion.png}
+\\
+Intel i7-6700 3.40 GHz & i5-1095G1 1.00 GHz
+\end{tabular}
 \end{frame}
 
 \section{Conclusiones}
