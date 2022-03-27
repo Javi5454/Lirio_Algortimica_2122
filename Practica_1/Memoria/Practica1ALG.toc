@@ -11,4 +11,5 @@
 \contentsline {subsection}{\numberline {2.5}Floyd}{4}%
 \contentsline {subsubsection}{\numberline {2.5.1}Eficiencia teórica}{4}%
 \contentsline {subsubsection}{\numberline {2.5.2}Eficiencia empírica}{4}%
+\contentsline {subsubsection}{\numberline {2.5.3}Eficiencia híbrida}{5}%
 \contentsline {subsection}{\numberline {2.6}Hanoi}{5}%

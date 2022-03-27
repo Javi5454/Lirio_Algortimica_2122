@@ -188,6 +188,42 @@ Tras ejecutar el algoritmo en un rango de 176 a 2000 elementos, con saltos de 76
 		}
 		\caption{Experiencia empírica de algoritmo de Floyd sin optimizar}
 \end{table}
+
+Observamos pequeñas diferencias, pero en general nada fuera de lo común. Estas diferencias son debidas a los distintos agentes tecnológicos usados para la realización del análisis de la eficiencia empírica en esta práctica.
+
+\subsubsection{Eficiencia híbrida}
+
+A través de la eficiencia híbrida, comprobaremos que el ajuste teórico realizado es correcto. Para realizar este análisi, tomamos los datasets de todos los integrantes del grupo. \\
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.15]{../../Images/floyd_combinados.png}
+\caption{Gráfica con los tiempos de ejecución del \\algoritmo de Floyd}
+\end{figure}
+
+En esta gráfica están representados los 26 puntos obtenidos tras la ejecución del algoritmo de Floyd en los distintos equipos de los integrantes equipos. Tras una serie de cálculos con gnuplot, observamos que las constantes ocultas son:
+\begin{itemize}
+	\item i7-6700 3.40Ghz \(\rightarrow T_1(n) = 4.38237 \cdot 10^{-9} x^3 -4.33753 \cdot 10^{-7} x^2 + 0.000337001 x -0.0504332\).
+	\item Ordenador Jota \(\rightarrow T_2(n) = 5.12922 \cdot 10^{-9} x^3 -1.11315 \cdot 10^{-6} x^2 + 0.00083571 x - 0.134397\).
+	\item Ordenador Moya \(\rightarrow T_3(n) = 6.77297 \cdot 10^{-9} x^3 + 5.13099 \cdot 10^{-7} - 0.000427834 x + 0.0714028\).
+\end{itemize} 
+
+A continuación, mostramos una gráfica que muestra otras posibilidades de ajuste para otros puntos, y se observa que el ajuste con una función cúbica es el mejor, confirmando así nuestro análisis teórico. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{../../Images/floy_comparacion.png}
+\caption{Bondad de ajuste cúbico Floyd}
+\end{figure}
+
+Podemos observar que nuestro análisis teórico es correcto. Además, podemos observarlo con el coeficiente de regresión para cada una de nuestra funciones de ajuste:
+\begin{itemize}
+	\item \(T_1(n) \longrightarrow R^2 = 0.00204522\)
+	\item \(T_2(n) \longrightarrow R^2 = 0.044778\)
+	\item \(T_3(n) \longrightarrow R^2 = 0.000855184\)
+\end{itemize}
+
+Estos valores son muy cercanos a 0, y por tanto indican que el ajuste es muy bueno.
 \subsection{Hanoi}
 
 \end{document}
