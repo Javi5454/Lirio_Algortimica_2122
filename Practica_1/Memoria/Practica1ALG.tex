@@ -10,6 +10,7 @@
 \usepackage{listings}
 \usepackage{csvsimple}
 \usepackage{caption}
+\usepackage{subcaption}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
 \renewcommand*\contentsname{Índice} %Nombre del indice
@@ -226,4 +227,31 @@ Podemos observar que nuestro análisis teórico es correcto. Además, podemos ob
 Estos valores son muy cercanos a 0, y por tanto indican que el ajuste es muy bueno.
 \subsection{Hanoi}
 
+\section{Casos especiales}
+
+Además del análisis mostrado de los seis algoritmos anteriores, también se ha realizado un análisis de algunos de ellos bajo condiciones distintas, para mostrar así además una experiencia más amplia y diversa y conseguir un mejor entendimiento de los algortimos trabajados.
+
+\subsection{Floyd optimizado}
+
+En este caso, queríamos mostrar la diferencia que obtenemos cuando realizamos la compilación de nuestro código bajo ciertas condiciones que pueden modificar "la pureza del mismo". 
+
+Con una compilación normal, el compilador tratará de convertir nuestros \texttt{.cpp} a código máquina de la manera más fiel posible. Sin embargo, si la introducimos la orden \texttt{-Og} estamos indicando a este que reduzca en lo máximo la ineficiencia de nuestro código, optimizándolo.
+
+\begin{figure}[h!]
+\begin{subfigure}{.33\textwidth}
+	\centering
+	\includegraphics[scale=0.25]{../../Images/floyd_opt_Javi5454.png}
+	\caption{Intel i7-6700 3.40GHz}
+	\label{Floyd Optimizado Javi5454}
+\end{subfigure}
+\hspace{1cm}
+\begin{subfigure}{.33\textwidth}
+	\centering
+	\includegraphics[scale=0.25]{../../Images/floyd_opt_Jota.png}
+	\caption{Ordenador Jota}
+	\label{Floyd Optimizado Jota}
+\end{subfigure}
+\end{figure}
+
+Podemos observar que el uso de la instrucción \texttt{-Og}, y todas sus variantes de su optimización, reducen considerablemente el tiempo de ejecución de nuestro código. Por tanto, su uso debe estar presente a la hora de compilar ciertos programas.
 \end{document}
