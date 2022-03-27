@@ -4,12 +4,24 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{graphics}
 \usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{csvsimple}
+\usepackage{caption}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
 \renewcommand*\contentsname{Índice} %Nombre del indice
 
 \begin{document}
+\lstset{language=C++,
+	basicstyle=\footnotesize,
+	extendedchars=true,
+	literate={á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {ú}{{\'u}}1 {ó}{{\'o}}1,
+	backgroundcolor=\color{black!5}
+	}
+	
 \begin{titlepage}
 	\centering
 	{\includegraphics[scale=0.5]{Logo_UGR.png}\par}
@@ -21,9 +33,9 @@
 	{\itshape\Large Doble Grado Ingeniería Informática y Matemáticas}
 	\vfill
 	{\Large Autores: \par}
-	{\Large Moya Mart\'in Castaño \par}
-	{\Large Javier Gómez López \par}
 	{\Large Jose Alberto Hoces Castro\par}
+	{\Large Javier Gómez López \par}
+	{\Large Moya Mart\'in Castaño \par}
 	\vfill
 	{\Large Marzo 2022 \par}
 \end{titlepage}
@@ -68,27 +80,114 @@ El análisis de la \textbf{eficiencia teórica} consiste en analizar el tiempo d
 
 Para el análisis de la \textbf{eficiencia empírica}, hemos ejecutado los algortimos en cada uno de nuestros equipos bajo las mismas normas y condiciones, hemos medido el tiempo de ejecución de dichos algoritmos con la biblioteca \texttt{<chrono>}, basándonos en la siguiente estructura del código:
 
-\newpage
+\begin{lstlisting}
+#include <chrono>
+...
 
-Meter arriba texto de introducción.
-¿METEMOS INDICE?
-\\
-Para el análisis de la eficiencia en distintos aspectos a tener en cuenta hemos realizado las siguientes tareas:
-	- Comparación de tiempos entre ejecuciones en distintos ordenadores. \\
-	- Comparación de tiempos entre ejecuciones en distintos sistemas operativos. \\
-	- Comparación de tiempos entre ejecuciones para el peor y el mejor caso en  inserción y selección. \\
-	- Comparación de tiempos entre ejecuciones utilizando optimización y sin utilizarla. \\
+high_resolution_clock::time_point tantes, tdespues;
+duration <double> transcurrido;
+..
 
-Para los algoritmos de inserción y selección hemos visto que la eficiencia híbrida nos aporta las siguientes funciones:
-(ESCRIBIR AQUÍ LAS FUNCIONES QUE LE HAN SALIDO A JOŚE ALBERTO)
-\\
-Inserción: $f(x) =  1.04896 * 10^{-9} * x^2 + 2.1386 * 10^{-7} * x - 0.0120955 $
-\\
-Selección: $f(x) =  1.29484 * 10^{-9} * x^2 - 7.43377 * 10^{-6} * x + 0.0733569 $
-\\
-(ESCRIBIR AQUÍ LOS TIEMPOS QUE LE HAN SALIDO A JOŚE ALBERTO)
-\\
-Vemos que para estas funciones, la ejecución de un tamaño de vector de 500000 datos, se tardaría  323.8048345 segundos para una única ejecucion de tamaño 500000. Esto multiplicado a 15 ejecuciones para obtener el promedio nos daría que para obtener el tiempo tamaño de 500000 se tardan $48570.72518 \simeq 1.3491$ horas. El mismo razonamiento lo podemos aplicar para obtener el tiempo de ejecución para tamaño 500000 con selección, donde para una única ejecución sale un tiempo de 320.0664719 segundos. Multiplicando este valor ahora por 15 tenemos que selección tarda $4800.997079 \simeq 1.3336103$ horas. Teniendo esto en cuenta hemos decidido llegar hasta un tamaño de vector de 200000 datos.
+tantes = high_resolution_clock::now();
+//Sentencia o programa a medir
+tdepues = high_resolution_clock::now();
+transcurrido = duration_cast<duration<double>>(tdespues-tantes);
+\end{lstlisting}
 
+Además, para automatizar el proceso de ejecución de los algortimos, hemos usado la siguiente estrucutra para generar nuestros scripts:
+\begin{lstlisting}[language=bash]
+i = #valor de la primera iteracion
+
+while [ $i -le #valor ultima iteracion ]
+do
+./programa_a_ejecutar $i >> salida.dat
+i=$[i+#salto entre valores para conseguir 26 puntos]
+done
+\end{lstlisting}
+
+Hemos ejecutado cada algoritmo 15 veces en cada uno de los tamaños que han sido probados, y hemos hecho la media de ellos para reducir perturbaciones que puedan ocurrir de manera aleatoria y que nos lleven al mejor o peor caso, obteniendo de esta forma casos promedio. 
+
+Cabe destacar que para \textit{seleccion} e \textit{insercion} hemos además ejecutado dos programas adicionales para obtener el mejor y peor caso de estos, pero este hecho lo detallaremos más adelante. \\
+
+\subsection{Análisis de la eficiencia híbrida}
+Para el análisi de la eficiencia híbrida, hemos tomado los datos de cada uno de los alumnos del grupo y hemos hallado la \(K\)(constante oculta). Para ello, hemos usado gnuplot. \\
+
+Lo primero que hacemos es definar la función a la que queremos ajustar los datos. Tenemos que tener en cuenta el análisis teórico que hemos realizado previamente para saber cuál va a ser la forma de esta función. Podemos definir esta función en gnuplot mediante el siguiente comando (ejemplo para \(\mathcal{O}(n^2)\)):
+\begin{lstlisting}[language=bash]
+gnuplot> f(x) = a0*x*x+a1*x+a2
+\end{lstlisting}
+
+El siguiente paso es indicarle a gnuplot que haga la regresión:
+\begin{lstlisting}
+gnuplot> fit f(x) 'salida.dat' via a0,a1,a2
+\end{lstlisting}
+donde \texttt{'salida.dat'} es nuestro dataset. 
+
+La parte que más nos interesa es la parte donde pone \texttt{Final set of parameters}, pues ahí están nuestros coeficientes.
+
+\section{Desarrollo}
+
+A continuación, realizaremos el estudio individual de cada algortimo, como se ha descrito anteriormente.
+
+\subsection{Inserción}
+\subsection{Selección}
+\subsection{Quicksort}
+\subsection{Heapsort}
+\subsection{Floyd}
+\lstinputlisting[language=Python]{./Codes/floyd.cpp}
+
+\subsubsection{Eficiencia teórica}
+
+Como podemos observar en los comentarios del código que hemos hecho en la función \texttt{void Floyd}, estamos ante una función que pertenece a \(\mathcal{O}(n^3)\). Son tres bucles \texttt{for} que están anidados, cada uno \(\mathcal{O}(n)\), por tanto, multiplicando los órdenes obtenemos que la función es \(\mathcal{O}(n^3)\), es decir,
+\[
+	T(n) \in \mathcal{O}(n^3)
+\]
+donde \(T(n)\) es la función que expresa el tiempo de ejecución del algoritmo.
+
+\subsubsection{Eficiencia empírica}
+
+Tras ejecutar el algoritmo en un rango de 176 a 2000 elementos, con saltos de 76 unidades por ejecución, obtenemos los siguientes resultados:
+
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Intel Core i7-6700 3.40 GHz}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Javi5454/salida_floyd.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+		}
+		\hspace{2cm}
+		\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Jota}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Jota/salida_floyd.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+			\end{tabular}
+			}
+		\hspace{2cm}
+		\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Moya/salida_floyd.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+		}
+		\caption{Experiencia empírica de algoritmo de Floyd sin optimizar}
+\end{table}
+\subsection{Hanoi}
 
 \end{document}
