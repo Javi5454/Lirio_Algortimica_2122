@@ -115,3 +115,154 @@ correlation matrix of the fit parameters:
 c0              1.000 
 c1             -0.972  1.000 
 c2              0.788 -0.893  1.000 
+
+*******************************************************************************
+Sat Mar 26 14:45:35 2022
+
+
+FIT:    data read from 'salida_seleccion_mejor.dat'
+        format = z
+        x range restricted to [10000.0 : 200000.]
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*x*x+b1*x+b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1            b2           
+   0 1.3863571867e+04   0.00e+00  3.29e-04   -8.841974e-15   4.555040e-09   2.971216e-05
+   4 6.4821704341e+01  -1.29e-01  3.29e-08    1.541864e-09  -6.252512e-05   1.555833e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 64.8217
+rel. change during last iteration : -1.29373e-06
+
+degrees of freedom    (FIT_NDF)                        : 23
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.67879
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.81833
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.54186e-09      +/- 1.135e-10    (7.364%)
+b1              = -6.25251e-05     +/- 2.453e-05    (39.24%)
+b2              = 1.55583          +/- 1.121        (72.03%)
+
+correlation matrix of the fit parameters:
+                b0     b1     b2     
+b0              1.000 
+b1             -0.972  1.000 
+b2              0.788 -0.893  1.000 
+
+*******************************************************************************
+Sat Mar 26 14:45:51 2022
+
+
+FIT:    data read from 'salida_seleccion_peor.dat'
+        format = z
+        x range restricted to [10000.0 : 200000.]
+        #datapoints = 25
+        residuals are weighted equally (unit weight)
+
+function used for fitting: h(x)
+	h(x) = c0*x*x+c1*x+c2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c0            c1            c2           
+   0 2.8327577037e+03   0.00e+00  2.47e+01    2.218101e-09  -5.472606e-05   1.927980e+00
+   5 8.3727533603e+00  -8.96e-08  2.47e-04    1.293773e-09   1.976431e-05  -2.054649e-01
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 8.37275
+rel. change during last iteration : -8.95948e-13
+
+degrees of freedom    (FIT_NDF)                        : 22
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.616911
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.38058
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c0              = 1.29377e-09      +/- 4.273e-11    (3.303%)
+c1              = 1.97643e-05      +/- 9.239e-06    (46.75%)
+c2              = -0.205465        +/- 0.4156       (202.3%)
+
+correlation matrix of the fit parameters:
+                c0     c1     c2     
+c0              1.000 
+c1             -0.973  1.000 
+c2              0.791 -0.893  1.000
+
+*******************************************************************************
+Sun Mar 27 13:22:03 2022
+
+
+FIT:    data read from 'salida_seleccion_mejorj.dat'
+        format = z
+        x range restricted to [10000.0 : 200000.]
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+	g(x) = b0*x*x+b1*x+b2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   b0            b1            b2           
+   0 9.3572299191e+03   0.00e+00  1.37e-04   -1.982594e-17   1.975238e-09   2.033106e-05
+   7 7.8707571042e-01  -3.09e-09  1.37e-11    1.019758e-09  -1.517547e-06  -1.055938e-01
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 0.787076
+rel. change during last iteration : -3.08914e-14
+
+degrees of freedom    (FIT_NDF)                        : 23
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.184988
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0342207
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+b0              = 1.01976e-09      +/- 1.251e-11    (1.227%)
+b1              = -1.51755e-06     +/- 2.704e-06    (178.2%)
+b2              = -0.105594        +/- 0.1235       (116.9%)
+
+correlation matrix of the fit parameters:
+                b0     b1     b2     
+b0              1.000 
+b1             -0.972  1.000 
+b2              0.788 -0.893  1.000 
+*******************************************************************************
+Sun Mar 27 13:22:24 2022
+
+
+FIT:    data read from 'salida_seleccion_peorj.dat'
+        format = z
+        x range restricted to [10000.0 : 200000.]
+        #datapoints = 26
+        residuals are weighted equally (unit weight)
+
+function used for fitting: h(x)
+	h(x) = c0*x*x+c1*x+c2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   c0            c1            c2           
+   0 3.1151708062e+03   0.00e+00  1.80e+01    1.649329e-09  -1.318853e-06   1.701604e-02
+   6 1.3518897718e+00  -6.95e-03  1.80e-05    1.116165e-09  -9.634305e-06   1.119242e-01
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.35189
+rel. change during last iteration : -6.95389e-08
+
+degrees of freedom    (FIT_NDF)                        : 23
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.242441
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0587778
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+c0              = 1.11617e-09      +/- 1.64e-11     (1.469%)
+c1              = -9.63431e-06     +/- 3.543e-06    (36.78%)
+c2              = 0.111924         +/- 0.1618       (144.6%)
+
+correlation matrix of the fit parameters:
+                c0     c1     c2     
+c0              1.000 
+c1             -0.972  1.000 
+c2              0.788 -0.893  1.000
