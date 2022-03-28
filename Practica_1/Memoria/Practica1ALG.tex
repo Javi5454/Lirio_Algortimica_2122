@@ -593,7 +593,175 @@ Y para el mejor caso hemos introducido un bucle que crea un vector ya ordenado:
 
 \lstinputlisting[language=C++]{./Codes/mejor.cpp}
 
-Y hemos generado las siguientes gráficas comparativas para cada integrante, las cuales son muy parecidas:
+A continuación comenzamos mostrando los datasets del peor y mejor caso de selección y peor y mejor caso de inserción:
+
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Javier}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Javi5454/salida_seleccion_peor.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\hspace{2cm}
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador José Alberto}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Jota/salida_seleccion_peor.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\hspace{2cm}
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Moya/salida_seleccion_peor.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\caption{Datasets de la ejecución del peor caso para Selección}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Javier}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Javi5454/salida_seleccion_mejor.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\hspace{2cm}
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador José Alberto}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Jota/salida_seleccion_mejor.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\hspace{2cm}
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Moya/salida_seleccion_mejor.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\caption{Datasets de la ejecución del mejor caso para Selección}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Javier}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Javi5454/salida_insercion_peor.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\hspace{2cm}
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador José Alberto}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Jota/salida_insercion_peor.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\hspace{2cm}
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Moya/salida_insercion_peor.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\caption{Datasets de la ejecución del peor caso para Inserción}
+	
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Javier}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Javi5454/salida_insercion_mejor.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\hspace{2cm}
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador José Alberto}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Jota/salida_insercion_mejor.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\hspace{2cm}
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Moya/salida_insercion_mejor.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\caption{Datasets de la ejecución del mejor caso para Inserción}
+	
+\end{table}
+
+Y a partir de estos datasets hemos generado las siguientes gráficas comparativas para cada integrante, las cuales son muy parecidas:
 
 \begin{figure}[h!]
 	\begin{subfigure}{.5\textwidth}
