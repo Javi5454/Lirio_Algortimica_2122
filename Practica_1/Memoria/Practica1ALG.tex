@@ -395,6 +395,7 @@ T(n) \in \mathcal{O}(n\log(n))
 \]
 donde \(T(n)\) es la función que expresa el tiempo de ejecución del algoritmo.
 
+<<<<<<< HEAD
 \subsubsection{Eficiencia empírica}
 Tras ejecutar el algortimo en un rango de 100000 a 2000000 elementos, con saltos de 76000 unidades por ejecución, obtenemos los siguientes resultados:
 
@@ -466,6 +467,8 @@ Podemos observar que nuestro análisis teórico es correcto. Además, podemos ob
 
 El ajusto es bueno pues los valores resultantes son próximos a 0.
 
+=======
+>>>>>>> 68a765bfa4dd68d2be750b801cc1e741c93b5285
 \subsection{Comparativa de los algoritmos de ordenación}
 
 En este apartado vamos a ver claramente cuál es la diferencia entre los 4 algoritmos de ordenación que acabamos de analizar. Para ello, hemos generado una gráfica conjunta con las funciones de ajuste ya halladas antes, que eran:
@@ -702,9 +705,15 @@ Este análisis confirmará nuestro análisis teórico. Para realizar este análi
 
 En esta gráfica están representados los 26 puntos obtenidos tras la ejecución del algoritmo de Hanoi en los distintos equipos de los integrantes del grupo. Tras una serie de cálculos con gnuplot, observamos que las constantes ocultas son:
 \begin{itemize}
+<<<<<<< HEAD
 	\item Ordenador Javier \(\rightarrow T_1(n) = 4.72408 \cdot 10^{-9} \cdot 2^x\).
 	\item Ordenador José Alberto \(\rightarrow T_2(n) = 4.70707 \cdot 10^{-9} \cdot 2^x\).
 	\item Ordenador Manuel \(\rightarrow T_3(n) = 6.03512 \cdot 10^{-9} \cdot 2^x\).
+=======
+	\item i7-6700 3.40GHz \(\rightarrow T_1(n) = 4.72408 \cdot 10^{-9} \cdot 2^x\).
+	\item i5-1095G1 1.00 GHz \(\rightarrow T_2(n) = 4.70707 \cdot 10^{-9} \cdot 2^x\).
+	\item Ordenador Moya \(\rightarrow T_3(n) = 6.03512 \cdot 10^{-9} \cdot 2^x\).
+>>>>>>> 68a765bfa4dd68d2be750b801cc1e741c93b5285
 \end{itemize}
 
 Podemos observar que nuestro análisis teórico es correcto. Además, podemos observarlo con el coeficiente de regresión para cada una de nuestras funciones de ajuste:
@@ -734,7 +743,11 @@ A continuación, se muestra una comparación de tiempos de ejecución:
 	\scalebox{0.75}{
 		\begin{tabular}{|c|c|}
 			\hline
+<<<<<<< HEAD
 			\multicolumn{2}{|c|}{\textsf{Ordenador Javier}}
+=======
+			\multicolumn{2}{|c|}{\textsf{Intel Core i7-6700 3.40 GHz}}
+>>>>>>> 68a765bfa4dd68d2be750b801cc1e741c93b5285
 			\\\hline
 			\bfseries T. Sin optimizar (s) & \bfseries T. Optimizado (s)
 			\csvreader{./data/Javi5454/salida_floyd_optimizado.csv}{}
@@ -746,7 +759,11 @@ A continuación, se muestra una comparación de tiempos de ejecución:
 		\scalebox{0.75}{
 		\begin{tabular}{|c|c|}
 			\hline
+<<<<<<< HEAD
 			\multicolumn{2}{|c|}{\textsf{Ordenador José Alberto}}
+=======
+			\multicolumn{2}{|c|}{\textsf{i5-1095G1 1.00 GHz}}
+>>>>>>> 68a765bfa4dd68d2be750b801cc1e741c93b5285
 			\\\hline
 			\bfseries T. Sin optimizar (s) & \bfseries T. Optimizado (s)
 			\csvreader{./data/Jota/salida_floyd_optimizado.csv}{}
@@ -758,7 +775,11 @@ A continuación, se muestra una comparación de tiempos de ejecución:
 		\scalebox{0.75}{
 		\begin{tabular}{|c|c|}
 			\hline
+<<<<<<< HEAD
 			\multicolumn{2}{|c|}{\textsf{Ordenador Manuel}}
+=======
+			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+>>>>>>> 68a765bfa4dd68d2be750b801cc1e741c93b5285
 			\\\hline
 			\bfseries T. Sin optimizar (s) & \bfseries T. Optimizado (s)
 			\csvreader{./data/Moya/salida_floyd_optimizado.csv}{}
@@ -786,7 +807,11 @@ A continuación, se muestra una comparación de tiempos de ejecución:
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.28]{../../Images/floyd_opt_ManuelMoya.png}
+<<<<<<< HEAD
 \caption*{(c) i5-7200 2.5GHz}
+=======
+\caption*{(c) Ordenador Moya}
+>>>>>>> 68a765bfa4dd68d2be750b801cc1e741c93b5285
 \end{figure}
 
 \newpage
