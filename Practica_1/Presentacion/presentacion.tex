@@ -224,7 +224,7 @@ Se ha realizado un análisis de los siguientes algoritmos:
 	\]
 \end{frame}
 
-\begin{frame}{Inserción.
+\begin{frame}[fragile]{Inserción.
 		\normalfont{Eficiencia empírica}}
 	\begin{table}[h!]
 		\centering
@@ -266,7 +266,7 @@ Se ha realizado un análisis de los siguientes algoritmos:
 	\end{table}
 \end{frame}
 
-\begin{frame}{Inserción.
+\begin{frame}[fragile]{Inserción.
 		\normalfont{Eficiencia híbrida}}
 	\centering
 	\includegraphics[scale=0.2]{../../Images/Inserción combinados.png}
@@ -303,7 +303,7 @@ Se ha realizado un análisis de los siguientes algoritmos:
 	\]
 \end{frame}
 
-\begin{frame}{Selección.
+\begin{frame}[fragile]{Selección.
 		\normalfont{Eficiencia empírica}}
 	\begin{table}[h!]
 		\centering
@@ -345,7 +345,7 @@ Se ha realizado un análisis de los siguientes algoritmos:
 	\end{table}
 \end{frame}
 
-\begin{frame}{Selección.
+\begin{frame}[fragile]{Selección.
 		\normalfont{Eficiencia híbrida}}
 	\centering
 	\includegraphics[scale=0.2]{../../Images/Selección combinados.png}
@@ -428,17 +428,17 @@ Son tres bucles \texttt{for} anidados, cada uno \(\mathcal{O}(n)\) y por tanto,
 Una vez estudiados inserción, selección, quicksort y heapsort, procedemos a compararlos gráficamente y sacar conclusiones
 \end{frame}
 
-\begin{frame}{Comparativa de los algoritmos de ordenación}
+\begin{frame}[fragile]{Comparativa de los algoritmos de ordenación}
 \centering
 \includegraphics[scale=0.2]{../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png}
 \end{frame}
 
-\begin{frame}{Comparativa de los algoritmos de ordenación}
+\begin{frame}[fragile]{Comparativa de los algoritmos de ordenación}
 	\centering
 	\includegraphics[scale=0.2]{../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q).png}
 \end{frame}
 
-\begin{frame}{Comparativa de los algoritmos de ordenación}
+\begin{frame}[fragile]{Comparativa de los algoritmos de ordenación}
 Las conclusiones que sacamos son:
 \begin{itemize}
 	\item Se verifica que los algoritmos \(\in \mathcal{O}(n \cdot log(n))\) son más eficientes que los algoritmos \(\in \mathcal{O}(n^2))\)
@@ -580,6 +580,96 @@ Intel i7-6700 3.40 GHz & i5-1095G1 1.00 GHz
 \\
 Intel i7-6700 3.40 GHz & i5-1095G1 1.00 GHz
 \end{tabular}
+\end{frame}
+
+\begin{frame}{Casos en la ejecución de inserción y selección: mejor, peor y promedio}
+	Para el peor caso, tomamos un vector ordenado a la inversa:
+	\lstinputlisting[language=Python]{./Codes/peor.cpp}
+	Para el mejor caso, tomamos un vector ordenado correctamente:
+	\lstinputlisting[language=C++]{./Codes/mejor.cpp}
+	
+\end{frame}
+
+\begin{frame}{Casos en la ejecución de inserción y selección: mejor, peor y promedio}
+Los datasets de los dos casos extremos para inserción fueron:
+
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.53}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Peor caso de inserción}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Jota/salida_insercion_peor.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\hspace{2cm}
+	\scalebox{0.53}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Mejor caso de inserción}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/Jota/salida_insercion_mejor.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+\caption{Datasets de la ejecución del peor y mejor caso para Inserción}
+\end{table}
+\end{frame}
+
+\begin{frame}{Casos en la ejecución de inserción y selección: mejor, peor y promedio}
+		\centering
+		\includegraphics[scale=0.45]{../../Images/Gráfica casos inserción Joshoccas.png}
+	\end{frame}
+
+\begin{frame}[fragile]{Casos en la ejecución de inserción y selección: mejor, peor y promedio}
+	Los datasets de los dos casos extremos para selección fueron:
+	
+	\begin{table}[h!]
+		\centering
+		\footnotesize
+		\scalebox{0.53}{
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textsf{Peor caso de selección}}
+				\\\hline
+				\bfseries Elementos (n) & \bfseries Tiempo (s)
+				\csvreader{./data/Jota/salida_seleccion_peor.csv}{}
+				{\\\hline\csvcoli&\csvcolii}
+				\\\hline
+			\end{tabular}
+		}
+		\hspace{2cm}
+		\scalebox{0.53}{
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textsf{Mejor caso de selección}}
+				\\\hline
+				\bfseries Elementos (n) & \bfseries Tiempo (s)
+				\csvreader{./data/Jota/salida_seleccion_mejor.csv}{}
+				{\\\hline\csvcoli&\csvcolii}
+				\\\hline
+			\end{tabular}
+		}
+		\caption{Datasets de la ejecución del peor y mejor caso para Selección}
+\end{table}
+\end{frame}
+
+\begin{frame}[fragile]{Casos en la ejecución de inserción y selección: mejor, peor y promedio}
+	\centering
+	\includegraphics[scale=0.2]{../../Images/Gráfica casos selección Joshoccas.png}
+\end{frame}
+
+\begin{frame}[fragile]{Casos en la ejecución de inserción y selección: mejor, peor y promedio}
+	\normalfont{¿A qué se debe este comportamiento?}
+	\centering
+	\includegraphics[scale=0.18]{../../Images/Ejemplo vectores.png}
 \end{frame}
 
 \section{Conclusiones}

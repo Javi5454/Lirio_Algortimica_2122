@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.27)  28 MAR 2022 11:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.27)  28 MAR 2022 12:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1461,7 +1461,7 @@ LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <7> not available
 ut line 168.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
 (Font)              scaled to size 7.0pt on input line 168.
-<logo_dark.jpg, id=61, 361.35pt x 144.54pt>
+<logo_dark.jpg, id=75, 361.35pt x 144.54pt>
 File: logo_dark.jpg Graphic file (type jpg)
 <use logo_dark.jpg>
 Package pdftex.def Info: logo_dark.jpg  used on input line 169.
@@ -1651,64 +1651,70 @@ LaTeX Font Info:    Font shape `T1/npxtt/m/n' will be
  (./presentacion.vrb) [11
 
 ]
+\openout4 = `presentacion.vrb'.
+
+ (./presentacion.vrb
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 267.
+(Font)              size <5> substituted on input line 15.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 267.
+(Font)              size <5> substituted on input line 15.
 
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <6.2> not availabl
 e
 (Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on inp
-ut line 267.
+ut line 15.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
-(Font)              scaled to size 6.2pt on input line 267.
+(Font)              scaled to size 6.2pt on input line 15.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <5.5> not availabl
 e
 (Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on inp
-ut line 267.
+ut line 15.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
-(Font)              scaled to size 5.5pt on input line 267.
+(Font)              scaled to size 5.5pt on input line 15.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' in size <6.2> not availab
 le
 (Font)              Font shape `T1/FiraSans-OsF/regular/it' tried instead on in
-put line 267.
+put line 15.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/it' will be
-(Font)              scaled to size 6.2pt on input line 267.
+(Font)              scaled to size 6.2pt on input line 15.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' in size <5.5> not availab
 le
 (Font)              Font shape `T1/FiraSans-OsF/regular/it' tried instead on in
-put line 267.
+put line 15.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/it' will be
-(Font)              scaled to size 5.5pt on input line 267.
+(Font)              scaled to size 5.5pt on input line 15.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <8> not available
 (Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input 
-line 267.
+line 15.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
-(Font)              scaled to size 8.0pt on input line 267.
+(Font)              scaled to size 8.0pt on input line 15.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <9> not available
 (Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input 
-line 267.
+line 38.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
-(Font)              scaled to size 9.0pt on input line 267.
-
+(Font)              scaled to size 9.0pt on input line 38.
+)
 Overfull \vbox (16.93791pt too high) detected at line 267
  []
 
 [12
 
 ]
-<../../Images/Inserción combinados.png, id=527, 1854.93pt x 955.57pt>
+\openout4 = `presentacion.vrb'.
+
+ (./presentacion.vrb
+<../../Images/Inserción combinados.png, id=601, 1854.93pt x 955.57pt>
 File: ../../Images/Inserción combinados.png Graphic file (type png)
 <use ../../Images/Inserción combinados.png>
 Package pdftex.def Info: ../../Images/Inserción combinados.png  used on input 
-line 273.
+line 3.
 (pdftex.def)             Requested size: 370.97943pt x 191.11061pt.
-
-Overfull \hbox (63.68956pt too wide) in paragraph at lines 273--273
- [][] 
+)
+Overfull \hbox (63.68956pt too wide) in paragraph at lines 3--273
+[][]  
  []
 
 [13
@@ -1731,21 +1737,27 @@ Overfull \vbox (8.38388pt too high) detected at line 294
  (./presentacion.vrb) [16
 
 ]
+\openout4 = `presentacion.vrb'.
+
+ (./presentacion.vrb)
 Overfull \vbox (16.93791pt too high) detected at line 346
  []
 
 [17
 
 ]
-<../../Images/Selección combinados.png, id=751, 1854.93pt x 955.57pt>
+\openout4 = `presentacion.vrb'.
+
+ (./presentacion.vrb
+<../../Images/Selección combinados.png, id=856, 1854.93pt x 955.57pt>
 File: ../../Images/Selección combinados.png Graphic file (type png)
 <use ../../Images/Selección combinados.png>
 Package pdftex.def Info: ../../Images/Selección combinados.png  used on input 
-line 352.
+line 3.
 (pdftex.def)             Requested size: 370.97943pt x 191.11061pt.
-
-Overfull \hbox (63.68956pt too wide) in paragraph at lines 352--352
- [][] 
+)
+Overfull \hbox (63.68956pt too wide) in paragraph at lines 3--352
+[][]  
  []
 
 [18
@@ -1772,44 +1784,53 @@ Overfull \vbox (16.93791pt too high) detected at line 425
 ] [23
 
 ]
+\openout4 = `presentacion.vrb'.
+
+ (./presentacion.vrb
 <../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png, id=
-1020, 1854.93pt x 955.57pt>
+1161, 1854.93pt x 955.57pt>
 File: ../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png
  Graphic file (type png)
 <use ../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png>
 
 Package pdftex.def Info: ../../Images/Gráfica comparativa algoritmos de ordena
-ción Joshoccas.png  used on input line 434.
+ción Joshoccas.png  used on input line 3.
 (pdftex.def)             Requested size: 370.97943pt x 191.11061pt.
-
-Overfull \hbox (63.68956pt too wide) in paragraph at lines 434--434
- [][] 
+)
+Overfull \hbox (63.68956pt too wide) in paragraph at lines 3--434
+[][]  
  []
 
 [24
 
  <../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png>]
+\openout4 = `presentacion.vrb'.
+
+ (./presentacion.vrb
 <../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q).png
-, id=1065, 1854.93pt x 955.57pt>
+, id=1212, 1854.93pt x 955.57pt>
 File: ../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q
 ).png Graphic file (type png)
 <use ../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q)
 .png>
 Package pdftex.def Info: ../../Images/Gráfica comparativa algoritmos ordenaci�
-�n Joshoccas (H y Q).png  used on input line 439.
+�n Joshoccas (H y Q).png  used on input line 3.
 (pdftex.def)             Requested size: 370.97943pt x 191.11061pt.
-
-Overfull \hbox (63.68956pt too wide) in paragraph at lines 439--439
- [][] 
+)
+Overfull \hbox (63.68956pt too wide) in paragraph at lines 3--439
+[][]  
  []
 
 [25
 
  <../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q).pn
-g>] [26
+g>]
+\openout4 = `presentacion.vrb'.
+
+ (./presentacion.vrb) [26
 
 ]
-<../../Images/floyd_combinados.png, id=1156, 1854.93pt x 955.57pt>
+<../../Images/floyd_combinados.png, id=1315, 1854.93pt x 955.57pt>
 File: ../../Images/floyd_combinados.png Graphic file (type png)
 <use ../../Images/floyd_combinados.png>
 Package pdftex.def Info: ../../Images/floyd_combinados.png  used on input line 
@@ -1817,10 +1838,10 @@ Package pdftex.def Info: ../../Images/floyd_combinados.png  used on input line
 (pdftex.def)             Requested size: 278.2275pt x 143.32932pt.
  [27
 
- <../../Images/floyd_combinados.png>] [28
+ <../../Images/floyd_combinados.png>]
+[28
 
-] (./Codes/hanoi.cpp)
-[29
+] (./Codes/hanoi.cpp) [29
 
 ]
 \openout4 = `presentacion.vrb'.
@@ -1853,13 +1874,13 @@ Overfull \vbox (16.93791pt too high) detected at line 536
 
 
 (./presentacion.vrb
-<../../Images/floyd_opt_Javi5454.png, id=1475, 642.4pt x 385.44pt>
+<../../Images/floyd_opt_Javi5454.png, id=1676, 642.4pt x 385.44pt>
 File: ../../Images/floyd_opt_Javi5454.png Graphic file (type png)
 <use ../../Images/floyd_opt_Javi5454.png>
 Package pdftex.def Info: ../../Images/floyd_opt_Javi5454.png  used on input lin
 e 4.
 (pdftex.def)             Requested size: 128.47772pt x 77.08662pt.
-<../../Images/floyd_opt_Jota.png, id=1476, 642.4pt x 385.44pt>
+<../../Images/floyd_opt_Jota.png, id=1677, 642.4pt x 385.44pt>
 File: ../../Images/floyd_opt_Jota.png Graphic file (type png)
 <use ../../Images/floyd_opt_Jota.png>
 Package pdftex.def Info: ../../Images/floyd_opt_Jota.png  used on input line 6.
@@ -1871,13 +1892,13 @@ Package pdftex.def Info: ../../Images/floyd_opt_Jota.png  used on input line 6.
 \openout4 = `presentacion.vrb'.
 
  (./presentacion.vrb
-<../../Images/floy_comparacion.png, id=1521, 642.4pt x 385.44pt>
+<../../Images/floy_comparacion.png, id=1728, 642.4pt x 385.44pt>
 File: ../../Images/floy_comparacion.png Graphic file (type png)
 <use ../../Images/floy_comparacion.png>
 Package pdftex.def Info: ../../Images/floy_comparacion.png  used on input line 
 4.
 (pdftex.def)             Requested size: 128.47772pt x 77.08662pt.
-<../../Images/hanoi_comparacion.png, id=1522, 642.4pt x 385.44pt>
+<../../Images/hanoi_comparacion.png, id=1729, 642.4pt x 385.44pt>
 File: ../../Images/hanoi_comparacion.png Graphic file (type png)
 <use ../../Images/hanoi_comparacion.png>
 Package pdftex.def Info: ../../Images/hanoi_comparacion.png  used on input line
@@ -1885,9 +1906,81 @@ Package pdftex.def Info: ../../Images/hanoi_comparacion.png  used on input line
 (pdftex.def)             Requested size: 128.47772pt x 77.08662pt.
 ) [36
 
- <../../Images/floy_comparacion.png> <../../Images/hanoi_comparacion.png>] [37
+ <../../Images/floy_comparacion.png> <../../Images/hanoi_comparacion.png>]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+(./Codes/peor.cpp) (./Codes/mejor.cpp) [37
 
-] [38
+]
+Overfull \vbox (32.5384pt too high) detected at line 624
+ []
+
+[38
+
+]
+<../../Images/Gráfica casos inserción Joshoccas.png, id=1883, 642.4pt x 385.4
+4pt>
+File: ../../Images/Gráfica casos inserción Joshoccas.png Graphic file (type p
+ng)
+<use ../../Images/Gráfica casos inserción Joshoccas.png>
+Package pdftex.def Info: ../../Images/Gráfica casos inserción Joshoccas.png  
+used on input line 629.
+(pdftex.def)             Requested size: 289.07733pt x 173.4464pt.
+ [39
+
+ <../../Images/Gráfica casos inserción Joshoccas.png>]
+\openout4 = `presentacion.vrb'.
+
+
+(./presentacion.vrb)
+Overfull \vbox (32.5384pt too high) detected at line 662
+ []
+
+[40
+
+]
+\openout4 = `presentacion.vrb'.
+
+ (./presentacion.vrb
+<../../Images/Gráfica casos selección Joshoccas.png, id=1985, 1854.93pt x 955
+.57pt>
+File: ../../Images/Gráfica casos selección Joshoccas.png Graphic file (type p
+ng)
+<use ../../Images/Gráfica casos selección Joshoccas.png>
+Package pdftex.def Info: ../../Images/Gráfica casos selección Joshoccas.png  
+used on input line 3.
+(pdftex.def)             Requested size: 370.97943pt x 191.11061pt.
+)
+Overfull \hbox (63.68956pt too wide) in paragraph at lines 3--667
+[][]  
+ []
+
+
+Overfull \vbox (5.79295pt too high) detected at line 667
+ []
+
+[41
+
+ <../../Images/Gráfica casos selección Joshoccas.png>]
+\openout4 = `presentacion.vrb'.
+
+ (./presentacion.vrb
+<../../Images/Ejemplo vectores.png, id=2036, 1119.18124pt x 1002.74625pt>
+File: ../../Images/Ejemplo vectores.png Graphic file (type png)
+<use ../../Images/Ejemplo vectores.png>
+Package pdftex.def Info: ../../Images/Ejemplo vectores.png  used on input line 
+4.
+(pdftex.def)             Requested size: 201.44392pt x 180.48653pt.
+)
+Overfull \vbox (11.10379pt too high) detected at line 673
+ []
+
+[42
+
+ <../../Images/Ejemplo vectores.png>] [43
+
+] [44
 
 ]
 \tf@nav=\write7
@@ -1899,33 +1992,27 @@ Package pdftex.def Info: ../../Images/hanoi_comparacion.png  used on input line
 \tf@snm=\write9
 \openout9 = `presentacion.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 594.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 594.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 684.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 684.
  (./presentacion.aux
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 594.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 594.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 684.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 684.
+Package rerunfilecheck Info: File `presentacion.out' has not changed.
+(rerunfilecheck)             Checksum: 51882C6EFD14B2FE3FA9C91BD925F02A;223.
 
-
-Package rerunfilecheck Warning: File `presentacion.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `presentacion.out':
-(rerunfilecheck)             Before: 905D136C365A8A57F56C79EF7CA13EB0;125
-(rerunfilecheck)             After:  51882C6EFD14B2FE3FA9C91BD925F02A;223.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.5pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 30234 strings out of 481239
- 575247 string characters out of 5920377
- 1207083 words of memory out of 5000000
- 44648 multiletter control sequences out of 15000+600000
+ 30443 strings out of 481239
+ 578522 string characters out of 5920377
+ 1212871 words of memory out of 5000000
+ 44810 multiletter control sequences out of 15000+600000
  860962 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,19n,101p,1811b,1502s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1936,10 +2023,10 @@ st/fonts/type1/public/fira/FiraSans-Italic.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/fira/FiraSans-Regular.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/newpx/pxsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/txfonts/t1xtt.pfb>
-Output written on presentacion.pdf (38 pages, 970417 bytes).
+Output written on presentacion.pdf (44 pages, 1399619 bytes).
 PDF statistics:
- 1663 PDF objects out of 1728 (max. 8388607)
- 1546 compressed objects within 16 object streams
- 81 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2190 PDF objects out of 2487 (max. 8388607)
+ 2053 compressed objects within 21 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 140 words of extra memory for PDF output out of 10000 (max. 10000000)
 

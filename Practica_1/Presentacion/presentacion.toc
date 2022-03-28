@@ -2,4 +2,4 @@
 \beamer@sectionintoc {1}{Introducción}{3}{0}{1}
 \beamer@sectionintoc {2}{Análisis de los algoritmos propuestos}{8}{0}{2}
 \beamer@sectionintoc {3}{Casos especiales}{34}{0}{3}
-\beamer@sectionintoc {4}{Conclusiones}{37}{0}{4}
+\beamer@sectionintoc {4}{Conclusiones}{43}{0}{4}
