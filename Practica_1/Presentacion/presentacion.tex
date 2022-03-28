@@ -214,11 +214,158 @@ Se ha realizado un análisis de los siguientes algoritmos:
 	\lstinputlisting[language=C++]{./Codes/insercion.cpp}
 \end{frame}
 
+\begin{frame}[fragile]{Inserción.
+		\normalfont{Eficiencia teórica}}
+	En los comentarios del código observamos el análisis de la función.
+	
+	Son dos bucles, uno \texttt{for} y otro \texttt{while}, los cuales están anidados y por ser cada uno \(\mathcal{O}(n)\):
+	\[
+	T(n) \in \mathcal{O}(n^2)
+	\]
+\end{frame}
+
+\begin{frame}{Inserción.
+		\normalfont{Eficiencia empírica}}
+	\begin{table}[h!]
+		\centering
+		\footnotesize
+		\scalebox{0.6}{
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textsf{Intel Core i7-6700 3.40 GHz}}
+				\\\hline
+				\bfseries Elementos (n) & \bfseries Tiempo (s)
+				\csvreader{./data/Javi5454/salida_insercion.csv}{}
+				{\\\hline\csvcoli&\csvcolii}
+				\\\hline
+			\end{tabular}
+		}
+		\scalebox{0.6}{
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textsf{i5-1095G1 1.00 GHz}}
+				\\\hline
+				\bfseries Elementos (n) & \bfseries Tiempo (s)
+				\csvreader{./data/Jota/salida_insercion.csv}{}
+				{\\\hline\csvcoli&\csvcolii}
+				\\\hline
+			\end{tabular}
+		}
+		\scalebox{0.6}{
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+				\\\hline
+				\bfseries Elementos (n) & \bfseries Tiempo (s)
+				\csvreader{./data/Moya/salida_insercion.csv}{}
+				{\\\hline\csvcoli&\csvcolii}
+				\\\hline
+			\end{tabular}
+		}
+		\caption{Experiencia empírica de algoritmo de Inserción sin optimizar}
+	\end{table}
+\end{frame}
+
+\begin{frame}{Inserción.
+		\normalfont{Eficiencia híbrida}}
+	\centering
+	\includegraphics[scale=0.2]{../../Images/Inserción combinados.png}
+\end{frame}
+
+\begin{frame}[fragile]{Inserción.
+		\normalfont{Eficiencia híbrida}}
+	\begin{itemize}
+		\item i7-6700 3.40Ghz \(\rightarrow T_1(n) = 8.49924 \cdot 10^{-10} x^2 - 8.57879 \cdot 10^{-6} x + 0.546581\).
+		\item Ordenador José Alberto \(\rightarrow T_2(n) = 7.96341 \cdot 10^{-10} x^2 + 2.23563 \cdot 10^{-5} x - 0.592279\).
+		\item Ordenador Manuel \(\rightarrow T_3(n) = 1.04394 \cdot 10^{-9} x^2 + 1.58593 \cdot 10^{-6} x - 0.0969414\).
+	\end{itemize}
+	
+	Varianza residual:
+	\begin{itemize}
+		\item \(T_1(n) \longrightarrow Var.res = 0.00162352\)
+		\item \(T_2(n) \longrightarrow Var.res = 0.0050675\)
+		\item \(T_3(n) \longrightarrow Var.res = 0.00161535\)
+	\end{itemize}
+\end{frame}
+
 \begin{frame}{Selección}
 	El código del algoritmo de Selección es el siguiente:
 	\lstinputlisting[language=C++]{./Codes/seleccion.cpp}
 \end{frame}
 
+\begin{frame}[fragile]{Selección.
+		\normalfont{Eficiencia teórica}}
+	En los comentarios del código observamos el análisis de la función.
+	
+	Son dos bucles \texttt{for}, los cuales están anidados y por ser cada uno \(\mathcal{O}(n)\):
+	\[
+	T(n) \in \mathcal{O}(n^2)
+	\]
+\end{frame}
+
+\begin{frame}{Selección.
+		\normalfont{Eficiencia empírica}}
+	\begin{table}[h!]
+		\centering
+		\footnotesize
+		\scalebox{0.6}{
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textsf{Intel Core i7-6700 3.40 GHz}}
+				\\\hline
+				\bfseries Elementos (n) & \bfseries Tiempo (s)
+				\csvreader{./data/Javi5454/salida_seleccion.csv}{}
+				{\\\hline\csvcoli&\csvcolii}
+				\\\hline
+			\end{tabular}
+		}
+		\scalebox{0.6}{
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textsf{i5-1095G1 1.00 GHz}}
+				\\\hline
+				\bfseries Elementos (n) & \bfseries Tiempo (s)
+				\csvreader{./data/Jota/salida_seleccion.csv}{}
+				{\\\hline\csvcoli&\csvcolii}
+				\\\hline
+			\end{tabular}
+		}
+		\scalebox{0.6}{
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+				\\\hline
+				\bfseries Elementos (n) & \bfseries Tiempo (s)
+				\csvreader{./data/Moya/salida_seleccion.csv}{}
+				{\\\hline\csvcoli&\csvcolii}
+				\\\hline
+			\end{tabular}
+		}
+		\caption{Experiencia empírica de algoritmo de Selección sin optimizar}
+	\end{table}
+\end{frame}
+
+\begin{frame}{Selección.
+		\normalfont{Eficiencia híbrida}}
+	\centering
+	\includegraphics[scale=0.2]{../../Images/Selección combinados.png}
+\end{frame}
+
+\begin{frame}[fragile]{Selección.
+		\normalfont{Eficiencia híbrida}}
+	\begin{itemize}
+		\item i7-6700 3.40Ghz \(\rightarrow T_1(n) = 1.0371 \cdot 10^{-9} x^2 + -9.86278 \cdot 10^{-6} x +0.0216418\).
+		\item Ordenador José Alberto \(\rightarrow T_2(n) = 1.17905 \cdot 10^{-9} x^2 + 3.97249 \cdot 10^{-7} x - 0.00421685\).
+		\item Ordenador Manuel \(\rightarrow T_3(n) = 1.29484 \cdot 10^{-9} x^2 - 7.43377 \cdot 10^{-6} x + 0.0733569\).
+	\end{itemize}
+	
+	Varianza residual:
+	\begin{itemize}
+		\item \(T_1(n) \longrightarrow Var.res = 0.0164518\)
+		\item \(T_2(n) \longrightarrow Var.res = 0.000537586\)
+		\item \(T_3(n) \longrightarrow Var.res = 0.00387134\)
+	\end{itemize}
+\end{frame}
 
 \begin{frame}{Floyd}
 El código del algoritmo de Floyd es el siguiente:
@@ -277,6 +424,29 @@ Son tres bucles \texttt{for} anidados, cada uno \(\mathcal{O}(n)\) y por tanto,
 \end{table}
 \end{frame}
 
+\begin{frame}{Comparativa de los algoritmos de ordenación}
+Una vez estudiados inserción, selección, quicksort y heapsort, procedemos a compararlos gráficamente y sacar conclusiones
+\end{frame}
+
+\begin{frame}{Comparativa de los algoritmos de ordenación}
+\centering
+\includegraphics[scale=0.2]{../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png}
+\end{frame}
+
+\begin{frame}{Comparativa de los algoritmos de ordenación}
+	\centering
+	\includegraphics[scale=0.2]{../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q).png}
+\end{frame}
+
+\begin{frame}{Comparativa de los algoritmos de ordenación}
+Las conclusiones que sacamos son:
+\begin{itemize}
+	\item Se verifica que los algoritmos \(\in \mathcal{O}(n \cdot log(n))\) son más eficientes que los algoritmos \(\in \mathcal{O}(n^2))\)
+	\item Es tal la diferencia que las gráficas de quicksort y heapsort parecen paralelas al eje X
+	\item Quicksort y Heapsort no pasan del segundo por ejecución, mientras que Inserción y Selección para 2000000 requieren más de 5000 segundos por ejecución
+\end{itemize}
+\end{frame}
+
 \begin{frame}{Floyd.
 \normalfont{Eficiencia híbrida}}
 \centering
@@ -291,7 +461,7 @@ Son tres bucles \texttt{for} anidados, cada uno \(\mathcal{O}(n)\) y por tanto,
 	\item Ordenador Moya \(\rightarrow T_3(n) = 6.77297 \cdot 10^{-9} x^3 + 5.13099 \cdot 10^{-7} x^2 - 0.000427834 x + 0.0714028\)
 \end{itemize}
 
-Coeficiente de regresión:
+Varianza residual:
 \begin{itemize}
 	\item \(T_1 (n) \longrightarrow Var.res = 0.00204522\)
 	\item \(T_2 (n) \longrightarrow Var.res = 0.044778\)
@@ -378,7 +548,7 @@ INSERTAR GRÁFICA HANOI
 	\item Ordenador Moya \(\rightarrow T_3 (n) = \)
 \end{itemize}
 
-Coeficiente de regresión:
+Varianza residual:
 \begin{itemize}
 	\item \(T_1(n) \longrightarrow R^2 = \)
 	\item \(T_2(n) \longrightarrow R^2 = \)
