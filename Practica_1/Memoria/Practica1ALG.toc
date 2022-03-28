@@ -25,5 +25,5 @@
 \contentsline {subsubsection}{\numberline {2.7.3}Eficiencia híbrida}{10}%
 \contentsline {section}{\numberline {3}Casos especiales}{11}%
 \contentsline {subsection}{\numberline {3.1}Floyd optimizado}{11}%
-\contentsline {subsection}{\numberline {3.2}Otros posibles ajustes funcionales}{11}%
-\contentsline {section}{\numberline {4}Casos en la ejecución de inserción y selección: mejor, peor y promedio}{12}%
+\contentsline {subsection}{\numberline {3.2}Otros posibles ajustes funcionales}{13}%
+\contentsline {section}{\numberline {4}Casos en la ejecución de inserción y selección: mejor, peor y promedio}{13}%

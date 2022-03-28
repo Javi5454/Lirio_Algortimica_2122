@@ -339,6 +339,8 @@ En este apartado vamos a ver claramente cuál es la diferencia entre los 4 algor
 		\caption{Ordenador Javier}
 	\end{subfigure}
 \end{figure}
+
+\newpage
  
  \begin{figure}[h!]
  	\begin{subfigure}{.5\textwidth}
@@ -525,13 +527,26 @@ Aquí si que observamos grandes diferencias entre los dos primeros equipos y el 
 
 Este análisis confirmará nuestro análisis teórico. Para realizar este análisis, tomamos los datasets de todos los integrantes del grupo.
 
-INSERTAR GRÁFICA
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.17]{../../Images/hanoi_combinados.png}
+\caption{Gráfica con los tiempos de ejecución del \\algoritmo de las torres de Hanoi}
+\end{figure}
+
+\newpage
 
 En esta gráfica están representados los 26 puntos obtenidos tras la ejecución del algoritmo de Hanoi en los distintos equipos de los integrantes del grupo. Tras una serie de cálculos con gnuplot, observamos que las constantes ocultas son:
 \begin{itemize}
-	\item i7-6700 3.40GHz \(\rightarrow T_1(n) =\).
-	\item i5-1095G1 1.00 GHz \(\rightarrow T_2(n) =\).
-	\item Ordenador Moya \(\rightarrow T_3(n) =\).
+	\item i7-6700 3.40GHz \(\rightarrow T_1(n) = 4.72408 \cdot 10^{-9} \cdot 2^x\).
+	\item i5-1095G1 1.00 GHz \(\rightarrow T_2(n) = 4.70707 \cdot 10^{-9} \cdot 2^x\).
+	\item Ordenador Moya \(\rightarrow T_3(n) = 6.03512 \cdot 10^{-9} \cdot 2^x\).
+\end{itemize}
+
+Podemos observar que nuestro análisis teórico es correcto. Además, podemos observarlo con el coeficiente de regresión para cada una de nuestras funciones de ajuste:
+\begin{itemize}
+	\item \(T_1(n) \longrightarrow Var.res = 0.000302074\)
+	\item \(T_2(n) \longrightarrow Var.res = 0.0113386\)
+	\item \(T_3(n) \longrightarrow Var.res = 3.87795 \cdot 10^{-7}\)
 \end{itemize}
 
 Estos valores son muy cercanos a 0, y por tanto indican que el ajuste es muy bueno.
@@ -546,21 +561,70 @@ En este caso, queríamos mostrar la diferencia que obtenemos cuando realizamos l
 
 Con una compilación normal, el compilador tratará de convertir nuestros \texttt{.cpp} a código máquina de la manera más fiel posible. Sin embargo, si la introducimos la orden \texttt{-Og} estamos indicando a este que reduzca en lo máximo la ineficiencia de nuestro código, optimizándolo.
 
-\begin{figure}[h!]
-\begin{subfigure}{.5\textwidth}
+A continuación, se muestra una comparación de tiempos de ejecución:
+
+\begin{table}[h!]
 	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Intel Core i7-6700 3.40 GHz}}
+			\\\hline
+			\bfseries T. Sin optimizar (s) & \bfseries T. Optimizado (s)
+			\csvreader{./data/Javi5454/salida_floyd_optimizado.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+		}
+		\hspace{2cm}
+		\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{i5-1095G1 1.00 GHz}}
+			\\\hline
+			\bfseries T. Sin optimizar (s) & \bfseries T. Optimizado (s)
+			\csvreader{./data/Jota/salida_floyd_optimizado.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+			\end{tabular}
+			}
+		\hspace{2cm}
+		\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\\\hline
+			\bfseries T. Sin optimizar (s) & \bfseries T. Optimizado (s)
+			\csvreader{./data/Moya/salida_floyd_optimizado.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+		}
+		\caption{Comparación optimización Floyd}
+\end{table}
+
+\begin{figure}[h!]
+\begin{subfigure}{.4\textwidth}
 	\includegraphics[scale=0.3]{../../Images/floyd_opt_Javi5454.png}
 	\caption{Intel i7-6700 3.40GHz}
 	\label{Floyd Optimizado Javi5454}
 \end{subfigure}
 \hfill
-\begin{subfigure}{.5\textwidth}
-	\centering
+\begin{subfigure}{.4\textwidth}
 	\includegraphics[scale=0.3]{../../Images/floyd_opt_Jota.png}
 	\caption{i5-1095G1 1.00 GHz}
 	\label{Floyd Optimizado Jota}
 \end{subfigure}
 \end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.28]{../../Images/floyd_opt_ManuelMoya.png}
+\caption*{(c) Ordenador Moya}
+\end{figure}
+
+\newpage
 
 Podemos observar que el uso de la instrucción \texttt{-Og}, y todas sus variantes de su optimización, reducen considerablemente el tiempo de ejecución de nuestro código. Por tanto, su uso debe estar presente a la hora de compilar ciertos programas.
 
@@ -593,7 +657,9 @@ Y para el mejor caso hemos introducido un bucle que crea un vector ya ordenado:
 
 \lstinputlisting[language=C++]{./Codes/mejor.cpp}
 
-A continuación comenzamos mostrando los datasets del peor y mejor caso de selección y peor y mejor caso de inserción:
+A continuación comenzamos mostrando los datasets del peor y mejor caso de selección y peor y mejor caso de inserción, junto a su representación gráfica:
+
+\newpage
 
 \begin{table}[h!]
 	\centering
@@ -722,7 +788,7 @@ A continuación comenzamos mostrando los datasets del peor y mejor caso de selec
 \begin{table}[h!]
 	\centering
 	\footnotesize
-	\scalebox{0.75}{
+	\scalebox{0.7}{
 		\begin{tabular}{|c|c|}
 			\hline
 			\multicolumn{2}{|c|}{\textsf{Ordenador Javier}}
@@ -734,7 +800,7 @@ A continuación comenzamos mostrando los datasets del peor y mejor caso de selec
 		\end{tabular}
 	}
 	\hspace{2cm}
-	\scalebox{0.75}{
+	\scalebox{0.7}{
 		\begin{tabular}{|c|c|}
 			\hline
 			\multicolumn{2}{|c|}{\textsf{Ordenador José Alberto}}
@@ -746,7 +812,7 @@ A continuación comenzamos mostrando los datasets del peor y mejor caso de selec
 		\end{tabular}
 	}
 	\hspace{2cm}
-	\scalebox{0.75}{
+	\scalebox{0.7}{
 		\begin{tabular}{|c|c|}
 			\hline
 			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
@@ -761,7 +827,7 @@ A continuación comenzamos mostrando los datasets del peor y mejor caso de selec
 	
 \end{table}
 
-Y a partir de estos datasets hemos generado las siguientes gráficas comparativas para cada integrante, las cuales son muy parecidas:
+\newpage
 
 \begin{figure}[h!]
 	\begin{subfigure}{.5\textwidth}
@@ -805,11 +871,15 @@ Y a partir de estos datasets hemos generado las siguientes gráficas comparativa
 	\end{subfigure}
 \end{figure}
 
+
+\newpage
+
+
 Como hemos apreciado en las gráficas, en inserción los casos se diferencian perfectamente, tardando casi 0 segundos para el mejor caso y tardando mucho más para el peor caso. Sin embargo, en el algoritmo de selección vemos que las gráficas oscilan en torno a los mismos valores. Esto se debe a cómo están hechos los códigos. En el algoritmo de selección, se comienza hallando el mínimo de los n elementos y se coloca en la primera posición. Tras esto, se calcula el mínimo de los n-1 elementos restantes que no están ordenados y se coloca en segunda posición, y así sucesivamente hasta llegar al final. Por ello, independientemente de que el vector esté ordenado o no, siempre va a tener que recorrer el vector de la forma descrita para hallar todos los mínimos, de ahí que los tiempos en los 3 casos no se diferencien mucho.\\
 
 Por otra parte, en inserción sí se diferencian, y esto se debe a que se ordena de una forma concreta. Este algoritmo ordena "subconjuntos" del vector empezando con los dos primeros elementos. Una vez ordena los dos primeros, inserta el tercero en la posición correcta de entre estos dos. En la siguiente iteración, añade el cuarto elemento a los tres ya ordenados y así sucesivamente hasta acabar. La razón principal de por qué tarda tanto cuando está ordenado es porque cada vez que se va a añadir un elemento a los ya ordenados, se comienza comparando con el último de los ya ordenados, es decir, el mayor de todos (esta comprobación se realiza en el bucle \texttt{while} que se encuentra dentro de un \texttt{for}):
 
-\lstinputlisting[language=Python]{./Codes/insercion.cpp}
+\lstinputlisting[language=C++]{./Codes/insercion.cpp}
 
 De esta forma, como el vector ya está ordenado, la condición del bucle \texttt{while} nunca se da y por lo tanto en cada iteración del \texttt{for} se ahorra la ejecución del cuerpo del bucle \texttt{while} y solo se realizan comparaciones entre pares de números consecutivos.
 \end{document}

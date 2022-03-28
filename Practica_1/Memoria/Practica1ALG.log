@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.27)  28 MAR 2022 09:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.2.1)  28 MAR 2022 10:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -493,64 +493,58 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 330--341
 []$[]$  $[]$ 
  []
 
+[7 <../../Images/Gráfica comparativa algoritmos ordenación Javi5454.png> <../
+../Images/Gráfica comparativa algoritmos ordenación Javi5454 (H y Q).png>]
 <../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png, id=
-55, 1854.93pt x 955.57pt>
+59, 1854.93pt x 955.57pt>
 File: ../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png
  Graphic file (type png)
 <use ../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png>
 
 Package pdftex.def Info: ../../Images/Gráfica comparativa algoritmos de ordena
-ción Joshoccas.png  used on input line 346.
+ción Joshoccas.png  used on input line 348.
 (pdftex.def)             Requested size: 241.14937pt x 124.22845pt.
 <../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q).png
-, id=56, 1854.93pt x 955.57pt>
+, id=60, 1854.93pt x 955.57pt>
 File: ../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q
 ).png Graphic file (type png)
 <use ../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q)
 .png>
 Package pdftex.def Info: ../../Images/Gráfica comparativa algoritmos ordenaci�
-�n Joshoccas (H y Q).png  used on input line 352.
+�n Joshoccas (H y Q).png  used on input line 354.
 (pdftex.def)             Requested size: 241.14937pt x 124.22845pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 344--355
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 346--357
 []$[]$  $[]$ 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya.png, id=57
+<../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya.png, id=61
 , 642.4pt x 385.44pt>
 File: ../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya.png G
 raphic file (type png)
 <use ../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya.png>
 Package pdftex.def Info: ../../Images/Gráfica comparativa algoritmos ordenaci�
-�n ManuelMoya.png  used on input line 360.
+�n ManuelMoya.png  used on input line 362.
 (pdftex.def)             Requested size: 224.84337pt x 134.90602pt.
 <../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya (H y Q).pn
-g, id=58, 1854.93pt x 955.57pt>
+g, id=62, 1854.93pt x 955.57pt>
 File: ../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya (H y 
 Q).png Graphic file (type png)
 <use ../../Images/Gráfica comparativa algoritmos ordenación ManuelMoya (H y Q
 ).png>
 Package pdftex.def Info: ../../Images/Gráfica comparativa algoritmos ordenaci�
-�n ManuelMoya (H y Q).png  used on input line 366.
+�n ManuelMoya (H y Q).png  used on input line 368.
 (pdftex.def)             Requested size: 278.2275pt x 143.32932pt.
 
-Overfull \hbox (36.37906pt too wide) in paragraph at lines 366--367
+Overfull \hbox (36.37906pt too wide) in paragraph at lines 368--369
  [][] 
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 358--369
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 360--371
 []$[]$  $[]$ 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7 <../../Images/Gráfica comparativa algoritmos ordenación Javi5454.png> <../
-../Images/Gráfica comparativa algoritmos ordenación Javi5454 (H y Q).png>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
@@ -559,7 +553,7 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
@@ -571,138 +565,157 @@ Underfull \hbox (badness 10000) in paragraph at lines 433--434
 File: ../../Images/floyd_combinados.png Graphic file (type png)
 <use ../../Images/floyd_combinados.png>
 Package pdftex.def Info: ../../Images/floyd_combinados.png  used on input line 
-437.
+439.
 (pdftex.def)             Requested size: 278.2275pt x 143.32932pt.
-(./Codes/hanoi.cpp [9 <../../Images/floyd_combinados.png>]) [10]
-<../../Images/floyd_opt_Javi5454.png, id=74, 642.4pt x 385.44pt>
+(./Codes/hanoi.cpp [9 <../../Images/floyd_combinados.png>])
+<../../Images/hanoi_combinados.png, id=70, 1854.93pt x 955.57pt>
+File: ../../Images/hanoi_combinados.png Graphic file (type png)
+<use ../../Images/hanoi_combinados.png>
+Package pdftex.def Info: ../../Images/hanoi_combinados.png  used on input line 
+532.
+(pdftex.def)             Requested size: 315.33392pt x 162.44475pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../../Images/floyd_opt_Javi5454.png, id=75, 642.4pt x 385.44pt>
 File: ../../Images/floyd_opt_Javi5454.png Graphic file (type png)
 <use ../../Images/floyd_opt_Javi5454.png>
 Package pdftex.def Info: ../../Images/floyd_opt_Javi5454.png  used on input lin
-e 552.
+e 609.
 (pdftex.def)             Requested size: 192.72148pt x 115.63289pt.
-<../../Images/floyd_opt_Jota.png, id=75, 642.4pt x 385.44pt>
+<../../Images/floyd_opt_Jota.png, id=76, 642.4pt x 385.44pt>
 File: ../../Images/floyd_opt_Jota.png Graphic file (type png)
 <use ../../Images/floyd_opt_Jota.png>
-Package pdftex.def Info: ../../Images/floyd_opt_Jota.png  used on input line 55
-9.
+Package pdftex.def Info: ../../Images/floyd_opt_Jota.png  used on input line 61
+5.
 (pdftex.def)             Requested size: 192.72148pt x 115.63289pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 550--563
-[]$[]$  $[]$ 
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../../Images/floy_comparacion.png, id=76, 642.4pt x 385.44pt>
+<../../Images/floyd_opt_ManuelMoya.png, id=77, 642.4pt x 385.44pt>
+File: ../../Images/floyd_opt_ManuelMoya.png Graphic file (type png)
+<use ../../Images/floyd_opt_ManuelMoya.png>
+Package pdftex.def Info: ../../Images/floyd_opt_ManuelMoya.png  used on input l
+ine 623.
+(pdftex.def)             Requested size: 179.87077pt x 107.92245pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11 <../../Images/hanoi_combinados.png>]
+
+LaTeX Warning: Text page 12 contains only floats.
+
+
+Overfull \vbox (1.8686pt too high) has occurred while \output is active []
+
+
+[12 <../../Images/floyd_opt_Javi5454.png> <../../Images/floyd_opt_Jota.png> <..
+/../Images/floyd_opt_ManuelMoya.png>]
+<../../Images/floy_comparacion.png, id=85, 642.4pt x 385.44pt>
 File: ../../Images/floy_comparacion.png Graphic file (type png)
 <use ../../Images/floy_comparacion.png>
 Package pdftex.def Info: ../../Images/floy_comparacion.png  used on input line 
-574.
+638.
 (pdftex.def)             Requested size: 160.59961pt x 96.35976pt.
-<../../Images/hanoi_comparacion.png, id=77, 642.4pt x 385.44pt>
+<../../Images/hanoi_comparacion.png, id=86, 642.4pt x 385.44pt>
 File: ../../Images/hanoi_comparacion.png Graphic file (type png)
 <use ../../Images/hanoi_comparacion.png>
 Package pdftex.def Info: ../../Images/hanoi_comparacion.png  used on input line
- 579.
+ 643.
 (pdftex.def)             Requested size: 160.59961pt x 96.35976pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 572--582
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 636--646
 []$[]$ $[]$ 
  []
 
-[11 <../../Images/floyd_opt_Javi5454.png> <../../Images/floyd_opt_Jota.png> <..
-/../Images/floy_comparacion.png> <../../Images/hanoi_comparacion.png>]
-(./Codes/peor.cpp) (./Codes/mejor.cpp)
+(./Codes/peor.cpp) (./Codes/mejor.cpp) [13 <../../Images/floy_comparacion.png> 
+<../../Images/hanoi_comparacion.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../../Images/Gráfica casos selección Javi5454.png, id=81, 642.4pt x 385.44pt
+[14]
+<../../Images/Gráfica casos selección Javi5454.png, id=93, 642.4pt x 385.44pt
 >
 File: ../../Images/Gráfica casos selección Javi5454.png Graphic file (type pn
 g)
 <use ../../Images/Gráfica casos selección Javi5454.png>
 Package pdftex.def Info: ../../Images/Gráfica casos selección Javi5454.png  u
-sed on input line 769.
+sed on input line 835.
 (pdftex.def)             Requested size: 192.72148pt x 115.63289pt.
-<../../Images/Gráfica inserción casos Javi5454.png, id=82, 642.4pt x 385.44pt
+<../../Images/Gráfica inserción casos Javi5454.png, id=94, 642.4pt x 385.44pt
 >
 File: ../../Images/Gráfica inserción casos Javi5454.png Graphic file (type pn
 g)
 <use ../../Images/Gráfica inserción casos Javi5454.png>
 Package pdftex.def Info: ../../Images/Gráfica inserción casos Javi5454.png  u
-sed on input line 775.
+sed on input line 841.
 (pdftex.def)             Requested size: 192.72148pt x 115.63289pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 767--778
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 833--844
 []$[]$  $[]$ 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../../Images/Gráfica casos selección Joshoccas.png, id=83, 1854.93pt x 955.5
+<../../Images/Gráfica casos selección Joshoccas.png, id=95, 1854.93pt x 955.5
 7pt>
 File: ../../Images/Gráfica casos selección Joshoccas.png Graphic file (type p
 ng)
 <use ../../Images/Gráfica casos selección Joshoccas.png>
 Package pdftex.def Info: ../../Images/Gráfica casos selección Joshoccas.png  
-used on input line 783.
+used on input line 849.
 (pdftex.def)             Requested size: 222.582pt x 114.66345pt.
-<../../Images/Gráfica casos inserción Joshoccas.png, id=84, 642.4pt x 385.44p
+<../../Images/Gráfica casos inserción Joshoccas.png, id=96, 642.4pt x 385.44p
 t>
 File: ../../Images/Gráfica casos inserción Joshoccas.png Graphic file (type p
 ng)
 <use ../../Images/Gráfica casos inserción Joshoccas.png>
 Package pdftex.def Info: ../../Images/Gráfica casos inserción Joshoccas.png  
-used on input line 789.
+used on input line 855.
 (pdftex.def)             Requested size: 192.72148pt x 115.63289pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 781--792
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 847--858
 []$[]$  $[]$ 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../../Images/Casos selección ManuelMoya.png, id=85, 642.4pt x 385.44pt>
+<../../Images/Casos selección ManuelMoya.png, id=97, 642.4pt x 385.44pt>
 File: ../../Images/Casos selección ManuelMoya.png Graphic file (type png)
 <use ../../Images/Casos selección ManuelMoya.png>
 Package pdftex.def Info: ../../Images/Casos selección ManuelMoya.png  used on 
-input line 797.
+input line 863.
 (pdftex.def)             Requested size: 192.72148pt x 115.63289pt.
-<../../Images/Casos inserción ManuelMoya.png, id=86, 642.4pt x 385.44pt>
+<../../Images/Casos inserción ManuelMoya.png, id=98, 642.4pt x 385.44pt>
 File: ../../Images/Casos inserción ManuelMoya.png Graphic file (type png)
 <use ../../Images/Casos inserción ManuelMoya.png>
 Package pdftex.def Info: ../../Images/Casos inserción ManuelMoya.png  used on 
-input line 803.
+input line 869.
 (pdftex.def)             Requested size: 192.72148pt x 115.63289pt.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 795--806
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 861--872
 []$[]$  $[]$ 
  []
 
+[15 <../../Images/Gráfica casos selección Javi5454.png> <../../Images/Gráfic
+a inserción casos Javi5454.png> <../../Images/Gráfica casos selección Joshoc
+cas.png> <../../Images/Gráfica casos inserción Joshoccas.png> <../../Images/C
+asos selección ManuelMoya.png> <../../Images/Casos inserción ManuelMoya.png>]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 808--809
+Underfull \hbox (badness 10000) in paragraph at lines 878--879
 
  []
 
-[12] [13 <../../Images/Gráfica casos selección Javi5454.png> <../../Images/Gr
-áfica inserción casos Javi5454.png>] (./Codes/insercion.cpp) [14 <../../Image
-s/Gráfica casos selección Joshoccas.png> <../../Images/Gráfica casos inserci
-ón Joshoccas.png> <../../Images/Casos selección ManuelMoya.png> <../../Images
-/Casos inserción ManuelMoya.png>] (./Practica1ALG.aux
+(./Codes/insercion.cpp) [16] (./Practica1ALG.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 9367 strings out of 481239
- 147881 string characters out of 5920377
- 655726 words of memory out of 5000000
- 24438 multiletter control sequences out of 15000+600000
+ 9385 strings out of 481239
+ 148379 string characters out of 5920378
+ 648896 words of memory out of 5000000
+ 24453 multiletter control sequences out of 15000+600000
  542803 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,10n,60p,936b,1715s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -728,10 +741,10 @@ sfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 ti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on Practica1ALG.pdf (15 pages, 1395174 bytes).
+Output written on Practica1ALG.pdf (17 pages, 1460462 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
+ 179 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
