@@ -7,29 +7,29 @@
 \contentsline {subsection}{\numberline {2.1}Inserción}{4}%
 \contentsline {subsubsection}{\numberline {2.1.1}Eficiencia teórica}{4}%
 \contentsline {subsubsection}{\numberline {2.1.2}Eficiencia empírica}{4}%
-\contentsline {subsubsection}{\numberline {2.1.3}Eficiencia híbrida}{4}%
-\contentsline {subsection}{\numberline {2.2}Selección}{5}%
+\contentsline {subsubsection}{\numberline {2.1.3}Eficiencia híbrida}{5}%
+\contentsline {subsection}{\numberline {2.2}Selección}{6}%
 \contentsline {subsubsection}{\numberline {2.2.1}Eficiencia teórica}{6}%
 \contentsline {subsubsection}{\numberline {2.2.2}Eficiencia empírica}{6}%
 \contentsline {subsubsection}{\numberline {2.2.3}Eficiencia híbrida}{6}%
 \contentsline {subsection}{\numberline {2.3}Quicksort}{7}%
-\contentsline {subsubsection}{\numberline {2.3.1}Eficiencia teórica}{7}%
+\contentsline {subsubsection}{\numberline {2.3.1}Eficiencia teórica}{8}%
 \contentsline {subsubsection}{\numberline {2.3.2}Eficiencia empírica}{8}%
 \contentsline {subsubsection}{\numberline {2.3.3}Eficiencia híbrida}{8}%
 \contentsline {subsection}{\numberline {2.4}Heapsort}{9}%
-\contentsline {subsubsection}{\numberline {2.4.1}Eficiencia teórica}{9}%
-\contentsline {subsubsection}{\numberline {2.4.2}Eficiencia empírica}{9}%
+\contentsline {subsubsection}{\numberline {2.4.1}Eficiencia teórica}{10}%
+\contentsline {subsubsection}{\numberline {2.4.2}Eficiencia empírica}{10}%
 \contentsline {subsubsection}{\numberline {2.4.3}Eficiencia híbrida}{10}%
 \contentsline {subsection}{\numberline {2.5}Comparativa de los algoritmos de ordenación}{11}%
 \contentsline {subsection}{\numberline {2.6}Floyd}{12}%
-\contentsline {subsubsection}{\numberline {2.6.1}Eficiencia teórica}{12}%
-\contentsline {subsubsection}{\numberline {2.6.2}Eficiencia empírica}{12}%
+\contentsline {subsubsection}{\numberline {2.6.1}Eficiencia teórica}{13}%
+\contentsline {subsubsection}{\numberline {2.6.2}Eficiencia empírica}{13}%
 \contentsline {subsubsection}{\numberline {2.6.3}Eficiencia híbrida}{13}%
 \contentsline {subsection}{\numberline {2.7}Hanoi}{14}%
 \contentsline {subsubsection}{\numberline {2.7.1}Eficiencia teórica}{14}%
-\contentsline {subsubsection}{\numberline {2.7.2}Eficiencia empírica}{15}%
+\contentsline {subsubsection}{\numberline {2.7.2}Eficiencia empírica}{14}%
 \contentsline {subsubsection}{\numberline {2.7.3}Eficiencia híbrida}{15}%
 \contentsline {section}{\numberline {3}Variación de la eficiencia empírica usando optimización}{16}%
 \contentsline {section}{\numberline {4}Probando otros posibles ajustes funcionales}{17}%
-\contentsline {section}{\numberline {5}Casos en la ejecución de inserción y selección: mejor, peor y promedio}{18}%
+\contentsline {section}{\numberline {5}Casos en la ejecución de inserción y selección: mejor, peor y promedio}{17}%
 \contentsline {section}{\numberline {6}Conclusiones}{21}%

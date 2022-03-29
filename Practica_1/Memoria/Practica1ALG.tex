@@ -66,7 +66,7 @@
 
 Las características de los ordenadores usados por cada integrante son:
 \begin{itemize}
-	\item \textit{Ordenador de Javier} \(\longrightarrow\) Nombre: , Procesador: i7-6700 3.40 GHz, RAM, 6a generación, núcleos, Caché L1d:, Caché L1i: , Caché L2:, Caché L3: 
+	\item \textit{Ordenador de Javier} \(\longrightarrow\) Nombre: , Procesador: i7-6700 3.40 GHz, RAM, 6a generación, núcleos, Caché L1d:, Caché L1i: 128 KiB, Caché L2: 1 MiB, Caché L3: 8 MiB 
 	\item \textit{Ordenador de Jose Alberto} \(\longrightarrow\) Nombre: Acer Aspire-A315-56, Procesador: i5-1035G1 1.00 GHz, 12 GB RAM, 10a generación, 8 núcleos, Caché L1d: 192 KiB, Caché L1i: 128 KiB, Caché L2: 2 MiB; Caché L3: 6 MiB
 	\item \textit{Ordenador de Manuel} \(\longrightarrow\) Nombre: , Procesador: i5-7200 2.5GHz, 12 GB RAM, 7a generación, 4 núcleos, Caché L1d: 32K, Caché L1i: 32K, Caché L2: 256K, Caché L3: 3072K 
 \end{itemize}
@@ -157,6 +157,8 @@ donde \(T(n)\) es la función que expresa el tiempo de ejecución del algoritmo.
 
 \subsubsection{Eficiencia empírica}
 Tras ejecutar el algortimo en un rango de 17600 a 200000 elementos, con saltos de 7600 unidades por ejecución, obtenemos los siguientes resultados:
+
+\newpage
 
 \begin{table}[h!]
 	\centering
@@ -288,6 +290,8 @@ Observamos pequeñas diferencias en los tiempos de ejecución de cada uno de los
 
 Gracias al estudio de la eficiencia híbrida veremos que el ajuste teórico hecho hace dos subapartados es el correcto. Para ello, hemos tomado los datasets recién mostrados y hemos generado una gráfica en la que se representan los 25 tiempos obtenidos en función de los tamaños que hemos probado. Gnuplot nos ha facilitado esta gráfica junto con las constantes específicas asociadas a cada uno de nuestro, así como las varianzas residuales:
 
+\newpage
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.15]{../../Images/Seleccion_combinados.png}
@@ -375,7 +379,9 @@ Tras ejecutar el algortimo en un rango de 176000 a 2000000 elementos, con saltos
 Al igual que ocurría en anteriores algoritmos las diferencias son pequeñas entre los distintos tiempos de ejecución y se deben a que se han utillizado distintos ordenadores en la ejecución de los programas.
 
 \subsubsection{Eficiencia híbrida}
-Comprobamos que la función de ajuste obtenida en el apartado teórico es correcta con la eficiencia híbrida. De esta forma utilizando los datasets de los integrantes del grupo lo comprobaremos. \\
+Comprobamos que la función de ajuste obtenida en el apartado teórico es correcta con la eficiencia híbrida. De esta forma utilizando los datasets de los integrantes del grupo lo comprobaremos. 
+
+\newpage
 
 \begin{figure}[h!]
 \centering
@@ -503,6 +509,8 @@ En este apartado vamos a ver claramente cuál es la diferencia entre los 4 algor
 	\item Quicksort Manuel \(\rightarrow T_3(n) = 1.21439 \cdot 10^{-8} \cdot x \cdot log(x)\).
 	\item Heapsort Manuel \(\rightarrow T_3(n) = 1.96051 \cdot 10^{-8} \cdot x \cdot log(x)\).
 \end{itemize}
+
+\newpage
 
 \begin{figure}[h!]
 	\begin{subfigure}{.5\textwidth}
@@ -655,10 +663,10 @@ Si resolvemos la ecuación de recurrencia obtenemos que:
 
 Y concluimos que \(T(n) \in \mathcal{O}(2^n)\), donde \(T(n)\) es la función que expresa el tiempo de ejecución de nuestro algortimo para \(n\) elementos.
 
-\newpage
-
 \subsubsection{Eficiencia empírica}
 Debido al orden del algoritmo, el número de elementos que tenemos que tomar es mucho menor que los que usamos en el resto de algortimos. En este caso, tras ejecutar el algoritmo en un rango de 8 a 32 elementos, con saltos de 1 elemento por iteración, obtenemos los siguientes resultados:
+
+\newpage
 
 \begin{table}[h!]
 	\centering
@@ -712,8 +720,6 @@ Este análisis confirmará nuestro análisis teórico. Para realizar este análi
 \includegraphics[scale=0.17]{../../Images/hanoi_combinados.png}
 \caption{Gráfica con los tiempos de ejecución del \\algoritmo de las torres de Hanoi}
 \end{figure}
-
-\newpage
 
 En esta gráfica están representados los 25 puntos obtenidos tras la ejecución del algoritmo de Hanoi en los distintos equipos de los integrantes del grupo. Tras una serie de cálculos con gnuplot, observamos que las constantes ocultas son:
 \begin{itemize}
@@ -959,6 +965,8 @@ A continuación comenzamos mostrando los datasets del peor y mejor caso de selec
 	
 \end{table}
 
+\newpage
+
 \begin{table}[h!]
 	\centering
 	\footnotesize
@@ -1001,7 +1009,6 @@ A continuación comenzamos mostrando los datasets del peor y mejor caso de selec
 	
 \end{table}
 
-\newpage
 
 \begin{figure}[h!]
 	\begin{subfigure}{.5\textwidth}
@@ -1046,7 +1053,7 @@ A continuación comenzamos mostrando los datasets del peor y mejor caso de selec
 \end{figure}
 
 
-\newpage
+\newpage{\ }
 
 
 Como hemos apreciado en las gráficas, en inserción los casos se diferencian perfectamente, tardando casi 0 segundos para el mejor caso y tardando mucho más para el peor caso. Sin embargo, en el algoritmo de selección vemos que las gráficas oscilan en torno a los mismos valores. Esto se debe a cómo están hechos los códigos. En el algoritmo de selección, se comienza hallando el mínimo de los n elementos y se coloca en la primera posición. Tras esto, se calcula el mínimo de los n-1 elementos restantes que no están ordenados y se coloca en segunda posición, y así sucesivamente hasta llegar al final. Por ello, independientemente de que el vector esté ordenado o no, siempre va a tener que recorrer el vector de la forma descrita para hallar todos los mínimos, de ahí que los tiempos en los 3 casos no se diferencien mucho.\\
