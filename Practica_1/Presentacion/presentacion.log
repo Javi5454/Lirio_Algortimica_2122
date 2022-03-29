@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.2.1)  28 MAR 2022 15:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.2.1)  29 MAR 2022 13:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1870,42 +1870,43 @@ Overfull \hbox (8.04405pt too wide) in paragraph at lines 3--519
 File: ../../Images/floyd_opt_Javi5454.png Graphic file (type png)
 <use ../../Images/floyd_opt_Javi5454.png>
 Package pdftex.def Info: ../../Images/floyd_opt_Javi5454.png  used on input lin
-e 4.
-(pdftex.def)             Requested size: 128.47772pt x 77.08662pt.
-<../../Images/floyd_opt_Jota.png, id=1473, 642.4pt x 385.44pt>
-File: ../../Images/floyd_opt_Jota.png Graphic file (type png)
-<use ../../Images/floyd_opt_Jota.png>
-Package pdftex.def Info: ../../Images/floyd_opt_Jota.png  used on input line 6.
-
-(pdftex.def)             Requested size: 128.47772pt x 77.08662pt.
+e 3.
+(pdftex.def)             Requested size: 256.95544pt x 154.17326pt.
 ) [31
 
- <../../Images/floyd_opt_Javi5454.png> <../../Images/floyd_opt_Jota.png>]
+ <../../Images/floyd_opt_Javi5454.png>]
 \openout4 = `presentacion.vrb'.
 
- (./presentacion.vrb
-<../../Images/floy_comparacion.png, id=1525, 642.4pt x 385.44pt>
+
+(./presentacion.vrb
+<../../Images/floy_comparacion.png, id=1524, 642.4pt x 385.44pt>
 File: ../../Images/floy_comparacion.png Graphic file (type png)
 <use ../../Images/floy_comparacion.png>
 Package pdftex.def Info: ../../Images/floy_comparacion.png  used on input line 
 4.
-(pdftex.def)             Requested size: 128.47772pt x 77.08662pt.
-<../../Images/hanoi_comparacion.png, id=1526, 642.4pt x 385.44pt>
+(pdftex.def)             Requested size: 147.74889pt x 88.64932pt.
+<../../Images/hanoi_comparacion.png, id=1525, 642.4pt x 385.44pt>
 File: ../../Images/hanoi_comparacion.png Graphic file (type png)
 <use ../../Images/hanoi_comparacion.png>
 Package pdftex.def Info: ../../Images/hanoi_comparacion.png  used on input line
  6.
-(pdftex.def)             Requested size: 128.47772pt x 77.08662pt.
-) [32
+(pdftex.def)             Requested size: 147.74889pt x 88.64932pt.
+)
+Overfull \hbox (12.2079pt too wide) in paragraph at lines 3--555
+[][]  
+ []
 
- <../../Images/floy_comparacion.png> <../../Images/hanoi_comparacion.png>] [33
+[32
+
+ <../../Images/floy_comparacion.png> <../../Images/hanoi_comparacion.png>]
+[33
 
 ]
 \openout4 = `presentacion.vrb'.
 
  (./presentacion.vrb
 <../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png, id=
-1628, 1854.93pt x 955.57pt>
+1627, 1854.93pt x 955.57pt>
 File: ../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png
  Graphic file (type png)
 <use ../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png>
@@ -1918,45 +1919,43 @@ ción Joshoccas.png  used on input line 3.
  <../../Images/Gráfica comparativa algoritmos de ordenación Joshoccas.png>]
 \openout4 = `presentacion.vrb'.
 
-
-(./presentacion.vrb
-<../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q).png
-, id=1680, 1854.93pt x 955.57pt>
-File: ../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q
-).png Graphic file (type png)
-<use ../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q)
-.png>
-Package pdftex.def Info: ../../Images/Gráfica comparativa algoritmos ordenaci�
-�n Joshoccas (H y Q).png  used on input line 3.
+ (./presentacion.vrb
+<../../Images/Grafica_comparativa_algoritmos_ordenacion_Joshoccas_(HyQ).png, id
+=1679, 1854.93pt x 955.57pt>
+File: ../../Images/Grafica_comparativa_algoritmos_ordenacion_Joshoccas_(HyQ).pn
+g Graphic file (type png)
+<use ../../Images/Grafica_comparativa_algoritmos_ordenacion_Joshoccas_(HyQ).png
+>
+Package pdftex.def Info: ../../Images/Grafica_comparativa_algoritmos_ordenacion
+_Joshoccas_(HyQ).png  used on input line 3.
 (pdftex.def)             Requested size: 278.2275pt x 143.32932pt.
 ) [35
 
- <../../Images/Gráfica comparativa algoritmos ordenación Joshoccas (H y Q).pn
-g>]
+ <../../Images/Grafica_comparativa_algoritmos_ordenacion_Joshoccas_(HyQ).png>]
 \openout4 = `presentacion.vrb'.
 
- (./presentacion.vrb) [36
+ (./presentacion.vrb)
+[36
 
-]
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
 (./Codes/peor.cpp) (./Codes/mejor.cpp) [37
 
 ]
-Overfull \vbox (32.5384pt too high) detected at line 628
+Overfull \vbox (32.5384pt too high) detected at line 622
  []
 
 [38
 
 ]
-<../../Images/Gráfica casos inserción Joshoccas.png, id=1884, 642.4pt x 385.4
+<../../Images/Gráfica casos inserción Joshoccas.png, id=1883, 642.4pt x 385.4
 4pt>
 File: ../../Images/Gráfica casos inserción Joshoccas.png Graphic file (type p
 ng)
 <use ../../Images/Gráfica casos inserción Joshoccas.png>
 Package pdftex.def Info: ../../Images/Gráfica casos inserción Joshoccas.png  
-used on input line 634.
+used on input line 628.
 (pdftex.def)             Requested size: 289.07733pt x 173.4464pt.
  [39
 
@@ -1965,7 +1964,7 @@ used on input line 634.
 
 
 (./presentacion.vrb)
-Overfull \vbox (32.5384pt too high) detected at line 667
+Overfull \vbox (32.5384pt too high) detected at line 661
  []
 
 [40
@@ -1974,21 +1973,17 @@ Overfull \vbox (32.5384pt too high) detected at line 667
 \openout4 = `presentacion.vrb'.
 
  (./presentacion.vrb
-<../../Images/Gráfica casos selección Joshoccas.png, id=1986, 1854.93pt x 955
+<../../Images/Gráfica casos selección Joshoccas.png, id=1985, 1854.93pt x 955
 .57pt>
 File: ../../Images/Gráfica casos selección Joshoccas.png Graphic file (type p
 ng)
 <use ../../Images/Gráfica casos selección Joshoccas.png>
 Package pdftex.def Info: ../../Images/Gráfica casos selección Joshoccas.png  
 used on input line 3.
-(pdftex.def)             Requested size: 370.97943pt x 191.11061pt.
+(pdftex.def)             Requested size: 315.33392pt x 162.44475pt.
 )
-Overfull \hbox (63.68956pt too wide) in paragraph at lines 3--673
+Overfull \hbox (8.04405pt too wide) in paragraph at lines 3--667
 [][]  
- []
-
-
-Overfull \vbox (5.79295pt too high) detected at line 673
  []
 
 [41
@@ -1997,14 +1992,14 @@ Overfull \vbox (5.79295pt too high) detected at line 673
 \openout4 = `presentacion.vrb'.
 
  (./presentacion.vrb
-<../../Images/Ejemplo vectores.png, id=2037, 1119.18124pt x 1002.74625pt>
+<../../Images/Ejemplo vectores.png, id=2036, 1119.18124pt x 1002.74625pt>
 File: ../../Images/Ejemplo vectores.png Graphic file (type png)
 <use ../../Images/Ejemplo vectores.png>
 Package pdftex.def Info: ../../Images/Ejemplo vectores.png  used on input line 
 4.
 (pdftex.def)             Requested size: 201.44392pt x 180.48653pt.
 )
-Overfull \vbox (11.10379pt too high) detected at line 679
+Overfull \vbox (11.10379pt too high) detected at line 673
  []
 
 [42
@@ -2023,14 +2018,14 @@ Overfull \vbox (11.10379pt too high) detected at line 679
 \tf@snm=\write9
 \openout9 = `presentacion.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 690.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 690.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 684.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 684.
  (./presentacion.aux
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 690.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 690.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 684.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 684.
 Package rerunfilecheck Info: File `presentacion.out' has not changed.
 (rerunfilecheck)             Checksum: 51882C6EFD14B2FE3FA9C91BD925F02A;223.
 
@@ -2040,10 +2035,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 30471 strings out of 481239
- 579100 string characters out of 5920378
- 1213302 words of memory out of 5000000
- 44815 multiletter control sequences out of 15000+600000
+ 30465 strings out of 481239
+ 578882 string characters out of 5920378
+ 1213253 words of memory out of 5000000
+ 44810 multiletter control sequences out of 15000+600000
  860962 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,19n,107p,1811b,1516s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2054,10 +2049,10 @@ st/fonts/type1/public/fira/FiraSans-Italic.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/fira/FiraSans-Regular.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/newpx/pxsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/txfonts/t1xtt.pfb>
-Output written on presentacion.pdf (44 pages, 1441174 bytes).
+Output written on presentacion.pdf (44 pages, 1421381 bytes).
 PDF statistics:
- 2191 PDF objects out of 2487 (max. 8388607)
+ 2190 PDF objects out of 2487 (max. 8388607)
  2053 compressed objects within 21 object streams
  93 named destinations out of 1000 (max. 500000)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 140 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -16,7 +16,7 @@
 \renewcommand*\contentsname{Índice} %Nombre del indice
 
 \begin{document}
-\lstset{language=C++,
+\lstset{
 	basicstyle=\footnotesize,
 	extendedchars=true,
 	literate={á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {ú}{{\'u}}1 {ó}{{\'o}}1,
@@ -63,6 +63,13 @@
 
 \newpage
 \section{Introducción}
+
+A modo de notación, destacamos las siguientes equivalencias:
+\begin{itemize}
+	\item \textit{Ordenador de Javier} \(\longrightarrow\) i7-6700 3.40 GHz.
+	\item \textit{Ordenador de Jose Alberto} \(\longrightarrow\) i5-1035G1 1.00 GHz.
+	\item \textit{Ordenador de Manuel} \(\longrightarrow\)i5-7200 2.5GHz.
+\end{itemize}
 
 Esta primera práctica, \textbf{Práctica 1}, consiste en el análisis de eficiencia de algoritmos, consiste en tres partes distintas:
 \begin{itemize}
@@ -356,7 +363,7 @@ Tras ejecutar el algortimo en un rango de 100000 a 2000000 elementos, con saltos
 			\\\hline
 		\end{tabular}
 	}
-	\caption{Experiencia empírica de algoritmo de Selección sin optimizar}
+	\caption{Experiencia empírica de algoritmo de Quicksort}
 \end{table}
 
 Al igual que ocurría en anteriores algoritmos las diferencias son pequeñas entre los distintos tiempos de ejecución y se deben a que se han utillizado distintos ordenadores en la ejecución de los programas.
@@ -366,7 +373,7 @@ Comprobamos que la función de ajuste obtenida en el apartado teórico es correc
 
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.15]{../../Images/Quicksort_combinados.png}
+\includegraphics[scale=0.3]{../../Images/Quicksort_combinados.png}
 \caption{Gráfica con los tiempos de ejecución del \\algoritmo de Quicksort}
 \end{figure}
 
@@ -395,7 +402,6 @@ T(n) \in \mathcal{O}(n\log(n))
 \]
 donde \(T(n)\) es la función que expresa el tiempo de ejecución del algoritmo.
 
-<<<<<<< HEAD
 \subsubsection{Eficiencia empírica}
 Tras ejecutar el algortimo en un rango de 100000 a 2000000 elementos, con saltos de 76000 unidades por ejecución, obtenemos los siguientes resultados:
 
@@ -437,7 +443,7 @@ Tras ejecutar el algortimo en un rango de 100000 a 2000000 elementos, con saltos
 			\\\hline
 		\end{tabular}
 	}
-	\caption{Experiencia empírica de algoritmo de Selección sin optimizar}
+	\caption{Experiencia empírica de algoritmo de Heapsort}
 \end{table}
 
 Se pueden observar pequeñas diferencias entre los distintos tiempos de ejecución pero no muy notables, debidas como hemos comentado anteriormente a las distintas características entre los ordenadores en los que se han ejecutado los programas.
@@ -467,8 +473,6 @@ Podemos observar que nuestro análisis teórico es correcto. Además, podemos ob
 
 El ajusto es bueno pues los valores resultantes son próximos a 0.
 
-=======
->>>>>>> 68a765bfa4dd68d2be750b801cc1e741c93b5285
 \subsection{Comparativa de los algoritmos de ordenación}
 
 En este apartado vamos a ver claramente cuál es la diferencia entre los 4 algoritmos de ordenación que acabamos de analizar. Para ello, hemos generado una gráfica conjunta con las funciones de ajuste ya halladas antes, que eran:
@@ -507,8 +511,6 @@ En este apartado vamos a ver claramente cuál es la diferencia entre los 4 algor
 		\caption{Ordenador Javier}
 	\end{subfigure}
 \end{figure}
-
-\newpage
  
  \begin{figure}[h!]
  	\begin{subfigure}{.5\textwidth}
@@ -608,6 +610,8 @@ A través de la eficiencia híbrida, comprobaremos que el ajuste teórico realiz
 \caption{Gráfica con los tiempos de ejecución del \\algoritmo de Floyd}
 \end{figure}
 
+\newpage
+
 En esta gráfica están representados los 26 puntos obtenidos tras la ejecución del algoritmo de Floyd en los distintos equipos de los integrantes del grupo. Tras una serie de cálculos con gnuplot, observamos que las constantes ocultas son:
 \begin{itemize}
 	\item Ordenador Javier \(\rightarrow T_1(n) = 4.38237 \cdot 10^{-9} x^3 -4.33753 \cdot 10^{-7} x^2 + 0.000337001 x -0.0504332\).
@@ -644,6 +648,8 @@ Si resolvemos la ecuación de recurrencia obtenemos que:
 \]
 
 Y concluimos que \(T(n) \in \mathcal{O}(2^n)\), donde \(T(n)\) es la función que expresa el tiempo de ejecución de nuestro algortimo para \(n\) elementos.
+
+\newpage
 
 \subsubsection{Eficiencia empírica}
 Debido al orden del algoritmo, el número de elementos que tenemos que tomar es mucho menor que los que usamos en el resto de algortimos. En este caso, tras ejecutar el algoritmo en un rango de 7 a 32 elementos, con saltos de 1 elemento por iteración, obtenemos los siguientes resultados:
@@ -705,15 +711,9 @@ Este análisis confirmará nuestro análisis teórico. Para realizar este análi
 
 En esta gráfica están representados los 26 puntos obtenidos tras la ejecución del algoritmo de Hanoi en los distintos equipos de los integrantes del grupo. Tras una serie de cálculos con gnuplot, observamos que las constantes ocultas son:
 \begin{itemize}
-<<<<<<< HEAD
 	\item Ordenador Javier \(\rightarrow T_1(n) = 4.72408 \cdot 10^{-9} \cdot 2^x\).
 	\item Ordenador José Alberto \(\rightarrow T_2(n) = 4.70707 \cdot 10^{-9} \cdot 2^x\).
 	\item Ordenador Manuel \(\rightarrow T_3(n) = 6.03512 \cdot 10^{-9} \cdot 2^x\).
-=======
-	\item i7-6700 3.40GHz \(\rightarrow T_1(n) = 4.72408 \cdot 10^{-9} \cdot 2^x\).
-	\item i5-1095G1 1.00 GHz \(\rightarrow T_2(n) = 4.70707 \cdot 10^{-9} \cdot 2^x\).
-	\item Ordenador Moya \(\rightarrow T_3(n) = 6.03512 \cdot 10^{-9} \cdot 2^x\).
->>>>>>> 68a765bfa4dd68d2be750b801cc1e741c93b5285
 \end{itemize}
 
 Podemos observar que nuestro análisis teórico es correcto. Además, podemos observarlo con el coeficiente de regresión para cada una de nuestras funciones de ajuste:
@@ -743,11 +743,7 @@ A continuación, se muestra una comparación de tiempos de ejecución:
 	\scalebox{0.75}{
 		\begin{tabular}{|c|c|}
 			\hline
-<<<<<<< HEAD
 			\multicolumn{2}{|c|}{\textsf{Ordenador Javier}}
-=======
-			\multicolumn{2}{|c|}{\textsf{Intel Core i7-6700 3.40 GHz}}
->>>>>>> 68a765bfa4dd68d2be750b801cc1e741c93b5285
 			\\\hline
 			\bfseries T. Sin optimizar (s) & \bfseries T. Optimizado (s)
 			\csvreader{./data/Javi5454/salida_floyd_optimizado.csv}{}
@@ -759,11 +755,7 @@ A continuación, se muestra una comparación de tiempos de ejecución:
 		\scalebox{0.75}{
 		\begin{tabular}{|c|c|}
 			\hline
-<<<<<<< HEAD
 			\multicolumn{2}{|c|}{\textsf{Ordenador José Alberto}}
-=======
-			\multicolumn{2}{|c|}{\textsf{i5-1095G1 1.00 GHz}}
->>>>>>> 68a765bfa4dd68d2be750b801cc1e741c93b5285
 			\\\hline
 			\bfseries T. Sin optimizar (s) & \bfseries T. Optimizado (s)
 			\csvreader{./data/Jota/salida_floyd_optimizado.csv}{}
@@ -775,11 +767,7 @@ A continuación, se muestra una comparación de tiempos de ejecución:
 		\scalebox{0.75}{
 		\begin{tabular}{|c|c|}
 			\hline
-<<<<<<< HEAD
 			\multicolumn{2}{|c|}{\textsf{Ordenador Manuel}}
-=======
-			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
->>>>>>> 68a765bfa4dd68d2be750b801cc1e741c93b5285
 			\\\hline
 			\bfseries T. Sin optimizar (s) & \bfseries T. Optimizado (s)
 			\csvreader{./data/Moya/salida_floyd_optimizado.csv}{}
@@ -793,13 +781,13 @@ A continuación, se muestra una comparación de tiempos de ejecución:
 \begin{figure}[h!]
 \begin{subfigure}{.4\textwidth}
 	\includegraphics[scale=0.3]{../../Images/floyd_opt_Javi5454.png}
-	\caption{i7-6700 3.40GHz}
+	\caption{Ordenador Javier}
 	\label{Floyd Optimizado Javi5454}
 \end{subfigure}
 \hfill
 \begin{subfigure}{.4\textwidth}
 	\includegraphics[scale=0.3]{../../Images/floyd_opt_Jota.png}
-	\caption{i5-1095G1 1.00 GHz}
+	\caption{Ordenador José Alberto}
 	\label{Floyd Optimizado Jota}
 \end{subfigure}
 \end{figure}
@@ -807,11 +795,7 @@ A continuación, se muestra una comparación de tiempos de ejecución:
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.28]{../../Images/floyd_opt_ManuelMoya.png}
-<<<<<<< HEAD
-\caption*{(c) i5-7200 2.5GHz}
-=======
-\caption*{(c) Ordenador Moya}
->>>>>>> 68a765bfa4dd68d2be750b801cc1e741c93b5285
+\caption*{(c) Ordenador Manuel}
 \end{figure}
 
 \newpage
@@ -826,12 +810,12 @@ A continuación, se muestran dos gráficas donde se observan otras posibilidades
 \begin{subfigure}{.5\textwidth}
 	\centering
 	\includegraphics[scale=0.25]{../../Images/floy_comparacion.png}
-	\caption{i7-6700 3.40GHz}
+	\caption{Algoritmo de Floyd}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
 	\centering
 	\includegraphics[scale=0.25]{../../Images/hanoi_comparacion.png}
-	\caption{i5-1095G1 1.00 GHz}
+	\caption{Algoritmo de Hanoi}
 \end{subfigure}
 \end{figure}
 
@@ -848,8 +832,6 @@ Y para el mejor caso hemos introducido un bucle que crea un vector ya ordenado:
 \lstinputlisting[language=C++]{./Codes/mejor.cpp}
 
 A continuación comenzamos mostrando los datasets del peor y mejor caso de selección y peor y mejor caso de inserción, junto a su representación gráfica:
-
-\newpage
 
 \begin{table}[h!]
 	\centering
@@ -1072,4 +1054,16 @@ Por otra parte, en inserción sí se diferencian, y esto se debe a que se ordena
 \lstinputlisting[language=C++]{./Codes/insercion.cpp}
 
 De esta forma, como el vector ya está ordenado, la condición del bucle \texttt{while} nunca se da y por lo tanto en cada iteración del \texttt{for} se ahorra la ejecución del cuerpo del bucle \texttt{while} y solo se realizan comparaciones entre pares de números consecutivos.
+
+\newpage
+
+\section{Conclusiones}
+
+Como conclusiones de esta práctica, hemos observado los siguientes hechos a destacar:
+\begin{itemize}
+	\item El orden de eficiencia de un algoritmo \(\mathcal{O}\) es un factor clave cuando el número de iteraciones a realizar es grande.
+	\item Usar optimización a la hora de compilar nuestros programas debe de ser un factor a tener en cuenta, pues puede suponernos una gran ventaja en lo relativo al tiempo de ejecución.
+	\item El análisis teórico es importante, pues puede darnos información sobre si merece la pena implementar un algoritmo o no.
+	\item El análisis híbrido y la obtención de las constantes ocultas son una manera de confirmar nuestros análisis teórico.
+\end{itemize}
 \end{document}
