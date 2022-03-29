@@ -64,11 +64,11 @@
 \newpage
 \section{Introducción}
 
-A modo de notación, destacamos las siguientes equivalencias:
+Las características de los ordenadores usados por cada integrante son:
 \begin{itemize}
-	\item \textit{Ordenador de Javier} \(\longrightarrow\) i7-6700 3.40 GHz.
-	\item \textit{Ordenador de Jose Alberto} \(\longrightarrow\) i5-1035G1 1.00 GHz.
-	\item \textit{Ordenador de Manuel} \(\longrightarrow\)i5-7200 2.5GHz.
+	\item \textit{Ordenador de Javier} \(\longrightarrow\) Nombre: , Procesador: i7-6700 3.40 GHz, RAM, 6a generación, núcleos, Caché L1d:, Caché L1i: , Caché L2:, Caché L3: 
+	\item \textit{Ordenador de Jose Alberto} \(\longrightarrow\) Nombre: Acer Aspire-A315-56, Procesador: i5-1035G1 1.00 GHz, 12 GB RAM, 10a generación, 8 núcleos, Caché L1d: 192 KiB, Caché L1i: 128 KiB, Caché L2: 2 MiB; Caché L3: 6 MiB
+	\item \textit{Ordenador de Manuel} \(\longrightarrow\) Nombre: , Procesador: i5-7200 2.5GHz, 12 GB RAM, 7a generación, 4 núcleos, Caché L1d: 32K, Caché L1i: 32K, Caché L2: 256K, Caché L3: 3072K 
 \end{itemize}
 
 Esta primera práctica, \textbf{Práctica 1}, consiste en el análisis de eficiencia de algoritmos, consiste en tres partes distintas:
@@ -82,7 +82,7 @@ A continuación, se explican en más profundidad dichas partes.
 
 \subsection{Análisis de la eficiencia teórica}
 
-El análisis de la \textbf{eficiencia teórica} consiste en analizar el tiempo de ejecución de los algoritmos dados para encontrar el peor de los casos, es decir, en qué clase de funciones en notación \(\mathcal{O}\) grande se encuentran. Para ello, hemos utilizado las técnicas de análisis de algoritmos vistas en clase y en la asignatura \textit{Estructura de Computadores}.
+El análisis de la \textbf{eficiencia teórica} consiste en analizar el tiempo de ejecución de los algoritmos dados para encontrar el peor de los casos, es decir, en qué clase de funciones en notación \(\mathcal{O}\) grande se encuentran. Para ello, hemos utilizado las técnicas de análisis de algoritmos vistas en clase y en la asignatura \textit{Estructura de Datos}.
 
 \subsection{Análisis de la eficiencia empírica}
 
@@ -109,7 +109,7 @@ i = #valor de la primera iteracion
 while [ $i -le #valor ultima iteracion ]
 do
 ./programa_a_ejecutar $i >> salida.dat
-i=$[i+#salto entre valores para conseguir 26 puntos]
+i=$[i+#salto entre valores para conseguir 25 puntos]
 done
 \end{lstlisting}
 
@@ -133,6 +133,12 @@ donde \texttt{'salida.dat'} es nuestro dataset.
 
 La parte que más nos interesa es la parte donde pone \texttt{Final set of parameters}, pues ahí están nuestros coeficientes junto con la bondad del ajuste realizado.
 
+Por último, representaremos los puntos junto a su curva de ajuste usando la siguiente estructura:
+
+\begin{lstlisting}
+gnuplot> plot 'salida.dat', f(x) title 'Curva de ajuste'
+\end{lstlisting}
+
 \section{Desarrollo}
 
 A continuación, realizaremos el estudio individual de cada algortimo, como se ha descrito anteriormente.
@@ -150,7 +156,7 @@ T(n) \in \mathcal{O}(n^2)
 donde \(T(n)\) es la función que expresa el tiempo de ejecución del algoritmo.
 
 \subsubsection{Eficiencia empírica}
-Tras ejecutar el algortimo en un rango de 10000 a 200000 elementos, con saltos de 7600 unidades por ejecución, obtenemos los siguientes resultados:
+Tras ejecutar el algortimo en un rango de 17600 a 200000 elementos, con saltos de 7600 unidades por ejecución, obtenemos los siguientes resultados:
 
 \begin{table}[h!]
 	\centering
@@ -196,7 +202,7 @@ Tras ejecutar el algortimo en un rango de 10000 a 200000 elementos, con saltos d
 En este caso, al igual que en el resto de algoritmos, percibimos un poco de diferencia entre los tiempos de ejecución, debido a las diferentes circunstancias de cada integrante del grupo, pues poseemos dispositivos con distinto potencial.
 
 \subsubsection{Eficiencia híbrida}
-El estudio de la eficiencia híbrida consiste en hallar la expresión de las funciones que representan el tiempo de ejecución a partir de un tamaño dado. Usando los datasets del anterior apartado, hemos usado gnuplot para graficar los 26 puntos obtenidos junto con su función de ajuste. A continuación mostramos la gráfica con los ajustes de cada uno de los integrantes:
+El estudio de la eficiencia híbrida consiste en hallar la expresión de las funciones que representan el tiempo de ejecución a partir de un tamaño dado. Usando los datasets del anterior apartado, hemos usado gnuplot para graficar los 25 puntos obtenidos junto con su función de ajuste. A continuación mostramos la gráfica con los ajustes de cada uno de los integrantes:
 
 \begin{figure}[h!]
 	\centering
@@ -233,7 +239,7 @@ T(n) \in \mathcal{O}(n^2)
 donde \(T(n)\) es la función que expresa el tiempo de ejecución del algoritmo.
 
 \subsubsection{Eficiencia empírica}
-Tras ejecutar el algortimo en un rango de 10000 a 200000 elementos, con saltos de 7600 unidades por ejecución, obtenemos los siguientes resultados:
+Tras ejecutar el algortimo en un rango de 17600 a 200000 elementos, con saltos de 7600 unidades por ejecución, obtenemos los siguientes resultados:
 
 \begin{table}[h!]
 	\centering
@@ -280,7 +286,7 @@ Observamos pequeñas diferencias en los tiempos de ejecución de cada uno de los
 
 \subsubsection{Eficiencia híbrida}
 
-Gracias al estudio de la eficiencia híbrida veremos que el ajuste teórico hecho hace dos subapartados es el correcto. Para ello, hemos tomado los datasets recién mostrados y hemos generado una gráfica en la que se representan los 26 tiempos obtenidos en función de los tamaños que hemos probado. Gnuplot nos ha facilitado esta gráfica junto con las constantes específicas asociadas a cada uno de nuestro, así como las varianzas residuales:
+Gracias al estudio de la eficiencia híbrida veremos que el ajuste teórico hecho hace dos subapartados es el correcto. Para ello, hemos tomado los datasets recién mostrados y hemos generado una gráfica en la que se representan los 25 tiempos obtenidos en función de los tamaños que hemos probado. Gnuplot nos ha facilitado esta gráfica junto con las constantes específicas asociadas a cada uno de nuestro, así como las varianzas residuales:
 
 \begin{figure}[h!]
 	\centering
@@ -309,13 +315,13 @@ Vemos que en todos los casos el ajuste cuadrático nos da varianzas muy próxima
 \lstinputlisting[language=C++]{./Codes/quicksort.cpp}
 \subsubsection{Eficiencia teórica}
 Tras un análisis rápido del código podemos ver como quicksort es una función recursiva que divide el vector a ordenar de tamaño n en dos vectores de tamaño aproximadamente \(\frac{n}{2}\). Obviaremos la parte de la función en la que por debajo del umbral se ejecuta la función \texttt{insercion\_lims} ya que no es de nuestro interés en el análisis. Luego es fácil ver que la ecuación recurrente asociada es la siguiente ya que la función \texttt{dividir\_qs} es evidentemente \(\mathcal{O}(n)\):
-\\
-\(T(n) = 2T(\frac{n}{2}) + n \)
-\\
+\[
+ T(n) = 2T\left(\frac{n}{2}\right) + n 
+\]
 cuya solución sabemos que es por los resultados vistos en clase 
-\\
-\(T(n) = c1 \cdot n + c2 \cdot n\log(n) donde c1, c2 \in \mathbb{R^+} \)
-\\
+\[
+ T(n) = c1 \cdot n + c2 \cdot n\log(n) \hspace{0.2cm} \text{donde} \hspace{0.2cm} c1, c2 \in \mathbb{R^+} 
+\]
 Por tanto es claro que ocurre que:
 \[
 T(n) \in \mathcal{O}(n\log(n))
@@ -323,7 +329,7 @@ T(n) \in \mathcal{O}(n\log(n))
 donde \(T(n)\) es la función que expresa el tiempo de ejecución del algoritmo.
 
 \subsubsection{Eficiencia empírica}
-Tras ejecutar el algortimo en un rango de 100000 a 2000000 elementos, con saltos de 76000 unidades por ejecución, obtenemos los siguientes resultados:
+Tras ejecutar el algortimo en un rango de 176000 a 2000000 elementos, con saltos de 76000 unidades por ejecución, obtenemos los siguientes resultados:
 
 \begin{table}[h!]
 	\centering
@@ -377,14 +383,14 @@ Comprobamos que la función de ajuste obtenida en el apartado teórico es correc
 \caption{Gráfica con los tiempos de ejecución del \\algoritmo de Quicksort}
 \end{figure}
 
-Tras representar en la gráfica los 26 puntos obtenidos con la ejecución del algoritmo de Quicksort, con gnuplot vemos que las constantes ocultas son:
+Tras representar en la gráfica los 25 puntos obtenidos con la ejecución del algoritmo de Quicksort, con gnuplot vemos que las constantes ocultas son:
 \begin{itemize}
-	\item Ordenador Javier \(\rightarrow T_1(n) = 6.30121 \cdot 10^{-9} x\log(x) + 0.00188054\). 
-	\item Ordenador José Alberto \(\rightarrow T_2(n) = 7.62891 \cdot 10^{-9} x\log(x) + 0.00283755\).
-	\item Ordenador Manuel \(\rightarrow T_3(n) = 8.39387 \cdot 10^{-9} x\log(x) + 0.000666717\).
+	\item Ordenador Javier \(\rightarrow T_1(n) = 9.18701 \cdot 10^{-9} \cdot x \cdot log(x)\).
+	\item Ordenador José Alberto \(\rightarrow T_2(n) = 1.11515 \cdot 10^{-8} \cdot x \cdot log(x)\).
+	\item Ordenador Manuel \(\rightarrow T_3(n) = 1.21439 \cdot 10^{-8} \cdot x \cdot log(x)\).
 \end{itemize} 
 
-Podemos observar que nuestro análisis teórico es correcto. Además, podemos observarlo con el coeficiente de regresión para cada una de nuestra funciones de ajuste:
+Podemos observar que nuestro análisis teórico es correcto. Además, podemos observarlo con la varianza residual para cada una de nuestra funciones de ajuste:
 \begin{itemize}
 	\item \(T_1(n) \longrightarrow Var.res = 0.000000796551\)
 	\item \(T_2(n) \longrightarrow Var.res = 0.00000158349\)
@@ -403,7 +409,7 @@ T(n) \in \mathcal{O}(n\log(n))
 donde \(T(n)\) es la función que expresa el tiempo de ejecución del algoritmo.
 
 \subsubsection{Eficiencia empírica}
-Tras ejecutar el algortimo en un rango de 100000 a 2000000 elementos, con saltos de 76000 unidades por ejecución, obtenemos los siguientes resultados:
+Tras ejecutar el algortimo en un rango de 176000 a 2000000 elementos, con saltos de 76000 unidades por ejecución, obtenemos los siguientes resultados:
 
 \begin{table}[h!]
 	\centering
@@ -457,14 +463,14 @@ A continuación comprobaremos como la función de ajuste teórico obtenida es la
 \caption{Gráfica con los tiempos de ejecución del \\algoritmo de Heapsort}
 \end{figure}
 
-Tras representar en la gráfica los 26 puntos obtenidos con la ejecución del algoritmo de Heapsort, es fácil calcular con gnuplot que las constantes ocultas son:
+Tras representar en la gráfica los 25 puntos obtenidos con la ejecución del algoritmo de Heapsort, es fácil calcular con gnuplot que las constantes ocultas son:
 \begin{itemize}
-	\item Ordenador Javier \(\rightarrow T_1(n) = 9.81428 \cdot 10^{-9} xlog(x) - 0.00367709\). 
-	\item Ordenador José Alberto \(\rightarrow T_2(n) = 1.08739 \cdot 10^{-8} xlog(x) - 0.000156439\).
-	\item Ordenador Manuel \(\rightarrow T_3(n) = 1.41147 \cdot 10^{-8} xlog(x) - 0.0148078\).
+	\item Ordenador Javier \(\rightarrow T_1(n) = 1.39707 \cdot 10^{-8} \cdot x \cdot log(x)\). 
+	\item Ordenador José Alberto \(\rightarrow T_2(n) = 1.56798 \cdot 10^{-8} \cdot x \cdot log(x)\).
+	\item Ordenador Manuel \(\rightarrow T_3(n) = 1.96051 \cdot 10^{-8} \cdot x \cdot log(x)\).
 \end{itemize} 
 
-Podemos observar que nuestro análisis teórico es correcto. Además, podemos observarlo con el coeficiente de regresión para cada una de nuestra funciones de ajuste:
+Podemos observar que nuestro análisis teórico es correcto. Además, podemos observarlo con la varianza residual para cada una de nuestra funciones de ajuste:
 \begin{itemize}
 	\item \(T_1(n) \longrightarrow Var.res = 0.00265428\)
 	\item \(T_2(n) \longrightarrow Var.res = 0.00031452\)
@@ -612,14 +618,14 @@ A través de la eficiencia híbrida, comprobaremos que el ajuste teórico realiz
 
 \newpage
 
-En esta gráfica están representados los 26 puntos obtenidos tras la ejecución del algoritmo de Floyd en los distintos equipos de los integrantes del grupo. Tras una serie de cálculos con gnuplot, observamos que las constantes ocultas son:
+En esta gráfica están representados los 25 puntos obtenidos tras la ejecución del algoritmo de Floyd en los distintos equipos de los integrantes del grupo. Tras una serie de cálculos con gnuplot, observamos que las constantes ocultas son:
 \begin{itemize}
 	\item Ordenador Javier \(\rightarrow T_1(n) = 4.38237 \cdot 10^{-9} x^3 -4.33753 \cdot 10^{-7} x^2 + 0.000337001 x -0.0504332\).
 	\item Ordenador José Alberto \(\rightarrow T_2(n) = 5.12922 \cdot 10^{-9} x^3 -1.11315 \cdot 10^{-6} x^2 + 0.00083571 x - 0.134397\).
 	\item Ordenador Manuel \(\rightarrow T_3(n) = 6.77297 \cdot 10^{-9} x^3 + 5.13099 \cdot 10^{-7} x^2 - 0.000427834 x + 0.0714028\).
 \end{itemize} 
 
-Podemos observar que nuestro análisis teórico es correcto. Además, podemos observarlo con el coeficiente de regresión para cada una de nuestra funciones de ajuste:
+Podemos observar que nuestro análisis teórico es correcto. Además, podemos observarlo con la varianza residual para cada una de nuestra funciones de ajuste:
 \begin{itemize}
 	\item \(T_1(n) \longrightarrow Var.res = 0.00204522\)
 	\item \(T_2(n) \longrightarrow Var.res = 0.044778\)
@@ -652,7 +658,7 @@ Y concluimos que \(T(n) \in \mathcal{O}(2^n)\), donde \(T(n)\) es la función qu
 \newpage
 
 \subsubsection{Eficiencia empírica}
-Debido al orden del algoritmo, el número de elementos que tenemos que tomar es mucho menor que los que usamos en el resto de algortimos. En este caso, tras ejecutar el algoritmo en un rango de 7 a 32 elementos, con saltos de 1 elemento por iteración, obtenemos los siguientes resultados:
+Debido al orden del algoritmo, el número de elementos que tenemos que tomar es mucho menor que los que usamos en el resto de algortimos. En este caso, tras ejecutar el algoritmo en un rango de 8 a 32 elementos, con saltos de 1 elemento por iteración, obtenemos los siguientes resultados:
 
 \begin{table}[h!]
 	\centering
@@ -709,14 +715,14 @@ Este análisis confirmará nuestro análisis teórico. Para realizar este análi
 
 \newpage
 
-En esta gráfica están representados los 26 puntos obtenidos tras la ejecución del algoritmo de Hanoi en los distintos equipos de los integrantes del grupo. Tras una serie de cálculos con gnuplot, observamos que las constantes ocultas son:
+En esta gráfica están representados los 25 puntos obtenidos tras la ejecución del algoritmo de Hanoi en los distintos equipos de los integrantes del grupo. Tras una serie de cálculos con gnuplot, observamos que las constantes ocultas son:
 \begin{itemize}
 	\item Ordenador Javier \(\rightarrow T_1(n) = 4.72408 \cdot 10^{-9} \cdot 2^x\).
 	\item Ordenador José Alberto \(\rightarrow T_2(n) = 4.70707 \cdot 10^{-9} \cdot 2^x\).
 	\item Ordenador Manuel \(\rightarrow T_3(n) = 6.03512 \cdot 10^{-9} \cdot 2^x\).
 \end{itemize}
 
-Podemos observar que nuestro análisis teórico es correcto. Además, podemos observarlo con el coeficiente de regresión para cada una de nuestras funciones de ajuste:
+Podemos observar que nuestro análisis teórico es correcto. Además, podemos observarlo con la varianza residual para cada una de nuestras funciones de ajuste:
 \begin{itemize}
 	\item \(T_1(n) \longrightarrow Var.res = 0.000302074\)
 	\item \(T_2(n) \longrightarrow Var.res = 0.0113386\)
@@ -725,13 +731,9 @@ Podemos observar que nuestro análisis teórico es correcto. Además, podemos ob
 
 Estos valores son muy cercanos a 0, y por tanto indican que el ajuste es muy bueno.
 
-\section{Casos especiales}
+\section{Variación de la eficiencia empírica usando optimización}
 
-Además del análisis mostrado de los seis algoritmos anteriores, también se ha realizado un análisis de algunos de ellos bajo condiciones distintas, para mostrar así además una experiencia más amplia y diversa y conseguir un mejor entendimiento de los algortimos trabajados.
-
-\subsection{Floyd optimizado}
-
-En este caso, queríamos mostrar la diferencia que obtenemos cuando realizamos la compilación de nuestro código bajo ciertas condiciones que pueden modificar "la pureza del mismo". 
+Además del análisis mostrado de los seis algoritmos anteriores, también se ha realizado un análisis de algunos de ellos bajo condiciones distintas, para mostrar así además una experiencia más amplia y diversa y conseguir un mejor entendimiento de los algortimos trabajados. En este caso, hemos decidido estudiar el algoritmo de \texttt{Floyd} usando la optimización \texttt{-Og}, la cual modifica "la pureza" del código generado por el compilador. 
 
 Con una compilación normal, el compilador tratará de convertir nuestros \texttt{.cpp} a código máquina de la manera más fiel posible. Sin embargo, si la introducimos la orden \texttt{-Og} estamos indicando a este que reduzca en lo máximo la ineficiencia de nuestro código, optimizándolo.
 
@@ -802,7 +804,7 @@ A continuación, se muestra una comparación de tiempos de ejecución:
 
 Podemos observar que el uso de la instrucción \texttt{-Og}, y todas sus variantes de su optimización, reducen considerablemente el tiempo de ejecución de nuestro código. Por tanto, su uso debe estar presente a la hora de compilar ciertos programas.
 
-\subsection{Otros posibles ajustes funcionales}
+\section{Probando otros posibles ajustes funcionales}
 
 A continuación, se muestran dos gráficas donde se observan otras posibilidades de ajuste para los algoritmos de Floyd y Hanoi, y se observa que los ajustes utilizados en los análisis previos son los mejores, confirmando nuestro análisis teórico.
 
@@ -863,7 +865,7 @@ A continuación comenzamos mostrando los datasets del peor y mejor caso de selec
 	\scalebox{0.75}{
 		\begin{tabular}{|c|c|}
 			\hline
-			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\multicolumn{2}{|c|}{\textsf{Ordenador Manuel}}
 			\\\hline
 			\bfseries Elementos (n) & \bfseries Tiempo (s)
 			\csvreader{./data/Moya/salida_seleccion_peor.csv}{}
@@ -904,7 +906,7 @@ A continuación comenzamos mostrando los datasets del peor y mejor caso de selec
 	\scalebox{0.75}{
 		\begin{tabular}{|c|c|}
 			\hline
-			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\multicolumn{2}{|c|}{\textsf{Ordenador Manuel}}
 			\\\hline
 			\bfseries Elementos (n) & \bfseries Tiempo (s)
 			\csvreader{./data/Moya/salida_seleccion_mejor.csv}{}
@@ -945,7 +947,7 @@ A continuación comenzamos mostrando los datasets del peor y mejor caso de selec
 	\scalebox{0.75}{
 		\begin{tabular}{|c|c|}
 			\hline
-			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\multicolumn{2}{|c|}{\textsf{Ordenador Manuel}}
 			\\\hline
 			\bfseries Elementos (n) & \bfseries Tiempo (s)
 			\csvreader{./data/Moya/salida_insercion_peor.csv}{}
@@ -987,7 +989,7 @@ A continuación comenzamos mostrando los datasets del peor y mejor caso de selec
 	\scalebox{0.7}{
 		\begin{tabular}{|c|c|}
 			\hline
-			\multicolumn{2}{|c|}{\textsf{Ordenador Moya}}
+			\multicolumn{2}{|c|}{\textsf{Ordenador Manuel}}
 			\\\hline
 			\bfseries Elementos (n) & \bfseries Tiempo (s)
 			\csvreader{./data/Moya/salida_insercion_mejor.csv}{}

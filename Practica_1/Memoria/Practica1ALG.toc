@@ -19,18 +19,17 @@
 \contentsline {subsection}{\numberline {2.4}Heapsort}{9}%
 \contentsline {subsubsection}{\numberline {2.4.1}Eficiencia teórica}{9}%
 \contentsline {subsubsection}{\numberline {2.4.2}Eficiencia empírica}{9}%
-\contentsline {subsubsection}{\numberline {2.4.3}Eficiencia híbrida}{9}%
-\contentsline {subsection}{\numberline {2.5}Comparativa de los algoritmos de ordenación}{10}%
+\contentsline {subsubsection}{\numberline {2.4.3}Eficiencia híbrida}{10}%
+\contentsline {subsection}{\numberline {2.5}Comparativa de los algoritmos de ordenación}{11}%
 \contentsline {subsection}{\numberline {2.6}Floyd}{12}%
 \contentsline {subsubsection}{\numberline {2.6.1}Eficiencia teórica}{12}%
 \contentsline {subsubsection}{\numberline {2.6.2}Eficiencia empírica}{12}%
-\contentsline {subsubsection}{\numberline {2.6.3}Eficiencia híbrida}{12}%
-\contentsline {subsection}{\numberline {2.7}Hanoi}{13}%
-\contentsline {subsubsection}{\numberline {2.7.1}Eficiencia teórica}{13}%
-\contentsline {subsubsection}{\numberline {2.7.2}Eficiencia empírica}{14}%
-\contentsline {subsubsection}{\numberline {2.7.3}Eficiencia híbrida}{14}%
-\contentsline {section}{\numberline {3}Casos especiales}{15}%
-\contentsline {subsection}{\numberline {3.1}Floyd optimizado}{15}%
-\contentsline {subsection}{\numberline {3.2}Otros posibles ajustes funcionales}{16}%
-\contentsline {section}{\numberline {4}Casos en la ejecución de inserción y selección: mejor, peor y promedio}{17}%
-\contentsline {section}{\numberline {5}Conclusiones}{20}%
+\contentsline {subsubsection}{\numberline {2.6.3}Eficiencia híbrida}{13}%
+\contentsline {subsection}{\numberline {2.7}Hanoi}{14}%
+\contentsline {subsubsection}{\numberline {2.7.1}Eficiencia teórica}{14}%
+\contentsline {subsubsection}{\numberline {2.7.2}Eficiencia empírica}{15}%
+\contentsline {subsubsection}{\numberline {2.7.3}Eficiencia híbrida}{15}%
+\contentsline {section}{\numberline {3}Variación de la eficiencia empírica usando optimización}{16}%
+\contentsline {section}{\numberline {4}Probando otros posibles ajustes funcionales}{17}%
+\contentsline {section}{\numberline {5}Casos en la ejecución de inserción y selección: mejor, peor y promedio}{18}%
+\contentsline {section}{\numberline {6}Conclusiones}{21}%
