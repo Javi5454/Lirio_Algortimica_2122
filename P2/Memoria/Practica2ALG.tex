@@ -1,0 +1,81 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{csvsimple}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\renewcommand*\contentsname{Índice} %Nombre del indice
+
+\begin{document}
+\lstset{
+	basicstyle=\footnotesize,
+	extendedchars=true,
+	literate={á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {ú}{{\'u}}1 {ó}{{\'o}}1,
+	backgroundcolor=\color{black!5}
+	}
+	
+\begin{titlepage}
+	\centering
+	{\includegraphics[scale=0.5]{Logo_UGR.png}\par}
+	\vspace{1cm}
+	{\bfseries\Large Escuela T\'ecnica Superior de Ingeniería Informática y Telecomunicaciones \par}
+	\vspace{2.5cm}
+	{\scshape\Huge Pr\'actica 2: Divide y Vencerás \par}
+	\vspace{3cm}
+	{\itshape\Large Doble Grado Ingeniería Informática y Matemáticas}
+	\vfill
+	{\Large Autores: \par}
+	{\Large Jose Alberto Hoces Castro\par}
+	{\Large Javier Gómez López \par}
+	{\Large Moya Mart\'in Castaño \par}
+	\vfill
+	{\Large Abril 2022 \par}
+\end{titlepage}
+
+\thispagestyle{empty}
+\null
+\vfill
+
+%%Información sobre la licencia
+\parbox[t]{\textwidth}{
+  \includegraphics[scale=0.05]{by-nc-sa.png}\\[4pt]
+  \raggedright % Texto alineado a la izquierda
+  \sffamily\large
+  {\Large Este trabajo se distribuye bajo una licencia CC BY-NC-SA 4.0.}\\[4pt]
+  Eres libre de distribuir y adaptar el material siempre que reconozcas a los\\
+  autores originales del documento, no lo utilices para fines comerciales\\
+  y lo distribuyas bajo la misma licencia.\\[4pt]
+  \texttt{creativecommons.org/licenses/by-nc-sa/4.0/}
+}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+\section{Introducción}
+
+El objetivo de esta práctica es utilizar la técnica ``divide y vencerás'' para resolver problemas de forma más eficiente que otras alternativas más sencillas o directas. Para ello, se plantean los siguientes dos problemas:
+
+\begin{itemize}
+	\item \textbf{Ejercicio 1:} Este problema consiste en realizar la búsqueda de un elemento en un vector ordenado con \(n\) elementos.
+	\item \textbf{Ejercicio 2:} Este problema consiste en dados \(k\) vectores de \(n\) elementos, todos ellos ordenados de menor a mayor, combinar todos los vectores en uno único ordenado.
+\end{itemize}
+
+\section{Desarrollo}
+
+\subsection{Ejercicio 1}
+El enunciado del problema es el siguiente: \textit{Dado un vector ordenado (de forma no decreciente) de números enteros \(v\), todos distintos, el objetivo es determinar si existe un índice \(i\) tal que \(v[i] = i\) y encontrarlo en ese caso. Diseñar e implementar un algoritmo ``divide y vencerás'' que permita resolver el problema. ¿Cuál es la complejidad de ese algoritmo y la del algoritmo ``obvio'' para realizar esta tarea? Realizar también un estudio empírico e híbrido de la eficiencia de ambos algoritmos.}
+
+\textit{Supóngase ahora que los enteros no tienen por qué ser todos distintos (pueden repetirse). Determinar si el algoritmo anterior sigue siendo válido, y en caso negativo proponer uno que sí lo sea. ¿Sigue siendo preferible al algoritmo obvio?}
+
+\end{document}
