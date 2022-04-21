@@ -7,9 +7,9 @@ using namespace std;
 #include <algorithm>
 #include <vector>
 
-// generador de ejemplos para el problema del elemento en su posición. Para rellenar el vector de tamaño n, genera todos los enteros entre -(n-1) y (n-1) en un vector auxiliar; después obtiene una permutación aleatoria de ese vector, se queda con los n primeros elementos, y los ordena de forma creciente
+// generador de ejemplos para el problema del elemento en su posiciï¿½n. Para rellenar el vector de tamaï¿½o n, genera todos los enteros entre -(n-1) y (n-1) en un vector auxiliar; despuï¿½s obtiene una permutaciï¿½n aleatoria de ese vector, se queda con los n primeros elementos, y los ordena de forma creciente
 
-double uniforme() //Genera un número uniformemente distribuido en el
+double uniforme() //Genera un nï¿½mero uniformemente distribuido en el
                   //intervalo [0,1) a partir de uno de los generadores
                   //disponibles en C. 
 {
@@ -39,7 +39,7 @@ srand(time(0));
 //genero todos los enteros entre -(n-1) y n-1
 for (int j=0; j<m; j++) aux[j]=j-(n-1);
 
-//algoritmo de random shuffling the Knuth (permutación aleatoria) 
+//algoritmo de random shuffling the Knuth (permutaciï¿½n aleatoria) 
 for (int j=m-1; j>0; j--) {
    double u=uniforme();
    int k=(int)(j*u);
@@ -49,7 +49,7 @@ for (int j=m-1; j>0; j--) {
 }
 //me quedo con los n primeros del vector
 for (int j=0; j<n; j++) T[j]=aux[j];
-for (int j=0; j<n; j++) cout << T[j] << " ";
+//for (int j=0; j<n; j++) cout << T[j] << " ";
 
 //Y ahora ordeno el vector T
 vector<int> myvector (T, T+n);
@@ -58,7 +58,7 @@ vector<int>::iterator it;
 sort(myvector.begin(),myvector.end());
 
  for (it=myvector.begin(); it!=myvector.end(); ++it)
-    cout << " " << *it;
+    cout << " " << *it << endl;
 
   cout << endl;
 
