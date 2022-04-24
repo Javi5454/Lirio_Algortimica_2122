@@ -73,9 +73,30 @@ El objetivo de esta práctica es utilizar la técnica ``divide y vencerás'' par
 
 \section{Desarrollo}
 
+Para los análsis de algoritmos que nos pedirán más adelante, hemos realizado los siguientes pasos:
+\begin{enumerate}
+	\item Un \textbf{análisis teórico} de los algoritmos usando las técnicas vistas en clase.
+	\item Un \textbf{análisis empírico} donde hemos ejecutado los algoritmos en nuestros ordenadores bajo las misma normas y condiciones. Hemos compilado usando la compilación  \texttt{-Og}. Además hemos usado como \textit{datasets} de pruebas generadores de datos aleatorios proporcionados por la profesora. Por otro lado, para automatizar el proceso, hemos generado unos \textit{scripts} de generación de datos de prueba y de ejecución de nuestros programas. Hemos ejecutado cada algoritmo 15 veces en cada uno de los tamaños que han sido probados, y hemos hecho la media de ellos para reducir perturbaciones que puedan alterar el resultado.
+	\item Un \textbf{análisis híbrido} donde hemos tomado los datos de cada uno de los alumnos del grupo y hemos hallado la \(K\) (constante oculta). Para ello hemos usado gnuplot.
+\end{enumerate}
+
 \subsection{Ejercicio 1}
 El enunciado del problema es el siguiente: \textit{Dado un vector ordenado (de forma no decreciente) de números enteros \(v\), todos distintos, el objetivo es determinar si existe un índice \(i\) tal que \(v[i] = i\) y encontrarlo en ese caso. Diseñar e implementar un algoritmo ``divide y vencerás'' que permita resolver el problema. ¿Cuál es la complejidad de ese algoritmo y la del algoritmo ``obvio'' para realizar esta tarea? Realizar también un estudio empírico e híbrido de la eficiencia de ambos algoritmos.}
 
 \textit{Supóngase ahora que los enteros no tienen por qué ser todos distintos (pueden repetirse). Determinar si el algoritmo anterior sigue siendo válido, y en caso negativo proponer uno que sí lo sea. ¿Sigue siendo preferible al algoritmo obvio?}
+
+\subsubsection{Algoritmo ``obvio'' o de fuerza bruta}
+La manera obvia de resolver este ejercicio sería mediante un algoritmo secuencial, que vaya recorriendo el vector hasta encontrar el elemento buscado. Pasemos a realizar un análisis de este algoritmo:
+
+\begin{enumerate}
+	\item \textbf{Análisis Teórico}
+	
+	\lstinputlisting[language=C++]{./Codes/secuencial.cpp}
+	
+	Tal y como se ha indicado en los comentarios del código, todas las operaciones de asignación y comprobación de los \texttt{if} son \(\mathcal{O}(1)\). Estas, a sus vez, se incluyen dentro de un bucle \texttt{for}. Dicho bucle es \(\mathcal{O}(n)\), obteniendo así que la función \texttt{int buscarSecuencial} es \(\mathcal{O}(n)\), es decir
+	\[
+	T(n) \in \mathcal{O}(n)
+	\]
+\end{enumerate}
 
 \end{document}

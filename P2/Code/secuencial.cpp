@@ -34,6 +34,9 @@ int buscarSecuencial(int v[], int n){
         if (v[i] == i){
             return i;
         }
+        else if(v[i] > n){
+            return -1;
+        }
     }
 
     return -1;
@@ -69,12 +72,12 @@ int main(int argc, char* argv[]){
         myFile.close();
     }
 
-    for (size_t i = 0; i < n; i++)
+    /*for (size_t i = 0; i < n; i++) //UNCOMMENT FOR SHOWING THE VECTOR
     {
         cout << "v[" << i << "]: " << T[i] << endl;
-    }
+    }*/
 
-    cout << endl;
+    //cout << endl;
 
     high_resolution_clock::time_point tantes, tdespues;
     duration<double> transcurrido;
@@ -89,8 +92,7 @@ int main(int argc, char* argv[]){
 
     double time_total = transcurrido.count();
 
-    cout << "Result busquedaSecuencial: " << result << endl;
-    cout << "Time used: " << time_total << endl;
+    cout << n << "\t" << time_total << endl;
 
     delete [] T;
 

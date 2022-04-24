@@ -2,10 +2,10 @@
 #!/bin/bash
 
 
-i="10"
+i="1000000"
 
-while [ $i -le 10000 ]
+while [ $i -le 20000000 ]
 do
 ../Code/genera-posicion $i >> ../Code/test_files/prueba$i.txt
-i=$[$i+400]
+i=$[$i+760000]
 done
