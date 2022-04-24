@@ -73,4 +73,11 @@ for (int i=0; i<k; i++) {
  cout << " " << endl;
 }
 
+if(T!= 0){
+  for (int i=0; i < k; i++){
+      delete[] T[i];
+  }
+  delete [] T;
+}
+
 }
