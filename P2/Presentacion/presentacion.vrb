@@ -1,0 +1,2 @@
+\frametitle{¿Elementos repetidos?. \normalfont {Eficacia}}
+Tras un estudio, observamos que nuestra solución es \(\mathcal{O}(n)\) igual que nuestra búsqueda secuencial. Por tanto, no es rentable usar este algoritmo.
