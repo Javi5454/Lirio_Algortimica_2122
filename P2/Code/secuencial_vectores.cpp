@@ -57,21 +57,20 @@ void mergeKArrays(int nElementos, int **arr, int nVectores, int * &v_resultante)
       for(int j = 0; j < nElementos; j++){ 
         encontrado = false;
         k = 0;
-        while(!encontrado && k < nElementos * i + j){
+        while(k < nElementos * i + j && !encontrado){
           if(v_resultante[k] > arr[i][j])
             encontrado = true;
           else
             k++;
         }
-
+        //Realizamos traslacion a la derecha para insertar elemento si es menor
         if(encontrado){
           for(int l = nElementos*i+j-1; l >= k; l--){ 
             v_resultante[l+1] = v_resultante[l];
           }
           v_resultante[k] = arr[i][j];
         }
-
-        if(!encontrado){
+        else{
           v_resultante[nElementos * i + j ] = arr[i][j];
         }
       }
@@ -90,8 +89,6 @@ int main(int argc, char* argv[]){
     int n = stoi(argv[1]);
     int k = stoi(argv[2]);
 
-    int *T = new int[n];
-    assert(T);
 
     string route = argv[3];
     string line;
