@@ -85,7 +85,7 @@ El enunciado del problema es el siguiente: \textit{Dado un vector ordenado (de f
 
 \textit{Supóngase ahora que los enteros no tienen por qué ser todos distintos (pueden repetirse). Determinar si el algoritmo anterior sigue siendo válido, y en caso negativo proponer uno que sí lo sea. ¿Sigue siendo preferible al algoritmo obvio?}
 
-\subsubsection{Algoritmo ``obvio'' o de fuerza bruta}
+\subsubsection{Algoritmo de fuerza bruta}
 La manera obvia de resolver este ejercicio sería mediante un algoritmo secuencial, que vaya recorriendo el vector hasta encontrar el elemento buscado. Pasemos a realizar un análisis de este algoritmo:
 
 \begin{enumerate}
@@ -97,6 +97,92 @@ La manera obvia de resolver este ejercicio sería mediante un algoritmo secuenci
 	\[
 	T(n) \in \mathcal{O}(n)
 	\]
+	
+	\item \textbf{Análisis Empírico}
+	
+	Tras ejecutar el algoritmo para 26 tamaños distintos; desde 1000000 hasta 20000000 dando saltos de 760000, hemos obtenido los siguientes resultados:
+	
+	\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Búsqueda secuencial}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/secuencial_ejej1.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\caption{Experiencia empírica de algoritmo de Inserción sin optimizar}
+\end{table}
 \end{enumerate}
 
+\subsubsection{Divide y Vencerás}
+La oportunidad para usar la técnica divide y vencerás ocurre en el momento en el que trabajamos con vectores ordenados (en nuestro caso de manera creciente). Esto nos permite usar un algoritmo que se basa en la técnica ``divide y vencerás'': la búsqueda binaria.
+
+La búsqueda binaria consiste en ir comprobando los elementos del vector comenzado por su mitad. Al estar el vector ordenado, si el valor que hemos comprobado es mayor que el buscado, podemos desechar la mitad superior de nuestro elemento. Aplicando esto de manera recursiva, obtenemos un algoritmo de características muy buenas e interesantes. Pasemos a su análisis:
+
+\begin{enumerate}
+ \item \textbf{Análisis teórico}
+ 
+ \lstinputlisting[language=C++]{./Codes/binaria.cpp}
+ 
+ Como podemos observar en los comentarios del código, estamos ante un bucle \texttt{while} cuyo interior es \(\mathcal{O}(1)\). Puesto que en cada iteración del bucle vamos descartando una mitad del vector, el bucle en sí mismo es \(\mathcal{O}(log(n))\). Por tanto, podemos afirmar que:
+ \[
+ 	T((n) \in \mathcal{O}(log(n))
+ \]
+ 
+ \item \textbf{Análisis empírico}
+ Tras ejecutar el algoritmo para 26 tamaños distintos; desde 1000000 hasta 20000000 dando saltos de 760000, hemos obtenido los siguientes resultados:
+ 
+ INSERTAR RESULTADOS BINARIA SIN REPETECIONES
+ 
+ \item \textbf{Análisis híbrido}
+ El análisis híbrido nos permitirá comprobar que nuestro análisis teórico era correcto. Usando los datasets del anterior apartado, hemos usado gnuplot para graficar los puntos obtenidos junto con su función de ajuste. A continuación mostramos la gráfica con su respectiva función de ajuste:
+ 
+ INSERTAR GRÇAFICA BINARIA SIN REPETICIONES
+ 
+ Y las constantes ocultas son:
+ 
+ INSERTAR FUNCION AJUSTADA
+ 
+ Para terminar nuestro análisis de este algoritmo, terminaremos de confirmar que el ajuste logarítmico es el óptimo viendo la varianza residual que nos ha proporcionado gnuplot:
+ 
+ INSERTAR VARIANZAS
+ 
+ Como es muy próxima a 0, podemos asegurar que el ajuste es muy bueno.
+\end{enumerate}
+
+\subsubsection{¿Elementos repetidos?}
+Otra parte que se nos plantea en el ejercicio es la siguiente: ¿qué pasaría si en el elemento tuviésemos elementos repetidos? En este caso, la búsqueda binaria tal y como la programamos antes dejaría de ser efectiva. Aquí un ejemplo:
+\[
+	1 \quad 2 \quad 3 \quad 4 \quad 4 \quad 5 \quad 6 \quad 7
+\]
+
+En este caso, el primer elemento que comprobaría nuestro algoritmo sería \(v[3] = 4\). Entonces, desecharía los siguiente elementos a partir de \(v[3]\). Pero vemos que en \(v[4] = 4\), que es el elemento que deseamos. 
+
+Para evitar este problema, hemos diseñado la siguiente solución:
+
+\lstinputlisting[language=C++]{./Codes/binaria_repes.cpp}
+
+Con este algoritmo se nos siguiente la siguiente ecuación de recurrencia:
+\[
+	T(n) = T \left( \frac{n}{2} \right) - 1
+\]
+
+Resolviéndola mediante los métodos vistos en clase, obtenemos que:
+\[
+	T(n) \in \mathcal{O}(n)
+\]
+
+Vemos que es el mismo orden de eficiencia que la búsqueda secuencial. Esto ocurre nuestro peor caso es que el elemento que buscamos este en \(v[n-2]\). Puesto que vamos comprobando elementos siempre en las mitades inferiores hasta que encontramos lo deseado, para llegar a el elemento \(v[n-2]\) tendríamos que hacer \(n\) iteraciones. Además, este algoritmo es incluso peor que la búsqueda secuencial, ya que en vectores muy grandes podemos llenar la pila de llamadas y hacer nuestro programa imposible de ejecutar.
+
+\subsection{Ejercicio 2}
+
+\subsubsection{Algoritmo de fuerza bruta}
+
+\subsubsection{Divide y Vencerás}
 \end{document}

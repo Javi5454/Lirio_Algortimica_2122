@@ -4,9 +4,6 @@ int buscarSecuencial(int v[], int n){
         if (v[i] == i){ //O(1)
             return i; //O(1)
         }
-        else if(v[i] > n){ //O(1)
-            return -1; //O(1)
-        }
     }
 
     return -1;//O(1)
