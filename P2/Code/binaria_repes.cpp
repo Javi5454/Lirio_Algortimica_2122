@@ -30,49 +30,37 @@ using namespace std::chrono;
  * @return the index of the element or -1 if it does not exists
  */
 
-int buscarBinaria(vector<int> v, int inicio,int fin){
+int buscarBinaria(int v[], int inicio,int fin){
+    int medio = (inicio + fin)/2;
+    int resultado = -1;
 
-    if(inicio == fin){
-        if(v[inicio] == inicio){
-        	return inicio;
-        }
-        else{
-        	return -1;
-        }
+    if(v[medio] == medio){
+        return medio;
     }
+    else{
+        if(inicio <= fin){
+            resultado = buscarBinaria(v, inicio, medio - 1);
 
-    if(v[inicio] != inicio && v[fin-1] != fin-1){
-        
-        int medio = (inicio+fin)/2;
-        int resultado = buscarBinaria(v,inicio+1,medio);
-        if(resultado != -1){
-        	return resultado;
+            if(resultado == -1){
+                resultado = buscarBinaria(v, medio + 1, fin);
+            }
         }
-        else{
-               resultado = buscarBinaria(v,medio+1,fin-1);
-               return resultado;
-        }
-    }
-    else if(v[inicio] == inicio){
-        
-        return inicio;
-    }
-    else if(v[fin-1] == fin-1){
-        
-        return fin-1;
     }
 
-    return -1;
+    return resultado;
+
 }
 
 int main(int argc, char* argv[]){
     if(argc != 2){
-        cout << "Syntax error: ./secuencial <Num of elements>" << endl;
+        cout << "Syntax error: ./binaria_repes <Num of elements>" << endl;
 
         return -1;
     }
 
-    int REPS = 15;
+    srand((unsigned) time(NULL));
+
+    int REPS = 1;
     int n = atoi(argv[1]);
     int m=2*n-1;
     double t = 0;
@@ -89,24 +77,41 @@ int main(int argc, char* argv[]){
 	    }
 
 	    sort(myvector.begin(),myvector.end());
+        vector<int>::iterator it;
+
+        int *T = new int[n];
+        
+        for(int i = 0; i < n; i++){
+            T[i] = myvector.at(i);
+        }
+
+        if(n <= 10){
+            for(int i = 0; i < n; i++){
+                cout << "v[" << i << "]: " << T[i] << " ";
+            }
+
+            cout << endl;
+        }
 
 	    high_resolution_clock::time_point tantes, tdespues;
 	    duration<double> transcurrido;
 
 	    tantes = high_resolution_clock::now();
 
-	    int result = buscarBinaria(myvector, 0, n);
+	    int result = buscarBinaria(T, 0, n-1);
 
 	    tdespues = high_resolution_clock::now();
 
 	    transcurrido = duration_cast<duration<double>>(tdespues - tantes);
 
 	    t += transcurrido.count();
+
+        //cout << "Result: " << result << endl;
     }
     
     t = ((double)t/REPS);
     
-    cout << t << endl;
+    cout << n << " " << t << endl;
 
     return 0;
     

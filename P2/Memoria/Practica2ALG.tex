@@ -108,54 +108,136 @@ La manera obvia de resolver este ejercicio sería mediante un algoritmo secuenci
 	\scalebox{0.75}{
 		\begin{tabular}{|c|c|}
 			\hline
-			\multicolumn{2}{|c|}{\textsf{Búsqueda secuencial}}
+			\multicolumn{2}{|c|}{\textsf{Algoritmo de fuerza bruta}}
 			\\\hline
 			\bfseries Elementos (n) & \bfseries Tiempo (s)
-			\csvreader{./data/secuencial_ejej1.csv}{}
+			\csvreader{./data/secuencial.csv}{}
 			{\\\hline\csvcoli&\csvcolii}
 			\\\hline
 		\end{tabular}
 	}
-	\caption{Experiencia empírica de algoritmo de Inserción sin optimizar}
-\end{table}
+	\caption{Experiencia empírica de la búsqueda a fuerza bruta}
+    \end{table}
+
+	\item \textbf{Análisis Híbrido}
+	
+	A continuación, aprovechamos los tiempos obtenidos en el análisis empírico para hallar la función de ajuste, para lo cual hemos hecho uso de gnuplot de la misma forma que en la anterior práctica. He aquí la gráfica correspondiente:
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.55]{./Images/Grafica_secuencial.png}
+		\caption{Gráfica con los tiempos de ejecución de la búsqueda a fuerza bruta}
+	\end{figure}
+
+	Y las constantes ocultas obtenidas son:
+	
+	\( T(n) = 8.41755 \cdot 10^{-9} n + 0.00153755\).
+	
+	Y el coeficiente de determinación es:
+	
+	Coef.determinación = 0.9992
+	
+	Verificando así que nuestro análisis teórico es correcto.
 \end{enumerate}
 
 \subsubsection{Divide y Vencerás}
-La oportunidad para usar la técnica divide y vencerás ocurre en el momento en el que trabajamos con vectores ordenados (en nuestro caso de manera creciente). Esto nos permite usar un algoritmo que se basa en la técnica ``divide y vencerás'': la búsqueda binaria.
+La oportunidad para usar la técnica ``Divide y Vencerás'' ocurre en el momento en el que trabajamos con vectores ordenados (en nuestro caso de manera creciente). Esto nos permite usar un algoritmo que se basa en la técnica ``Divide y Vencerás'': la búsqueda binaria.
 
-La búsqueda binaria consiste en ir comprobando los elementos del vector comenzado por su mitad. Al estar el vector ordenado, si el valor que hemos comprobado es mayor que el buscado, podemos desechar la mitad superior de nuestro elemento. Aplicando esto de manera recursiva, obtenemos un algoritmo de características muy buenas e interesantes. Pasemos a su análisis:
+La búsqueda binaria consiste en ir comprobando los elementos del vector comenzado por su mitad. Al estar el vector ordenado, si el valor que hemos comprobado es mayor que la posición en la que se encuentra, podemos desechar la mitad superior de nuestro vector. En caso de ser menor que la posición en la que se encuentra, podemos desechar la primera mitad del vector.  Aplicando esto de manera recursiva, obtenemos un algoritmo de características muy buenas e interesantes. Pasemos a su análisis:
 
 \begin{enumerate}
- \item \textbf{Análisis teórico}
+ \item \textbf{Análisis Teórico}
  
  \lstinputlisting[language=C++]{./Codes/binaria.cpp}
  
- Como podemos observar en los comentarios del código, estamos ante un bucle \texttt{while} cuyo interior es \(\mathcal{O}(1)\). Puesto que en cada iteración del bucle vamos descartando una mitad del vector, el bucle en sí mismo es \(\mathcal{O}(log(n))\). Por tanto, podemos afirmar que:
+ Como podemos observar en los comentarios del código, todas las operaciones son \(\mathcal{O}(1)\) y la llamada recursiva a la función es \(\mathcal{O}\left(\frac{n}{2}\right)\). Una de las dos llamadas recursivas nunca se ejecuta, es decir, vamos descartando mitades del vector, por lo que la recurrencia que expresa el tiempo a partir del tamaño del vector viene dada por la siguiente expresión, de la cual vamos a deducir la eficiencia del algoritmo:
+ 
  \[
- 	T((n) \in \mathcal{O}(log(n))
+ T(n) = T\left(\frac{n}{2}\right) + a
  \]
  
- \item \textbf{Análisis empírico}
+ Para resolver esta recurrencia, tomamos $n = 2^k$, quedándose de la forma:
+ 
+  \[
+ T(2^k) = T(2^{k-1}) + a
+ \]
+ 
+ Cuyo polinomio característico es:
+ 
+ \[
+ (x-1)^2
+ \]
+ 
+ De donde se deduce que la solución de la recurrencia será de la forma $(c0 + c1 \cdot k) \cdot 1^k$, y al deshacer el cambio $n = 2^k$, obtenemos que:
+ 
+ \[
+ T(n) = c0 + c1 \cdot \log_{2}(n)
+ \]
+ 
+ Por lo que concluimos que:
+ 
+ \[
+ 	T((n) \in \mathcal{O}(log_{2}(n))
+ \]
+ 
+ \item \textbf{Análisis Empírico}\\
+ \\
  Tras ejecutar el algoritmo para 26 tamaños distintos; desde 1000000 hasta 20000000 dando saltos de 760000, hemos obtenido los siguientes resultados:
  
- INSERTAR RESULTADOS BINARIA SIN REPETECIONES
+ \begin{table}[h!]
+ 	\centering
+ 	\footnotesize
+ 	\scalebox{0.75}{
+ 		\begin{tabular}{|c|c|}
+ 			\hline
+ 			\multicolumn{2}{|c|}{\textsf{Divide y Vencerás sin repeticiones}}
+ 			\\\hline
+ 			\bfseries Elementos (n) & \bfseries Tiempo (s)
+ 			\csvreader{./data/binaria.csv}{}
+ 			{\\\hline\csvcoli&\csvcolii}
+ 			\\\hline
+ 		\end{tabular}
+ 	}
+ 	\caption{Experiencia empírica de la búsqueda binaria}
+ \end{table}
  
- \item \textbf{Análisis híbrido}
+ \item \textbf{Análisis híbrido}\\
+ \\
  El análisis híbrido nos permitirá comprobar que nuestro análisis teórico era correcto. Usando los datasets del anterior apartado, hemos usado gnuplot para graficar los puntos obtenidos junto con su función de ajuste. A continuación mostramos la gráfica con su respectiva función de ajuste:
  
- INSERTAR GRÇAFICA BINARIA SIN REPETICIONES
+ \begin{figure}[h!]
+ 	\centering
+ 	\includegraphics[scale=0.55]{./Images/Grafica_binaria.png}
+ 	\caption{Gráfica con los tiempos de ejecución de la búsqueda binaria}
+ \end{figure}
  
  Y las constantes ocultas son:
  
- INSERTAR FUNCION AJUSTADA
+ \( T(n) = 5.63832 \cdot 10^{-8} \cdot \log_{2}(n) - 6.87177 \cdot 10^{-7}\).
  
- Para terminar nuestro análisis de este algoritmo, terminaremos de confirmar que el ajuste logarítmico es el óptimo viendo la varianza residual que nos ha proporcionado gnuplot:
+ Para terminar nuestro análisis de este algoritmo, terminaremos de confirmar que el ajuste logarítmico es el óptimo viendo el coeficiente de determinación que nos ha proporcionado gnuplot:
  
- INSERTAR VARIANZAS
+ Coef.determinación = 0.999999954166
  
- Como es muy próxima a 0, podemos asegurar que el ajuste es muy bueno.
+ \item \textbf{Comparación algoritmo de fuerza bruta vs Divide y Vencerás sin repeticiones}\\
+ 
+ Como ya sabemos de la práctica anterior, el orden de eficiencia $\mathcal{O}(log_{2}(n))$ es mejor que $\mathcal{O}(n)$, por lo que nuestra implementación usando la técnica ``Divide y Vencerás'' mejora los tiempos de ejecución considerablemente. Para saber a partir de qué tamaño del vector nos renta usar más la búsqueda por fuerza bruta o la nueva implementación, hemos de calcular el \textbf{umbral}, que surge de igualar las expresiones halladas en el análisis híbrido de ambos algoritmos:
+ 
+ \[
+ 5.63832 \cdot 10^{-8} \cdot \log_{2}(n) - 6.87177 \cdot 10^{-7} = 8.41755 \cdot 10^{-9} n + 0.00153755
+ \]
+ 
+ Sin embargo, no existe ningún natural tal que se cumpla esta igualdad, pues la función del algoritmo de fuerza bruta siempre va a estar por encima, luego el umbral es $n = 1$. Por último, mostramos la gráfica comparando las dos funciones de ajuste de ambos algoritmos:
+ 
+ 
+  \begin{figure}[h!]
+ 	\centering
+ 	\includegraphics[scale=0.55]{./Images/Grafica_secvsbin.png}
+ 	\caption{Gráfica comparativa: Fuerza Bruta vs DyV sin repeticiones}
+ \end{figure}
 \end{enumerate}
 
+\begin{enumerate}
 \subsubsection{¿Elementos repetidos?}
 Otra parte que se nos plantea en el ejercicio es la siguiente: ¿qué pasaría si en el elemento tuviésemos elementos repetidos? En este caso, la búsqueda binaria tal y como la programamos antes dejaría de ser efectiva. Aquí un ejemplo:
 \[
@@ -168,17 +250,92 @@ Para evitar este problema, hemos diseñado la siguiente solución:
 
 \lstinputlisting[language=C++]{./Codes/binaria_repes.cpp}
 
-Con este algoritmo se nos siguiente la siguiente ecuación de recurrencia:
+\item \textbf{Análisis teórico}\\
+
+Con este algoritmo, obtenemos la siguiente ecuación de recurrencia:
 \[
-	T(n) = T \left( \frac{n}{2} \right) - 1
+	T(n) = 2 \cdot T \left( \frac{n}{2} \right) + a
 \]
 
-Resolviéndola mediante los métodos vistos en clase, obtenemos que:
+Resolviéndola mediante los métodos vistos en clase, tomamos $n = 2^k$ y obtenemos que el polinomio característico asociado a la recurrencia es:
+
+\[
+	(x-1)(x-2)
+\]
+
+De donde se obtiene que el tiempo se expresa en función de k como:
+
+\[
+	T(2^k) = c0 + c1*2^k
+\]
+
+Y deshaciendo el cambio obtenemos que $T(n) = c0 + c1*n$, por lo que concluimos que:
+
 \[
 	T(n) \in \mathcal{O}(n)
 \]
 
-Vemos que es el mismo orden de eficiencia que la búsqueda secuencial. Esto ocurre nuestro peor caso es que el elemento que buscamos este en \(v[n-2]\). Puesto que vamos comprobando elementos siempre en las mitades inferiores hasta que encontramos lo deseado, para llegar a el elemento \(v[n-2]\) tendríamos que hacer \(n\) iteraciones. Además, este algoritmo es incluso peor que la búsqueda secuencial, ya que en vectores muy grandes podemos llenar la pila de llamadas y hacer nuestro programa imposible de ejecutar.
+Vemos que es el mismo orden de eficiencia que la búsqueda secuencial. Esto ocurre porque nuestro peor caso es en el que el elemento que buscamos está en \(v[n-2]\). Puesto que vamos comprobando elementos siempre en las mitades inferiores hasta que encontramos lo deseado, para llegar a el elemento \(v[n-2]\) tendríamos que hacer \(n\) iteraciones. Además, este algoritmo es incluso peor que la búsqueda secuencial, ya que en vectores muy grandes podemos llenar la pila de llamadas y hacer nuestro programa imposible de ejecutar. Esto también se ve en los datasets obtenidos en el análisis empírico y en la gráfica comparativa, que veremos a continuación en el análisis empírico e híbrido
+
+\item \textbf{Análisis empírico}\\
+
+Al igual que para el algoritmo de fuerza bruta y el anterior, hemos probado para 26 tamaños distintos (15 repeticiones por tamaño), desde 1000000 hasta 20000000, dando saltos de 760000, dando lugar a este dataset:
+
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Divide y Vencerás con repeticiones}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/binaria_repes.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\caption{Experiencia empírica de la búsqueda con repeticiones}
+\end{table}
+
+\item \textbf{Análisis híbrido}\\
+
+A partir del dataset anterior, hemos usado gnuplot para comprobar que la función de ajuste se corresponde con el orden de eficiencia hallado, corroborando así nuestro análisis. He aquí la gráfica:
+
+ \begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.55]{./Images/Grafica_binaria_repes.png}
+	\caption{Gráfica con los tiempos de ejecución de la búsqueda con repeticiones}
+\end{figure}
+
+Y las constantes ocultas son:
+
+\( T(n) = 8.71886 \cdot 10^{-9} \cdot n -0.00140853 \).
+
+Para terminar nuestro análisis de este algoritmo, terminaremos de confirmar que el ajuste lineal es el óptimo viendo el coeficiente de determinación que nos ha proporcionado gnuplot:
+
+Coef.determinación = 0.9941
+
+\item \textbf{Comparación algoritmo de fuerza bruta vs Divide y Vencerás con repeticiones}\\
+
+Como hemos visto, tanto el algoritmo de fuerza bruta como el ``Divide y Vencerás'' para vectores ordenados con repeticiones presentan una eficiencia $\mathcal{O}(n)$. Además si observamos sus respectivas funciones de ajuste y las graficamos observamos que el algoritmo de fuerza bruta es más eficiente que el ``Divide y Vencerás'' implementado, pues la pendiente del de fuerza bruta es algo menor que la del otro algoritmo:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.55]{./Images/Grafica_secvsrep.png}
+	\caption{Gráfica comparativa: Fuerza Bruta vs DyV con repeticiones}
+\end{figure}
+
+
+Fuerza bruta $\longrightarrow$ \( T(n) = 8.41755 \cdot 10^{-9} n + 0.00153755\).
+
+DyV con repeticiones $\longrightarrow$ \( T(n) = 8.71886 \cdot 10^{-9} \cdot n -0.00140853 \).
+
+El estudio de este caso nos ha servido para obtener una de las conclusiones de nuestro trabajo, y es que la técnica ``Divide y Vencerás'' no siempre da resultado e incluso puede dar lugar a algoritmos que tarden más en dar la solución que lo que tarda el de fuerza bruta.
+
+\end{enumerate}
+
+
 
 \subsection{Ejercicio 2}
 

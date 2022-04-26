@@ -31,27 +31,22 @@ const int REPS = 15;
  * @return the index of the element or -1 if it does not exists
  */
 
-int buscarBinaria(vector<int> v, int n){
+int buscarBinaria(int *v, int inicio, int fin){
+    if(fin >= inicio){
+        int medio = inicio + (fin - inicio) / 2;
 
-    int inicio = 0;
-    int fin = n-1;
-    int medio = (inicio+fin)/2;
-
-    while(inicio <= fin){
-
-        if(v.at(medio) > medio){
-            fin = medio - 1;
-        }
-        else if(v.at(medio) < medio){
-            inicio = medio + 1;
-        }
-        else{
+        if(v[medio] == medio){
             return medio;
         }
-        
-        medio = (inicio + fin)/2;
+
+        if(v[medio] > medio){
+            return buscarBinaria(v, inicio, medio - 1);
+        }
+
+        //else
+        return buscarBinaria(v, medio + 1, fin);
     }
-    
+
     return -1;
 }
 
@@ -104,12 +99,13 @@ int main(int argc, char* argv[]){
 
 		sort(myvector.begin(),myvector.end());
 
-        int k = 0;
+        for(int i = 0; i < n; i++){
+            T[i] = myvector.at(i);
+        }
 
-        if(n <= 100){
-            for(it = myvector.begin(); it != myvector.end(); it++){
-                cout << "v[" << k << "]: " << *it << " ";
-                k++;
+        if(n <= 10){
+            for(int i = 0; i < n; i++){
+                cout << "v[" << i << "]: " << T[i] << " ";
             }
 
             cout << endl;
@@ -120,7 +116,7 @@ int main(int argc, char* argv[]){
 
 	    tantes = high_resolution_clock::now();
 
-	    int result = buscarBinaria(myvector, n);
+	    int result = buscarBinaria(T, 0, n-1);
 
 	    tdespues = high_resolution_clock::now();
 
