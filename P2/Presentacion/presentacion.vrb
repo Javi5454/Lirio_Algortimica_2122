@@ -1,8 +1,5 @@
-\frametitle{¿Elementos repetidos?. \normalfont {Fuerza bruta vs DyV con repeticiones}}
-\centering Fuerza bruta \(\longrightarrow$ \( T(n) = 8.41755 \cdot 10^{-9} n + 0.00153755\).\\
-	
-	\centering DyV con repeticiones \(\longrightarrow$ \( T(n) = 8.71886 \cdot 10^{-9} \cdot n -0.00140853 \).\\
-	
-	\centering $\downarrow$ \\
-	
-	\centering ¡La pendiente del algoritmo de fuerza bruta es menor que la del ``Divide y Vencerás''!
+\frametitle{Mezcla Divide y Vencerás. \normalfont {Eficiencia teórica}}
+Observamos por lo indicado en la diapositiva anterior que si $M = max \left\lbrace n^2, \log_{2}(n) \cdot k \cdot n \right\rbrace $ nuestra función es
+\[
+	T(n) \in \mathcal{O}(M)
+\]

@@ -388,6 +388,59 @@ T(n) \in \mathcal{O}(n)
 	\centering ¡La pendiente del algoritmo de fuerza bruta es menor que la del ``Divide y Vencerás''!
 \end{frame}
 
+\section{Ejercicio 2}
+\begin{frame}[fragile]{Mezcla secuencial}
+Es la forma más simple de mezclar k vectores. Copias el primer vector y después vas añadiendo cada elemento de los sucesivos vectores en su posición correspondiente.
+\end{frame}
+
+\begin{frame}[fragile]{Mezcla secuencial. \normalfont{Código}}
+\lstinputlisting[language=C++]{./Codes/secuencial_vectores.cpp}
+\end{frame}
+
+\begin{frame}[fragile]{Mezcla secuencial. \normalfont{Eficiencia teórica}}
+Observamos como se indica en los comentarios que 
+\[
+	T(n) \in \mathcal{O}(k^2n^2)
+\]
+\end{frame}
+
+
+
+
+
+
+
+
+
+\begin{frame}[fragile]{Mezcla Divide y Vencerás}
+Aplicamos el método Divide y Vencerás, donde aplicamos una función recursiva en la que dividimos el array de vectores de entrada en 2 arrays de tamaño la mitad, la función se llama a sí misma y, finalmente, se mezclan ambos arrays. El caso base es que el array contenga un único vector y se copia en el resultado final. Tras resolver la ecuación recurrente asociada
+\[
+ 	T(n)= \left\{ \begin{array}{lcc}
+             n  &   si  & n = 1 \\
+             \\ 2T(\frac{n}{2}) + c2k \cdot n &  si & n > 1, n=2^z \\
+             \end{array}
+   \right.
+ \]
+  que finalmente resultará
+  \[
+ 	T(n) =  n^2 + c2\cdot\log_{2}(n) \cdot k \cdot n
+ \]
+
+\end{frame}
+
+\begin{frame}[fragile]{Mezcla Divide y Vencerás. \normalfont{Código}}
+\lstinputlisting[language=C++]{./Codes/dyv_vectores.cpp}
+\end{frame}
+
+\begin{frame}[fragile]{Mezcla Divide y Vencerás. \normalfont{Eficiencia teórica}}
+Observamos por lo indicado en la diapositiva anterior que si $M = max \left\lbrace n^2, \log_{2}(n) \cdot k \cdot n \right\rbrace $ nuestra función es
+\[
+	T(n) \in \mathcal{O}(M)
+\]
+\end{frame}
+
+
+
 \begin{frame}{Conclusiones}
 
 	\begin{itemize}
@@ -400,6 +453,5 @@ T(n) \in \mathcal{O}(n)
 		
 \end{itemize}		
 \end{frame}
-
 
 \end{document}

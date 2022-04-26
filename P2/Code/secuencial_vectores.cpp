@@ -55,7 +55,6 @@ void mergeKArrays(int nElementos, int **arr, int nVectores, int * &v_resultante)
     for(int i = 0; i < nElementos; i++){    //O(n)
       v_resultante[i] = arr[0][i];
     }
-    }
 
     //iteramos por cada vector y por cada elemento del nuevo vector a insertar
     for(int i = 1; i < nVectores; i++){         //O(k)
