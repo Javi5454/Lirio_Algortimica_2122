@@ -1,0 +1,10 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducción}{3}%
+\contentsline {section}{\numberline {2}Desarrollo}{3}%
+\contentsline {subsection}{\numberline {2.1}Ejercicio 1}{3}%
+\contentsline {subsubsection}{\numberline {2.1.1}Algoritmo de fuerza bruta}{3}%
+\contentsline {subsubsection}{\numberline {2.1.2}Divide y Vencerás}{4}%
+\contentsline {subsubsection}{\numberline {2.1.3}¿Elementos repetidos?}{7}%
+\contentsline {subsection}{\numberline {2.2}Ejercicio 2}{9}%
+\contentsline {subsubsection}{\numberline {2.2.1}Algoritmo de fuerza bruta}{10}%
+\contentsline {subsubsection}{\numberline {2.2.2}Divide y Vencerás}{10}%
