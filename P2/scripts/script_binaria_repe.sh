@@ -1,7 +1,10 @@
 #!/bin/bash
 
 
-i="2520000"
+i="1000000"
 
-../Code/binaria2 $i ../Code/test_files/prueba$i >> binaria_repe.dat
-
+while [ $i -le 20000000 ]
+do
+../Code/binaria_repes $i >> binaria_repe.dat
+i=$[$i+760000]
+done
