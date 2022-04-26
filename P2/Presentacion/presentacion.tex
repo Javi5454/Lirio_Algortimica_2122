@@ -405,9 +405,61 @@ Observamos como se indica en los comentarios que
 \end{frame}
 
 
+\begin{frame}[fragile]{Mezcla secuencial fijado k. \normalfont{Eficiencia empírica}}
+	\begin{table}[h!]
+		\centering
+		\footnotesize
+		\scalebox{0.6}{
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textsf{Mezcla secuencial fijado k}}
+				\\\hline
+				\bfseries Elementos (n) & \bfseries Tiempo (s)
+				\csvreader{./data/secuencial_vectores.csv}{}
+				{\\\hline\csvcoli&\csvcolii}
+				\\\hline
+			\end{tabular}
+		}
+		\caption{Experiencia empírica de la mezcla con fuerza bruta fijado k}
+	\end{table}
+\end{frame}
 
 
+\begin{frame}[fragile]{Mezcla secuencial fijado k. \normalfont{Eficiencia híbrida}}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.45]{./Images/Grafica_eje2_fijoksec.png}
+	\caption{Gráfica con los tiempos de ejecución de la mezcla con fuerza bruta fijado k}
+\end{figure}
+\end{frame}
 
+\begin{frame}[fragile]{Mezcla secuencial fijado n. \normalfont{Eficiencia empírica}}
+	\begin{table}[h!]
+		\centering
+		\footnotesize
+		\scalebox{0.6}{
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textsf{Mezcla secuencial fijado n}}
+				\\\hline
+				\bfseries Elementos (n) & \bfseries Tiempo (s)
+				\csvreader{./data/secuencial_vectores2.csv}{}
+				{\\\hline\csvcoli&\csvcolii}
+				\\\hline
+			\end{tabular}
+		}
+		\caption{Experiencia empírica de la mezcla con fuerza bruta fijado n}
+	\end{table}
+\end{frame}
+
+
+\begin{frame}[fragile]{Mezcla secuencial fijado n. \normalfont{Eficiencia híbrida}}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.45]{./Images/Grafica_eje2_fijonsec.png}
+	\caption{Gráfica con los tiempos de ejecución de la mezcla con fuerza bruta fijado n}
+\end{figure}
+\end{frame}
 
 
 

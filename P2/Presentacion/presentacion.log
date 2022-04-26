@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.20)  26 APR 2022 22:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.20)  27 APR 2022 00:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1885,7 +1885,7 @@ LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' will be
 (Font)              scaled to size 5.0pt on input line 168.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' will be
 (Font)              scaled to size 7.0pt on input line 168.
-<logo_dark.jpg, id=51, 361.35pt x 144.54pt>
+<logo_dark.jpg, id=59, 361.35pt x 144.54pt>
 File: logo_dark.jpg Graphic file (type jpg)
 <use logo_dark.jpg>
 Package pdftex.def Info: logo_dark.jpg  used on input line 169.
@@ -2063,7 +2063,7 @@ Overfull \vbox (18.93791pt too high) detected at line 221
 \openout4 = `presentacion.vrb'.
 
  (./presentacion.vrb
-<./Images/Grafica_secuencial.png, id=314, 642.4pt x 385.44pt>
+<./Images/Grafica_secuencial.png, id=386, 642.4pt x 385.44pt>
 File: ./Images/Grafica_secuencial.png Graphic file (type png)
 <use ./Images/Grafica_secuencial.png>
 Package pdftex.def Info: ./Images/Grafica_secuencial.png  used on input line 4.
@@ -2112,7 +2112,7 @@ Overfull \vbox (49.55238pt too high) detected at line 281
 \openout4 = `presentacion.vrb'.
 
  (./presentacion.vrb
-<./Images/Grafica_binaria.png, id=468, 642.4pt x 385.44pt>
+<./Images/Grafica_binaria.png, id=581, 642.4pt x 385.44pt>
 File: ./Images/Grafica_binaria.png Graphic file (type png)
 <use ./Images/Grafica_binaria.png>
 Package pdftex.def Info: ./Images/Grafica_binaria.png  used on input line 4.
@@ -2127,7 +2127,7 @@ Overfull \vbox (8.67874pt too high) detected at line 290
 \openout4 = `presentacion.vrb'.
 
  (./presentacion.vrb
-<./Images/Grafica_secvsbin.png, id=500, 642.4pt x 385.44pt>
+<./Images/Grafica_secvsbin.png, id=621, 642.4pt x 385.44pt>
 File: ./Images/Grafica_secvsbin.png Graphic file (type png)
 <use ./Images/Grafica_secvsbin.png>
 Package pdftex.def Info: ./Images/Grafica_secvsbin.png  used on input line 4.
@@ -2176,7 +2176,7 @@ Overfull \vbox (49.55238pt too high) detected at line 363
 \openout4 = `presentacion.vrb'.
 
  (./presentacion.vrb
-<./Images/Grafica_binaria_repes.png, id=683, 642.4pt x 385.44pt>
+<./Images/Grafica_binaria_repes.png, id=853, 642.4pt x 385.44pt>
 File: ./Images/Grafica_binaria_repes.png Graphic file (type png)
 <use ./Images/Grafica_binaria_repes.png>
 Package pdftex.def Info: ./Images/Grafica_binaria_repes.png  used on input line
@@ -2192,7 +2192,7 @@ Overfull \vbox (21.32867pt too high) detected at line 371
 \openout4 = `presentacion.vrb'.
 
  (./presentacion.vrb
-<./Images/Grafica_secvsrep.png, id=715, 642.4pt x 385.44pt>
+<./Images/Grafica_secvsrep.png, id=892, 642.4pt x 385.44pt>
 File: ./Images/Grafica_secvsrep.png Graphic file (type png)
 <use ./Images/Grafica_secvsrep.png>
 Package pdftex.def Info: ./Images/Grafica_secvsrep.png  used on input line 4.
@@ -2220,11 +2220,6 @@ Overfull \vbox (8.67874pt too high) detected at line 379
 \openout4 = `presentacion.vrb'.
 
  (./presentacion.vrb (./Codes/secuencial_vectores.cpp))
-Overfull \hbox (15.8324pt too wide) in paragraph at lines 398--398
-[][]  
- []
-
-
 Overfull \vbox (219.00774pt too high) detected at line 398
  []
 
@@ -2233,19 +2228,13 @@ Overfull \vbox (219.00774pt too high) detected at line 398
 ]
 \openout4 = `presentacion.vrb'.
 
- (./presentacion.vrb)
-Overfull \hbox (31.67036pt too wide) in paragraph at lines 405--405
-[][]  
- []
-
-[29
+ (./presentacion.vrb) [29
 
 ]
 \openout4 = `presentacion.vrb'.
 
  (./presentacion.vrb)
-Overfull \hbox (47.50276pt too wide) in paragraph at lines 429--429
-[][]  
+Overfull \vbox (18.93791pt too high) detected at line 425
  []
 
 [30
@@ -2253,33 +2242,84 @@ Overfull \hbox (47.50276pt too wide) in paragraph at lines 429--429
 ]
 \openout4 = `presentacion.vrb'.
 
- (./presentacion.vrb (./Codes/dyv_vectores.cpp))
-Overfull \hbox (63.34073pt too wide) in paragraph at lines 433--433
-[][]  
- []
-
-
-Overfull \vbox (262.7075pt too high) detected at line 433
+ (./presentacion.vrb
+<./Images/Grafica_eje2_fijoksec.png, id=1130, 642.4pt x 385.44pt>
+File: ./Images/Grafica_eje2_fijoksec.png Graphic file (type png)
+<use ./Images/Grafica_eje2_fijoksec.png>
+Package pdftex.def Info: ./Images/Grafica_eje2_fijoksec.png  used on input line
+ 4.
+(pdftex.def)             Requested size: 289.07733pt x 173.4464pt.
+)
+Overfull \vbox (21.32867pt too high) detected at line 434
  []
 
 [31
 
-]
+ <./Images/Grafica_eje2_fijoksec.png>]
 \openout4 = `presentacion.vrb'.
 
  (./presentacion.vrb)
-Overfull \hbox (79.17314pt too wide) in paragraph at lines 440--440
-[][]  
+Overfull \vbox (18.93791pt too high) detected at line 453
  []
 
 [32
 
 ]
-Overfull \hbox (95.00554pt too wide) in paragraph at lines 455--455
-[][]  
+\openout4 = `presentacion.vrb'.
+
+ (./presentacion.vrb
+<./Images/Grafica_eje2_fijonsec.png, id=1208, 642.4pt x 385.44pt>
+File: ./Images/Grafica_eje2_fijonsec.png Graphic file (type png)
+<use ./Images/Grafica_eje2_fijonsec.png>
+Package pdftex.def Info: ./Images/Grafica_eje2_fijonsec.png  used on input line
+ 4.
+(pdftex.def)             Requested size: 289.07733pt x 173.4464pt.
+)
+Overfull \vbox (21.32867pt too high) detected at line 462
  []
 
 [33
+
+ <./Images/Grafica_eje2_fijonsec.png>]
+\openout4 = `presentacion.vrb'.
+
+ (./presentacion.vrb)
+Overfull \hbox (12.55922pt too wide) in paragraph at lines 481--481
+[][]  
+ []
+
+[34
+
+]
+\openout4 = `presentacion.vrb'.
+
+ (./presentacion.vrb (./Codes/dyv_vectores.cpp))
+Overfull \hbox (25.11845pt too wide) in paragraph at lines 485--485
+[][]  
+ []
+
+
+Overfull \vbox (262.7075pt too high) detected at line 485
+ []
+
+[35
+
+]
+\openout4 = `presentacion.vrb'.
+
+ (./presentacion.vrb)
+Overfull \hbox (37.67767pt too wide) in paragraph at lines 492--492
+[][]  
+ []
+
+[36
+
+]
+Overfull \hbox (50.23134pt too wide) in paragraph at lines 507--507
+[][]  
+ []
+
+[37
 
 ]
 \tf@nav=\write7
@@ -2291,14 +2331,14 @@ Overfull \hbox (95.00554pt too wide) in paragraph at lines 455--455
 \tf@snm=\write9
 \openout9 = `presentacion.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 457.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 457.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 509.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 509.
  (./presentacion.aux
 LaTeX Info: Redefining \. on input line 20.
 LaTeX Info: Redefining \% on input line 20.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 457.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 457.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 509.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 509.
 Package rerunfilecheck Info: File `presentacion.out' has not changed.
 (rerunfilecheck)             Checksum: 93A0D19F30403C28320B400A88C05061;142.
 
@@ -2308,10 +2348,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 28570 strings out of 492982
- 531087 string characters out of 6134896
- 1023889 words of memory out of 5000000
- 31317 multiletter control sequences out of 15000+600000
+ 28620 strings out of 492982
+ 531988 string characters out of 6134896
+ 1028977 words of memory out of 5000000
+ 31348 multiletter control sequences out of 15000+600000
  339675 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,19n,108p,1815b,1398s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2323,10 +2363,10 @@ onts/type1/public/fira/FiraSans-Regular.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/newpx/pxsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txe
 xs.pfb>
-Output written on presentacion.pdf (33 pages, 759762 bytes).
+Output written on presentacion.pdf (37 pages, 807017 bytes).
 PDF statistics:
- 1044 PDF objects out of 1200 (max. 8388607)
- 955 compressed objects within 10 object streams
- 70 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1452 PDF objects out of 1728 (max. 8388607)
+ 1345 compressed objects within 14 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 107 words of extra memory for PDF output out of 10000 (max. 10000000)
 

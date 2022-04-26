@@ -365,8 +365,80 @@ Tal y como se ven en los comentarios del código, el bucle principal está forma
  \]
  
  \item \textbf{Análisis empírico}
-Tras ejecutar el algoritmo para 26 tamaños distintos; desde 1000000 hasta 20000000 dando saltos de 760000, hemos obtenido los siguientes resultados:
+Tras ejecutar el algoritmo para 26 tamaños distintos; desde 100 hasta 2000 dando saltos de 76, hemos obtenido los siguientes resultados, fijando primero k, es decir, el número de vectores a mezclar y en otra ocasión fijando n, es decir, el númeor de elementos de cada vector:
 
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Algoritmo de fuerza bruta fijado k}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/secuencial_vectores.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\caption{Experiencia empírica de la búsqueda a fuerza bruta fijado}
+    \end{table}
+    
+    \begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Algoritmo de fuerza bruta fijado n}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/secuencial_vectores2.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\caption{Experiencia empírica de la búsqueda a fuerza bruta fijado}
+    \end{table}
+
+	\item \textbf{Análisis Híbrido}
+	
+	Aprovecharemos los tiempos obtenidos en el análisis empírico para hallar la función de ajuste, para lo cual hemos hecho uso de gnuplot de la misma forma que en el primer ejercicio. Aquí se muestra, en primer lugar, la gráfica correspondiente cuando se fija el tamaño de k:
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.55]{./Images/Grafica_eje2_fijoksec.png}
+		\caption{Gráfica con los tiempos de ejecución de la mezcla con fuerza bruta fijado k}
+	\end{figure}
+
+	Y las constantes ocultas obtenidas son:
+	
+	\( T(n) = 8.04405\cdto10^{-7} n^2 - 1.33411\cdot10^{-5}n + 0.0227577\).
+	
+	Y el coeficiente de determinación es:
+	
+	Coef.determinación = 0.973
+	
+	Verificando así que nuestro análisis teórico para tamaño fijo de k es correcto.
+
+\\
+	Mostremos ahora la gráfica con tamaño fijo de n:
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.55]{./Images/Grafica_eje2_fijonsec.png}
+		\caption{Gráfica con los tiempos de ejecución de la mezcla con fuerza bruta fijado n}
+	\end{figure}
+
+	Y las constantes ocultas obtenidas son:
+	
+	\( T(n) = 1.39477\cdto10^{-6} k^2 - 0.000122489\cdot10^{-5}k + 0.0332803\).
+	
+	Y el coeficiente de determinación es:
+	
+	Coef.determinación = 0.956
+	
+	Verificando así que nuestro análisis teórico para tamaño fijo de n es correcto.
 
  \end{enumerate}
 \subsubsection{Divide y Vencerás}
