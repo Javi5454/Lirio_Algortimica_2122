@@ -41,6 +41,10 @@ void reservarArray(int tamano, int * &array){
       cerr << "error al reservar tamano" << endl;
       exit(EXIT_FAILURE);
     }
+
+    for (int i=0; i < tamano; i++){
+        array[i] = 0;
+    }
 }
 
 void mergeKArrays(int nElementos, int **arr, int nVectores, int * &v_resultante)
@@ -98,6 +102,11 @@ int main(int argc, char* argv[]){
     for (int i=0; i < k; i++){
         v[i] = new int[n];
     }
+    for (int i=0; i < k; i++){
+        for (int j=0; j<n; j++){
+        v[i][j] = 0;
+        }
+    }
 
     ifstream myFile(route);
     int numero;
@@ -138,12 +147,12 @@ int main(int argc, char* argv[]){
     cout << "Time used: " << time_total << endl;
     cout << "Numero de elementos: " << n << endl;
     cout << "Numero de vectores: " << k << endl;
-
+    /*
     for(int i=0; i < k*n; i++){
         cout << " " <<  v_resultante[i];
     }
     cout << endl;
-
+    */
     if(v!= nullptr){
         for (int i=0; i < k; i++){
             delete[] v[i];

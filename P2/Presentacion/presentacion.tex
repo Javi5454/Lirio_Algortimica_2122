@@ -205,7 +205,7 @@ Observamos claramente que
 	\begin{table}[h!]
 		\centering
 		\footnotesize
-		\scalebox{0.7}{
+		\scalebox{0.6}{
 			\begin{tabular}{|c|c|}
 				\hline
 				\multicolumn{2}{|c|}{\textsf{Búsqueda secuencial}}
@@ -219,6 +219,7 @@ Observamos claramente que
 		\caption{Experiencia empírica de la búsqueda a fuerza bruta}
 	\end{table}
 \end{frame}
+
 
 \begin{frame}[fragile]{Búsqueda secuencial. \normalfont{Eficiencia híbrida}}
 \begin{figure}[h!]
@@ -298,13 +299,12 @@ Observamos claramente que
 
 \begin{frame}[fragile]{Búsqueda binaria. \normalfont{Fuerza bruta vs Divide y Vencerás}}
 Las expresiones del tiempo de cada algoritmo son:\\
-\\
-\centering Fuerza bruta $\longrightarrow$ \( T(n) = 8.41755 \cdot 10^{-9} n + 0.00153755\).\\
-\centering DyV sin repeticiones $\longrightarrow$ \( T(n) = 5.63832 \cdot 10^{-8} \cdot \log_{2}(n) - 6.87177 \cdot 10^{-7}\).
 
-E igualando las expresiones obtenemos que: \\
-\centering $\downarrow$ \\
-\centering \textbf{Umbral: $n = 1$}
+ Fuerza bruta \(\longrightarrow T(n) = 8.41755 \cdot 10^{-9} n + 0.00153755\) \\
+ DyV sin repeticiones \(\longrightarrow T(n) = 5.63832 \cdot 10^{-8} \cdot \log_{2}(n) - 6.87177 \cdot 10^{-7}\).
+
+E igualando las expresiones obtenemos que: 
+ \textbf{Umbral: \(n = 1\)}
 
 \end{frame}
 
@@ -324,25 +324,24 @@ E igualando las expresiones obtenemos que: \\
 \[
 T(n) = 2 \cdot T \left( \frac{n}{2} \right) + a
 \]
-\centering $\downarrow$
+\centering \(\downarrow\)
 \[
 (x-1)(x-2)
 \]
-\centering $\downarrow$
+\centering \(\downarrow\)
 \[
 T(2^k) = c0 + c1*2^k
 \]
-\centering $\downarrow$
+\centering \(\downarrow\)
 \[
 T(n) = c0 + c1*n
 \]
-\centering $\downarrow$
+\centering \(\downarrow\)
 \[
 T(n) \in \mathcal{O}(n)
 \]
 
 \end{frame}
-
 
 \begin{frame}[fragile]{¿Elementos repetidos?. \normalfont{Eficiencia empírica}}
 	\begin{table}[h!]
@@ -380,9 +379,9 @@ T(n) \in \mathcal{O}(n)
 \end{frame}
 
 \begin{frame}[fragile]{¿Elementos repetidos?. \normalfont{Fuerza bruta vs DyV con repeticiones}}
-	\centering Fuerza bruta $\longrightarrow$ \( T(n) = 8.41755 \cdot 10^{-9} n + 0.00153755\).\\
+	\centering Fuerza bruta \(\longrightarrow$ \( T(n) = 8.41755 \cdot 10^{-9} n + 0.00153755\).\\
 	
-	\centering DyV con repeticiones $\longrightarrow$ \( T(n) = 8.71886 \cdot 10^{-9} \cdot n -0.00140853 \).\\
+	\centering DyV con repeticiones \(\longrightarrow$ \( T(n) = 8.71886 \cdot 10^{-9} \cdot n -0.00140853 \).\\
 	
 	\centering $\downarrow$ \\
 	
@@ -390,13 +389,17 @@ T(n) \in \mathcal{O}(n)
 \end{frame}
 
 \begin{frame}{Conclusiones}
-	
+
+	\begin{itemize}
 	\item El uso de la técnica ``Divide y Vencerás'' no siempre es garantía de mejora respecto al uso del algoritmo de fuerza bruta.
 	
 	\item En aquellos casos en los que el uso de ``Divide y Vencerás'' sí nos ayuda a mejorar los tiempos, es importante saber que el algoritmo de fuerza bruta es preferible si se usan tamaños por debajo del umbral.
 	
 	\item EL uso de la recursividad requiere un uso excesivo de la pila y en algunos casos, esto da lugar a algoritmos ineficientes.
 	
+		
+\end{itemize}		
 \end{frame}
+
 
 \end{document}

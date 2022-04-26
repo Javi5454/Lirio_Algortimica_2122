@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.27)  26 APR 2022 19:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.2.1)  26 APR 2022 20:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -428,281 +428,6 @@ File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <8> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 2.
 )
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.118 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -718,600 +443,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--186
 
  []
 
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.200  	}
-         
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--207
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 206--209
 
  []
 
-<./Images/Grafica_binaria.png, id=44, 642.4pt x 385.44pt>
+<./Images/Grafica_binaria.png, id=50, 642.4pt x 385.44pt>
 File: ./Images/Grafica_binaria.png Graphic file (type png)
 <use ./Images/Grafica_binaria.png>
-Package pdftex.def Info: ./Images/Grafica_binaria.png  used on input line 210.
+Package pdftex.def Info: ./Images/Grafica_binaria.png  used on input line 212.
 (pdftex.def)             Requested size: 353.32109pt x 211.99265pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
 
  []
 
-[5]
-<./Images/Grafica_secvsbin.png, id=51, 642.4pt x 385.44pt>
+[6 <./Images/Grafica_binaria.png>]
+<./Images/Grafica_secvsbin.png, id=55, 642.4pt x 385.44pt>
 File: ./Images/Grafica_secvsbin.png Graphic file (type png)
 <use ./Images/Grafica_secvsbin.png>
-Package pdftex.def Info: ./Images/Grafica_secvsbin.png  used on input line 235.
+Package pdftex.def Info: ./Images/Grafica_secvsbin.png  used on input line 237.
 
 (pdftex.def)             Requested size: 353.32109pt x 211.99265pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-(./Codes/binaria_repes.cpp [6 <./Images/Grafica_binaria.png>])
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
+ (./Codes/binaria_repes.cpp)
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
 [7 <./Images/Grafica_secvsbin.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 280--281
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\csv@@body ->\\\hline \csvcoli &\csvcolii 
-                                          
-l.297 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
@@ -1319,31 +484,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--302
 File: ./Images/Grafica_binaria_repes.png Graphic file (type png)
 <use ./Images/Grafica_binaria_repes.png>
 Package pdftex.def Info: ./Images/Grafica_binaria_repes.png  used on input line
- 307.
+ 309.
 (pdftex.def)             Requested size: 353.32109pt x 211.99265pt.
-[8 <./Images/Grafica_binaria_repes.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
 
  []
 
+[8]
 <./Images/Grafica_secvsrep.png, id=63, 642.4pt x 385.44pt>
 File: ./Images/Grafica_secvsrep.png Graphic file (type png)
 <use ./Images/Grafica_secvsrep.png>
-Package pdftex.def Info: ./Images/Grafica_secvsrep.png  used on input line 325.
+Package pdftex.def Info: ./Images/Grafica_secvsrep.png  used on input line 327.
 
 (pdftex.def)             Requested size: 353.32109pt x 211.99265pt.
-[9 <./Images/Grafica_secvsrep.png>] (./Practica2ALG.aux
+ [9 <./Images/Grafica_binaria_repes.png> <./Images/Grafica_secvsrep.png>]
+(./Practica2ALG.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 8911 strings out of 481239
- 137323 string characters out of 5920377
- 591860 words of memory out of 5000000
- 24024 multiletter control sequences out of 15000+600000
+ 8915 strings out of 481239
+ 137377 string characters out of 5920378
+ 588859 words of memory out of 5000000
+ 24028 multiletter control sequences out of 15000+600000
  542504 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,62p,798b,1767s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,10n,62p,798b,1551s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-di
@@ -1366,7 +536,7 @@ ts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></
 usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on Practica2ALG.pdf (10 pages, 660406 bytes).
+Output written on Practica2ALG.pdf (10 pages, 660778 bytes).
 PDF statistics:
  140 PDF objects out of 1000 (max. 8388607)
  95 compressed objects within 1 object stream
