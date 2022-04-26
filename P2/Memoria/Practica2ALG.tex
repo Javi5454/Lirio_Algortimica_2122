@@ -363,6 +363,44 @@ Tal y como se ven en los comentarios del código, el bucle principal está forma
 \[
  	T((n) \in \mathcal{O}(k^2n^2)
  \]
+ 
+ \item \textbf{Análisis empírico}
+Tras ejecutar el algoritmo para 26 tamaños distintos; desde 1000000 hasta 20000000 dando saltos de 760000, hemos obtenido los siguientes resultados:
+
+
  \end{enumerate}
 \subsubsection{Divide y Vencerás}
+El algoritmo más eficiente para realizar este ejercicio es de la forma divide y vencerás. Lo primero que hacemos al igual que antes es definir una matriz de k filas y n columnas y un un array del tamaño final que sabemos que será k$\cdot$n. Ahora lo que hacemos es ir creando en cada caso 2 arrays auxiliares de la matriz de tamaño $ \frac{k\cdotn}{2} $ y llamar a la función de nuevo para cada uno de arrays, actualizando en cada caso el valor de k a la mitad. De esta forma tenemos una función recursiva que divide el array de entrada en 2 arrays auxiliares, se llama a sí misma en cada array y finalmente se mezclan los dos arrays resultantes. El caso base de la función recursiva es que k sea 1 y entonces se copia el array auxiliar en el array resultado de la función.
+\\
+
+\begin{enumerate}
+	\item \textbf{Análisis Teórico}
+	
+	\lstinputlisting[language=C++]{./Codes/dyv_vectores.cpp}
+
+Tal como se ha comentado, es una función recursiva en la que como se ve en la imagen, el caso base es \(\mathcal{O}(n)\) y la función utilizada para mezclar dos vectores es \(\mathcal{O}(kn)\). La ecuación recurrente asociada a dicho algorirmo será entonces:
+\[
+ 	T(n)= \left\{ \begin{array}{lcc}
+             n  &   si  & n = 1 \\
+             \\ 2T(\frac{n}{2}) + c2k \cdot n &  si & n > 1, n=2^z \\
+             \end{array}
+   \right.
+ \]
+
+Tras resolver la ecuación recurrente como hemos visto en clase (por expansión) obtenemos que: 
+\[
+ 	T(n) = 2^z T(1) + z\cdotc2\cdotk\cdotn
+ \]
+y como T(1) = n y n = 2^z entonces tenemos finalmente que
+
+\[
+ 	T(n) =  n^2 + c2\cdot\log_{2}(n) \cdot k \cdot n
+ \]
+
+y podemos deducir entonces que si $M = max \left\lbrace n^2, \log_{2}(n) \cdot k \cdot n \right\rbrace $ nuestra función es
+\[
+ 	T(n) \in \mathcal{O}(M)
+ \]
+
+
 \end{document}

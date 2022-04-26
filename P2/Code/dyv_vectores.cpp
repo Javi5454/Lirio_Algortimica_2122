@@ -1,7 +1,7 @@
 /**
  * @file secuencial.cpp
  * @author Manuel Moya
- * @brief Program that searchs in an ordered vector an element that v[i] = i
+ * @brief Program that merge k sorted arrays in 1
  * @version 0.1
  * @date 2022-04-19
  * 
@@ -57,8 +57,7 @@ void merge2Arrays(int * &arr1, int * &arr2, int n1, int n2, int * &arr3)
     int i = 0, j = 0, k= 0;
  
     // Traverse both array
-    while (i<n1 && j <n2)
-    {
+    while (i<n1 && j <n2){
         // Comprueba si el elemento actual del primer array 
         // es menor que el elemento actual del segundo array
         // Si es menor, almacena el elemento del primer array
@@ -95,20 +94,12 @@ void merge2Arrays(int * &arr1, int * &arr2, int n1, int n2, int * &arr3)
 void mergeKArrays(int n, int **arr, int n1,int n2, int * &array_resultante)
 {
     //si solo hay un array
-    if(n1==n2)
-    {
+    if(n1==n2) {
         for(int i=0; i < n; i++)
         array_resultante[i]=arr[n1][i];
     }
     else{
-    /*
-    //si solo hay dos arrays los mezcla
-    if(n2-n1==1)
-    {
-        merge2Arrays(arr[n1],arr[n2],n,n,array_resultante);
-        return;
-    }
-    */
+
       int nVect = n2-n1+1;
       int mitad = (n2+n1)/2;
 
