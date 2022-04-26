@@ -340,8 +340,28 @@ El estudio de este caso nos ha servido para obtener una de las conclusiones de n
 
 
 \subsection{Ejercicio 2}
-
+El enunciado del problema es el siguiente: \textit{Se tienen k vectores ordenados (de menor a mayor), cada uno con n elementos, y queremos combinarlos
+en un único vector ordenado (con kn elementos). Una posible alternativa consiste en, utilizando un algoritmo clásico, mezclar los dos primeros vectores, posteriormente mezclar el resultado con el tercero, y así sucesivamente.}
+\\
+\textit{¿Cuál serı́a el tiempo de ejecución de este algoritmo?}
+\\
+\textit{Existe un algoritmo más eficiente?. Si es así diseñe, analice la eficiencia e implemente dicho algoritmo.}
+\\
+\textit{Realizar también un estudio empírico e híbrido de la eficiencia de ambos algoritmos.}
 \subsubsection{Algoritmo de fuerza bruta}
+Como se comenta en el enunciado, el algortimo de fuerza bruta de este ejercicio es ir mezclando los dos primeros vectores, después mezclar el resultante con el tercero y así sucesivamente. \\
 
+Para ello la forma simple definir un array del tamaño final que sabemos que será k$\cdot$n. Inicializamos el primer vector en las priemras n posiciones del array y vamos iterando en dicho array cada elemento de cada nuevo vector e ir comprobando si es menor que alguno de los ya insertados previamente. Si el elemento es menor se realiza una traslación hacia la derecha desde la posición en la que ha resultado ser menor hasta el último elemento insertado en el array. Si no es menor, entonces se insertará en la siguiente posición al útlimo insertado. De esta forma se va expandiendo hasta completar las k*n posiciones del array.
+\\
+
+\begin{enumerate}
+	\item \textbf{Análisis Teórico}
+	
+	\lstinputlisting[language=C++]{./Codes/secuencial_vectores.cpp}
+	
+Tal y como se ven en los comentarios del código, el bucle principal está formado por dos bucles anidados cuyos tamaños son \(\mathcal{O}(k)\) y \(\mathcal{O}(n)\) respectivamente y dentro de ellos tenemos dos bucles en paralelo de tamaños \(\mathcal{O}(kn + n)\) y \(\mathcal{O}(kn)\). Luego la eficiencia teórica del algoritmo, según lo visto en clase, es evidente que es:
+\[
+ 	T((n) \in \mathcal{O}(k^2n^2)
+ \]
 \subsubsection{Divide y Vencerás}
 \end{document}
