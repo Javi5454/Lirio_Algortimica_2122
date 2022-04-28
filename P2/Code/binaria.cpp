@@ -31,7 +31,6 @@ const int REPS = 15;
  * @return the index of the element or -1 if it does not exists
  */
 
-<<<<<<< HEAD
 int buscarBinaria(int *v, int inicio, int fin){
     if(fin >= inicio){
         int medio = inicio + (fin - inicio) / 2;
@@ -46,22 +45,6 @@ int buscarBinaria(int *v, int inicio, int fin){
 
         //else
         return buscarBinaria(v, medio + 1, fin);
-=======
-int binarySearch(int v[], int low, int high){
-    if(high >= low){
-        int mid = low + (high - low) / 2;
-
-        if(v[mid] == mid){
-            return mid;
-        }
-
-        if(v[mid] > mid){
-            return binarySearch(v, low, mid - 1);
-        }
-
-        //else
-        return binarySearch(v, mid + 1, high);
->>>>>>> 3aa3343252e6409c9458e66ee19538af2290208c
     }
 
     return -1;
@@ -133,11 +116,7 @@ int main(int argc, char* argv[]){
 
 	    tantes = high_resolution_clock::now();
 
-<<<<<<< HEAD
 	    int result = buscarBinaria(T, 0, n-1);
-=======
-	    int result = binarySearch(T, 0, n-1);
->>>>>>> 3aa3343252e6409c9458e66ee19538af2290208c
 
 	    tdespues = high_resolution_clock::now();
 

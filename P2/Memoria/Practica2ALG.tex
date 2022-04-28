@@ -351,7 +351,7 @@ en un único vector ordenado (con \(kn\) elementos). Una posible alternativa con
 \subsubsection{Algoritmo de fuerza bruta}
 Como se comenta en el enunciado, el algortimo de fuerza bruta de este ejercicio es ir mezclando los dos primeros vectores, después mezclar el resultante con el tercero y así sucesivamente. \\
 
-Para ello la forma simple definir un array del tamaño final que sabemos que será k$\cdot$n. Inicializamos el primer vector en las priemras n posiciones del array y vamos iterando en dicho array cada elemento de cada nuevo vector e ir comprobando si es menor que alguno de los ya insertados previamente. Si el elemento es menor se realiza una traslación hacia la derecha desde la posición en la que ha resultado ser menor hasta el último elemento insertado en el array. Si no es menor, entonces se insertará en la siguiente posición al útlimo insertado. De esta forma se va expandiendo hasta completar las k*n posiciones del array.
+Para ello, definir un array del tamaño final que sabemos que será k$\cdot$n. Inicializamos el primer vector en las primeras n posiciones del array y vamos iterando en dicho array cada elemento de cada nuevo vector y vamos comprobando si es menor que alguno de los ya insertados previamente. Si el elemento es menor, se realiza una traslación hacia la derecha desde la posición en la que ha resultado ser menor hasta el último elemento insertado en el array. Si no es menor, entonces se insertará en la siguiente posición al último insertado. De esta forma se va expandiendo hasta completar las k*n posiciones del array.
 \\
 
 \begin{enumerate}
@@ -361,8 +361,210 @@ Para ello la forma simple definir un array del tamaño final que sabemos que ser
 	
 Tal y como se ven en los comentarios del código, el bucle principal está formado por dos bucles anidados cuyos tamaños son \(\mathcal{O}(k)\) y \(\mathcal{O}(n)\) respectivamente y dentro de ellos tenemos dos bucles en paralelo de tamaños \(\mathcal{O}(kn + n)\) y \(\mathcal{O}(kn)\). Luego la eficiencia teórica del algoritmo, según lo visto en clase, es evidente que es:
 \[
- 	T((n) \in \mathcal{O}(k^2n^2)
+ 	T(n) \in \mathcal{O}(k^2n^2)
  \]
+ 
+ Como para estudiar la eficiencia hemos visto qué ocurre cuando $k$ o $n$ se fijan, cabe destacar al fijar cualquier de estos dos parámetros estamos considerándolos como una constante, por lo que siempre nos da lugar a una eficiencia cuadrática. Por razones obvias, no hemos visto qué ocurre cuando aumentan $k$ y $n$ simultáneamente, porque esto nos daría un algoritmo de eficiencia $\mathcal{O}(n^4)$, cuya ejecución es muy pesada.
+ 
+ \item \textbf{Análisis empírico}
+Tras ejecutar el algoritmo para 26 tamaños distintos; desde 100 hasta 2000 dando saltos de 76, hemos obtenido los siguientes resultados (en un caso se fija k = 25 y en el otro, n = 30):
+
+
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Algoritmo de fuerza bruta fijado k}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/secuencial_vectores.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\caption{Experiencia empírica de la búsqueda a fuerza bruta fijado k}
+    \end{table}
+    
+    \begin{table}[h!]
+	\centering
+	\footnotesize
+	\scalebox{0.75}{
+		\begin{tabular}{|c|c|}
+			\hline
+			\multicolumn{2}{|c|}{\textsf{Algoritmo de fuerza bruta fijado n}}
+			\\\hline
+			\bfseries Elementos (n) & \bfseries Tiempo (s)
+			\csvreader{./data/secuencial_vectores2.csv}{}
+			{\\\hline\csvcoli&\csvcolii}
+			\\\hline
+		\end{tabular}
+	}
+	\caption{Experiencia empírica de la búsqueda a fuerza bruta fijado n}
+    \end{table}
+
+	\item \textbf{Análisis Híbrido}
+	
+	Aprovecharemos los tiempos obtenidos en el análisis empírico para hallar la función de ajuste, para lo cual hemos hecho uso de gnuplot de la misma forma que en el primer ejercicio. Aquí se muestra, en primer lugar, la gráfica correspondiente cuando se fija el tamaño de k:
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.55]{./Images/Grafica_eje2_fijoksec.png}
+		\caption{Gráfica con los tiempos de ejecución de la mezcla con fuerza bruta fijado k}
+	\end{figure}
+
+	Y las constantes ocultas obtenidas son:
+	
+	\( T(n) = 8.04405\cdot 10^{-7} n^2 - 1.33411\cdot 10^{-5}n + 0.0227577\).
+	
+	Y el coeficiente de determinación es:
+	
+	Coef.determinación = 0.973
+	
+	Verificando así que nuestro análisis teórico para tamaño fijo de k es correcto.
+
+	Mostremos ahora la gráfica con tamaño fijo de n:
+	
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[scale=0.55]{./Images/Grafica_eje2_fijonsec.png}
+		\caption{Gráfica con los tiempos de ejecución de la mezcla con fuerza bruta fijado n}
+	\end{figure}
+
+	Y las constantes ocultas obtenidas son:
+	
+	\( T(k) = 1.39477\cdot 10^{-6} k^2 - 0.000122489\cdot 10^{-5}k + 0.0332803\).
+	
+	Y el coeficiente de determinación es:
+	
+	Coef.determinación = 0.956
+	
+	Verificando así que nuestro análisis teórico para tamaño fijo de n es correcto.
+
  \end{enumerate}
 \subsubsection{Divide y Vencerás}
+El algoritmo más eficiente para realizar este ejercicio es de la forma divide y vencerás. Lo primero que hacemos al igual que antes es definir una matriz de k filas y n columnas y un array del tamaño final que sabemos que será k$\cdot$n. A continuación, vamos creando en cada caso 2 arrays auxiliares de la matriz de tamaño $ \frac{k\cdot n}{2} $ y llamar a la función de nuevo para cada uno de arrays, actualizando en cada caso el valor de k a la mitad. De esta forma tenemos una función recursiva que divide el array de entrada en 2 arrays auxiliares, se llama a sí misma en cada array y finalmente se mezclan los dos arrays resultantes. El caso base de la función recursiva es que k sea 1 y entonces se copia el array auxiliar en el array resultado de la función.
+\\
+
+\begin{enumerate}
+	\item \textbf{Análisis Teórico}
+	
+	
+
+Tal como se ha comentado, es una función recursiva en la que como se ve en la imagen, se realizan tres llamadas recursivas con un tamaño igual a la mitad del problema inicial, luego cada llamada es \(\mathcal{O}\left(\frac{kn}{2}\right)\). En lo que sigue, vamos a considerar k fijo. La ecuación recurrente asociada a dicho algorirmo será entonces:
+\[
+ 	T(n)= 3 \cdot T\left(\frac{n}{2}\right) + a
+ \]
+
+Tras resolver la ecuación recurrente como hemos visto en clase (cambio de variable $n = 2^z$) obtenemos que: 
+\[
+ 	T(2^z) = 3 \cdot T(2^{z-1}) + a
+ \]
+
+Cuyo polinomio característico es:
+
+\[
+(x-3)(x-1)
+\]
+
+De donde se obtiene que el tiempo en función de z será:
+
+\[
+T(2^z) = c0 + c1 \cdot 3^z
+\]
+
+Y deshaciendo el cambio de variable:
+
+\[
+T(n) = c0 + c1 \cdot n^{\log_{2}(3)}
+\]
+
+y por lo tanto concluimos que:
+
+\[
+ 	T(n) \in \mathcal{O}(n^{\log_{2}(3)})
+ \]
+ 
+ En caso de fijar n y aumentar k, el análisis sería análogo y obtendríamos que $T(k) \in \mathcal{O}(k^{\log_{2}(3)})$
+ 
+ \item \textbf{Análisis Empírico}
+ 
+ A continuación, mostramos los datasets obtenidos cuando fijamos k = 25 y n = 30, haciendo variar a k y n desde 100 hasta 2000 dando saltos de 76 en 76:
+ 
+   \begin{table}[h!]
+  	\centering
+  	\footnotesize
+  	\scalebox{0.75}{
+  		\begin{tabular}{|c|c|}
+  			\hline
+  			\multicolumn{2}{|c|}{\textsf{Divide y Vencerás fijado k}}
+  			\\\hline
+  			\bfseries Elementos (n) & \bfseries Tiempo (s)
+  			\csvreader{./data/dyv_k_fijo.csv}{}
+  			{\\\hline\csvcoli&\csvcolii}
+  			\\\hline
+  		\end{tabular}
+  	}
+  \end{table}
+  
+  \begin{table}[h!]
+  	\centering
+  	\footnotesize
+  	\scalebox{0.75}{
+  		\begin{tabular}{|c|c|}
+  			\hline
+  			\multicolumn{2}{|c|}{\textsf{Divide y Vencerás fijado n}}
+  			\\\hline
+  			\bfseries Elementos (n) & \bfseries Tiempo (s)
+  			\csvreader{./data/dyv_n_fijo.csv}{}
+  			{\\\hline\csvcoli&\csvcolii}
+  			\\\hline
+  		\end{tabular}
+  	}
+  \end{table}
+ 
+\item \textbf{Análisis Híbrido}
+
+Por último, aprovechamos los datos obtenidos en el apartado anterior para generar con gnuplot las gráficas comparativas de los algoritmos nuevos frente a los secuenciales:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.55]{./Images/Grafica_secvsdyvk.png}
+	\caption{Gráfica Fuerza Bruta vs Divide y Vencerás con k fijo}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.55]{./Images/Grafica_secvsdyvn.png}
+	\caption{Gráfica Fuerza Bruta vs Divide y Vencerás con n fijo}
+\end{figure}
+
+Y las constantes ocultas son:
+
+\( T(n) = 0.0000000077954 \cdot n^{\log_{2}(3)} + 0.01854\).
+
+\( T(k) = 0.000001287153 \cdot k^{\log_{2}(3)} + 0.03562\).
+	
+Los coeficientes de determinación de las funciones de ajuste son:
+
+Coef.determinación (fijado k) = 0.9813\\
+Coef.determinación (fijado n) = 0.9982\\
+
+En conclusión, estamos ante otro caso en el que la técnica ``Divide y Vencerás'' mejora la eficiencia con respecto al algoritmo de fuerza bruta.
+
+\section{Conclusiones}
+\begin{itemize}
+	\item El uso de la técnica ``Divide y Vencerás'' no siempre es garantía de mejora respecto al uso del algoritmo de fuerza bruta.
+	
+	\item En aquellos casos en los que el uso de ``Divide y Vencerás'' sí nos ayuda a mejorar los tiempos, es importante saber que el algoritmo de fuerza bruta es preferible si se usan tamaños por debajo del umbral.
+	
+	\item El uso de la recursividad requiere un uso excesivo de la pila y en algunos casos, esto da lugar a algoritmos ineficientes.
+	
+	
+\end{itemize}
+ 
+\end{enumerate}
+
 \end{document}

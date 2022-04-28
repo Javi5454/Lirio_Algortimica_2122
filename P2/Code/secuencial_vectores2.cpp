@@ -177,7 +177,7 @@ for(int i=0; i < REPS; i++){
     
     t = ((double)t/REPS);
 
-    cout << n << " " << t << endl;
+    cout << k << " " << t << endl;
     
     return 0;
 }

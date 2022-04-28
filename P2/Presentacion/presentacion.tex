@@ -388,7 +388,132 @@ T(n) \in \mathcal{O}(n)
 	\centering ¡La pendiente del algoritmo de fuerza bruta es menor que la del ``Divide y Vencerás''!
 \end{frame}
 
-\begin{frame}{Conclusiones}
+\section{Ejercicio 2}
+
+\begin{frame}[fragile]{Fuerza Bruta}
+Este algoritmo consiste en ir mezclando los dos primeros vectores, después mezclar el resultante con el tercero y así sucesivamente.
+\end{frame}
+
+\begin{frame}[fragile]{Fuerza Bruta. \normalfont{Código}}
+\centering
+\scalebox{0.4}{
+\centering
+\lstinputlisting[language=C++]{./Codes/secuencial_vectores.cpp}
+}
+\end{frame}
+
+\begin{frame}[fragile]{Fuerza Bruta. \normalfont{Análisis Teórico}}
+Vemos tras lo explicado que 
+\[
+	T(n) \in \mathcal{O}(k^2 n^2)
+\]
+\end{frame}
+
+\begin{frame}[fragile]{Fuerza Bruta. \normalfont{Análisis Empírico}}
+\begin{table}[h!]
+		\centering
+		\footnotesize
+		\scalebox{0.6}{
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textsf{Algoritmo de fuerza bruta fijado n}}
+				\\\hline
+				\bfseries Elementos (n) & \bfseries Tiempo (s)
+				\csvreader{./data/secuencial_vectores.csv}{}
+				{\\\hline\csvcoli&\csvcolii}
+				\\\hline
+			\end{tabular}
+		}
+		\scalebox{0.6}{
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textsf{Algoritmo de fuerza bruta fijado k}}
+				\\\hline
+				\bfseries Elementos (n) & \bfseries Tiempo (s)
+				\csvreader{./data/secuencial_vectores2.csv}{}
+				{\\\hline\csvcoli&\csvcolii}
+				\\\hline
+			\end{tabular}
+		}
+		\caption{Experiencia empírica de algoritmo de Inserción sin optimizar}
+	\end{table}
+\end{frame}
+
+\begin{frame}[fragile]{Fuerza Bruta. \normalfont{Análisis Híbrido}}
+\centering
+		\includegraphics[scale=0.35]{./Images/Grafica_eje2_fijoksec.png}
+\end{frame}
+
+\begin{frame}[fragile]{Fuerza Bruta. \normalfont{Análisis Híbrido}}
+\centering
+\includegraphics[scale=0.35]{./Images/Grafica_eje2_fijonsec.png}
+\end{frame}
+
+\begin{frame}[fragile]{Divide y vencerás}
+Vamos creando en cada iteración 2 arrays auxiliares de la matriz de tamaño \(\frac{k \cdot n }{2}\) y llamar a la función de nuevo para cada uno de los arrays.
+\end{frame}
+
+\begin{frame}[fragile]{Divide y vencerás. \normalfont{Análisis Teórico}}
+La recursividad a plantear es 
+\[
+	T(n) = 3 * T \left( \frac{n}{2} \right) + a
+\]
+
+Resolviendo esta ecuación, obtenemos que 
+\[
+	T(n) \in \mathcal{O} (n^{\log_2(3)})) \qquad T(k) \in \mathcal{O}(k^{\log_2(3)})
+\]
+\end{frame}
+
+\begin{frame}[fragile]{Divide y vencerás. \normalfont{Análisis Empírico}}
+\begin{table}[h!]
+  	\centering
+  	\footnotesize
+  	\scalebox{0.6}{
+  		\begin{tabular}{|c|c|}
+  			\hline
+  			\multicolumn{2}{|c|}{\textsf{Divide y Vencerás fijado k}}
+  			\\\hline
+  			\bfseries Elementos (n) & \bfseries Tiempo (s)
+  			\csvreader{./data/dyv_k_fijo.csv}{}
+  			{\\\hline\csvcoli&\csvcolii}
+  			\\\hline
+  		\end{tabular}
+  	}
+  \end{table}
+\end{frame}
+
+\begin{frame}[fragile]{Divide y vencerás. \normalfont{Análisis Empírico}}
+  \begin{table}[h!]
+  	\centering
+  	\footnotesize
+  	\scalebox{0.6}{
+  		\begin{tabular}{|c|c|}
+  			\hline
+  			\multicolumn{2}{|c|}{\textsf{Divide y Vencerás fijado n}}
+  			\\\hline
+  			\bfseries Elementos (n) & \bfseries Tiempo (s)
+  			\csvreader{./data/dyv_n_fijo.csv}{}
+  			{\\\hline\csvcoli&\csvcolii}
+  			\\\hline
+  		\end{tabular}
+  	}
+  \end{table}
+  \end{frame}
+  
+  \begin{frame}[fragile]{Divide y Vencerás. \normalfont{Análisis Híbrido}}
+  \centering
+	\includegraphics[scale=0.35]{./Images/Grafica_secvsdyvk.png}
+  \end{frame}
+  
+  \begin{frame}[fragile]{Divide y Vencerás. \normalfont{Análisis Híbrido}}
+  \centering
+	\includegraphics[scale=0.35]{./Images/Grafica_secvsdyvn.png}
+  \end{frame}
+
+\section{Conclusiones}
+
+\begin{frame}[fragile]{Conclusiones}
 
 	\begin{itemize}
 	\item El uso de la técnica ``Divide y Vencerás'' no siempre es garantía de mejora respecto al uso del algoritmo de fuerza bruta.
