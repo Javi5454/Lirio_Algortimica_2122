@@ -1,0 +1,97 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{csvsimple}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\renewcommand*\contentsname{Índice} %Nombre del indice
+
+\begin{document}
+\lstset{
+	basicstyle=\footnotesize,
+	extendedchars=true,
+	literate={á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {ú}{{\'u}}1 {ó}{{\'o}}1,
+	backgroundcolor=\color{black!5}
+	}
+	
+\begin{titlepage}
+	\centering
+	{\includegraphics[scale=0.5]{Logo_UGR.png}\par}
+	\vspace{1cm}
+	{\bfseries\Large Escuela T\'ecnica Superior de Ingeniería Informática y Telecomunicaciones \par}
+	\vspace{2.5cm}
+	{\scshape\Huge Pr\'actica 3: Algoritmos Greedy \par}
+	\vspace{3cm}
+	{\itshape\Large Doble Grado Ingeniería Informática y Matemáticas}
+	\vfill
+	{\Large Autores: \par}
+	{\Large Jose Alberto Hoces Castro\par}
+	{\Large Javier Gómez López \par}
+	{\Large Moya Mart\'in Castaño \par}
+	\vfill
+	{\Large Mayo 2022 \par}
+\end{titlepage}
+
+\thispagestyle{empty}
+\null
+\vfill
+
+%%Información sobre la licencia
+\parbox[t]{\textwidth}{
+  \includegraphics[scale=0.05]{by-nc-sa.png}\\[4pt]
+  \raggedright % Texto alineado a la izquierda
+  \sffamily\large
+  {\Large Este trabajo se distribuye bajo una licencia CC BY-NC-SA 4.0.}\\[4pt]
+  Eres libre de distribuir y adaptar el material siempre que reconozcas a los\\
+  autores originales del documento, no lo utilices para fines comerciales\\
+  y lo distribuyas bajo la misma licencia.\\[4pt]
+  \texttt{creativecommons.org/licenses/by-nc-sa/4.0/}
+}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introducción}
+
+El objetivo de esta práctica es aprender a implementar y utilizar algoritmos \textit{``greedy''} o voraces para resolver problemas de manera rápida aunque no por ello menos óptima. Para ello, se plantean los siguientes dos problemas:
+
+\begin{itemize}
+	\item \textbf{Ejercicio 1} (Contenedores): Se quiere rellenar un buque mercante con una cierta capacidad de peso con contenedores, cada uno de los cuales tiene su propio peso.
+	\item \textbf{Ejercicio 2} (TSP): El problema del viajero. Se quiere recorrer una serie de ciudades, pasando por ellas solo una vez y volviendo al punto de partida. Se quiere encontrar la ruta más óptima.
+\end{itemize}
+
+\section{Desarrollo}
+
+Para el análisis de los algoritmos que desarrollaremos, hemos realizado los siguientes pasos:
+
+\begin{enumerate}
+	\item Un \textbf{análisis teórico} de los algoritmos usando las técnicas vistas en clase.
+	
+	\item Un \textbf{análisis empírico} donde hemos ejecutado los algoritmos en nuestros ordenadores bajo las mismas normas y condiciones. Hemos compilado usando la optimización \texttt{-Og}. Además, hemos usado como \textit{datasets} de pruebas los datos proporcionados por la profesora en el caso del TSP, y valores aleatorios de los pesos de los contenedores para el primer problema. Por otro lado, para automatizar el proceso, hemos creado unos \textit{scripts} de generació  de datos de prueba y de ejecución de nuestros programas. Hemos ejecutado cada algoritmo 15 veces en cada uno de los tamaños probados, y hemos hecho la media de ellos para reducir perturbaciones que puedan alterar el resultado.
+	
+	\item Un \textbf{análisis híbrido} donde hemos tomado los datos de cada uno de los alumnos del grupo y hemos hallado la \(K\) (constante oculta). Para ello hemos usado gnuplot.
+\end{enumerate}
+
+\subsection{Ejercicio 1. Contenedores}
+
+El enunciado del problema es el siguiente: \textit{Se tiene un buque mercante cuya capacidad de carga es de } K \textit{toneladas y un conjunto de contenedores \(c_1, \dotsc, c_n\) cuyos pesos respectivos son \(p_1, \dotsc, p_n\) (expresados también en toneladas). Teniendo en cuenta que la capacidad del buque es menor que la suma total de los pesos de los contenedores: }
+
+\begin{itemize}
+	\item \textit{Diseñe un algoritmo que maximice el número de contenedores cargados, y demuestre su optimalidad.}
+	\item \textit{Diseñe un algoritmo que intente maximizar el número de toneladas cargadas.}
+\end{itemize}
+
+
+\end{document}
