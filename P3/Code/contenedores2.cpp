@@ -52,8 +52,6 @@ int main(int argc, char* argv[]){
     for(int i=0; i < REPS; i++){
     	    
     	    int *T = new int[n];
-    	    
-	    vector<int> myvector(n);
 	    
 	    for(int j=0; j < n; j++){
 	    	T[j] = rand()%n;
