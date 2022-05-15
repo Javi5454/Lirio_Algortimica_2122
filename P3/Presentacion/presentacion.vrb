@@ -1,0 +1,11 @@
+\frametitle{Segundo ejercicio. \normalfont {Estudio de la optimalidad}}
+\centering [5, 4, 6, 1, 1, 2, 7, 9, 8, 3] \hspace{0.2cm}K = 10
+	\\
+	\centering $\downarrow$
+	\\
+	\centering [9, 8, 7, 6, 5, 4, 3, 2, 1, 1]
+	\\
+	\textbf{Solución aportada por nuestro algoritmo}: [9]
+	\\
+	\textbf{Solución óptima}: [1,2,3,4]
+	

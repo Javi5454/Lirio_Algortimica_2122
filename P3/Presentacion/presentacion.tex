@@ -154,10 +154,10 @@
 % | Título |
 % |________|
 
-\title{Algoritmos Greedy (o voraces}
+\title{Algoritmos Greedy (o voraces)}
 \subtitle{Algorítmica. \alert{Práctica 3}}
 \date{Mayo 2022}
-\author{Jose Alberto Hoces Castro\\Javier Gómez López\\Moya Martín Castaño\\[4pt]}
+\author{Jose Alberto Hoces Castro\\Javier Gómez López\\ Manuel Moya Martín Castaño\\[4pt]}
 \titlegraphic{\hfill\includegraphics[width=2.5cm]{logo_dark.jpg}}
 
 %  ___________
@@ -173,5 +173,81 @@
 	\tableofcontents[]
 \end{frame}
 
+\begin{frame}[fragile]{Objetivo de la práctica}
+	Aprender a analizar un problema y resolverlo mediante la técnica Greedy, además de justificar su utilidad para resolver problemas de forma muy eficiente, obteniendo la solución óptima o muy cercana a la óptima.
+\end{frame}
 
+\section{Ejercicio 1. Contenedores}
+\begin{frame}[fragile]{Enunciado}
+	\textit{Se tiene un buque mercante cuya capacidad de carga es de } K \textit{toneladas y un conjunto de contenedores \(c_1, \dotsc, c_n\) cuyos pesos respectivos son \(p_1, \dotsc, p_n\) (expresados también en toneladas). Teniendo en cuenta que la capacidad del buque es menor que la suma total de los pesos de los contenedores: }
+\end{frame}
+
+\begin{frame}[fragile]{Primer ejercicio}
+	\textit{Diseñe un algoritmo que maximice el número de contenedores cargados, y demuestre su optimalidad.}
+\end{frame}
+
+\begin{frame}[fragile]{Primer ejercicio. \normalfont{Planteamiento del algoritmo}}
+	\begin{itemize}
+		\item Como queremos cargar el máximo número de contenedores, empezaremos cargando los más \textbf{pequeños}.
+		\item Ordenamos de \textbf{menor a mayor} peso los contenedores.
+		\item Empezamos a cargar los de menor peso hasta que superemos las K toneladas del buque mercante.
+		\item Todo esto lo simulamos con un vector de enteros en nuestro código, el cual tenemos a continuación.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Primer ejercicio. \normalfont{Código}}
+	\lstinputlisting[language=C++]{./Codes/contenedores1.cpp}
+\end{frame}
+
+\begin{frame}[fragile]{Primer ejercicio. \normalfont{Enfoque Greedy}}
+	Las 6 características de nuestro problema que hacen que lo identifiquemos como problema Greedy son:
+	\begin{itemize}
+		\item \textbf{Un conjunto de candidatos}: En este caso, los contenedores a cargar.
+		\item \textbf{Una lista de candidatos ya usados}: Los contenedores que ya han sido cargados.
+		\item \textbf{Un criterio que dice cuándo un conjunto de candidatos forma una solución}: El criterio es que la suma de los pesos de un conjunto de contenedores no sea superior a las K toneladas del buque.
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}[fragile]{Primer ejercicio. \normalfont{Enfoque Greedy}}
+	\begin{itemize}
+		\item \textbf{Un criterio que dice cuándo un conjunto de candidatos es factible (podrá llegar a ser una solución)}: el conjunto de contenedores que se evalúe no debe superar en peso las K toneladas del buque.
+		\item \textbf{Una función de selección que indica en cualquier instante cuál es el candidato más prometedor de los no usados todavía}: El contenedor de menor peso de los que aún no están cargados, de ahí que los ordenemos de menor a mayor peso.
+		\item \textbf{La función objetivo que intentamos optimizar}: El número de contenedores a cargar, es lo que queremos maximizar.
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}[fragile]{Primer ejercicio. \normalfont{Estudio de la optimalidad}}
+\end{frame}
+	
+\begin{frame}[fragile]{Segundo ejercicio}
+	\textit{Diseñe un algoritmo que intente maximizar el número de toneladas cargadas.}
+\end{frame}
+
+\begin{frame}[fragile]{Segundo ejercicio. \normalfont{Planteamiento del algoritmo}}
+	\begin{itemize}
+		\item Como queremos cargar el máximo número de toneladas, empezaremos cargando los más \textbf{pesados}.
+		\item Ordenamos de \textbf{mayor a menor} peso los contenedores.
+		\item Empezamos a cargar los de mayor peso hasta que superemos las K toneladas del buque mercante.
+		\item Todo esto lo simulamos con un vector de enteros en nuestro código, el cual tenemos a continuación.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Segundo ejercicio. \normalfont{Código}}
+	\lstinputlisting[language=C++]{./Codes/contenedores2.cpp}
+\end{frame}
+
+\begin{frame}[fragile]{Segundo ejercicio. \normalfont{Estudio de la optimalidad}}
+	\centering [5, 4, 6, 1, 1, 2, 7, 9, 8, 3] \hspace{0.2cm}K = 10
+	\\
+	\centering $\downarrow$
+	\\
+	\centering [9, 8, 7, 6, 5, 4, 3, 2, 1, 1]
+	\\
+	\textbf{Solución aportada por nuestro algoritmo}: [9]
+	\\
+	\textbf{Solución óptima}: [1,2,3,4]
+	
+\end{frame}
 \end{document}

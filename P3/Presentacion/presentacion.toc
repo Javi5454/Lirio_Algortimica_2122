@@ -1,1 +1,2 @@
-\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}
+\beamer@sectionintoc {1}{Ejercicio 1. Contenedores}{4}{0}{1}
