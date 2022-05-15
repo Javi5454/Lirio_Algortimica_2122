@@ -74,7 +74,10 @@ El objetivo de esta práctica es aprender a implementar y utilizar algoritmos \t
 
 \section{Desarrollo}
 
-Para el análisis de los algoritmos que desarrollaremos, hemos realizado los siguientes pasos:
+Para el primer ejercicio, nos centraremos en identificar el problema de los contenedores como un problema Greedy identificando sus características. También, justificaremos los optimalidad o la no optimalidad de los algoritmos Greedy desarrollados.
+\\
+\\
+Para el análisis de los algoritmos del viajante de comercio que desarrollaremos, hemos realizado los siguientes pasos:
 
 \begin{enumerate}
 	\item Un \textbf{análisis teórico} de los algoritmos usando las técnicas vistas en clase.
@@ -93,5 +96,54 @@ El enunciado del problema es el siguiente: \textit{Se tiene un buque mercante cu
 	\item \textit{Diseñe un algoritmo que intente maximizar el número de toneladas cargadas.}
 \end{itemize}
 
+\subsubsection{Primer ejercicio}
+	Nuestro objetivo es que podamos cargar el máximo número de contenedores en un buque mercante de K toneladas. Para ello, el algoritmo que nosotros proponemos es tomar los contenedores, ordenarlos de menor a mayor peso, y comenzar añadiendo los de menor peso. De esta forma, podemos cargar más contenedores, ya que si empezásemos por los de pesos intermedios o mayores, acabaríamos cargando menos. 
+	\\
+	\\
+	Veamos las 6 características de nuestro problema Greedy:
+	\begin{itemize}
+		\item \textbf{Un conjunto de candidatos}: En este caso, los contenedores a cargar.
+		\item \textbf{Una lista de candidatos ya usados}: Los contenedores que ya han sido cargados.
+		\item \textbf{Un criterio que dice cuándo un conjunto de candidatos forma una solución}: El criterio es que la suma de los pesos de un conjunto de contenedores no sea superior a las K toneladas del buque.
+		\item \textbf{Un criterio que dice cuándo un conjunto de candidatos es factible (podrá llegar a ser una solución)}: el conjunto de contenedores que se evalúe no debe superar en peso las K toneladas del buque.
+		\item \textbf{Una función de selección que indica en cualquier instante cuál es el candidato más prometedor de los no usados todavía}: El contenedor de menor peso de los que aún no están cargados, de ahí que los ordenemos de menor a mayor peso.
+		\item \textbf{La función objetivo que intentamos optimizar}: El número de contenedores a cargar, es lo que queremos maximizar.
+	\end{itemize}
 
+	A continuación pasamos a mostrar el código de nuestro algoritmo. Para representar el conjunto de contenedores, hemos considerado un vector de enteros, siendo cada entero el peso de cada contenedor. Para asegurarnos de que la suma de los pesos de todos los contenedores supera a las K toneladas del buque, el vector es de dimensión K con enteros aleatorios desde 0 hasta K (en nuestro código lo representamos por el parámetro n, introducido por el usuario). Nuestra función devuelve el número de contenedores que se han podido cargar:
+	
+	\lstinputlisting[language=C++]{./Codes/contenedores1.cpp}
+	
+	\begin{itemize}
+		\item \textbf{Estudio de la optimalidad}
+		\\
+		\\
+	\end{itemize}
+	
+\subsubsection{Segundo ejercicio}
+
+	En este segundo ejercicio, lo que queremos es maximizar las toneladas cargadas en el buque sin sobrepasar su capacidad total. Para ello, seguimos el pensamiento inverso al planteado en el anterior ejercicio. Como lo que nos interesa es cargar el máximo de toneladas posibles, empezaremos cargando aquellos contenedores cuyo peso sea el más grande. Para ello, los ordenamos de mayor a menor peso, justo al contrario que antes. Identificamos las 6 características de un problema Greedy:
+	
+	\begin{itemize}
+		\item \textbf{Un conjunto de candidatos}: En este caso, los contenedores a cargar.
+		\item \textbf{Una lista de candidatos ya usados}: Los contenedores que ya han sido cargados.
+		\item \textbf{Un criterio que dice cuándo un conjunto de candidatos forma una solución}: El criterio es que la suma de los pesos de un conjunto de contenedores no sea superior a las K toneladas del buque.
+		\item \textbf{Un criterio que dice cuándo un conjunto de candidatos es factible (podrá llegar a ser una solución)}: el conjunto de contenedores que se evalúe no debe superar en peso las K toneladas del buque.
+		\item \textbf{Una función de selección que indica en cualquier instante cuál es el candidato más prometedor de los no usados todavía}: El contenedor de mayor peso de los que aún no están cargados, de ahí que los ordenemos de mayor a menor peso.
+		\item \textbf{La función objetivo que intentamos optimizar}: El número de toneladas a cargar, es lo que queremos maximizar.
+	\end{itemize}
+
+	En el código del algoritmo, al igual que antes, simulamos los contenedores con sus respectivos pesos con un vector de enteros, el cual ordenamos de mayor a menor usando el sort de la STL. Se van sumando los pesos hasta que se sobrepase el tope de toneladas del buque. Nuestra función devuelve el número de toneladas que se han podido cargar en total:
+	
+	\lstinputlisting[language=C++]{./Codes/contenedores2.cpp}
+	
+	\begin{itemize}
+		\item \textbf{Estudio de la optimalidad}
+		\\
+		\\
+		Sin embargo, en este caso nuestro algoritmo no nos da la solución óptima. Veámoslo con un contraejemplo. Con n = 10, imaginemos que tenemos el vector [5, 4, 6, 1, 1, 2, 7, 9, 8, 3].
+		Nuestro algoritmo lo ordenaría de mayor a menor, obteniendo el vector [9, 8, 7, 6, 5, 4, 3, 2, 1, 1]. Tras esto, se incluiría el contenedor de peso 9, pero el siguiente ya no sería posible cargarlo ya que 9 + 8 = 17 $>$ 10. La solución óptima en este caso sería tomar un contenedor de peso 1, otro de 2, otro de 3 y otro de 4, aprovechando así las 10 toneladas en su totalidad.
+	\end{itemize}
+	
+\subsection{Ejercicio 2. El problema del viajante de comercio}
 \end{document}

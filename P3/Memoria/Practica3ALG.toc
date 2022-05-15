@@ -2,3 +2,6 @@
 \contentsline {section}{\numberline {1}Introducción}{3}%
 \contentsline {section}{\numberline {2}Desarrollo}{3}%
 \contentsline {subsection}{\numberline {2.1}Ejercicio 1. Contenedores}{3}%
+\contentsline {subsubsection}{\numberline {2.1.1}Primer ejercicio}{3}%
+\contentsline {subsubsection}{\numberline {2.1.2}Segundo ejercicio}{4}%
+\contentsline {subsection}{\numberline {2.2}Ejercicio 2. El problema del viajante de comercio}{5}%
