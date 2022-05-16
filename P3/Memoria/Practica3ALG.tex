@@ -80,7 +80,7 @@ Para el primer ejercicio, nos centraremos en identificar el problema de los cont
 Para el análisis de los algoritmos del viajante de comercio que desarrollaremos, hemos realizado los siguientes pasos:
 
 \begin{enumerate}
-	\item Un \textbf{análisis teórico} de los algoritmos usando las técnicas vistas en clase.
+	\item Un \textbf{análisis teórico} donde se comentará el código desarrollado para la resolución de los problemas propuestos.
 	
 	\item Un \textbf{análisis empírico} donde hemos ejecutado los algoritmos en nuestros ordenadores bajo las mismas normas y condiciones. Hemos compilado usando la optimización \texttt{-Og}. Además, hemos usado como \textit{datasets} de pruebas los datos proporcionados por la profesora en el caso del TSP, y valores aleatorios de los pesos de los contenedores para el primer problema. Por otro lado, para automatizar el proceso, hemos creado unos \textit{scripts} de generació  de datos de prueba y de ejecución de nuestros programas. Hemos ejecutado cada algoritmo 15 veces en cada uno de los tamaños probados, y hemos hecho la media de ellos para reducir perturbaciones que puedan alterar el resultado.
 	
@@ -171,6 +171,8 @@ Adicionalmente, se han implementado una serie de funciones comunes a todas las h
 \lstinputlisting[language=Python]{./Codes/common_functions.py}
 
 Hemos definido una ``estructura'' \texttt{Point} para representar los puntos, una función \texttt{parse\_input} para parsear el input según el formato dado en los archivos de clase, \texttt{distance} que mide la distancia entre dos puntos, \texttt{gen\_distance\_matrix} que genera la matriz de distancias dada una lista de puntos y \texttt{get\_road\_distance} que da la longitud de un vector de recorrido.
+
+Cabe destacar que los datos que se van a mostrar son de los \textit{datasets} dados por la profesora, pero se han trabajados con conjuntos de datos más grandes. En estas experiencias con datos más grandes hemos observado la importancia de jugar con más de un tipo distinto de enfoque \textit{greedy} pues en algunos casos el tiempo de ejecución puede ser demasiado alto.
 
 \subsubsection{Heurística del vecino más cercano}
 
@@ -304,4 +306,16 @@ A continuación, mostramos los resultados obtenidos tras probar nuestro programa
 	\caption{Gráfica de Eil mediante perturbaciones}
 	\end{figure}
 \end{itemize}
+
+\subsubsection{Comparación de heurísticas}
+
+Los tres algoritmos que tenemos son: cercanía (el vecino más cercano), inserción y por perturbaciones. Vamos a comprobar por separado las gráficas de las distancias y los tiempos de estos algoritmos:
+
+\section{Conclusiones}
+
+Con esta práctica, hemos aprendido a crear algoritmos voraces para resolver problemas que, en su versión obvia o de fuerza bruta tienen una complejidad en ocasiones demasiado elevadas.
+
+Además, hemos comprobado como dentro de esta misma técnica podemos atacar los problemas de manera distinta. Debemos de prestar atención a la dificultad de obtener la solución óptima, y primar el ``acercarnos'' a ella mediante algoritmos que van mejorando la solución anterior.
+
+Esto es algo de especial relevancia a la hora de trabajar con cantidades ingentes de datos, en el que dar una solución inicial puede ser muy complicado, pudiendo partir incluso de soluciones arbitrarias, mejorándolas conforme nuestros algoritmos se van ejecutando. 
 \end{document}

@@ -1,11 +1,15 @@
-\frametitle{Segundo ejercicio. \normalfont {Estudio de la optimalidad}}
-\centering [5, 4, 6, 1, 1, 2, 7, 9, 8, 3] \hspace{0.2cm}K = 10
-	\\
-	\centering $\downarrow$
-	\\
-	\centering [9, 8, 7, 6, 5, 4, 3, 2, 1, 1]
-	\\
-	\textbf{Solución aportada por nuestro algoritmo}: [9]
-	\\
-	\textbf{Solución óptima}: [1,2,3,4]
-	
+\frametitle{Heurística del vecino más cercano. \normalfont {Gráficos}}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[scale=0.23]{./Images/ulysses_cercania.png}
+&
+\includegraphics[scale=0.23]{./Images/bayg_cercania.png} \\
+Ulysses & Bayg
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[scale=0.23]{./Images/eil_cercania.png} \\
+Eil
+\end{tabular}
+\end{center}

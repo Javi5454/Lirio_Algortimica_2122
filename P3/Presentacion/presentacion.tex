@@ -250,4 +250,74 @@
 	\textbf{Solución óptima}: [1,2,3,4]
 	
 \end{frame}
+
+\section{Ejercicio 2. El problema del viajante de comercio}
+
+\begin{frame}[fragile]{Enunciado}
+\textit{Dado un conjunto de ciudades y una matriz con las distancias entre todas ellas, un viajante debe recorrer todas las ciudades exactamente una vez, regresando al punto de partida de forma tal que la distancia recorrida sea mínima.}
+\end{frame}
+
+\begin{frame}[fragile]{TSP. \normalfont{Heurística del vecino más cercano}}
+\begin{enumerate}
+	\item Partimos de un nodo cualquiera.
+	\item Encontramos el nodo más cercano a este nodo, y lo añadimos al recorrido.
+	\item Repetimos el proceso hasta cubrir todos los nodos.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{Heurística del vecino más cercano. \normalfont{Código}}
+\begin{center}
+\scalebox{0.75}{
+\lstinputlisting[language=Python]{./Codes/cercania.py}
+}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Heurística del vecino más cercano. \normalfont{Resultados}}
+\begin{itemize}
+	\item \texttt{ulysses16.tsp}:
+	\[
+		[0,7,15,12,11,13,6,5,14,4,8,9,3,1,2,10] \qquad D = 103
+	\]
+
+	\item \texttt{bayg29.tsp}:
+	\[
+		[0,27,5,11,8,4,20,1,19,9,3,14,17,13,21,16,10,18,24,
+	\]
+	\[
+		6,22,26,7,23,15,12,28,25,2] \qquad D = 10209
+	\]
+	
+	\item \texttt{eil76.tsp}:
+	\[
+		[0,72,32,62,15,2,43,31,8,38,71,57,9,37,64,10,65,52,13,18,34,6,7,45,
+	\]
+	\[
+		33,51,26,44,28, 47,46,20,73, 27, 61,1,29,3,74,75,
+	\]
+	\[
+		66,25,11,39,15,50,5,67,4,36,19,69,59,70,35,68,60,2,1,
+	\]
+	\[
+		41,40,42,22,55,48,23,17,49,24,54,30,58,53,12,56,14,63] \qquad D = 642
+	\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Heurística del vecino más cercano. \normalfont{Gráficos}}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[scale=0.23]{./Images/ulysses_cercania.png}
+&
+\includegraphics[scale=0.23]{./Images/bayg_cercania.png} \\
+Ulysses & Bayg
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[scale=0.23]{./Images/eil_cercania.png} \\
+Eil
+\end{tabular}
+\end{center}
+\end{frame}
 \end{document}
