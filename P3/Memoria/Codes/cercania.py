@@ -1,8 +1,3 @@
-from dis import dis
-from common_functions import Point, parse_input, distance, gen_distance_matrix,  get_road_distance
-import math
-import sys
-
 def  get_min_row_element(matrix, position):
     min_pos = 0
     starting_pos = 0
@@ -66,19 +61,5 @@ recorrido, distancia, orden = get_best_solution(points)
 
 str_orden = [str(n) for n in orden]
 
-'''print("El mejor orden a seguir: [" + ','.join(str_orden) + "]")
-correct = len(set(orden)) == len(orden) #Checks if there is any duplicate
-
-if correct:
-    print("Correct order!")
-else:
-    print("Incorrect order")
-
-
-print("Su distancia es: " + str(distancia))'''
-
-number = file.split("../Datasets/")
-number = number[1].split(".tsp")
-number = int(number[0])
-
-print(str(number) + " " + str(distancia))
+print("El mejor orden a seguir: [" + ','.join(str_orden) + "]")
+print("Su distancia es: " + str(distancia))

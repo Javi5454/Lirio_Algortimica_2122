@@ -146,4 +146,46 @@ El enunciado del problema es el siguiente: \textit{Se tiene un buque mercante cu
 	\end{itemize}
 	
 \subsection{Ejercicio 2. El problema del viajante de comercio}
+
+El enunciado del problema es el siguiente: \textit{dado un conjunto de ciudades y una matriz con las distancias entre todas ellas, un viajante debe recorrer todas las ciudades exactamente una vez, regresando al punto de partida, de forma tal que la distancia recorrida sea mínima.}
+
+Además, se nos pide enfocarlo usando dos heurísticas distintas:
+\begin{itemize}
+	\item \textbf{Vecino más cercano}: dada una ciudad inicial \(v_0\), se agrega como ciudad siguiente aquella \(v_i\) (no incluida en el circuito) que se encuentre más cercana a \(v_0\). El procedimiento se repite hasta que todas las ciudades se hayan visitado.
+	\item \textbf{Inserción}: la idea es comenzar con un recorrido parcial, que incluya algunas de las ciudades, y luego extender este recorrido insertando las ciudades restantes mediante algún criterio de tipo greedy.
+\end{itemize}
+
+Además, se debe proponer por parte del equipo otra heurística propia para resolver el problema.
+
+\subsubsection*{Elementos comunes}
+A lo largo de la solución del problema usaremos la siguiente notación para todas las heurísticas a desarrollar:
+\begin{itemize}
+	\item \(n\) es el \textbf{número de ciudades}.
+	\item \(D\) es la \textbf{matriz de distancias}.
+	\item \(r\) es el \textbf{vector de recorrido}, que contiene unra ruta que pasa por todas las ciudades, es decir, \(n\) elementos no repetidos.
+	\item \(W_r\) es el \textbf{coste} de un recorrido, es decir, la distancia de un recorrido \(r\).
+\end{itemize}
+
+Adicionalmente, se han implementado una serie de funciones comunes a todas las heurísticas trabajadas en esta práctica:
+
+\lstinputlisting[language=Python]{./Codes/common_functions.py}
+
+Hemos definido una ``estructura'' \texttt{Point} para representar los puntos, una función \texttt{parse\_input} para parsear el input según el formato dado en los archivos de clase, \texttt{distance} que mide la distancia entre dos puntos, \texttt{gen\_distance\_matrix} que genera la matriz de distancias dada una lista de puntos y \texttt{get\_road\_distance} que da la longitud de un vector de recorrido.
+
+\subsubsection{Heurística del vecino más cercano}
+
+Este algortimo \textit{greedy} es muy simple:
+\begin{enumerate}
+	\item Partimos de un nodo cualquiera (en nuestro caso siempre usaremos el primer elemento de nuestro \textit{input}).
+	\item Encontramos el nodo más cercano a este nodo, y los añadimos al recorrido.
+	\item Repetimos el proceso hasta cubrir todos los nodos.
+\end{enumerate}
+
+Hacemos uso del siguiente código:
+\lstinputlisting[language=Python]{./Codes/cercania.py}
+
+En este programa, básicamente tenemos lo que hacemos es partir de el primer punto pasado en el \textit{input} y tras ello vamos buscando los nodos más cercanos sin repetir los ya añadidos. Primero parseamos el input, generamos la matriz de distancia, y la vamos transformando para descartar los nodos ya considerados. 
+
+\subsubsection*{Análisis empírico}
+Los tamaños de prueba para ejecutar el algoritmo han sido muy variados. Todos los \textit{datasets} se han obtenido de la página oficial de TSPLIB. A su vez, cada iteración la hemos realizado 25 veces y hemos calculado la media, con el fin de determinar el caso promedio.
 \end{document}

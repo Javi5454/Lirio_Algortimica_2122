@@ -1,8 +1,3 @@
-from cmath import sqrt
-from dataclasses import dataclass
-import math
-from ntpath import join
-
 #Creating a struct point
 @dataclass
 class Point:
@@ -16,7 +11,6 @@ def parse_input(input):
         archive.readline()
 
         for line in archive.readlines():
-            line = " ".join(line.split())
             line = line.strip().split(' ')
 
             p = Point(float(line[1]), float(line[2]))
