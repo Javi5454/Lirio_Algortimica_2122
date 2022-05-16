@@ -6,3 +6,5 @@
 \contentsline {subsubsection}{\numberline {2.1.2}Segundo ejercicio}{4}{}%
 \contentsline {subsection}{\numberline {2.2}Ejercicio 2. El problema del viajante de comercio}{5}{}%
 \contentsline {subsubsection}{\numberline {2.2.1}Heurística del vecino más cercano}{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Heurística por inserción}{8}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}Heurística propia: perturbaciones}{8}{}%

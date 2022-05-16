@@ -53,3 +53,16 @@ def get_road_distance(road):
     road_distance += distance(road[0], road[len(road)-1])
 
     return road_distance
+
+def file_reordered(points):
+    for point in points:
+        print(str(point.x) + " " + str(point.y))
+
+def get_swap(road, pos1, pos2):
+    changed = road
+
+    tmp = road[pos1]
+    road[pos1] = road[pos2]
+    road[pos2] = tmp
+
+    return changed

@@ -187,5 +187,121 @@ Hacemos uso del siguiente código:
 En este programa, básicamente tenemos lo que hacemos es partir de el primer punto pasado en el \textit{input} y tras ello vamos buscando los nodos más cercanos sin repetir los ya añadidos. Primero parseamos el input, generamos la matriz de distancia, y la vamos transformando para descartar los nodos ya considerados. 
 
 \subsubsection*{Análisis empírico}
-Los tamaños de prueba para ejecutar el algoritmo han sido muy variados. Todos los \textit{datasets} se han obtenido de la página oficial de TSPLIB. A su vez, cada iteración la hemos realizado 25 veces y hemos calculado la media, con el fin de determinar el caso promedio.
+A continuación, mostramos los resultados obtenidos tras probar nuestro programa con los \textit{datasets} proporcionados en la asignatura:
+
+\begin{itemize}
+	\item \texttt{ulysses16.tsp}: El mejor orden para este \textit{dataset} (teniendo en cuenta el orden del fichero original) es:
+	\[
+		[0,7,15,12,11,13,6,5,14,4,8,9,3,1,2,10]
+	\]
+	
+	y la distancia a recorrer es: 103
+	
+	Si representamos los puntos con el recorrido generado obtenemos el siguiente gráfico:
+	
+	\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{./Images/ulysses_cercania.png}
+	\caption{Gráfica de Ulysses mediante el Vecino más cercano}
+	\end{figure}
+	
+	\item \texttt{bayg29.tsp}: El mejor orden para este \textit{dataset} (teniendo en cuenta el orden del fichero original) es:
+	\[
+		[0,27,5,11,8,4,20,1,19,9,3,14,17,13,21,16,10,18,24,6,22,26,7,23,15,12,28,25,2]
+	\]
+	
+	y la distancia a recorrer es: 10209
+	
+	Si representamos los puntos con el recorrido generado obtenemos el siguiente gráfico:
+	
+	\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{./Images/bayg_cercania.png}
+	\caption{Gráfica de Bayg mediante el Vecino más cercano}
+	\end{figure}
+	
+	\item \texttt{eil76.tsp}: El mejor orden para este \textit{dataset} (teniendo en cuenta el orden del fichero original) es:
+	\[
+		[0,72,32,62,15,2,43,31,8,38,71,57,9,37,64,10,65,52,13,18,34,6,7,45,33,51,26,44,28,
+	\]
+	\[
+		47,46,20,73, 27, 61,1,29,3,74,75,66,25,11,39,15,50,5,67,4,36,19,69,59,70,35,68,60,2
+	\]
+	\[
+		1,41,40,42,22,55,48,23,17,49,24,54,30,58,53,12,56,14,63]
+	\]
+	
+	y la distancia a recorrer es: 642
+	
+	Si representamos los puntos con el recorrido generado obtenemos el siguiente gráfico:
+	
+	\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{./Images/eil_cercania.png}
+	\caption{Gráfica de Eil mediante el Vecino más cercano}
+	\end{figure}
+\end{itemize}
+
+\subsubsection{Heurística por inserción}
+
+\subsubsection{Heurística propia: perturbaciones}
+
+Este enfoque, de nuevo \textit{greedy}, realiza las perturbaciones indicadas por un parámetro sobre un recorrido dado para intentar mejorarlo. Tenemos el siguiente código:
+\lstinputlisting[language=Python]{./Codes/perturbaciones.py}
+
+Primero lo que hacemos es obtener una solución mediante la heurística del vecino más cercano. Tras esto, tenemos la función \texttt{get\_worst\_node} que dado un recorrido, haya el nodo que más dista de su nodo siguiente. Por ello es necesario usar ya una solución previa (mediante el vecino más cercano) para calcular este ``nodo peor''. Por último, tenemos la función \texttt{perturbate} que prueba todas las posibles permutaciones que podemos hacer desde el respectivo ``peor nodo'' y se queda con la mejor de ellas.
+
+\subsubsection*{Análisis empírico}
+
+A continuación, mostramos los resultados obtenidos tras probar nuestro programa con los \textit{datasets} proporcionados en la asignatura:
+\begin{itemize}
+	\item \texttt{ulysses16.tsp}: Aplicando 10 perturbaciones, obtenemos que el mejor orden (teniendo en cuenta el orden del fichero original):
+	\[
+		[0,7,15,12,11,13,6,5,14,4,8,9,2,1,3,10]
+	\]
+	y su distancia es 101.
+
+	Si representamos los puntos con el recorrido generado para 10 perturbaciones obtenemos el siguiente gráfico:
+	\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{./Images/ulysses_perturbaciones.png}
+	\caption{Gráfica de Ulysses mediante perturbaciones}
+	\end{figure}
+	
+	\newpage
+	
+	\item \texttt{bayg29.tsp}: Aplicando 10 perturbaciones, obtenemos que el mejor orden (teniendo en cuenta el orden del fichero original):
+	\[
+		[0,27,5,11,8,4,20,1,19,9,3,14,17,13,21,16,10,18,24,6,22,26,7,23,15,12,28,25,2]
+	\]
+	y su distancia es 10209.
+
+	Si representamos los puntos con el recorrido generado para 10 perturbaciones obtenemos el siguiente gráfico:
+	\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{./Images/bayg_perturbaciones.png}
+	\caption{Gráfica de Bayg mediante perturbaciones}
+	\end{figure}
+	
+	\item \texttt{eil76.tsp}: Aplicando 10 perturbaciones, obtenemos que el mejor orden (teniendo en cuenta el orden del fichero original):
+	\[
+		[0,72,32,62,15,2,43,31,8,38,71,57,9,37,64,10,65,52,13,18,34,6,7,45,33,51,26,44,28,
+	\]
+	\[
+		47,46,20,73,27,61,1,29,3,74,75,66,25,11,39,16,50,5,67,4,36,19,69,59,70,35,68,60,2,
+	\]
+	\[
+		1,41,40,42,22,55,48,23,17,49,24,54,30,58,53,12,56,14,63]
+	\]
+	y su distancia es 642.
+
+	Si representamos los puntos con el recorrido generado para 10 perturbaciones obtenemos el siguiente gráfico:
+	
+	\newpage
+	\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{./Images/eil_perturbaciones.png}
+	\caption{Gráfica de Eil mediante perturbaciones}
+	\end{figure}
+\end{itemize}
 \end{document}

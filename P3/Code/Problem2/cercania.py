@@ -1,7 +1,7 @@
-from dis import dis
-from common_functions import Point, parse_input, distance, gen_distance_matrix,  get_road_distance
+from common_functions import Point, parse_input, gen_distance_matrix,  get_road_distance, file_reordered
 import math
 import sys
+import time
 
 def  get_min_row_element(matrix, position):
     min_pos = 0
@@ -32,7 +32,7 @@ def clean_position(matrix, pos):
     for row in range(len(matrix)):
         matrix[row][pos] = -1
 
-def get_best_solution(points):
+def get_best_solution_nna(points):
     road = []
     order = []
 
@@ -57,16 +57,32 @@ def get_best_solution(points):
 
     return road, road_distance, order
 
-
+'''
 file = sys.argv[1]
 
 points = parse_input(file)
 
-recorrido, distancia, orden = get_best_solution(points)
+#total_time = 0
+
+
+#start = time.perf_counter()
+
+recorrido, distancia, orden = get_best_solution_nna(points)
+
+#end = time.perf_counter()
+
+#total_time += (end-start)
 
 str_orden = [str(n) for n in orden]
 
-'''print("El mejor orden a seguir: [" + ','.join(str_orden) + "]")
+#print(orden)
+#print("Su distancia es: " + str(distancia))
+
+file_reordered(recorrido)
+
+
+
+print("El mejor orden a seguir: [" + ','.join(str_orden) + "]")
 correct = len(set(orden)) == len(orden) #Checks if there is any duplicate
 
 if correct:
@@ -75,10 +91,13 @@ else:
     print("Incorrect order")
 
 
-print("Su distancia es: " + str(distancia))'''
+print("Su distancia es: " + str(distancia))
 
-number = file.split("../Datasets/")
+number = file.split("./Datasets/")
 number = number[1].split(".tsp")
+print(number)
 number = int(number[0])
 
-print(str(number) + " " + str(distancia))
+total_time /= 15
+
+print(str(number) + " " + str(total_time))'''
