@@ -332,10 +332,12 @@ Después, hemos representado con \texttt{gnuplot} los datos de tiempos obtenidos
  	\caption{Gráfica con los tiempos de ejecución del vecino más cercano}
  \end{figure}
  
+ \newpage
+ 
  Y las constantes ocultas son:
  \(T(n) = 7.6769 \cdot 10^{-7} n^2 + 0.00112191 n - 0.56077\)
  
- Para terminar nuesto análisis, terminaremos de confirmar que el ajuste cuadrático es el óptimo viendo el coeficiente de determinación que nos proporcionado gnuplot:
+ Para terminar nuesto análisis, terminaremos de confirmar que el ajuste cuadrático es el óptimo viendo el coeficiente de determinación que nos ha proporcionado gnuplot:
  
  Coef.determination = 0.869828
  
@@ -348,7 +350,12 @@ Después, hemos representado con \texttt{gnuplot} los datos de tiempos obtenidos
 Este enfoque, de nuevo \textit{greedy}, realiza las perturbaciones indicadas por un parámetro sobre un recorrido dado para intentar mejorarlo. Tenemos el siguiente código:
 \lstinputlisting[language=Python]{./Codes/perturbaciones.py}
 
-Primero lo que hacemos es obtener una solución mediante la heurística del vecino más cercano. Tras esto, tenemos la función \texttt{get\_worst\_node} que dado un recorrido, haya el nodo que más dista de su nodo siguiente. Por ello es necesario usar ya una solución previa (mediante el vecino más cercano) para calcular este ``nodo peor''. Por último, tenemos la función \texttt{perturbate} que prueba todas las posibles permutaciones que podemos hacer desde el respectivo ``peor nodo'' y se queda con la mejor de ellas.
+\subsubsection*{Análisis teórico}
+
+Primero lo que hacemos es obtener una solución mediante la heurística del vecino más cercano. Tras esto, tenemos la función \texttt{get\_worst\_node} que es \(\mathcal{O}(n)\), que dado un recorrido, haya el nodo que más dista de su nodo siguiente. Por ello es necesario usar ya una solución previa (mediante el vecino más cercano) para calcular este ``nodo peor''. Por último, tenemos la función \texttt{perturbate} que es \(\mathcal{O}(n^2)\), que prueba todas las posibles permutaciones que podemos hacer desde el respectivo ``peor nodo'' y se queda con la mejor de ellas. Por todo ello, apoyándonos en los comentarios realizados en el código mostrado, podemos concluir que:
+\[
+	T(n) \in \mathcal{O}(n^2 \cdot perturbaciones) \Rightarrow T(n) \in \mathcal{O}(n^2)
+\]
 
 \subsubsection*{Análisis empírico}
 
@@ -403,6 +410,45 @@ A continuación, mostramos los resultados obtenidos tras probar nuestro programa
 	\caption{Gráfica de Eil mediante perturbaciones}
 	\end{figure}
 \end{itemize}
+
+Además. hemos obtenido más de problemas TSP de la página \texttt{TSPLIB} y hemos realizado un estudio con más números de ciudades y hemos medido el tiempo de ejecución de nuestro algoritmo, obteniendo los siguientes datos:
+
+ \begin{table}[h!]
+ 	\centering
+ 	\footnotesize
+ 	\scalebox{0.75}{
+ 		\begin{tabular}{|c|c|}
+ 			\hline
+ 			\multicolumn{2}{|c|}{\textsf{Heurística de perturabciones}}
+ 			\\\hline
+ 			\bfseries Ciudades (n) & \bfseries Tiempo (s)
+ 			\csvreader{./data/perturbaciones.csv}{}
+ 			{\\\hline\csvcoli&\csvcolii}
+ 			\\\hline
+ 		\end{tabular}
+ 	}
+ 	\caption{Experiencia empírica de perturbaciones}
+ \end{table}
+ 
+ \subsubsection*{Análisis híbrido}
+ 
+Después, hemos representado con \texttt{gnuplot} los datos de tiempo obtenidos en el apartado anterior y les hemos realizado un ajuste cuadrático (dato obtenido en el análisis teórico), obteniendo la gráfica que se muestra a continuación. El análisis híbrido nos permitirá comprobar que nuestro análisis teórico era correcto.
+
+\begin{figure}[h!]
+ 	\centering
+ 	\includegraphics[scale=0.55]{./Images/perturbaciones.png}
+ 	\caption{Gráfica con los tiempos de ejecución del vecino más cercano}
+ \end{figure}
+ 
+ \newpage
+ 
+ Y las constantes ocultas son \(T(n) = 5.39602 \cdot 10^{-5} \cdot n^2 - 0.00659642 n + 3.2468\).
+ 
+ Para terminar nuestro análisis, terminaremos de confirmar que el ajuste cuadrático es el óptimo viendo el coeficiente de determinación que nos ha proporcionado gnuplot:
+ 
+ Coef.determination = 0.93507
+ 
+ Vemos que es muy cercano a 1, por tanto nuestro análisis es correcto.
 
 \subsubsection{Comparación de heurísticas}
 

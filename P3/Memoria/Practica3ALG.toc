@@ -8,5 +8,5 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Heurística del vecino más cercano}{7}{}%
 \contentsline {subsubsection}{\numberline {2.2.2}Heurística por inserción}{11}{}%
 \contentsline {subsubsection}{\numberline {2.2.3}Heurística propia: perturbaciones}{11}{}%
-\contentsline {subsubsection}{\numberline {2.2.4}Comparación de heurísticas}{14}{}%
-\contentsline {section}{\numberline {3}Conclusiones}{14}{}%
+\contentsline {subsubsection}{\numberline {2.2.4}Comparación de heurísticas}{15}{}%
+\contentsline {section}{\numberline {3}Conclusiones}{15}{}%
