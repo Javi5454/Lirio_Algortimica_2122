@@ -58,10 +58,9 @@ def get_best_solution_nna(points):
     return road, road_distance, order
 
 
-'''#file = sys.argv[1]
+#file = sys.argv[1]
 
-file = "./Problem2/Datasets/ulysses16.tsp"  #sys.argv[1] 
-perturbations = 10 # int(sys.argv[2])
+file = sys.argv[1] 
 
 points = parse_input(file)
 
@@ -72,9 +71,7 @@ recorrido, distancia, orden = get_best_solution_nna(points)
 end = time.perf_counter()
 
 total_time = (end-start)
-
-total_time /= 15
-
+'''
 str_orden = [str(n) for n in orden]
 
 #print(orden)
@@ -100,4 +97,4 @@ number = number[1].split(".tsp")
 print(number)
 number = int(number[0])'''
 
-#print(str(len(points)) + " " + str(total_time))
+print(str(len(points)) + " " + str(total_time))

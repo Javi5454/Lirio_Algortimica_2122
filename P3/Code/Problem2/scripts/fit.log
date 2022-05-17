@@ -1,0 +1,38 @@
+
+
+*******************************************************************************
+Tue May 17 14:18:53 2022
+
+
+FIT:    data read from 'cercania.dat'
+        format = z
+        #datapoints = 25
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a0*x*x+a1*x+a2
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a0            a1            a2           
+   0 2.2246193976e+15   0.00e+00  5.44e+06    1.000000e+00   1.000000e+00   1.000000e+00
+  10 2.8637894448e+00  -3.39e-03  5.44e-04    7.676961e-07   1.121914e-03  -5.600768e-01
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 2.86379
+rel. change during last iteration : -3.38713e-08
+
+degrees of freedom    (FIT_NDF)                        : 22
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.360794
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.130172
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a0              = 7.67696e-07      +/- 4.857e-08    (6.327%)
+a1              = 0.00112191       +/- 0.000233     (20.77%)
+a2              = -0.560077        +/- 0.2351       (41.98%)
+
+correlation matrix of the fit parameters:
+                a0     a1     a2     
+a0              1.000 
+a1             -0.971  1.000 
+a2              0.775 -0.885  1.000 

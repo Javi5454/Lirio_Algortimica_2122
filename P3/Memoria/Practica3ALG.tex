@@ -304,11 +304,33 @@ A continuación, mostramos los resultados obtenidos tras probar nuestro programa
 
 Además, hemos obtenido más datos de problemas TSP de la página \texttt{TSPLIB} y hemos realizado un estudio con más números de ciudades y hemos medido el tiempo de ejecución de nuestro algoritmo, obteniendo los siguientes datos:
 
-INSERTAR CSV CERCANIA CON MANY TSP
+
+ \begin{table}[h!]
+ 	\centering
+ 	\footnotesize
+ 	\scalebox{0.75}{
+ 		\begin{tabular}{|c|c|}
+ 			\hline
+ 			\multicolumn{2}{|c|}{\textsf{Heurística del Vecino más cercano}}
+ 			\\\hline
+ 			\bfseries Ciudades (n) & \bfseries Tiempo (s)
+ 			\csvreader{./data/cercania.csv}{}
+ 			{\\\hline\csvcoli&\csvcolii}
+ 			\\\hline
+ 		\end{tabular}
+ 	}
+ 	\caption{Experiencia empírica de el vecino más cercano}
+ \end{table}
 
 \subsubsection*{Análisis híbrido}
 
-Después, hemos representado con \texttt{gnuplot} los datos de tiempos obtenidos en el apartado anterior y les hemos realizado un ajuste cuadrático (dato obtenido en el análisis teórico), obteniendo la siguiente gráfica.
+Después, hemos representado con \texttt{gnuplot} los datos de tiempos obtenidos en el apartado anterior y les hemos realizado un ajuste cuadrático (dato obtenido en el análisis teórico), obteniendo la gráfica que se muestra a continuación. El análisis hbirido nos permitirá comprobar que nuestro análisis teórico era correcto. 
+
+ \begin{figure}[h!]
+ 	\centering
+ 	\includegraphics[scale=0.55]{./Images/cercania.png}
+ 	\caption{Gráfica con los tiempos de ejecución del vecino más cercano}
+ \end{figure}
 
 \subsubsection{Heurística por inserción}
 
