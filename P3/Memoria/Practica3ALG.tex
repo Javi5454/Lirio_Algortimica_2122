@@ -118,7 +118,56 @@ El enunciado del problema es el siguiente: \textit{Se tiene un buque mercante cu
 		\item \textbf{Estudio de la optimalidad}
 		\\
 		\\
-	\end{itemize}
+		Vamos a probar la optimalidad de nuestro algoritmo mediante una demostración matemática. Sea $T = \lbrace c_{1},...,c_{n} \rbrace$ y llamemos $S = \lbrace c_{1},...,c_{m} \rbrace$ a la solución de nuestro algoritmo Greedy. Vamos a fijar notación para lo que sigue:
+		
+		\begin{itemize}
+			\item $|S| \rightarrow$ Cardinal del conjunto de contenedores S
+			\item $c_{i} \rightarrow$ Contenedor i
+			\item $p_{i} \rightarrow$ Peso del contenedor i
+		\end{itemize}
+	
+	Consideramos que $|S| = m$. Por cómo hemos diseñado el algoritmo, sabemos que los pesos de los contenedores de la solución cumplen que:
+	
+	\[
+	\sum_{c_{i} \in S}p_{i} = \sum_{i = 1}^{m}p_{i} \leq  K \hspace{0.2cm} \text{y} \hspace{0.2cm} \sum_{i = 1}^{m+1}p_{i} > K
+	\]
+	
+	También, dado un conjunto Q cualquiera no vacío que no está contenido en S, deducimos de lo anterior que:
+	
+	\[
+	\sum_{c_{i} \in S}p_{i} + \sum_{c_{i} \in Q}p_{i} > K
+	\]
+	
+	Para ver que nuestra solución es óptima, vamos a ver que dado cualquier subconjunto U de T con un cardinal mayor que S, es decir, con más contenedores que S ($|U| = m' > m = |S|$), nunca podrá ser solución del problema. Para ver que no es solución del problema, hay que probar que $\sum_{c_{i} \in U}p_{i} > K$.
+	
+	Comenzaremos descomponiendo el conjunto de contenedores U de una forma que nos interesa. Sabemos que $U = (S \cap U) \cup (U\setminus S)$. Por ello, podemos escribir la siguiente igualdad:
+	
+	\[
+	\sum_{c_{i} \in U}p_{i} = \sum_{c_{i} \in S \cap U}p_{i} + \sum_{c_{i} \in U \setminus S}p_{i} 
+	\]
+	
+	Debido a esto, $|U| = m' = |S \cap U| + |U\setminus S|$. También se tiene que $(S \cap U) \cup (S\setminus U)$, luego $|S| = m = |S \cap U| + |S\setminus U|$. Teniendo en cuenta las dos igualdades en términos de cardinales que acabamos de ver, se tiene que $|U \setminus S| = m' - |S \cap U| > m - |S \cap U| = |S \setminus U|$. Esto nos demuestra que en $|U \setminus S|$ hay más elementos que en $|S \setminus U|$.
+	
+	A continuación, consideramos un subconjunto R de $U \setminus S$ cuyo cardinal coincida con el de $S \setminus U$ (esto lo podemos hacer porque hemos demostrado antes que $|U \setminus S| > |S \setminus U|$), de forma que $U \setminus S \setminus R \neq \emptyset$. Esto nos permite seguir desarrollando la igualdad anterior:
+	
+	\[
+	\sum_{c_{i} \in S \cap U}p_{i} + \sum_{c_{i} \in U \setminus S}p_{i} = \sum_{c_{i} \in S \cap U}p_{i} + \sum_{c_{i} \in R}p_{i} + \sum_{c_{i} \in U \setminus S \setminus R}p_{i}
+	\]
+	
+	Ahora, hemos de tener en cuenta que todos los contenedores de $U \setminus S$ son de mayor peso que los de $S \setminus U$, y como R es subconjunto de $U \setminus S$, se cumple concretamente para los contenedores de R. Esto nos permite afirmar que la siguiente desigualdad es cierta (recordar que esto también se debe a que R y $S \setminus U$ tienen el mismo cardinal):
+	
+	\[
+	\sum_{c_{i} \in S \cap U}p_{i} + \sum_{c_{i} \in R}p_{i} + \sum_{c_{i} \in U \setminus S \setminus R}p_{i} \geq \sum_{c_{i} \in S \cap U}p_{i} + \sum_{c_{i} \in S \setminus U}p_{i} + \sum_{c_{i} \in U \setminus S \setminus R}p_{i}
+	\]
+	
+	Y el miembro de la derecha lo podemos reescribir como:
+	
+	\[
+	\sum_{c_{i} \in S \cap U}p_{i} + \sum_{c_{i} \in S \setminus U}p_{i} + \sum_{c_{i} \in U \setminus S \setminus R}p_{i} = \sum_{c_{i} \in S}p_{i} + \sum_{c_{i} \in U \setminus S \setminus R}p_{i}
+	\]
+	
+	Y por ser S la solución de nuestro algoritmo Greedy, sabemos que $\sum_{c_{i} \in S}p_{i} + \sum_{c_{i} \in U \setminus S \setminus R}p_{i} > K$, y si seguimos la secuencia de igualdades y la desigualdad final que hemos ido exponiendo, uniendo los extremos, llegamos a que $\sum_{c_{i} \in U}p_{i} > K$, que era lo que queríamos demostrar. Por tanto, S es la solución óptima del problema.
+\end{itemize}
 	
 \subsubsection{Segundo ejercicio}
 
@@ -186,7 +235,14 @@ Este algortimo \textit{greedy} es muy simple:
 Hacemos uso del siguiente código:
 \lstinputlisting[language=Python]{./Codes/cercania.py}
 
-En este programa, básicamente tenemos lo que hacemos es partir de el primer punto pasado en el \textit{input} y tras ello vamos buscando los nodos más cercanos sin repetir los ya añadidos. Primero parseamos el input, generamos la matriz de distancia, y la vamos transformando para descartar los nodos ya considerados. 
+\subsubsection*{Análisis teórico}
+
+En este programa, básicamente tenemos lo que hacemos es partir de el primer punto pasado en el \textit{input} y tras ello vamos buscando los nodos más cercanos sin repetir los ya añadidos. Primero parseamos el input, generamos la matriz de distancia, y la vamos transformando para descartar los nodos ya considerados. Si observamos los comentarios que tenemos en el código, vemos que la función que resuelve nuestro problema es \(\mathcal{O}(n^2\), es decir:
+\[
+	T(n) \in \mathcal{O} (n^2)
+\]
+
+Esto se debe a que las funciones \texttt{get\_min\_row\_element} y \texttt{clean\_position}, que son \(\mathcal{O}(n)\) se encuentran dentro de un bucle \texttt{while} que es \(\mathcal{O}(n)\).
 
 \subsubsection*{Análisis empírico}
 A continuación, mostramos los resultados obtenidos tras probar nuestro programa con los \textit{datasets} proporcionados en la asignatura:
@@ -222,6 +278,8 @@ A continuación, mostramos los resultados obtenidos tras probar nuestro programa
 	\caption{Gráfica de Bayg mediante el Vecino más cercano}
 	\end{figure}
 	
+	\newpage
+	
 	\item \texttt{eil76.tsp}: El mejor orden para este \textit{dataset} (teniendo en cuenta el orden del fichero original) es:
 	\[
 		[0,72,32,62,15,2,43,31,8,38,71,57,9,37,64,10,65,52,13,18,34,6,7,45,33,51,26,44,28,
@@ -243,6 +301,14 @@ A continuación, mostramos los resultados obtenidos tras probar nuestro programa
 	\caption{Gráfica de Eil mediante el Vecino más cercano}
 	\end{figure}
 \end{itemize}
+
+Además, hemos obtenido más datos de problemas TSP de la página \texttt{TSPLIB} y hemos realizado un estudio con más números de ciudades y hemos medido el tiempo de ejecución de nuestro algoritmo, obteniendo los siguientes datos:
+
+INSERTAR CSV CERCANIA CON MANY TSP
+
+\subsubsection*{Análisis híbrido}
+
+Después, hemos representado con \texttt{gnuplot} los datos de tiempos obtenidos en el apartado anterior y les hemos realizado un ajuste cuadrático (dato obtenido en el análisis teórico), obteniendo la siguiente gráfica.
 
 \subsubsection{Heurística por inserción}
 

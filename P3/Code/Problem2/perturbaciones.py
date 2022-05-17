@@ -2,6 +2,7 @@ from common_functions import Point, parse_input, distance, gen_distance_matrix, 
 from cercania import get_best_solution_nna
 import sys
 import copy
+import time
 
 #Find the most separated nodes (only one of them)
 def get_worst_node(road):
@@ -47,14 +48,18 @@ def get_best_solution_perturbations(points, orden, perturbations):
 
     return base_road, get_road_distance(base_road), orden
 
-file = sys.argv[1] #"./Problem2/Datasets/ulysses16.tsp" 
-perturbations = int(sys.argv[2])
+file = sys.argv[1] #"./Problem2/Datasets/ulysses16.tsp"  
+perturbations =  int(sys.argv[2])
 
 points = parse_input(file)
+
+start = time.perf_counter()
 
 base_road, distance_nna, orden = get_best_solution_nna(points)
 
 final_road, final_distance, final_orden = get_best_solution_perturbations(base_road, orden, perturbations)
+
+end = time.perf_counter()
 
 
 correct = len(set(final_orden)) == len(final_orden) #Checks if there is any duplicate
@@ -67,4 +72,8 @@ else:
 #print(final_orden)
 #print("Su distancia es: " + str(final_distance))
 
-file_reordered(final_road)
+# file_reordered(final_road)
+
+time_total = end-start
+
+print(str(len(points)) + " " + str(time_total))
