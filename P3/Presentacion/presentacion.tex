@@ -218,7 +218,38 @@
 	
 \end{frame}
 
+
 \begin{frame}[fragile]{Primer ejercicio. \normalfont{Estudio de la optimalidad}}
+	
+	Sea $T = \lbrace c_{1},...,c_{n} \rbrace$ y llamemos $S = \lbrace c_{1},...,c_{m} \rbrace$ a la solución de nuestro algoritmo Greedy.
+	
+	\[
+	\sum_{c_{i} \in S}p_{i} = \sum_{i = 1}^{m}p_{i} \leq  K \hspace{0.2cm} \text{y} \hspace{0.2cm} \sum_{i = 1}^{m+1}p_{i} > K
+	\]
+	
+	Sea $U \subset T$ con un número mayor de contenedores que $S$ y veamos que no es solución, es decir, que $\sum_{c_{i} \in U}p_{i} > K$.
+\end{frame}
+
+\begin{frame}[fragile]{Primer ejercicio. \normalfont{Estudio de la optimalidad}}
+	
+	\[
+	\sum_{c_{i} \in U}p_{i} = \sum_{c_{i} \in S \cap U}p_{i} + \sum_{c_{i} \in U \setminus S}p_{i}
+	\]
+	\centering $\downarrow$
+	\[
+	\sum_{c_{i} \in S \cap U}p_{i} + \sum_{c_{i} \in U \setminus S}p_{i} = \sum_{c_{i} \in S \cap U}p_{i} + \sum_{c_{i} \in R}p_{i} + \sum_{c_{i} \in U \setminus S \setminus R}p_{i}
+	\]
+	\centering $\downarrow$
+	\[
+	\sum_{c_{i} \in S \cap U}p_{i} + \sum_{c_{i} \in R}p_{i} + \sum_{c_{i} \in U \setminus S \setminus R}p_{i} \geq \sum_{c_{i} \in S \cap U}p_{i} + \sum_{c_{i} \in S \setminus U}p_{i} + \sum_{c_{i} \in U \setminus S \setminus R}p_{i}
+	\]
+	\centering $\downarrow$
+	\[
+	\sum_{c_{i} \in S \cap U}p_{i} + \sum_{c_{i} \in S \setminus U}p_{i} + \sum_{c_{i} \in U \setminus S \setminus R}p_{i} = \sum_{c_{i} \in S}p_{i} + \sum_{c_{i} \in U \setminus S \setminus R}p_{i} > K
+	\]
+	
+	Luego hemos demostrado que $\sum_{c_{i} \in U}p_{i} > K$ y por lo tanto, $U$ no es solución.
+	
 \end{frame}
 	
 \begin{frame}[fragile]{Segundo ejercicio}
@@ -385,4 +416,6 @@ Eil
 \begin{frame}[fragile]{Comparación de las distinas heurísticas}
 a
 \end{frame}
+
+\section{Conclusiones}
 \end{document}

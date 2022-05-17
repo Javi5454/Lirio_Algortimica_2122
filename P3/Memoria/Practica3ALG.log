@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.14)  17 MAY 2022 14:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.14)  17 MAY 2022 17:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,7 +490,7 @@ Package pdftex.def Info: ./Images/cercania.png  used on input line 331.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(./Codes/perturbaciones.py [10 <./Images/eil_cercania.png (PNG copy)>] [11 <./I
+[10 <./Images/eil_cercania.png (PNG copy)>] (./Codes/perturbaciones.py [11 <./I
 mages/cercania.png (PNG copy)>]
 Overfull \hbox (56.9151pt too wide) in paragraph at lines 53--55
 [][][][][][][][][][][][][][][][][][][][][][] 
@@ -501,21 +501,21 @@ Overfull \hbox (56.9151pt too wide) in paragraph at lines 53--55
 File: ./Images/ulysses_perturbaciones.png Graphic file (type png)
 <use ./Images/ulysses_perturbaciones.png>
 Package pdftex.def Info: ./Images/ulysses_perturbaciones.png  used on input lin
-e 357.
+e 366.
 (pdftex.def)             Requested size: 240.8994pt x 180.67456pt.
  [12 <./Images/ulysses_perturbaciones.png (PNG copy)>]
 <./Images/bayg_perturbaciones.png, id=80, 481.8pt x 361.35pt>
 File: ./Images/bayg_perturbaciones.png Graphic file (type png)
 <use ./Images/bayg_perturbaciones.png>
 Package pdftex.def Info: ./Images/bayg_perturbaciones.png  used on input line 3
-72.
+81.
 (pdftex.def)             Requested size: 240.8994pt x 180.67456pt.
  [13 <./Images/bayg_perturbaciones.png (PNG copy)>]
 <./Images/eil_perturbaciones.png, id=84, 481.8pt x 361.35pt>
 File: ./Images/eil_perturbaciones.png Graphic file (type png)
 <use ./Images/eil_perturbaciones.png>
-Package pdftex.def Info: ./Images/eil_perturbaciones.png  used on input line 39
-3.
+Package pdftex.def Info: ./Images/eil_perturbaciones.png  used on input line 40
+2.
 (pdftex.def)             Requested size: 240.8994pt x 180.67456pt.
  [14 <./Images/eil_perturbaciones.png (PNG copy)>]
 (./Practica3ALG.aux
@@ -555,7 +555,7 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/sha
 re/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1
 /public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sft
 i0800.pfb>
-Output written on Practica3ALG.pdf (15 pages, 870409 bytes).
+Output written on Practica3ALG.pdf (15 pages, 881275 bytes).
 PDF statistics:
  197 PDF objects out of 1000 (max. 8388607)
  115 compressed objects within 2 object streams

@@ -331,6 +331,15 @@ Después, hemos representado con \texttt{gnuplot} los datos de tiempos obtenidos
  	\includegraphics[scale=0.55]{./Images/cercania.png}
  	\caption{Gráfica con los tiempos de ejecución del vecino más cercano}
  \end{figure}
+ 
+ Y las constantes ocultas son:
+ \(T(n) = 7.6769 \cdot 10^{-7} n^2 + 0.00112191 n - 0.56077\)
+ 
+ Para terminar nuesto análisis, terminaremos de confirmar que el ajuste cuadrático es el óptimo viendo el coeficiente de determinación que nos proporcionado gnuplot:
+ 
+ Coef.determination = 0.869828
+ 
+ Vemos que es un muy cercano a 1, por tanto es correcto nuestro análisis. Hay que tener en cuenta que los datos de los que partimos no son aleatorios y por tanto puede generar una pequeña perturbación en los tiempos.
 
 \subsubsection{Heurística por inserción}
 

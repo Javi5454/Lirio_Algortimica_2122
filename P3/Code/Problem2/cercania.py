@@ -60,7 +60,7 @@ def get_best_solution_nna(points):
 
 #file = sys.argv[1]
 
-file = sys.argv[1] 
+'''file = sys.argv[1] 
 
 points = parse_input(file)
 
@@ -71,7 +71,7 @@ recorrido, distancia, orden = get_best_solution_nna(points)
 end = time.perf_counter()
 
 total_time = (end-start)
-'''
+
 str_orden = [str(n) for n in orden]
 
 #print(orden)
@@ -97,4 +97,4 @@ number = number[1].split(".tsp")
 print(number)
 number = int(number[0])'''
 
-print(str(len(points)) + " " + str(total_time))
+#print(str(len(points)) + " " + str(total_time))

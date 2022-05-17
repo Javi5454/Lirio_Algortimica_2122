@@ -53,9 +53,9 @@ perturbations =  int(sys.argv[2])
 
 points = parse_input(file)
 
-start = time.perf_counter()
-
 base_road, distance_nna, orden = get_best_solution_nna(points)
+
+start = time.perf_counter()
 
 final_road, final_distance, final_orden = get_best_solution_perturbations(base_road, orden, perturbations)
 
