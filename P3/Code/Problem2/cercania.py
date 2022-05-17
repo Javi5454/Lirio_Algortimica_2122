@@ -64,20 +64,22 @@ def get_best_solution_nna(points):
 
 points = parse_input(file)
 
-start = time.perf_counter()
+#start = time.perf_counter()
 
 recorrido, distancia, orden = get_best_solution_nna(points)
 
-end = time.perf_counter()
+print(str(len(points)) + " " + str(distancia))
 
-total_time = (end-start)
+#end = time.perf_counter()
 
-str_orden = [str(n) for n in orden]
+#total_time = (end-start)
+
+#str_orden = [str(n) for n in orden]
 
 #print(orden)
 #print("Su distancia es: " + str(distancia))
 
-file_reordered(recorrido)
+#file_reordered(recorrido)
 
 
 

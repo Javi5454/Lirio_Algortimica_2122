@@ -55,16 +55,17 @@ points = parse_input(file)
 
 base_road, distance_nna, orden = get_best_solution_nna(points)
 
-start = time.perf_counter()
+#start = time.perf_counter()
 
 final_road, final_distance, final_orden = get_best_solution_perturbations(base_road, orden, perturbations)
 
-end = time.perf_counter()
+#end = time.perf_counter()
 
+print(str(len(points)) + " " + str(final_distance))
 
-correct = len(set(final_orden)) == len(final_orden) #Checks if there is any duplicate
+'''correct = len(set(final_orden)) == len(final_orden) #Checks if there is any duplicate
 
-'''if correct:
+if correct:
     print("Correct order!")
 else:
     print("Incorrect order")'''
@@ -74,6 +75,6 @@ else:
 
 # file_reordered(final_road)
 
-time_total = end-start
+#time_total = end-start
 
-print(str(len(points)) + " " + str(time_total))
+#print(str(len(points)) + " " + str(time_total))
