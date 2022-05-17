@@ -43,7 +43,7 @@ double distacia2Puntos(Point punto1, Point punto2){
 	if(punto1 == punto2)
 		return 0;
 	else
-		return double(sqrt(pow((punto1.x - punto2.x),2) + pow((punto1.y - punto2.y),2)));
+		return round(double(sqrt(pow((punto1.x - punto2.x),2) + pow((punto1.y - punto2.y),2))));
 }
 
 void salidaPunto(Point punto){
@@ -158,7 +158,7 @@ double Coste(vector<Point> v, double ** array_distancias){
     }
     coste_aux += array_distancias[v[dimension].posicion_obtencion-1][v[0].posicion_obtencion-1];
 
-    return coste_aux;
+    return round(coste_aux);
 }
 
 int main(int argc, char* argv[]){
