@@ -304,6 +304,39 @@
 \end{center}
 \end{frame}
 
+\begin{frame}[fragile]{Heurística del vecino más cercano. \normalfont{Análisis Teórico}}
+\[
+	T(n) \in \mathcal{O} (n^2)
+\]
+\end{frame}
+
+\begin{frame}[fragile]{Heurística del vecino más cercano. \normalfont{Análisis empírico}}
+\begin{table}[h!]
+ 	\centering
+ 	\footnotesize
+ 	\scalebox{0.6}{
+ 		\begin{tabular}{|c|c|}
+ 			\hline
+ 			\multicolumn{2}{|c|}{\textsf{Heurística del Vecino más cercano}}
+ 			\\\hline
+ 			\bfseries Ciudades (n) & \bfseries Tiempo (s)
+ 			\csvreader{./data/cercania.csv}{}
+ 			{\\\hline\csvcoli&\csvcolii}
+ 			\\\hline
+ 		\end{tabular}
+ 	}
+ 	\caption{Experiencia empírica de el vecino más cercano}
+ \end{table}
+\end{frame}
+
+\begin{frame}[fragile]{Heurística del vecino más cercano. \normalfont{Análisis Híbrido}}
+ \begin{figure}[h!]
+ 	\centering
+ 	\includegraphics[scale=0.5]{./Images/cercania.png}
+ 	\caption{Gráfica con los tiempos de ejecución del vecino más cercano. \(R^2 = 0.869828\)}
+ \end{figure}
+\end{frame}
+
 \begin{frame}[fragile]{Heurística del vecino más cercano. \normalfont{Resultados}}
 \begin{itemize}
 	\item \texttt{ulysses16.tsp}:
@@ -366,6 +399,39 @@ Este enfoque, de nuevo \textit{greedy}, realiza las perturbaciones indicadas por
 \lstinputlisting[language=Python]{./Codes/perturbaciones.py}
 }
 \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Heurística de perturbaciones. \normalfont{Análisis teórico}}
+\[
+	T(n) \in \mathcal{O}(n^2 \cdot perturbaciones) \Rightarrow T(n) \in \mathcal{O}(n^2)
+\]
+\end{frame}
+
+\begin{frame}[fragile]{Heurística de perturbaciones. \normalfont{Análisis empírico}}
+\begin{table}[h!]
+ 	\centering
+ 	\footnotesize
+ 	\scalebox{0.6}{
+ 		\begin{tabular}{|c|c|}
+ 			\hline
+ 			\multicolumn{2}{|c|}{\textsf{Heurística de perturabciones}}
+ 			\\\hline
+ 			\bfseries Ciudades (n) & \bfseries Tiempo (s)
+ 			\csvreader{./data/perturbaciones.csv}{}
+ 			{\\\hline\csvcoli&\csvcolii}
+ 			\\\hline
+ 		\end{tabular}
+ 	}
+ 	\caption{Experiencia empírica de perturbaciones}
+ \end{table}
+\end{frame}
+
+\begin{frame}[fragile]{Heurística de perturbaciones. \normalfont{Análisis híbrido}}
+\begin{figure}[h!]
+ 	\centering
+ 	\includegraphics[scale=0.5]{./Images/perturbaciones.png}
+ 	\caption{Gráfica con los tiempos de ejecución del vecino más cercano. \(R^2 = 0.93507\)}
+ \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]{Heurística de perturbaciones. \normalfont{Resultados}}
