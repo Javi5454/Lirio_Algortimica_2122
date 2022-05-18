@@ -1,2 +1,9 @@
-\frametitle{Comparación de las distinas heurísticas}
-a
+\frametitle{Conclusiones}
+\begin{itemize}
+		\item Los algoritmos Greedy nos ahorran la elevada complejidad de los algoritmos de fuerza bruta.
+		\item Los algoritmos más eficientes no siempre son los más útiles.
+		\item La anterior conclusión nos lleva a que debemos saber encontrar un término medio entre eficiencia y búsqueda de la solución óptima.
+		\item Nos interesa una buena eficiencia y una solución próxima a la óptima
+		\item Los algoritmos Greedy no siempre nos dan la mejor solución.
+
+	\end{itemize}

@@ -386,7 +386,111 @@ Eil
 \end{frame}
 
 \begin{frame}[fragile]{TSP. \normalfont{Heurística de inserción}}
-Empezar insercion aqui
+Veamos las 6 características de nuestro problema Greedy:
+	\begin{itemize}
+		\item \textbf{Un conjunto de candidatos}: En este caso, las ciudades por las que pasar.
+		\item \textbf{Una lista de candidatos ya usados}: Los ciudades por las que ya se ha pasado. Cabe resaltar que se debe comenzar por un recorrido inicial de 3 ciudades previamente. Para escoger estas ciudades simplemente lo haremos escogiendo la ciudad más al oeste, la más al este y la más al norte.
+		\item \textbf{Un criterio que dice cuándo un conjunto de candidatos forma una solución}: El criterio es que el recorrido que se haga forme un circuito pasando por todas las ciudades una sola vez.
+		\item \textbf{Un criterio que dice cuándo un conjunto de candidatos es factible (podrá llegar a ser una solución)}: En caso de que no se repita ningún nodo (ciudad), el conjunto de candidatos es factible.
+		\end{itemize}
+		
+\end{frame}
+\begin{frame}[fragile]{TSP. \normalfont{Heurística de inserción}}
+	\begin{itemize}
+	
+		\item \textbf{Una función de selección que indica en cualquier instante cuál es el candidato más prometedor de los no usados todavía}: Utilizaremos un criterio que denominaremos inserción mas económica: de entre todas las ciudades no visitadas, elegimos aquella que provoque el menor incremento en la longitud total del circuito.
+En otras palabras, cada ciudad debemos insertarla en cada una de las soluciones posibles y quedarnos con la ciudad (y posición) que nos permita obtener un circuito de menor longitud. Seleccionaremos aquella ciudad que nos proporcione el mínimo de los mínimos calculados para cada una de las ciudades
+		\item \textbf{La función objetivo que intentamos optimizar}: El coste del recorrido total del circuito.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Heurística de inserción. \normalfont{Código}}
+\begin{center}
+\scalebox{0.75}{
+\lstinputlisting[language=C++]{./Codes/pseudocodigo_insercion.cpp}
+}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Heurística de inserción. \normalfont{Análisis Teórico}}
+\[
+	T(n) \in \mathcal{O} (n^3)
+\]
+\end{frame}
+
+\begin{frame}[fragile]{Heurística de inserción. \normalfont{Análisis empírico}}
+\begin{table}[h!]
+ 	\centering
+ 	\footnotesize
+ 	\scalebox{0.6}{
+ 		\begin{tabular}{|c|c|}
+ 			\hline
+ 			\multicolumn{2}{|c|}{\textsf{Heurística de inserción}}
+ 			\\\hline
+ 			\bfseries Ciudades (n) & \bfseries Tiempo (s)
+ 			\csvreader{./data/insercion.csv}{}
+ 			{\\\hline\csvcoli&\csvcolii}
+ 			\\\hline
+ 		\end{tabular}
+ 	}
+ 	\caption{Experiencia empírica de inserción}
+ \end{table}
+\end{frame}
+
+\begin{frame}[fragile]{Heurística de inserción. \normalfont{Análisis Híbrido}}
+ \begin{figure}[h!]
+ 	\centering
+ 	\includegraphics[scale=0.5]{./Images/insercion.png}
+ 	\caption{Gráfica con los tiempos de ejecución de insercion. \(R^2 = 0.85647\)}
+ \end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Heurística de inserción. \normalfont{Resultados}}
+\begin{itemize}
+	\item \texttt{ulysses16.tsp}:
+	\[
+		[5, 6, 7, 10, 12, 14, 15, 13, 16, 1, 4, 8, 9, 11, 2, 3]	\qquad D = 99
+	\]		
+
+	\item \texttt{bayg29.tsp}:
+	\[
+		[3, 23, 12, 6, 5, 26, 29, 21, 2, 20, 10, 13, 4, 15, 19, 25, 7, 18,
+		\]
+		\[
+		 14, 22, 11, 17, 9, 28, 1, 24, 27, 16, 8] \qquad D = 10048
+	\]
+	
+	\item \texttt{eil76.tsp}:
+	\[
+		[56, 23, 63, 33, 73, 62, 22, 28, 61, 74, 30, 48, 5, 15, 57, 37, 20, 70, 60,
+	\]
+	\[
+	 71, 47, 36, 69, 21, 29, 45, 27, 13, 54, 52, 34, 67, 26, 76, 75, 4, 68, 6, 51,
+	 \]
+	\[
+	 17, 12, 40, 46, 8, 35, 53, 11, 66, 65, 38, 10, 58, 72, 39, 9, 32, 50, 25, 55,
+	 \]
+	\[
+	 18, 44, 3, 14, 19, 7, 2, 1, 43, 41, 42, 64, 16, 49, 24, 59, 31] \qquad D = 611
+	\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Heurística de insercion. \normalfont{Gráficos}}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[scale=0.23]{./Images/ulysses_insercion.png}
+&
+\includegraphics[scale=0.23]{./Images/bayg_insercion.png} \\
+Ulysses & Bayg
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[scale=0.23]{./Images/eil_insercion.png} \\
+Eil
+\end{tabular}
+\end{center}
 \end{frame}
 
 \begin{frame}[fragile]{TSP. \normalfont{Heurística de perturbaciones}}
@@ -480,8 +584,75 @@ Eil
 \end{frame}
 
 \begin{frame}[fragile]{Comparación de las distinas heurísticas}
-a
+Los tres algoritmos que tenemos son: cercanía (el vecino más cercano), inserción y por perturbaciones. Veremos la gráfica comparativa de los tiempos de cada heurística.
+
+\end{frame}
+\begin{frame}[fragile]{Comparación de las distinas heurísticas}
+
+\begin{figure}[h!]
+ 	\centering
+ 	\includegraphics[scale=0.45]{./Images/comparativa_tiempos.png}
+ 	\caption{Gráfica comparativa con los tiempos de ejecución de las distintas heurísticas}
+ \end{figure}
+
+\end{frame}
+ 
+ \begin{frame}[fragile]{Comparación de las distinas heurísticas}
+\begin{table}[h!]
+ 	\centering
+ 	\footnotesize
+ 	\scalebox{0.5}{
+ 		\begin{tabular}{|c|c|}
+ 			\hline
+ 			\multicolumn{2}{|c|}{\textsf{Heurística de cercania}}
+ 			\\\hline
+ 			\bfseries Ciudades (n) & \bfseries Distancia ()
+ 			\csvreader{./data/cercania_distancias.csv}{}
+ 			{\\\hline\csvcoli&\csvcolii}
+ 			\\\hline
+ 		\end{tabular}
+ 	}
+ 	\scalebox{0.50}{
+ 		\begin{tabular}{|c|c|}
+ 			\hline
+ 			\multicolumn{2}{|c|}{\textsf{Heurística de insercion}}
+ 			\\\hline
+ 			\bfseries Ciudades (n) & \bfseries Distancia ()
+ 			\csvreader{./data/insercion_distancias.csv}{}
+ 			{\\\hline\csvcoli&\csvcolii}
+ 			\\\hline
+ 		\end{tabular}
+ 	}
+ 	\scalebox{0.50}{
+ 		\begin{tabular}{|c|c|}
+ 			\hline
+ 			\multicolumn{2}{|c|}{\textsf{Heurística de perturbaciones}}
+ 			\\\hline
+ 			\bfseries Ciudades (n) & \bfseries Distancia ()
+ 			\csvreader{./data/perturbaciones_distancias.csv}{}
+ 			{\\\hline\csvcoli&\csvcolii}
+ 			\\\hline
+ 		\end{tabular}
+ 	}
+ 	\caption{Experiencia empírica de las distintas heurísticas}
+ \end{table}
+ 
+ \end{frame}
+ \begin{frame}[fragile]{Comparación de las distinas heurísticas}
+ Vemos como los tiempos de ejecución son mayores para inserción debido a que su eficiencia es cúbica respecto a los demás, donde también se observa que la heurística de perturbaciones tiene un tiempo algo mayor que la de cercanía. Sin embargo este mayor tiempo se puede justificar a la hora de escoger estas heurísticas debido a que el algoritmo que proporciona mejores soluciones es, como se puede comprobar con los costes previamente reflejados, el que utiliza la heurística de inserción y posteriormente al que utiliza la heurística de perturbaciones. Por tanto la conclusión en este caso es que a mayor tiempo de ejecución mejor solución obtenemos y por tanto debemos de tener esto en cuenta a la hora de elegir una heurística u otra.
 \end{frame}
 
 \section{Conclusiones}
+
+\begin{frame}[fragile]{Conclusiones}
+	\begin{itemize}
+		\item Los algoritmos Greedy nos ahorran la elevada complejidad de los algoritmos de fuerza bruta.
+		\item Los algoritmos más eficientes no siempre son los más útiles.
+		\item La anterior conclusión nos lleva a que debemos saber encontrar un término medio entre eficiencia y búsqueda de la solución óptima.
+		\item Nos interesa una buena eficiencia y una solución próxima a la óptima
+		\item Los algoritmos Greedy no siempre nos dan la mejor solución.
+		
+	\end{itemize}
+\end{frame}
+
 \end{document}

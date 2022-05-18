@@ -39,11 +39,11 @@ struct Point
 
 };
 
-double distacia2Puntos(Point punto1, Point punto2){
+int distacia2Puntos(Point punto1, Point punto2){
 	if(punto1 == punto2)
 		return 0;
 	else
-		return round(double(sqrt(pow((punto1.x - punto2.x),2) + pow((punto1.y - punto2.y),2))));
+		return sqrt(pow((punto2.x - punto1.x),2) + pow((punto2.y - punto1.y),2)) + 0.5;
 }
 
 void salidaPunto(Point punto){
@@ -63,12 +63,13 @@ void borrarPunto(Point punto, vector <Point> & circuito){
   }
 }
 
-void TSP_Insercion(vector<Point> v_candidatos, vector<Point> &circuito_solucion){
+void TSP_Insercion(vector<Point> candidatos, vector<Point> &circuito_solucion){
+    vector<Point> v_candidatos = candidatos;
     int menorInc;
     //vector auxiliar con los posibles candidatos junto con sus array_distancias minimas dentro del recorrido
     vector<pair<Point,int>> posibles;
     Point pCandidato;
-    int dist_minima = 10000000;
+    int dist_minima = 100000000;
     int distancia_auxiliar = 0;
     int indice = 0;
     //punto que sera un candidato a ser solucion junto con su distancia minima dentro del recorrido
@@ -91,18 +92,17 @@ void TSP_Insercion(vector<Point> v_candidatos, vector<Point> &circuito_solucion)
             pPosibleCandidato.second = dist_minima;
             posibles.push_back(pPosibleCandidato);
 
-            dist_minima = 10000000;
+            dist_minima = 100000000;
         }
 
         //escogemos el candidato con menor distancia
-        menorInc = 10000000;
+        menorInc = 100000000;
         for(unsigned int i=0; i<posibles.size(); i++){
             if(posibles[i].second < menorInc){
                 menorInc = posibles[i].second;
                 indice = i;
             }
         }
-
         circuito_solucion.insert(circuito_solucion.begin()+indice+1,posibles[indice].first);
         /*
           cout << endl << "MOSTRANDO RUTA ACTUALMENTE..." << endl;
@@ -114,19 +114,20 @@ void TSP_Insercion(vector<Point> v_candidatos, vector<Point> &circuito_solucion)
     }
 }
 
-//esta funcion es simplemente de depuracion
-double ** calculando_array_distancias(vector<Point> v){
-    int dimension = v.size();
-    double ** array_distancias = nullptr;
 
-    array_distancias = new double * [dimension];
+//esta funcion es simplemente de depuracion
+int ** calculando_array_distancias(vector<Point> v){
+    int dimension = v.size();
+    int ** array_distancias = nullptr;
+
+    array_distancias = new int * [dimension];
     if(array_distancias == nullptr){
         cerr << "Memoria insuficiente" << endl;
         exit(EXIT_FAILURE);
     }
 
     for(int i=0; i<dimension; i++){
-        array_distancias[i] = new double [dimension];
+        array_distancias[i] = new int [dimension];
         if(array_distancias[i] == nullptr){
             cerr << "Error en memoria" << endl;
             for(int j=i; j>=0; j--)
@@ -148,18 +149,20 @@ double ** calculando_array_distancias(vector<Point> v){
     return array_distancias;
 }
 
-//esta funcion es simplemente de depuracion
-double Coste(vector<Point> v, double ** array_distancias){
-    int dimension = v.size() -1;
-    double coste_aux = 0;
 
-    for(unsigned int i=0; i<dimension; i++){
+//esta funcion es simplemente de depuracion
+int Coste(vector<Point> v, int ** array_distancias){
+    int dimension = v.size();
+    int coste_aux = 0;
+
+    for(unsigned int i=0; i<dimension-1; i++){
         coste_aux += array_distancias[v[i].posicion_obtencion-1][v[i+1].posicion_obtencion-1];
     }
-    coste_aux += array_distancias[v[dimension].posicion_obtencion-1][v[0].posicion_obtencion-1];
-
-    return round(coste_aux);
+    coste_aux += array_distancias[v[dimension-1].posicion_obtencion-1][v[0].posicion_obtencion-1];
+    
+    return coste_aux;
 }
+
 
 int main(int argc, char* argv[]){
 	if(argc != 2){
@@ -186,9 +189,9 @@ int main(int argc, char* argv[]){
 	}
 
 	//la siguiente funcion es de depuracion unicamente
-	double **array_distancias = calculando_array_distancias(v);
+	int **array_distancias = calculando_array_distancias(v);
 
-
+	
 	vector<Point> circuito_inicial;
 	double x_oeste = 10000;
 	double x_este = 0;
@@ -219,16 +222,16 @@ int main(int argc, char* argv[]){
 	circuito_inicial.push_back(v[indice]);
 	v.erase(v.begin()+indice);
 
-	double longitud_circuito_inicial = 0;
-	salidaPunto(circuito_inicial[0]);
-	salidaPunto(circuito_inicial[1]);
-	salidaPunto(circuito_inicial[2]);
+	int longitud_circuito_inicial = 0;
+	//salidaPunto(circuito_inicial[0]);
+	//salidaPunto(circuito_inicial[1]);
+	//salidaPunto(circuito_inicial[2]);
 	longitud_circuito_inicial += distacia2Puntos(circuito_inicial[0], circuito_inicial[1]);
 	longitud_circuito_inicial += distacia2Puntos(circuito_inicial[1], circuito_inicial[2]);
 	longitud_circuito_inicial += distacia2Puntos(circuito_inicial[2], circuito_inicial[0]);
 
-	cout << "Longitud circuito_inicial " << longitud_circuito_inicial << endl;
-	cout << "tamano actual vector candidatos" << v.size() << endl; 
+	//cout << "Longitud circuito_inicial " << longitud_circuito_inicial << endl;
+	//cout << "tamano actual vector candidatos" << v.size() << endl; 
 
 	
     high_resolution_clock::time_point tantes, tdespues;
@@ -244,14 +247,25 @@ int main(int argc, char* argv[]){
     double tiempo = transcurrido.count();
 
     //las siguientes funciones/operaciones son simplemente de depuracion
-    double coste = Coste(circuito_inicial, array_distancias);
+    
+    int coste = Coste(circuito_inicial, array_distancias);
+    /*
     cout << "Tiempo ejecucion: " << tiempo << endl;
     cout << "COSTE CIRCUITO: " << coste << endl;
     cout << "RUTA: " << endl; 
+    cout << "[";
     for( int i = 0; i < circuito_inicial.size() - 1; i++){
-    	cout << circuito_inicial[i].posicion_obtencion << " ---> ";
+    	cout << circuito_inicial[i].posicion_obtencion << ", ";
   	}
   	cout << circuito_inicial[circuito_inicial.size()-1].posicion_obtencion << endl;
+  	cout << "]" << endl;
+  	
+  	cout << "DIMENSION: "<< dimension << endl;
+  	for( int i = 0; i < circuito_inicial.size(); i++){
+    	cout << circuito_inicial[i].posicion_obtencion << " " << circuito_inicial[i].x << " " << circuito_inicial[i].y << endl;
+  	}
+  	*/
+  	cout << dimension << " " << tiempo << endl;
 
     //t += transcurrido.count();
 

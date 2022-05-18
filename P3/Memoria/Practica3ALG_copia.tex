@@ -454,7 +454,6 @@ Después, hemos representado con \texttt{gnuplot} los datos de tiempos obtenidos
  
  Vemos que es un muy cercano a 1, por tanto es correcto nuestro análisis. Hay que tener en cuenta que los datos de los que partimos no son aleatorios y por tanto puede generar una pequeña perturbación en los tiempos.
 
-
 \subsubsection{Heurística propia: perturbaciones}
 
 Este enfoque, de nuevo \textit{greedy}, realiza las perturbaciones indicadas por un parámetro sobre un recorrido dado para intentar mejorarlo. Tenemos el siguiente código:
@@ -529,7 +528,7 @@ Además. hemos obtenido más de problemas TSP de la página \texttt{TSPLIB} y he
  	\scalebox{0.75}{
  		\begin{tabular}{|c|c|}
  			\hline
- 			\multicolumn{2}{|c|}{\textsf{Heurística de perturbaciones}}
+ 			\multicolumn{2}{|c|}{\textsf{Heurística de perturabciones}}
  			\\\hline
  			\bfseries Ciudades (n) & \bfseries Tiempo (s)
  			\csvreader{./data/perturbaciones_tiempo.csv}{}
@@ -570,54 +569,13 @@ Los tres algoritmos que tenemos son: cercanía (el vecino más cercano), inserci
  	\caption{Gráfica comparativa con los tiempos de ejecución de las distintas heurísticas}
  \end{figure}
  
-\begin{table}[h!]
- 	\centering
- 	\footnotesize
- 	\scalebox{0.5}{
- 		\begin{tabular}{|c|c|}
- 			\hline
- 			\multicolumn{2}{|c|}{\textsf{Heurística de cercania}}
- 			\\\hline
- 			\bfseries Ciudades (n) & \bfseries Distancia ()
- 			\csvreader{./data/cercania_distancias.csv}{}
- 			{\\\hline\csvcoli&\csvcolii}
- 			\\\hline
- 		\end{tabular}
- 	}
- 	\scalebox{0.50}{
- 		\begin{tabular}{|c|c|}
- 			\hline
- 			\multicolumn{2}{|c|}{\textsf{Heurística de insercion}}
- 			\\\hline
- 			\bfseries Ciudades (n) & \bfseries Distancia ()
- 			\csvreader{./data/insercion_distancias.csv}{}
- 			{\\\hline\csvcoli&\csvcolii}
- 			\\\hline
- 		\end{tabular}
- 	}
- 	\scalebox{0.50}{
- 		\begin{tabular}{|c|c|}
- 			\hline
- 			\multicolumn{2}{|c|}{\textsf{Heurística de perturbaciones}}
- 			\\\hline
- 			\bfseries Ciudades (n) & \bfseries Distancia ()
- 			\csvreader{./data/perturbaciones_distancias.csv}{}
- 			{\\\hline\csvcoli&\csvcolii}
- 			\\\hline
- 		\end{tabular}
- 	}
- 	\caption{Experiencia empírica de las distintas heurísticas}
- \end{table}
-  \newpage
  Vemos como los tiempos de ejecución son mayores para inserción debido a que su eficiencia es cúbica respecto a los demás, donde también se observa que la heurística de perturbaciones tiene un tiempo algo mayor que la de cercanía. Sin embargo este mayor tiempo se puede justificar a la hora de escoger estas heurísticas debido a que el algoritmo que proporciona mejores soluciones es, como se puede comprobar con los costes previamente reflejados, el que utiliza la heurística de inserción y posteriormente al que utiliza la heurística de perturbaciones. Por tanto la conclusión en este caso es que a mayor tiempo de ejecución mejor solución obtenemos y por tanto debemos de tener esto en cuenta a la hora de elegir una heurística u otra.
 
 \section{Conclusiones}
 
 Con esta práctica, hemos aprendido a crear algoritmos voraces para resolver problemas que, en su versión obvia o de fuerza bruta tienen una complejidad en ocasiones demasiado elevadas.
-\\
-\\
-Además, hemos comprobado como dentro de esta misma técnica podemos atacar los problemas de manera distinta. Debemos de prestar atención a la dificultad de obtener la solución óptima, y \textbf{primar el ``acercarnos''} a ella mediante algoritmos que van mejorando la solución anterior y \textbf{no presentan una eficiencia baja}. De hecho, hemos visto que el algoritmo de inserción para el TSP es el que daba la \textbf{solución más óptima} con respecto a los otros dos, \textbf{pero es de eficiencia cúbica}, y \textbf{para tamaños muy grandes del problema no nos serviría}. Es por esto, que debemos hallar un \textbf{término medio entre eficiencia y optimalidad}.
-\\
-\\
+
+Además, hemos comprobado como dentro de esta misma técnica podemos atacar los problemas de manera distinta. Debemos de prestar atención a la dificultad de obtener la solución óptima, y primar el ``acercarnos'' a ella mediante algoritmos que van mejorando la solución anterior.
+
 Esto es algo de especial relevancia a la hora de trabajar con cantidades ingentes de datos, en el que dar una solución inicial puede ser muy complicado, pudiendo partir incluso de soluciones arbitrarias, mejorándolas conforme nuestros algoritmos se van ejecutando. 
 \end{document}
