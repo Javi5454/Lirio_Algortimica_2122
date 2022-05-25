@@ -53,11 +53,18 @@ int main(int argc, char* argv[]){
         	}
         }
         
+        // Inicializamos la primera columna
+        for(int i = 1; i < n; i++){
+        	if(entrada1[i] == entrada2[0]){
+        		matriz_calculos[i][0] = 1;
+        	}
+        }
+        
         
         // Cálculo de la matriz de cálculos
         
         for(int i = 1; i < n; i++){
-        	for(int j = 0; j < m; j++){
+        	for(int j = 1; j < m; j++){
         		if(entrada1[i] == entrada2[j]){
         			matriz_calculos[i][j] = matriz_calculos[i-1][j-1]+1;
         		}
