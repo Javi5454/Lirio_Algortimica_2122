@@ -1,0 +1,96 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{csvsimple}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\renewcommand*\contentsname{Índice} %Nombre del indice
+
+\begin{document}
+\lstset{
+	basicstyle=\footnotesize,
+	extendedchars=true,
+	literate={á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {ú}{{\'u}}1 {ó}{{\'o}}1,
+	backgroundcolor=\color{black!5}
+	}
+	
+\begin{titlepage}
+	\centering
+	{\includegraphics[scale=0.5]{Logo_UGR.png}\par}
+	\vspace{1cm}
+	{\bfseries\Large Escuela T\'ecnica Superior de Ingeniería Informática y Telecomunicaciones \par}
+	\vspace{2.5cm}
+	{\scshape\Huge Pr\'actica 4: Programación Dinámica \par}
+	\vspace{3cm}
+	{\itshape\Large Doble Grado Ingeniería Informática y Matemáticas}
+	\vfill
+	{\Large Autores: \par}
+	{\Large Jose Alberto Hoces Castro\par}
+	{\Large Javier Gómez López \par}
+	{\Large Moya Mart\'in Castaño \par}
+	\vfill
+	{\Large Mayo 2022 \par}
+\end{titlepage}
+
+\thispagestyle{empty}
+\null
+\vfill
+
+%%Información sobre la licencia
+\parbox[t]{\textwidth}{
+  \includegraphics[scale=0.05]{by-nc-sa.png}\\[4pt]
+  \raggedright % Texto alineado a la izquierda
+  \sffamily\large
+  {\Large Este trabajo se distribuye bajo una licencia CC BY-NC-SA 4.0.}\\[4pt]
+  Eres libre de distribuir y adaptar el material siempre que reconozcas a los\\
+  autores originales del documento, no lo utilices para fines comerciales\\
+  y lo distribuyas bajo la misma licencia.\\[4pt]
+  \texttt{creativecommons.org/licenses/by-nc-sa/4.0/}
+}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introducción}
+
+El objetivo de esta práctica es aprender a implementar y utilizar algoritmos que utilizan la técnica de programación dinámica. Para ello hemos tenido que resolver el siguiente ejercicio:\\
+
+\textbf{Enunciado} Dos hermanos fueron separados al nacer y mediante un programa de televisión se han enterado que podrían ser hermanos. Ante esto, los dos están de acuerdo en hacerse un test de ADN para verificar si realmente son hermanos.\\
+- Deben encontrar el \% de similitud que existe entre estos posibles hermanos, como es un ejemplo lo haremos para 2 entradas posibles.\\
+- Dadas las 2 entradas\\
+PRIMERA \\
+Hermano 1 - abbcdefabcdxzyccd \\
+Hermano 2 - abbcdeafbcdzxyccd \\
+SEGUNDA\\
+Hermano 1 - $010111000100010101010010001001001001$\\
+Hermano 2 - $110000100100101010001010010011010100$\\
+\\
+Dar las salidas (secuencia más larga) de las 2 entradas.\\
+Dar la matriz de los cálculos de la primera entrada.
+\\
+\\
+\section{Requisitos de la PD}
+Lo primero que debemos observar es que el problema tiene una naturaleza n-etápica. Esto es fácil de ver puesto que para ver la mayor subsecuencia entre dos indices j e i debemos primero ver si coinciden en el primer índice, ver sino si el primero de una entrada coincide con el segundo de la otra, después el tercero y así sucesivamente.
+\\
+Veamos ahora que se cumple el POB:	\\
+Sea $ d_i, s_2,...., s_k, d_j$ la mayor subsecuencia del índice i hasta el j.
+Comenzando en el elemento $s_1$ correspondiente al índice i, entonces hemos decidido que el siguiente elemento común en ambas entradas es $s_2$ y por tanto ahora necesitamos encontrar la mayor subsecuencia común entre índice que corresponde a $s_2$ en la primera entrada, llamémoslo l, y el índice j. Por tanto es claro que entre l y j la subsecuencia $s_2,...., s_k$ debe ser la de mayor longitud. Si no ocurriese así, entonces existiría una subsecuencia $s_2, t_3, t4, ...., t_r, d_j$ con $r>k$ entre los índices l y j que sería de mayor longitud. Entonces ocurre que $d_i, s_2, t_3, t4, ...., t_r, d_j$ es una subsecuencia de mayor longitud que $ d_i, s_2,...., s_k, d_j$ del índice i al j. Luego es evidente que el POB se puede aplicar al problema.`
+
+\section{Solución: Construcción de la recurrencia}
+La solución al problema la vamos a ir comentando a la vez que mostraremos el código utilizado en cada caso.
+\\
+
+
+\end{document}
