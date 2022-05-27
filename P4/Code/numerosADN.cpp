@@ -35,37 +35,22 @@ int main(int argc, char* argv[]){
 	int m = entrada2.size();
 	
 	int ** matriz_calculos = nullptr;
-	matriz_calculos = new int * [n];
-	for(int i=0; i < n; i++){
-        	matriz_calculos[i] = new int [m];
+	matriz_calculos = new int * [n+1];
+	for(int i=0; i < n+1; i++){
+        	matriz_calculos[i] = new int [m+1];
         }
         
-        for(int i = 0; i < n; i++){
-        	for(int j = 0; j < m; j++){
+        for(int i = 0; i < n+1; i++){
+        	for(int j = 0; j < m+1; j++){
         		matriz_calculos[i][j] = 0;
         	}
         }
         
-        // Inicializamos la primera fila
-        for(int j = 0; j < m; j++){
-        	if(entrada1[0] == entrada2[j]){
-        		matriz_calculos[0][j] = 1;
-        	}
-        }
-        
-        // Inicializamos la primera columna
-        for(int i = 1; i < n; i++){
-        	if(entrada1[i] == entrada2[0]){
-        		matriz_calculos[i][0] = 1;
-        	}
-        }
-        
-        
         // Cálculo de la matriz de cálculos
         
-        for(int i = 1; i < n; i++){
-        	for(int j = 1; j < m; j++){
-        		if(entrada1[i] == entrada2[j]){
+        for(int i = 1; i < n+1; i++){
+        	for(int j = 1; j < m+1; j++){
+        		if(entrada1[i-1] == entrada2[j-1]){
         			matriz_calculos[i][j] = matriz_calculos[i-1][j-1]+1;
         		}
         		else{
@@ -79,28 +64,39 @@ int main(int argc, char* argv[]){
         	}
         }
 	
-	// Buscamos el máximo en la última fila de la matriz de cálculos y seguimos el camino hacia atrás
+	// Buscamos el máximo en la última fila de la matriz de cálculos
 	
 	int max = 0;
 	int posj = 0;
 	
-	for(int j = 0; j < m; j++){
-		if(matriz_calculos[n-1][j] >= max){
-			max = matriz_calculos[n-1][j];
+	for(int j = 1; j < m+1; j++){
+		if(matriz_calculos[n][j] >= max){
+			max = matriz_calculos[n][j];
 			posj = j;
 		}
 	}
 	
-	list<char> resultado;
-	int i = n-1;
+	// Realizamos el camino hacia atrás y almacenamos la subsecuencia en una lista
 	
-	while(i >= 0){
-		if(entrada1[i] == entrada2[posj]){
-			resultado.push_front(entrada2[posj]);
+	list<char> resultado;
+	int i = n;
+	
+	while(i >= 1){
+		
+		// Si hay coincidencia, almacenamos la letra al principio de la cadena
+		// Nos vamos a la anterior fila en diagonal
+		
+		if(entrada1[i-1] == entrada2[posj-1]){
+			resultado.push_front(entrada2[posj-1]);
 			posj--;
 			i--;
 		}
 		else{
+		
+			// Si no hay coincidencia, vemos cuál es el máximo de entre la
+			// casilla de la izquierda y la de arriba a la actual, y nos 
+			// movemos hacia donde esté el máximo
+			
 			if(matriz_calculos[i][posj-1] == matriz_calculos[i][posj]){
 				posj--;
 			}
@@ -113,8 +109,8 @@ int main(int argc, char* argv[]){
 	// Impresión de resultados
 	
 	cout << "Matriz de cálculos: \n";
-	for(int i = 0; i < n; i++){
-		for(int j = 0; j < m; j++){
+	for(int i = 0; i < n+1; i++){
+		for(int j = 0; j < m+1; j++){
 			cout << matriz_calculos[i][j] << " ";
 		}
 		cout << endl;
@@ -130,7 +126,7 @@ int main(int argc, char* argv[]){
 	cout << endl;
     
 
-    for(int i=0; i<n; i++){
+    for(int i=0; i<n+1; i++){
       delete [] matriz_calculos[i];
     }
   
