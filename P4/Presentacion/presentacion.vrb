@@ -1,0 +1,6 @@
+\frametitle{Conclusiones}
+\begin{itemize}
+		\item Obtenemos la \textbf{solución optimal}, cosa que no habríamos logrado con otras técnicas ya vistas como \textbf{Greedy}
+	\item También ganamos ventaja respecto a \textbf{Divide y Vencerás}, pues en \textbf{programación dinámica} tenemos problemas que están \textbf{encajados}, por lo que \textbf{no repetimos cálculos}.
+	\item Como principal \textbf{inconveniente} de la \textbf{programación dinámica}, se hace un \textbf{gran uso de recursos}, en nuestro caso, la \textbf{memoria} reservada para nuestra \textbf{matriz de cálculos}.
+	\end{itemize}
