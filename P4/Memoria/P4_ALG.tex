@@ -13,6 +13,8 @@
 \usepackage{subcaption}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
+\setcounter{MaxMatrixCols}{20}
+
 \renewcommand*\contentsname{Índice} %Nombre del indice
 
 \begin{document}
@@ -67,8 +69,7 @@
 
 El objetivo de esta práctica es aprender a implementar y utilizar algoritmos que utilizan la técnica de programación dinámica. Para ello hemos tenido que resolver el siguiente ejercicio:\\
 
-<<<<<<< HEAD
-\textbf{Enunciado.} Dos hermanos fueron separados al nacer y mediante un programa de televisión se han enterado que podrían ser hermanos. Ante esto, los dos están de acuerdo en hacerse un test de ADN para verificar si realmente son hermanos.\\
+\textbf{Enunciado.} \textit{Dos hermanos fueron separados al nacer y mediante un programa de televisión se han enterado que podrían ser hermanos. Ante esto, los dos están de acuerdo en hacerse un test de ADN para verificar si realmente son hermanos.}\\
 \\
 Dadas las 2 entradas:\\
 \\
@@ -86,12 +87,12 @@ Hermano 2 - $110000100100101010001010010011010100$\\
 	\item Dar la matriz de los cálculos de la primera entrada.
 \end{itemize}
 
-\section{Requisitos de la PD}
+\section{Requisitos de la Progamación Dinámica}
 Como ya sabemos, la programación dinámica se aplica en cuatro fases que vamos a identificar:
 
 \begin{itemize}
 	\item \textbf{Naturaleza n-etápica:} Para hallar la mayor subsecuencia entre dos secuencias dadas, comenzamos hallando la subsecuencia más larga para el primer carácter de las dos secuencias, después la más larga teniendo en cuenta los dos primeros caracteres, y así hasta tener en cuenta los caracteres de ambas secuencias en su totalidad.
-	\item \textbf{Verificación del POB (Principio de Optimalidad de Bellman):} Sea $ s_i, s_2,...., s_k, s_j$ la mayor subsecuencia del índice i hasta el j.
+	\item \textbf{Verificación del POB (Principio de Optimalidad de Bellman):} Sea $ s_i, s_2,...., s_k, s_j$ la mayor subsecuencia del índice \(i\) hasta el \(j\).
 	Comenzando en el elemento $s_i$ correspondiente al índice $i$, entonces hemos encontrado, el siguiente elemento común en ambas entradas, que es $s_2$. Por tanto, ahora necesitamos encontrar la mayor subsecuencia común entre el índice que le corresponde a $s_2$, es decir, $i+1$, llamémoslo $l$, y el índice $j$. Es claro que entre $l$ y $j$ la subsecuencia $s_2,...., s_k$ debe ser la de mayor longitud. De no serlo, entonces existiría una subsecuencia $s_2, t_3, t4, ...., t_r, d_j$ con $r>k$ entre los índices l y j que sería de mayor longitud. Entonces, tendríamos que $s_i, s_2, t_3, t4, ...., t_r, s_j$ es una subsecuencia de mayor longitud que $ s_i, s_2,...., s_k, s_j$ del índice $i$ al $j$.
 	\item \textbf{Planteamiento de una recurrencia:} Para resolver este problema, vamos a hacer uso de una matriz de dimensión $n \cdot m$, siendo $n$ y $m$ las longitudes de las secuencias de nuestro problema: 
 	
@@ -140,7 +141,6 @@ Como ya sabemos, la programación dinámica se aplica en cuatro fases que vamos 
 	\lstinputlisting[language=C++]{./Code/similitud.cpp}
 	
 \end{itemize}
- `
 
 \section{Solución}
 
@@ -164,10 +164,30 @@ Una vez expuesto nuestro algoritmo para resolver el problema y su implementació
 	\end{center}
 
 	\item \textbf{3. Matriz de cálculos del primer problema}
-	
-	\begin{center}
-		\includegraphics[scale=0.65]{./Matriz.png}
-	\end{center}
+
+	\[
+	\begin{matrix}
+      &   & a & b & b & c & d & e & a & f & b & c & d & z & x & y & c & c & d \\
+      & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+    a & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+    b & 0 & 1 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & 2 \\
+    b & 0 & 1 & 2 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 & 3 \\
+    c & 0 & 1 & 2 & 3 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 & 4 \\
+    d & 0 & 1 & 2 & 3 & 4 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 \\
+    e & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 & 6 \\
+    f & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 6 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 \\
+    a & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 & 7 \\
+    b & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 7 & 8 & 8 & 8 & 8 & 8 & 8 & 8 & 8 & 8 \\
+    c & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 7 & 8 & 9 & 9 & 9 & 9 & 9 & 9 & 9 & 9 \\
+    d & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 7 & 8 & 9 & 10 & 10 & 10 & 10 & 10 & 10 & 10  \\
+    x & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 7 & 8 & 9 & 10 & 10 & 11 & 11 & 11 & 11 & 11\\
+    z & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 7 & 8 & 9 & 10 & 11 & 11 & 11 & 11 & 11 & 11 \\
+    y & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 7 & 8 & 9 & 10 & 11 & 11 & 12 & 12 & 12 & 12\\
+    c & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 7 & 8 & 9 & 10 & 11 & 11 & 12 & 13 & 13 & 13 \\
+    c & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 7 & 8 & 9 & 10 & 11 & 11 & 12 & 13 & 14 & 14 \\
+    d & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 7 & 8 & 9 & 10 & 11 & 11 & 12 & 13 & 14 & 15 
+	\end{matrix}
+	\]
 	
 \end{itemize}
 
@@ -180,32 +200,4 @@ Una vez expuesto nuestro algoritmo para resolver el problema y su implementació
 	\item También ganamos ventaja respecto a \textbf{Divide y Vencerás}, pues en \textbf{programación dinámica} tenemos problemas que están \textbf{encajados}, por lo que \textbf{no repetimos cálculos}.
 	\item Como principal \textbf{inconveniente} de la \textbf{programación dinámica}, se hace un \textbf{gran uso de recursos}, en nuestro caso, la \textbf{memoria} reservada para nuestra \textbf{matriz de cálculos}.
 \end{itemize}
-=======
-\textbf{Enunciado} Dos hermanos fueron separados al nacer y mediante un programa de televisión se han enterado que podrían ser hermanos. Ante esto, los dos están de acuerdo en hacerse un test de ADN para verificar si realmente son hermanos.\\
-- Deben encontrar el \% de similitud que existe entre estos posibles hermanos, como es un ejemplo lo haremos para 2 entradas posibles.\\
-- Dadas las 2 entradas\\
-PRIMERA \\
-Hermano 1 - abbcdefabcdxzyccd \\
-Hermano 2 - abbcdeafbcdzxyccd \\
-SEGUNDA\\
-Hermano 1 - $010111000100010101010010001001001001$\\
-Hermano 2 - $110000100100101010001010010011010100$\\
-\\
-Dar las salidas (secuencia más larga) de las 2 entradas.\\
-Dar la matriz de los cálculos de la primera entrada.
-\\
-\\
-\section{Requisitos de la PD}
-Lo primero que debemos observar es que el problema tiene una naturaleza n-etápica. Esto es fácil de ver puesto que para ver la mayor subsecuencia entre dos indices j e i debemos primero ver si coinciden en el primer índice, ver sino si el primero de una entrada coincide con el segundo de la otra, después el tercero y así sucesivamente.
-\\
-Veamos ahora que se cumple el POB:	\\
-Sea $ d_i, s_2,...., s_k, d_j$ la mayor subsecuencia del índice i hasta el j.
-Comenzando en el elemento $s_1$ correspondiente al índice i, entonces hemos decidido que el siguiente elemento común en ambas entradas es $s_2$ y por tanto ahora necesitamos encontrar la mayor subsecuencia común entre índice que corresponde a $s_2$ en la primera entrada, llamémoslo l, y el índice j. Por tanto es claro que entre l y j la subsecuencia $s_2,...., s_k$ debe ser la de mayor longitud. Si no ocurriese así, entonces existiría una subsecuencia $s_2, t_3, t4, ...., t_r, d_j$ con $r>k$ entre los índices l y j que sería de mayor longitud. Entonces ocurre que $d_i, s_2, t_3, t4, ...., t_r, d_j$ es una subsecuencia de mayor longitud que $ d_i, s_2,...., s_k, d_j$ del índice i al j. Luego es evidente que el POB se puede aplicar al problema.`
-
-\section{Solución: Construcción de la recurrencia}
-La solución al problema la vamos a ir comentando a la vez que mostraremos el código utilizado en cada caso.
-\\
-
->>>>>>> ca2befa89fea13edbeda2240c2e426fddf8006ce
-
 \end{document}

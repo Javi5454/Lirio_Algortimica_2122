@@ -1,9 +1,5 @@
 \babel@toc {spanish}{}
 \contentsline {section}{\numberline {1}Introducción}{3}%
-<<<<<<< HEAD
-\contentsline {section}{\numberline {2}Requisitos de la PD}{3}%
+\contentsline {section}{\numberline {2}Requisitos de la Progamación Dinámica}{3}%
 \contentsline {section}{\numberline {3}Solución}{5}%
 \contentsline {section}{\numberline {4}Conclusiones}{6}%
-=======
-\contentsline {section}{\numberline {2}Solución}{3}%
->>>>>>> ca2befa89fea13edbeda2240c2e426fddf8006ce

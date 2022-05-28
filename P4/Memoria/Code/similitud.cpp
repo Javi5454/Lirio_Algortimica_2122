@@ -1,1 +1,1 @@
-double similitud = (double)max/n * 100
+double similitud = (double)max/n * 100;
